@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function loadProducts() {
         try {
-            const response = await fetch('products.json');
+            // Use absolute path with a cache-busting timestamp
+            const response = await fetch(`/products.json?t=${new Date().getTime()}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

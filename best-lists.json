@@ -1,0 +1,87 @@
+[
+  {
+    "id": "overall",
+    "title": "Best Overall Robot Pool Cleaners of 2023",
+    "description": "We tested the top models on the market to find the perfect balance of performance, features, and value.",
+    "intro": "<p>Finding the best robot pool cleaner isn't just about picking the most expensive model. It's about finding the machine that delivers the most reliable clean with the least amount of hassle. For our 'Best Overall' list, we focused on three key criteria: <strong>cleaning coverage</strong> (floor, walls, waterline), <strong>ease of use</strong> (filtration access, weight), and <strong>value for money</strong>.</p>",
+    "criteria": [
+      "Wall and waterline climbing ability",
+      "Filtration system accessibility and capacity",
+      "Reliability and warranty",
+      "Price-to-performance ratio"
+    ],
+    "products": [
+      {
+        "sku": "Dolphin-Nautilus-CC-Plus",
+        "badge": "Best Overall",
+        "reason": "The perfect balance of performance and simplicity. It just works."
+      },
+      {
+        "sku": "Polaris-9650iQ-Sport",
+        "badge": "Best Smart Features",
+        "reason": "Top-tier app control and lift system for tech-savvy owners."
+      },
+      {
+        "sku": "Hayward-TigerShark-QC",
+        "badge": "Best Durability",
+        "reason": "Built like a tank and known for lasting years without issues."
+      },
+      {
+        "sku": "Aquabot-Breeze-IQ",
+        "badge": "Best Value",
+        "reason": "Excellent cleaning performance at a very competitive price point."
+      }
+    ],
+    "buying_advice": "<h3>How to Choose the Best All-Rounder</h3><p>When looking for the best overall cleaner, prioritize <strong>reliability</strong> over gimmicks. While app control is fun, a cleaner that gets stuck or misses spots is useless. Look for models with <strong>dual scrubbing brushes</strong> and <strong>top-load filters</strong>, as these features make the biggest difference in daily operation.</p>"
+  },
+  {
+    "id": "value",
+    "title": "Best Value Robot Pool Cleaners",
+    "description": "Get a sparkling clean pool without breaking the bank.",
+    "intro": "<p>You don't need to spend over $1000 to get a great robotic cleaner. Our 'Best Value' picks focus on models that deliver core cleaning performance—scrubbing and vacuuming—without the premium price tag of smart features.</p>",
+    "criteria": [
+      "Low initial purchase price",
+      "Low long-term maintenance costs",
+      "Effective floor and wall cleaning",
+      "Simple, durable design"
+    ],
+    "products": [
+      {
+        "sku": "Aquabot-Breeze-IQ",
+        "badge": "Top Pick",
+        "reason": "Features usually found on much more expensive models."
+      },
+      {
+        "sku": "Dolphin-Nautilus-CC-Plus",
+        "badge": "Runner Up",
+        "reason": "Slightly pricier but offers unbeatable reliability."
+      }
+    ],
+    "buying_advice": "<h3>Value vs. Cheap</h3><p>Be careful not to confuse 'value' with 'cheap'. Extremely low-cost cleaners often lack replacement parts or have short warranties. The models on this list are from reputable brands that offer good support, ensuring your investment lasts.</p>"
+  },
+  {
+    "id": "leaves",
+    "title": "Best Robot Pool Cleaners for Leaves",
+    "description": "Heavy-duty cleaners designed to handle acorns, twigs, and large debris.",
+    "intro": "<p>If your pool is surrounded by trees, you know the struggle. Standard cleaners can get clogged easily. For this list, we selected robots with <strong>oversized intake ports</strong> and <strong>large debris baskets</strong> (or bags) that can handle a heavy leaf load without stopping.</p>",
+    "criteria": [
+      "Large intake opening",
+      "High-capacity filter basket/bag",
+      "Powerful suction",
+      "Anti-clogging mechanisms"
+    ],
+    "products": [
+      {
+        "sku": "Polaris-P39",
+        "badge": "Leaf Master",
+        "reason": "Pressure-side power designed specifically for heavy debris."
+      },
+      {
+        "sku": "Dolphin-Premier",
+        "badge": "Best Bag System",
+        "reason": "The oversized leaf bag option is a game-changer for autumn."
+      }
+    ],
+    "buying_advice": "<h3>Basket vs. Bag</h3><p>For heavy leaves, a <strong>bag</strong> is often superior to a cartridge basket because it can hold more volume and is less likely to choke the suction when full. Look for cleaners that offer a 'leaf bag' accessory or come with one standard.</p>"
+  }
+]

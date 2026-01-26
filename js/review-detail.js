@@ -98,12 +98,20 @@ function populateReview(product, amazonTag) {
         analysisContainer.innerHTML = '<p class="text-muted">Detailed analysis for this product is coming soon.</p>';
     }
 
-    // Set Who This Is For (using innerHTML to render HTML tags)
+    // Set Who This Is For
     const whoForContainer = document.getElementById('product-who-is-this-for');
     if (product.who_is_this_for) {
         whoForContainer.innerHTML = product.who_is_this_for;
     } else {
         whoForContainer.innerHTML = '<p class="text-muted">Information coming soon.</p>';
+    }
+
+    // Set Who Should Skip It
+    const skipContainer = document.getElementById('product-who-should-skip');
+    if (product.who_should_skip) {
+        skipContainer.innerHTML = product.who_should_skip;
+    } else {
+        skipContainer.innerHTML = '<p class="text-muted">Information coming soon.</p>';
     }
 
     document.getElementById('product-verdict').textContent = product.verdict || "Review coming soon.";
@@ -143,6 +151,23 @@ function populateReview(product, amazonTag) {
     } else {
         checkPriceBtn.href = "#";
         checkPriceBtn.classList.add('disabled');
+    }
+
+    // Set Alternatives
+    const alternativesCard = document.getElementById('alternatives-card');
+    const alternativesList = document.getElementById('product-alternatives');
+    alternativesList.innerHTML = ''; // Clear existing
+
+    if (product.alternatives && product.alternatives.length > 0) {
+        product.alternatives.forEach(alt => {
+            const li = document.createElement('li');
+            li.className = 'list-group-item';
+            li.innerHTML = `<a href="/reviews/review.html?sku=${alt.sku}" class="text-decoration-none fw-bold">${alt.name}</a>`;
+            alternativesList.appendChild(li);
+        });
+        alternativesCard.style.display = 'block';
+    } else {
+        alternativesCard.style.display = 'none';
     }
 
     // Show Content
