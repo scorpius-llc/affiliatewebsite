@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.hero-section {
+    background-color: #e3f2fd;
+    border-bottom: 1px solid #dee2e6;
+}
+
+h1, h2, h3, h4 {
+    color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #0056b3 !important;
+}
+
+.nav-link {
+    color: #555 !important;
+}
+
+.nav-link:hover {
+    color: #0056b3 !important;
+}
+
+.nav-link.active {
+    color: #0056b3 !important;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+}
