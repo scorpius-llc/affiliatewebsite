@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         const product = products.find(p => p.sku === sku);
 
         if (product) {
-            populateReview(product, AMAZON_TAG);
+            // Pass the full products array to populateReview so we can look up alternatives
+            populateReview(product, products, AMAZON_TAG);
             updateMetaTags(product);
         } else {
             showError();
@@ -66,7 +67,7 @@ function updateOgTag(property, content, attributeName = 'property') {
     tag.content = content;
 }
 
-function populateReview(product, amazonTag) {
+function populateReview(product, allProducts, amazonTag) {
     // Set Page Title (Visual)
     document.getElementById('page-title').textContent = `${product.name} Review - Robot Pool Cleaner Reviews`;
 
@@ -153,16 +154,43 @@ function populateReview(product, amazonTag) {
         checkPriceBtn.classList.add('disabled');
     }
 
-    // Set Alternatives
+    // Set Best Buy Link (New)
+    // Check if the button already exists to avoid duplicates on re-render
+    let bestBuyBtn = document.getElementById('bestbuy-btn');
+    if (!bestBuyBtn) {
+        bestBuyBtn = document.createElement('a');
+        bestBuyBtn.id = 'bestbuy-btn';
+        bestBuyBtn.className = 'btn btn-primary btn-lg fw-bold w-100 mt-2';
+        bestBuyBtn.target = '_blank';
+        bestBuyBtn.textContent = 'Check Price on Best Buy';
+        // Insert after the Amazon button
+        checkPriceBtn.parentNode.insertBefore(bestBuyBtn, checkPriceBtn.nextSibling);
+    }
+
+    if (product.bestbuy_url) {
+        bestBuyBtn.href = product.bestbuy_url;
+        bestBuyBtn.style.display = 'block';
+    } else {
+        bestBuyBtn.style.display = 'none';
+    }
+
+    // Set Alternatives with Price
     const alternativesCard = document.getElementById('alternatives-card');
     const alternativesList = document.getElementById('product-alternatives');
     alternativesList.innerHTML = ''; // Clear existing
 
     if (product.alternatives && product.alternatives.length > 0) {
         product.alternatives.forEach(alt => {
+            // Look up the full product details to get the price
+            const fullAltProduct = allProducts.find(p => p.sku === alt.sku);
+            const price = fullAltProduct ? fullAltProduct.approx_price : '???';
+
             const li = document.createElement('li');
-            li.className = 'list-group-item';
-            li.innerHTML = `<a href="/reviews/review.html?sku=${alt.sku}" class="text-decoration-none fw-bold">${alt.name}</a>`;
+            li.className = 'list-group-item d-flex justify-content-between align-items-center';
+            li.innerHTML = `
+                <a href="/reviews/review.html?sku=${alt.sku}" class="text-decoration-none fw-bold">${alt.name}</a>
+                <span class="badge bg-secondary rounded-pill">$${price}</span>
+            `;
             alternativesList.appendChild(li);
         });
         alternativesCard.style.display = 'block';
