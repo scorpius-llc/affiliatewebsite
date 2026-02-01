@@ -46,13 +46,19 @@ export default function ReviewPage({ params }) {
         <div className="col-lg-8">
           <h1 className="mb-3">{product.name}: In-Depth Review</h1>
 
-          <div className="text-center mb-4">
-            {/* Using standard img tag for external images to avoid Next.js config complexity for now */}
+          <div className="text-center mb-4 p-3 bg-white rounded border" style={{ height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {/* Enforcing standard image container size */}
             <img 
               src={product.image_url || 'https://via.placeholder.com/600x400'} 
               alt={product.name} 
-              className="img-fluid rounded" 
-              style={{maxHeight: '400px'}}
+              className="img-fluid" 
+              style={{ 
+                maxHeight: '100%', 
+                maxWidth: '100%', 
+                objectFit: 'contain',
+                width: 'auto',
+                height: 'auto'
+              }}
             />
           </div>
 
@@ -117,16 +123,6 @@ export default function ReviewPage({ params }) {
               >
                 Check Price on Amazon
               </a>
-              
-              {product.bestbuy_url && (
-                <a 
-                  href={product.bestbuy_url} 
-                  target="_blank" 
-                  className="btn btn-primary btn-lg fw-bold w-100 mt-2"
-                >
-                  Check Price on Best Buy
-                </a>
-              )}
               
               <small className="text-muted d-block mt-2">We may earn a commission on qualifying purchases.</small>
             </div>

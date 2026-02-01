@@ -55,10 +55,23 @@ export default function Reviews() {
           <div key={product.sku} className="col-md-6 mb-4">
             <div className="card h-100">
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">{product.description}</p>
-                <p className="card-text fw-bold">Approx. Price: ${product.approx_price}</p>
-                <div className="mt-auto d-flex gap-2">
+                <div className="d-flex mb-3">
+                  <div className="flex-shrink-0 me-3" style={{ width: '100px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img 
+                      src={product.image_url || 'https://via.placeholder.com/100x100'} 
+                      alt={product.name} 
+                      className="img-fluid rounded"
+                      style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                    />
+                  </div>
+                  <div>
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text small text-muted">{product.description}</p>
+                  </div>
+                </div>
+                
+                <p className="card-text fw-bold mt-auto">Approx. Price: ${product.approx_price}</p>
+                <div className="d-flex gap-2">
                   <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary flex-grow-1">Read Review</Link>
                   <a 
                     href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=poolbotreviews-20` : '#'} 
