@@ -83,5 +83,85 @@
       }
     ],
     "buying_advice": "<h3>Basket vs. Bag</h3><p>For heavy leaves, a <strong>bag</strong> is often superior to a cartridge basket because it can hold more volume and is less likely to choke the suction when full. Look for cleaners that offer a 'leaf bag' accessory or come with one standard.</p>"
+  },
+  {
+    "id": "above-ground",
+    "title": "Best Robot Pool Cleaners for Above-Ground Pools",
+    "description": "Compact, lightweight, and affordable cleaners designed for smaller pools.",
+    "intro": "<p>Above-ground pools have different needs than in-ground ones. You need a cleaner that is lightweight, won't damage the liner, and is designed for flat or slightly dished floors. These picks are perfect for keeping your above-ground oasis clean without the heavy lifting.</p>",
+    "criteria": [
+      "Lightweight design for easy removal",
+      "Gentle on vinyl liners",
+      "Affordable price point",
+      "Effective floor cleaning"
+    ],
+    "products": [
+      {
+        "sku": "BWT-Pool-Robot-ES-Nano",
+        "badge": "Top Pick",
+        "reason": "Premium filtration in a compact package designed for small pools."
+      },
+      {
+        "sku": "Aquabot-Breeze-IQ",
+        "badge": "Best Value",
+        "reason": "Gentle vibrating brush is perfect for vinyl liners."
+      }
+    ],
+    "buying_advice": "<h3>Floor vs. Wall</h3><p>Most above-ground cleaners focus on the floor and the 'cove' (where the floor meets the wall). Don't overpay for a wall-climbing robot if your pool walls are flexible or don't have a rigid structure to support it.</p>"
+  },
+  {
+    "id": "vinyl",
+    "title": "Best Robot Pool Cleaners for Vinyl Liners",
+    "description": "Gentle yet effective cleaners that won't damage your delicate pool liner.",
+    "intro": "<p>Vinyl liners require a delicate touch. A robot with overly aggressive tracks or brushes can wear down the pattern or even cause tears over time. We've selected robots with non-abrasive brushes and tracks designed specifically to be safe for vinyl.</p>",
+    "criteria": [
+      "Non-abrasive brushes (foam or vibrating)",
+      "Tracks that don't leave black marks",
+      "Gentle navigation logic",
+      "Lightweight to prevent liner stretching"
+    ],
+    "products": [
+      {
+        "sku": "Aquabot-Breeze-IQ",
+        "badge": "Gentlest Clean",
+        "reason": "Vibrating brush technology cleans without scrubbing the pattern off."
+      },
+      {
+        "sku": "Dolphin-Nautilus-CC-Plus",
+        "badge": "Best All-Rounder",
+        "reason": "Standard brushes are safe for vinyl, and it covers the whole pool efficiently."
+      }
+    ],
+    "buying_advice": "<h3>Watch the Tracks</h3><p>Avoid robots with hard plastic wheels or aggressive 'gunite-only' tracks. Look for rubber tracks or foam rollers that provide grip without abrasion.</p>"
+  },
+  {
+    "id": "inground",
+    "title": "Best Robot Pool Cleaners for In-Ground Pools",
+    "description": "Powerful, full-featured robots for deep ends, diving wells, and vertical walls.",
+    "intro": "<p>In-ground pools are the natural habitat for high-end robotic cleaners. You need a machine that can handle deep ends, climb vertical walls to the tile line, and navigate around main drains. These are the heavy hitters of the pool world.</p>",
+    "criteria": [
+      "Strong wall climbing and waterline scrubbing",
+      "Ability to handle deep ends (8ft+)",
+      "Long cable length (50ft+)",
+      "Advanced navigation for complex shapes"
+    ],
+    "products": [
+      {
+        "sku": "Dolphin-Sigma",
+        "badge": "Ultimate Performance",
+        "reason": "Gyroscopic navigation ensures it never gets lost in large pools."
+      },
+      {
+        "sku": "Polaris-9650iQ-Sport",
+        "badge": "Best 4WD",
+        "reason": "4-wheel drive handles deep ends and steep slopes with ease."
+      },
+      {
+        "sku": "Pentair-Prowler-930",
+        "badge": "Premium Choice",
+        "reason": "A luxury cleaning experience with top-tier filtration."
+      }
+    ],
+    "buying_advice": "<h3>Cable Length is Key</h3><p>Ensure the cable is long enough to reach the furthest corner of your pool from the power supply, plus 10 feet. For large in-ground pools, a swivel cable is highly recommended to prevent tangling during long cycles.</p>"
   }
 ]

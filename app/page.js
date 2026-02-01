@@ -36,7 +36,7 @@ export default function Home() {
             <div className="p-4">
               <h4>Quick Links</h4>
               <ul className="list-unstyled">
-                <li><Link href="/top-lists">Best of 2023</Link></li>
+                <li><Link href="/best-of">Best of 2023</Link></li>
                 <li><Link href="/guides">Troubleshooting</Link></li>
                 <li><Link href="/guides">Daily Routine</Link></li>
               </ul>

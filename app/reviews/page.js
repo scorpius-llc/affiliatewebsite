@@ -6,13 +6,18 @@ import products from '../../data/products.json';
 
 export default function Reviews() {
   const [selectedBrand, setSelectedBrand] = useState('all');
-  const [maxPrice, setMaxPrice] = useState(1500);
+  // Initialize with a value higher than any product price to show "Any" by default
+  const [maxPrice, setMaxPrice] = useState(2000);
 
   const brands = [...new Set(products.map(p => p.brand))].sort();
 
+  // Define the maximum value for the slider
+  const SLIDER_MAX = 2000;
+
   const filteredProducts = products.filter(product => {
     const brandMatch = selectedBrand === 'all' || product.brand === selectedBrand;
-    const priceMatch = product.approx_price <= maxPrice;
+    // If maxPrice is at the slider's max, consider it "Any" (no price filter)
+    const priceMatch = maxPrice >= SLIDER_MAX ? true : product.approx_price <= maxPrice;
     return brandMatch && priceMatch;
   });
 
@@ -36,12 +41,14 @@ export default function Reviews() {
           </select>
         </div>
         <div className="col-md-4">
-          <label htmlFor="priceFilter" className="form-label">Max Price: <span>${maxPrice}</span></label>
+          <label htmlFor="priceFilter" className="form-label">
+            Max Price: <span>{maxPrice >= SLIDER_MAX ? 'Any' : `$${maxPrice}`}</span>
+          </label>
           <input 
             type="range" 
             className="form-range" 
             min="500" 
-            max="1500" 
+            max={SLIDER_MAX} 
             step="100" 
             id="priceFilter"
             value={maxPrice}
@@ -85,6 +92,18 @@ export default function Reviews() {
             </div>
           </div>
         ))}
+        
+        {filteredProducts.length === 0 && (
+          <div className="col-12 text-center py-5">
+            <p className="lead text-muted">No products found matching your criteria.</p>
+            <button 
+              className="btn btn-outline-secondary"
+              onClick={() => { setSelectedBrand('all'); setMaxPrice(SLIDER_MAX); }}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

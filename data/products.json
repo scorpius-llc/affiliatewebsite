@@ -29,7 +29,7 @@
       { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
     ],
     "image_url": "https://brand.maytronics.com/m/4f1de64dc1be474a/EP_Large-Dolphin-Nautilus-CC-Plus-2025.webp",
-    "approx_price": 800
+    "approx_price": 799
   },
   {
     "sku": "Dolphin-Premier",
@@ -93,7 +93,7 @@
       { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
     ],
     "image_url": "https://www.maytronics.com/dw/image/v2/BGGP_PRD/on/demandware.static/-/Library-Sites-MaytronicsSharedLibrary/default/dw67795726/MTNA/Excci_Titan_Image_OnWhite%20673x850.jpg",
-    "approx_price": 950
+    "approx_price": 1599
   },
   {
     "sku": "Dolphin-Sigma",
@@ -414,5 +414,69 @@
     ],
     "image_url": "https://m.media-amazon.com/images/I/71avyX9pZUL._AC_SL1500_.jpg",
     "approx_price": 429
+  },
+  {
+    "sku": "BWT-Pool-Robot-ES-Nano",
+    "brand": "BWT",
+    "name": "BWT Pool Robot ES Nano",
+    "asin": "B0GGZ49DZX",
+    "description": "A compact, budget-friendly cleaner designed for smaller pools and above-ground setups.",
+    "long_description": "The BWT Pool Robot ES Nano is a compact powerhouse designed specifically for smaller in-ground pools and above-ground pools. BWT (Best Water Technology) brings its European engineering expertise to this entry-level robot, offering premium filtration and smart navigation at a price that competes with suction-side cleaners. It proves that you don't need a massive machine to get a clean pool.",
+    "who_is_this_for": "<p>The ES Nano is the perfect fit for:</p><ul><li><strong>Small in-ground or above-ground pools</strong> (up to 25 feet).</li><li>Owners on a <strong>tight budget</strong> who still want robotic cleaning.</li><li>Those who want <strong>ultra-fine filtration</strong> (4D filter) standard.</li><li>Users who want a lightweight, easy-to-store unit.</li></ul>",
+    "who_should_skip": "<p>This isn't for you if:</p><ul><li><strong>You have a large pool:</strong> The cable is short and the cleaning cycle is designed for small spaces.</li><li><strong>You need waterline scrubbing:</strong> It focuses primarily on the floor and cove.</li></ul>",
+    "detailed_analysis": "<p><strong>4D Filter Technology:</strong> The standout feature of BWT robots is their 4D filter. It uses elastic loops to trap even the finest particles, down to 2 microns. This is significantly better than standard mesh filters and ensures crystal clear water.</p><p><strong>Smart Navigation:</strong> Despite its small size, it uses a gyroscope and algorithm to scan and map the pool. It adjusts its path to ensure coverage of the entire floor area.</p><p><strong>Compact Design:</strong> Weighing significantly less than standard robots, the ES Nano is incredibly easy to lift in and out of the pool. Its small footprint also makes it easy to store during the off-season.</p>",
+    "features": "<ul><li><strong>4D Hyperfine Filter:</strong> Traps particles as small as 2 microns.</li><li><strong>Smart Navigation:</strong> Gyroscope ensures efficient cleaning patterns.</li><li><strong>Compact & Lightweight:</strong> Easy to handle for any user.</li><li><strong>Floor & Cove Cleaning:</strong> Focuses on the bottom of the pool where dirt settles.</li><li><strong>Plug & Play:</strong> Simple one-button operation.</li></ul>",
+    "pros": [
+      "Incredible filtration performance for the price",
+      "Very lightweight and easy to manage",
+      "Smart navigation avoids random bouncing",
+      "Great value for small pool owners",
+      "Modern, attractive design"
+    ],
+    "cons": [
+      "Short cable limits pool size",
+      "Does not climb walls to the waterline",
+      "Small debris basket fills up quickly",
+      "Not suitable for large debris like big leaves"
+    ],
+    "verdict": "The BWT Pool Robot ES Nano is a fantastic entry-level robot. It brings high-end filtration technology to the budget market. While it won't scrub your waterline like a $1000 robot, it will keep your pool floor spotless and your water clearer than you thought possible. For small pool owners, it's a no-brainer upgrade from manual vacuuming.",
+    "alternatives": [
+      { "name": "Aquabot Breeze IQ", "sku": "Aquabot-Breeze-IQ" },
+      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" }
+    ],
+    "image_url": "https://m.media-amazon.com/images/I/51KidbjJW2L._AC_SL1416_.jpg",
+    "approx_price": 899
+  },
+  {
+    "sku": "Beatbot-AquaSense-2",
+    "brand": "Beatbot",
+    "name": "Beatbot AquaSense 2",
+    "asin": "B0DPMDQ2RD",
+    "description": "A cutting-edge cordless robot with 5-in-1 cleaning capabilities and intelligent path planning.",
+    "long_description": "The Beatbot AquaSense 2 is a futuristic leap forward in pool cleaning technology. As a fully cordless unit, it eliminates the hassle of cables while delivering a comprehensive 5-in-1 cleaning solution: floor, walls, waterline, surface skimming, and water clarification. It's designed for the modern pool owner who wants a truly autonomous, set-it-and-forget-it experience.",
+    "who_is_this_for": "<p>The AquaSense 2 is perfect for:</p><ul><li><strong>Early adopters</strong> who love the latest tech gadgets.</li><li>Owners who want <strong>surface skimming</strong> included in their robot (a rare feature).</li><li>Those who demand a <strong>cordless experience</strong> without sacrificing power.</li><li>Pools with complex shapes that benefit from advanced mapping.</li></ul>",
+    "who_should_skip": "<p>You might want to wait if:</p><ul><li><strong>You prefer established brands:</strong> Beatbot is a newer player compared to Dolphin or Polaris.</li><li><strong>You have a very deep pool:</strong> Check the depth rating, as some cordless units struggle with extreme depths.</li></ul>",
+    "detailed_analysis": "<p><strong>5-in-1 Cleaning:</strong> Most robots just do floors and walls. The AquaSense 2 goes further by skimming the surface for floating debris and clarifying the water with a built-in agent dispenser (optional). This holistic approach aims to replace multiple pool tools with one device.</p><p><strong>Intelligent Path Planning:</strong> Powered by a quad-core processor and 20 sensors, it maps your pool with precision. It doesn't just bounce around; it plans an S-shaped route for the floor and an N-shaped route for walls, ensuring 100% coverage with no missed spots.</p><p><strong>Cordless Convenience:</strong> The freedom from cords is its biggest selling point. It parks itself at the waterline when the battery is low or the cycle is finished, making retrieval easy. The charging dock is simple and unobtrusive.</p>",
+    "features": "<ul><li><strong>5-in-1 Cleaning:</strong> Floor, walls, waterline, surface skimming, and water clarification.</li><li><strong>Cordless Design:</strong> No cables to tangle or trip over.</li><li><strong>Intelligent Mapping:</strong> Advanced sensors for precise navigation and coverage.</li><li><strong>Auto-Parking:</strong> Surfaces automatically for easy retrieval.</li><li><strong>App Control:</strong> Monitor status and cleaning history via smartphone.</li></ul>",
+    "pros": [
+      "Unique surface skimming capability",
+      "Completely cordless operation",
+      "Advanced mapping technology",
+      "Sleek, futuristic design",
+      "Easy to retrieve with auto-parking"
+    ],
+    "cons": [
+      "Newer brand with less long-term reliability data",
+      "Premium price point",
+      "Battery life limits cleaning time for massive pools",
+      "Clarifying agent is a consumable cost"
+    ],
+    "verdict": "The Beatbot AquaSense 2 is an ambitious and impressive machine. It attempts to do everything—and largely succeeds. The addition of surface skimming is a game-changer for pools near trees. If you are willing to invest in the latest technology and want a truly all-in-one cleaning solution, the AquaSense 2 offers a glimpse into the future of pool maintenance.",
+    "alternatives": [
+      { "name": "Aiper Seagull Pro", "sku": "Aiper-Seagull-Pro" },
+      { "name": "Dolphin Sigma", "sku": "Dolphin-Sigma" }
+    ],
+    "image_url": "https://m.media-amazon.com/images/I/71Eb7aj+5gL._AC_SL1500_.jpg",
+    "approx_price": 899
   }
 ]

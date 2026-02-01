@@ -17,7 +17,7 @@ export default function Navbar() {
               <Link href="/reviews" className="nav-link">Reviews</Link>
             </li>
             <li className="nav-item">
-              <Link href="/top-lists" className="nav-link">Top Lists</Link>
+              <Link href="/best-of" className="nav-link">Best of</Link>
             </li>
             <li className="nav-item">
               <Link href="/guides" className="nav-link">Guides</Link>
