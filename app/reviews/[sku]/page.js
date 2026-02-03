@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   if (!product) return {};
 
   return {
-    title: `${product.name} Review - Robot Pool Cleaner Reviews`,
+    title: `${product.name} Review - The Pool Lab`,
     description: product.description,
     openGraph: {
       title: `${product.name} Review`,

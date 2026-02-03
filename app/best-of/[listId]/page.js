@@ -16,12 +16,12 @@ export async function generateMetadata({ params }) {
   if (!list) return {};
 
   return {
-    title: `${list.title} - PoolBot Reviews`,
+    title: `${list.title} - The Pool Lab`,
     description: list.description,
     openGraph: {
       title: list.title,
       description: list.description,
-      images: ['https://via.placeholder.com/1200x630?text=PoolBot+Reviews'],
+      images: ['https://via.placeholder.com/1200x630?text=The+Pool+Lab'],
     },
   };
 }

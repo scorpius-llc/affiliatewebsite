@@ -4,7 +4,17 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link href="/" className="navbar-brand">PoolBot Reviews</Link>
+        <Link href="/" className="navbar-brand d-flex align-items-center">
+          {/* Logo - 16:9 Aspect Ratio */}
+          <div style={{ width: '160px', height: '90px', position: 'relative', marginRight: '10px' }}>
+            <img 
+              src="/images/ThePoolLab.png"
+              alt="The Pool Lab Logo" 
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            />
+          </div>
+          <span className="d-none d-sm-inline">The Pool Lab</span>
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>

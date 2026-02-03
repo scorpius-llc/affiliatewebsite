@@ -4,16 +4,16 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Robot Pool Cleaner Reviews - Your Ultimate Guide',
+  title: 'The Pool Lab - Expert Robot Pool Cleaner Reviews',
   description: 'Find the best robot pool cleaner for your home. We provide in-depth reviews, top 10 lists, and maintenance guides.',
   openGraph: {
-    title: 'Robot Pool Cleaner Reviews - Your Ultimate Guide',
+    title: 'The Pool Lab - Expert Robot Pool Cleaner Reviews',
     description: 'Find the best robot pool cleaner for your home.',
-    url: 'https://poolbotreviews.com',
-    siteName: 'PoolBot Reviews',
+    url: 'https://thepoollab.com',
+    siteName: 'The Pool Lab',
     images: [
       {
-        url: 'https://via.placeholder.com/1200x630?text=PoolBot+Reviews',
+        url: 'https://via.placeholder.com/1200x630?text=The+Pool+Lab',
         width: 1200,
         height: 630,
       },

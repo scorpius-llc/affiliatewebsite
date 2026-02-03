@@ -1,11 +1,38 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    /* Background Image Setup */
+    background-image: url('/images/ThePoolLabBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa; /* Fallback color */
+}
+
+/* White overlay at 50% opacity */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% white overlay */
+    z-index: -1;
 }
 
 .hero-section {
-    background-color: #e3f2fd;
+    background-color: rgba(227, 242, 253, 0.9); /* Slightly transparent hero */
     border-bottom: 1px solid #dee2e6;
+}
+
+/* Ensure main content containers have a solid background for readability */
+.container.my-5 {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 h1, h2, h3, h4 {
@@ -41,4 +68,5 @@ a:hover {
 
 footer {
     margin-top: auto;
+    background-color: #343a40; /* Keep footer solid dark */
 }
