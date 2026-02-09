@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import products from '../../../data/products.json';
+import config from '../../../data/config.json';
 
 // Generate segments for all products
 export async function generateStaticParams() {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }) {
 
 export default function ReviewPage({ params }) {
   const product = products.find((p) => p.sku === params.sku);
-  const amazonTag = "poolbotreviews-20";
+  const amazonTag = config.amazonAffiliateTag;
 
   if (!product) {
     notFound();

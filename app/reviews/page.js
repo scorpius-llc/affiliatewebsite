@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import products from '../../data/products.json';
+import config from '../../data/config.json';
 
 export default function Reviews() {
   const [selectedBrand, setSelectedBrand] = useState('all');
@@ -81,7 +82,7 @@ export default function Reviews() {
                 <div className="d-flex gap-2">
                   <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary flex-grow-1">Read Review</Link>
                   <a 
-                    href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=poolbotreviews-20` : '#'} 
+                    href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${config.amazonAffiliateTag}` : '#'}
                     target="_blank" 
                     className={`btn btn-warning flex-grow-1 fw-bold ${!product.asin ? 'disabled' : ''}`}
                   >

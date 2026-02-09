@@ -12,7 +12,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best Overall</h5>
               <p className="card-text">The top performers that balance price, features, and reliability.</p>
-              <Link href="/bestof/overall" className="btn btn-primary mt-auto">View List</Link>
+              <Link href="/best-of/overall" className="btn btn-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>
@@ -21,7 +21,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best Value</h5>
               <p className="card-text">Great cleaning performance without breaking the bank.</p>
-              <Link href="/bestof/value" className="btn btn-outline-primary mt-auto">View List</Link>
+              <Link href="/best-of/value" className="btn btn-outline-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best for Leaves</h5>
               <p className="card-text">Models with large baskets and powerful suction designed specifically for heavy debris.</p>
-              <Link href="/bestof/leaves" className="btn btn-outline-primary mt-auto">View List</Link>
+              <Link href="/best-of/leaves" className="btn btn-outline-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best for Above-Ground</h5>
               <p className="card-text">Lightweight, compact cleaners perfect for smaller pools and flat floors.</p>
-              <Link href="/bestof/above-ground" className="btn btn-outline-primary mt-auto">View List</Link>
+              <Link href="/best-of/above-ground" className="btn btn-outline-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best for Vinyl Liners</h5>
               <p className="card-text">Gentle cleaners that won't damage or stretch your delicate pool liner.</p>
-              <Link href="/bestof/vinyl" className="btn btn-outline-primary mt-auto">View List</Link>
+              <Link href="/best-of/vinyl" className="btn btn-outline-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function BestOf() {
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">Best for In-Ground</h5>
               <p className="card-text">Powerful machines built to handle deep ends, diving wells, and vertical walls.</p>
-              <Link href="/bestof/inground" className="btn btn-outline-primary mt-auto">View List</Link>
+              <Link href="/best-of/inground" className="btn btn-outline-primary mt-auto">View List</Link>
             </div>
           </div>
         </div>

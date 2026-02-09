@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import bestLists from '../../../data/best-lists.json';
 import products from '../../../data/products.json';
+import config from '../../../data/config.json';
 
 // Generate segments for all lists
 export async function generateStaticParams() {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }) {
 
 export default function BestOfPage({ params }) {
   const list = bestLists.find((l) => l.id === params.listId);
-  const amazonTag = "poolbotreviews-20";
+  const amazonTag = config.amazonAffiliateTag;
 
   if (!list) {
     notFound();
@@ -85,7 +86,7 @@ export default function BestOfPage({ params }) {
               <div className="card-body text-center d-flex flex-column">
                 <h5 className="card-title h6">{product.name}</h5>
                 <p className="card-text small text-muted flex-grow-1">{product.reason}</p>
-                <Link href={`#review-${product.sku}`} className="btn btn-outline-primary btn-sm mt-2">Read Mini-Review</Link>
+                <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
               </div>
             </div>
           </div>
