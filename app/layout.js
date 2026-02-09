@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'The Pool Lab - Expert Robot Pool Cleaner Reviews',
     description: 'Find the best robot pool cleaner for your home.',
-    url: 'https://thepoollab.com',
+    url: 'https://www.the-pool-lab.com',
     siteName: 'The Pool Lab',
     images: [
       {

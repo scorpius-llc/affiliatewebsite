@@ -7,7 +7,7 @@ export default function About() {
           
           <section className="mb-5">
             <h2>Who We Are</h2>
-            <p>Welcome to The Pool Lab! I'm [Your Name], a pool enthusiast and tech geek who got tired of spending hours manually scrubbing my pool every weekend. My journey into the world of robotic pool cleaners began out of necessity, but it quickly turned into a passion for finding the most efficient, reliable, and cost-effective ways to keep a pool sparkling clean.</p>
+            <p>Welcome to The Pool Lab! I'm Tom, a pool enthusiast and tech geek who got tired of spending hours manually scrubbing my pool every weekend. My journey into the world of robotic pool cleaners began out of necessity, but it quickly turned into a passion for finding the most efficient, reliable, and cost-effective ways to keep a pool sparkling clean.</p>
             <p>I created this site to share my research, experiences, and honest opinions with fellow pool owners. Whether you have a small above-ground pool or a massive in-ground oasis, my goal is to help you cut through the marketing hype and find the perfect robot helper for your needs.</p>
           </section>
 

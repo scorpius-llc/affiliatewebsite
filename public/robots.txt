@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://poolbotreviews.com/sitemap.xml
+Sitemap: https://www.the-pool-lab.com/sitemap.xml
