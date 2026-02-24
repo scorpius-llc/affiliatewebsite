@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import config from '../data/config.json';
 
 export default function Navbar() {
   return (
@@ -8,12 +9,12 @@ export default function Navbar() {
           {/* Logo - 16:9 Aspect Ratio */}
           <div style={{ width: '160px', height: '90px', position: 'relative', marginRight: '10px' }}>
             <img 
-              src="/images/ThePoolLab.png"
-              alt="The Pool Lab Logo" 
+              src={config.logoPath}
+              alt={`${config.siteName} Logo`} 
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
           </div>
-          <span className="d-none d-sm-inline">The Pool Lab</span>
+          <span className="d-none d-sm-inline">{config.siteName}</span>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
@@ -24,16 +25,16 @@ export default function Navbar() {
               <Link href="/" className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <Link href="/reviews" className="nav-link">Reviews</Link>
+              <Link href="/reviews/" className="nav-link">Reviews</Link>
             </li>
             <li className="nav-item">
-              <Link href="/best-of" className="nav-link">Best of</Link>
+              <Link href="/best-of/" className="nav-link">Best of</Link>
             </li>
             <li className="nav-item">
-              <Link href="/guides" className="nav-link">Guides</Link>
+              <Link href="/guides/" className="nav-link">Guides</Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" className="nav-link">About</Link>
+              <Link href="/about/" className="nav-link">About</Link>
             </li>
           </ul>
         </div>

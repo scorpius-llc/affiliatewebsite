@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import articles from '../data/articles.json';
+import config from '../data/config.json';
 
 export default function Home() {
   // Sort articles by date (newest first)
@@ -11,8 +12,8 @@ export default function Home() {
     <>
       <header className="hero-section text-center py-5">
         <div className="container">
-          <h1 className="display-4">Dive into a Cleaner Pool</h1>
-          <p className="lead">Your ultimate guide to robot pool cleaners, reviews, and maintenance tips.</p>
+          <h1 className="display-4">{config.heroTitle}</h1>
+          <p className="lead">{config.heroSubtitle}</p>
           <Link href="/reviews/" className="btn btn-primary btn-lg">Read Reviews</Link>
         </div>
       </header>
@@ -33,7 +34,7 @@ export default function Home() {
           <div className="col-md-4">
             <div className="p-4 mb-3 bg-light rounded">
               <h4>About Us</h4>
-              <p className="mb-0">We are passionate about keeping pools sparkling clean with the latest technology. Our reviews are unbiased and thorough.</p>
+              <p className="mb-0">{config.aboutSnippet}</p>
             </div>
             <div className="p-4">
               <h4>Quick Links</h4>

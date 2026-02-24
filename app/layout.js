@@ -3,19 +3,20 @@ import '../public/css/style.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BootstrapClient from '../components/BootstrapClient';
+import config from '../data/config.json';
 
 export const metadata = {
-  metadataBase: new URL('https://www.the-pool-lab.com'),
-  title: 'The Pool Lab - Expert Robot Pool Cleaner Reviews',
-  description: 'Find the best robot pool cleaner for your home. We provide in-depth reviews, top 10 lists, and maintenance guides.',
+  metadataBase: new URL(`https://${config.domain}`),
+  title: `${config.siteName} - ${config.tagline}`,
+  description: `Find the best ${config.siteName.toLowerCase()} for your home. We provide in-depth reviews, top 10 lists, and maintenance guides.`,
   openGraph: {
-    title: 'The Pool Lab - Expert Robot Pool Cleaner Reviews',
-    description: 'Find the best robot pool cleaner for your home.',
-    url: 'https://www.the-pool-lab.com',
-    siteName: 'The Pool Lab',
+    title: `${config.siteName} - Expert Reviews`,
+    description: `Find the best ${config.siteName.toLowerCase()} for your home.`,
+    url: `https://${config.domain}`,
+    siteName: config.siteName,
     images: [
       {
-        url: 'https://via.placeholder.com/1200x630?text=The+Pool+Lab',
+        url: `https://via.placeholder.com/1200x630?text=${config.siteName.replace(/ /g, '+')}`,
         width: 1200,
         height: 630,
       },
