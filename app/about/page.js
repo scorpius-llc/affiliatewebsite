@@ -1,3 +1,5 @@
+import PageFaqs from '../../components/PageFaqs';
+
 export default function About() {
   return (
     <div className="container my-5">
@@ -21,6 +23,8 @@ export default function About() {
               <p>These commissions come at <strong>no extra cost to you</strong>. They help support the website, cover hosting costs, and allow us to continue creating free, high-quality content. We only recommend products that we believe will add value to our readers. Our reviews are based on thorough research and, whenever possible, hands-on testing.</p>
             </div>
           </section>
+
+          <PageFaqs />
 
           <hr className="my-5" />
 

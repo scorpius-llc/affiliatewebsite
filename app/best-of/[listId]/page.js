@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import bestLists from '../../../data/best-lists.json';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
+import PageFaqs from '../../../components/PageFaqs';
 
 // Generate segments for all lists
 export async function generateStaticParams() {
@@ -34,6 +35,28 @@ export default function BestOfPage({ params }) {
   if (!list) {
     notFound();
   }
+
+  // Create a map of product SKUs to their ASINs for easy lookup
+  const productAsinMap = products.reduce((acc, product) => {
+    acc[product.sku] = product.asin;
+    return acc;
+  }, {});
+
+  // Function to process placeholders in a string
+  const processPlaceholders = (text) => {
+    let processedText = text || '';
+    const placeholders = processedText.match(/\{\{.*?\}\}/g) || [];
+    placeholders.forEach(placeholder => {
+      const key = placeholder.replace(/\{\{AFFILIATE_|\}\}/g, '');
+      const sku = Object.keys(productAsinMap).find(k => k.toUpperCase().includes(key));
+      if (sku) {
+        const asin = productAsinMap[sku];
+        const url = `https://www.amazon.com/dp/${asin}?tag=${amazonTag}`;
+        processedText = processedText.replace(placeholder, url);
+      }
+    });
+    return processedText;
+  };
 
   // Merge list-specific product data with full product details
   const listProducts = list.products.map(item => {
@@ -85,8 +108,11 @@ export default function BestOfPage({ params }) {
               </div>
               <div className="card-body text-center d-flex flex-column">
                 <h5 className="card-title h6">{product.name}</h5>
-                <p className="card-text small text-muted flex-grow-1">{product.reason}</p>
-                <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
+                <div 
+                  className="card-text small text-muted flex-grow-1"
+                  dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} 
+                />
+                <Link href={`/reviews/${product.sku}/`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
               </div>
             </div>
           </div>
@@ -118,7 +144,7 @@ export default function BestOfPage({ params }) {
               return (
                 <tr key={product.sku}>
                   <td className="fw-bold">
-                    <Link href={`/reviews/${product.sku}`} className="text-decoration-none">{product.name}</Link>
+                    <Link href={`/reviews/${product.sku}/`} className="text-decoration-none">{product.name}</Link>
                   </td>
                   <td><span className="badge bg-info text-dark">{product.badge}</span></td>
                   <td>${product.approx_price}</td>
@@ -165,11 +191,12 @@ export default function BestOfPage({ params }) {
                     </div>
                   </div>
                   
-                  <p className="card-text mt-3">{product.description}</p>
-                  <p className="card-text"><strong>Why we picked it:</strong> {product.reason}</p>
+                  <div className="card-text mt-3" dangerouslySetInnerHTML={{ __html: processPlaceholders(product.description) }} />
+                  <p className="card-text"><strong>Why we picked it:</strong></p>
+                  <div className="card-text" dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} />
                   
                   <div className="d-flex gap-2 mt-4">
-                    <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary">Read Full Review</Link>
+                    <Link href={`/reviews/${product.sku}/`} className="btn btn-outline-primary">Read Full Review</Link>
                     <a 
                       href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}` : '#'} 
                       target="_blank" 
@@ -190,12 +217,15 @@ export default function BestOfPage({ params }) {
         <div className="col-lg-8 mx-auto">
           <div className="card border-primary">
             <div className="card-header bg-primary text-white">
-              <h3 class="h5 mb-0">Buying Advice</h3>
+              <h3 className="h5 mb-0">Buying Advice</h3>
             </div>
             <div className="card-body" dangerouslySetInnerHTML={{ __html: list.buying_advice }} />
           </div>
         </div>
       </div>
+
+      <PageFaqs />
+
     </div>
   );
 }

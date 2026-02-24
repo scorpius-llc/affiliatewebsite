@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import articles from '../../../data/articles.json';
+import PageFaqs from '../../../components/PageFaqs';
 
 // Generate segments for all articles
 export async function generateStaticParams() {
@@ -50,8 +51,10 @@ export default function BlogPost({ params }) {
           <div className="col-lg-8">
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
             
+            <PageFaqs />
+
             <div className="mt-5">
-              <Link href="/reviews" className="btn btn-primary btn-lg">Find Your Perfect Robot</Link>
+              <Link href="/reviews/" className="btn btn-primary btn-lg">Find Your Perfect Robot</Link>
             </div>
           </div>
         </div>
