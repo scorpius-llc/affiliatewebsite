@@ -6,6 +6,7 @@
 # Node artifact files
 node_modules/
 dist/
+.next/
 
 # Compiled Java class files
 *.class
@@ -23,8 +24,11 @@ dist/
 target/
 dist/
 
-# JetBrains IDE
-.idea/
+# JetBrains IDE - Ignore user-specific files but share project-level settings
+.idea/*
+!.idea/misc.xml
+!.idea/runConfigurations/
+!.idea/vcs.xml
 
 # Unit test reports
 TEST*.xml
@@ -47,4 +51,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
