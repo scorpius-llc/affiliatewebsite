@@ -1,7 +1,15 @@
 import PageFaqs from '../../components/PageFaqs';
 import config from '../../data/config.json';
+import aboutContent from '../../data/about-page.json';
 
 export default function About() {
+  // Replace placeholders in the about page content
+  const processedWhoWeAre = aboutContent.whoWeAre
+    .replace('{siteName}', config.siteName)
+    .replace('{author}', config.author);
+  const processedPrivacyPolicy = aboutContent.privacyPolicy
+    .replace(/{siteName}/g, config.siteName);
+
   return (
     <div className="container my-5">
       <div className="row">
@@ -10,8 +18,7 @@ export default function About() {
           
           <section className="mb-5">
             <h2>Who We Are</h2>
-            <p>Welcome to {config.siteName}! I'm {config.author}, a pool enthusiast and tech geek who got tired of spending hours manually scrubbing my pool every weekend. My journey into the world of robotic pool cleaners began out of necessity, but it quickly turned into a passion for finding the most efficient, reliable, and cost-effective ways to keep a pool sparkling clean.</p>
-            <p>I created this site to share my research, experiences, and honest opinions with fellow pool owners. Whether you have a small above-ground pool or a massive in-ground oasis, my goal is to help you cut through the marketing hype and find the perfect robot helper for your needs.</p>
+            <p>{processedWhoWeAre}</p>
           </section>
 
           <hr className="my-5" />
@@ -31,20 +38,14 @@ export default function About() {
 
           <section className="mb-5">
             <h2>Privacy Policy</h2>
-            <p>Your privacy is important to us. This privacy policy explains what personal data we collect and how we use it.</p>
-            <ul>
-              <li><strong>Log Files:</strong> Like many other Web sites, we make use of log files. The information inside the log files includes internet protocol (IP) addresses, type of browser, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</li>
-              <li><strong>Cookies:</strong> We use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</li>
-              <li><strong>Third-Party Advertisers:</strong> Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include Amazon. These third-party ad servers or ad networks use technology to the advertisements and links that appear on {config.siteName} send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</li>
-            </ul>
-            <p>{config.siteName} has no access to or control over these cookies that are used by third-party advertisers.</p>
+            <div dangerouslySetInnerHTML={{ __html: processedPrivacyPolicy }} />
           </section>
 
           <hr className="my-5" />
 
           <section className="mb-5">
             <h2>Contact Us</h2>
-            <p>Have a question about a specific model? Need advice for your pool setup? Or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
+            <p>{aboutContent.contactIntro}</p>
             
             <form action={`mailto:${config.contactEmail}`} method="post" encType="text/plain">
               <div className="mb-3">

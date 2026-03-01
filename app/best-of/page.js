@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import bestLists from '../../data/best-lists.json';
 import PageFaqs from '../../components/PageFaqs';
+import pageContent from '../../data/best-of-page.json';
 
 export default function BestOf() {
   return (
     <div className="container my-5">
-      <h1 className="mb-4 text-center">Best Robot Pool Cleaners: Curated Lists</h1>
-      <p className="lead text-center mb-5">We've tested dozens of models to help you find the perfect cleaner for your specific pool and budget.</p>
+      <h1 className="mb-4 text-center">{pageContent.title}</h1>
+      <p className="lead text-center mb-5">{pageContent.subtitle}</p>
 
       <div className="row mb-5">
         {bestLists.map((list, index) => (
@@ -15,7 +16,7 @@ export default function BestOf() {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{list.title}</h5>
                 <p className="card-text">{list.description}</p>
-                <Link href={`/best-of/${list.id}/`} className={`btn ${index === 0 ? 'btn-primary' : 'btn-outline-primary'} mt-auto`}>View List</Link>
+                <Link href={`/best-of/${list.id}`} className={`btn ${index === 0 ? 'btn-primary' : 'btn-outline-primary'} mt-auto`}>View List</Link>
               </div>
             </div>
           </div>
@@ -24,8 +25,8 @@ export default function BestOf() {
       
       <div className="row">
         <div className="col-lg-8 mx-auto text-center">
-          <h3>Why Trust Our Lists?</h3>
-          <p className="text-muted">Our rankings are based on real-world performance metrics, including cleaning cycle efficiency, filtration capacity, and long-term durability. We don't just look at the spec sheet; we look at how these robots perform in actual pools.</p>
+          <h3>{pageContent.whyTrustTitle}</h3>
+          <p className="text-muted">{pageContent.whyTrustContent}</p>
         </div>
       </div>
 

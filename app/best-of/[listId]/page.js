@@ -112,7 +112,7 @@ export default function BestOfPage({ params }) {
                   className="card-text small text-muted flex-grow-1"
                   dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} 
                 />
-                <Link href={`/reviews/${product.sku}/`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
+                <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function BestOfPage({ params }) {
               return (
                 <tr key={product.sku}>
                   <td className="fw-bold">
-                    <Link href={`/reviews/${product.sku}/`} className="text-decoration-none">{product.name}</Link>
+                    <Link href={`/reviews/${product.sku}`} className="text-decoration-none">{product.name}</Link>
                   </td>
                   <td><span className="badge bg-info text-dark">{product.badge}</span></td>
                   <td>${product.approx_price}</td>
@@ -196,7 +196,7 @@ export default function BestOfPage({ params }) {
                   <div className="card-text" dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} />
                   
                   <div className="d-flex gap-2 mt-4">
-                    <Link href={`/reviews/${product.sku}/`} className="btn btn-outline-primary">Read Full Review</Link>
+                    <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary">Read Full Review</Link>
                     <a 
                       href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}` : '#'} 
                       target="_blank" 

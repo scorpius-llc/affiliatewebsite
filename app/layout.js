@@ -5,24 +5,43 @@ import Footer from '../components/Footer';
 import BootstrapClient from '../components/BootstrapClient';
 import config from '../data/config.json';
 
+// Function to replace topic placeholders
+const replacePlaceholders = (text) => {
+  return text
+    .replace(/{topicPlural}/g, config.topicPlural)
+    .replace(/{topicSingular}/g, config.topicSingular);
+};
+
+const siteTitle = `${config.siteName} - ${replacePlaceholders(config.tagline)}`;
+const siteDescription = replacePlaceholders(config.tagline);
+
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
-  title: `${config.siteName} - ${config.tagline}`,
-  description: `Find the best ${config.siteName.toLowerCase()} for your home. We provide in-depth reviews, top 10 lists, and maintenance guides.`,
+  alternates: {
+    canonical: '/',
+  },
+  title: siteTitle,
+  description: siteDescription,
   openGraph: {
-    title: `${config.siteName} - Expert Reviews`,
-    description: `Find the best ${config.siteName.toLowerCase()} for your home.`,
+    title: siteTitle,
+    description: siteDescription,
     url: `https://${config.domain}`,
     siteName: config.siteName,
     images: [
       {
-        url: `https://via.placeholder.com/1200x630?text=${config.siteName.replace(/ /g, '+')}`,
+        url: '/images/ThePoolLabOG.png', // Relative path to your image
         width: 1200,
         height: 630,
       },
     ],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: ['/images/ThePoolLabOG.png'], // Must be an array
   },
 };
 

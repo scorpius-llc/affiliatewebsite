@@ -2,12 +2,14 @@
   "siteName": "The Pool Lab",
   "domain": "www.the-pool-lab.com",
   "apexDomain": "the-pool-lab.com",
-  "tagline": "Your ultimate guide to robot pool cleaners, reviews, and maintenance tips.",
+  "topicPlural": "Robot Pool Cleaners",
+  "topicSingular": "Robot Pool Cleaner",
+  "tagline": "Your ultimate guide to {topicPlural}, reviews, and maintenance tips.",
   "author": "Tom",
   "contactEmail": "thomas@scorpius-llc.com",
   "amazonAffiliateTag": "scorpiusllc-20",
   "logoPath": "/images/ThePoolLab.png",
-  "heroTitle": "Dive into a Cleaner Pool",
-  "heroSubtitle": "Your ultimate guide to robot pool cleaners, reviews, and maintenance tips.",
+  "heroTitle": "Find the Perfect {topicSingular}",
+  "heroSubtitle": "Your ultimate guide to {topicPlural}, reviews, and maintenance tips.",
   "aboutSnippet": "We are passionate about finding the best products to make your life easier. Our reviews are unbiased and thorough."
 }

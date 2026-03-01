@@ -1,12 +1,6 @@
-import Link from 'next/link';
-import Accordion from '../../../components/Accordion';
+import Accordion from '../Accordion';
 
-export const metadata = {
-  title: 'Maintenance & Care - The Pool Lab',
-  description: 'Tips to extend the life of your robot and keep it running smoothly.',
-};
-
-export default function MaintenanceCare() {
+export default function MaintenanceGuide() {
   const maintenanceSteps = [
     {
       title: "Cleaning the Filters",
@@ -95,19 +89,5 @@ export default function MaintenanceCare() {
     }
   ];
 
-  return (
-    <div className="container my-5">
-      <nav aria-label="breadcrumb">
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link href="/guides">Guides</Link></li>
-          <li className="breadcrumb-item active" aria-current="page">Maintenance & Care</li>
-        </ol>
-      </nav>
-
-      <h1 className="mb-4">Maintenance & Care</h1>
-      <p className="lead mb-5">Keep your robot pool cleaner running like new with these simple maintenance tips.</p>
-
-      <Accordion items={maintenanceSteps} />
-    </div>
-  );
+  return <Accordion items={maintenanceSteps} />;
 }
