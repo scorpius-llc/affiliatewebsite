@@ -1,72 +1,218 @@
+:root {
+    --bg-dark: #111111;
+    --bg-card: #1A1A1A;
+    --accent-orange: #FF5A1F;
+    --accent-blue: #00B3FF;
+    --text-light: #F5F5F5;
+    --text-muted: #a0a0a0;
+    --border-color: #333333;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    /* Background Image Setup */
-    background-image: url('/images/ThePoolLabBackground.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #f8f9fa; /* Fallback color */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
-/* White overlay at 50% opacity */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 50% white overlay */
-    z-index: -1;
-}
-
+/* --- Hero Section --- */
 .hero-section {
-    background-color: rgba(227, 242, 253, 0.9); /* Slightly transparent hero */
-    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+    padding: 120px 20px;
+    background: linear-gradient(90deg, rgba(0, 100, 140, 0.2) 0%, rgba(255, 90, 31, 0.1) 100%), var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Ensure main content containers have a solid background for readability */
-.container.my-5 {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
 }
 
-h1, h2, h3, h4 {
-    color: #0056b3;
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
+/* --- CTA Buttons --- */
+.btn-primary-cta {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-a:hover {
-    text-decoration: underline;
+.btn-primary-cta:hover {
+    background-color: #e04e1b;
+    transform: scale(1.05);
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: #0056b3 !important;
+.btn-secondary-cta {
+    color: var(--text-light);
+    border-color: var(--text-light);
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.nav-link {
-    color: #555 !important;
+.btn-secondary-cta:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
-.nav-link:hover {
-    color: #0056b3 !important;
+/* --- Trust Signals --- */
+.trust-strip {
+    padding: 80px 0;
 }
 
-.nav-link.active {
-    color: #0056b3 !important;
-    font-weight: bold;
+.trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: var(--text-muted);
 }
 
+.trust-item svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 1rem;
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+/* --- Featured Products --- */
+.featured-section {
+    padding: 100px 0;
+}
+
+.featured-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.featured-card-img-container {
+    background-color: #fff;
+    padding: 1rem;
+    height: 180px; /* Smaller, uniform height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-card-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.featured-card .card-body {
+    background-color: var(--bg-card);
+    color: var(--text-light);
+}
+
+.featured-card .card-title {
+    color: var(--accent-blue);
+}
+
+.featured-card .card-text {
+    color: var(--text-muted);
+}
+
+.featured-card .btn-outline-primary {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.featured-card .btn-outline-primary:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+
+/* --- General Styles --- */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--bg-dark) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .navbar-brand {
+    color: var(--text-light) !important;
+}
+
+.navbar .nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent-blue) !important;
+}
+
+/* --- Footer --- */
 footer {
-    margin-top: auto;
-    background-color: #343a40; /* Keep footer solid dark */
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+footer a {
+    color: var(--text-light);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .trust-item {
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+    .featured-section, .trust-strip {
+        padding: 60px 0;
+    }
 }

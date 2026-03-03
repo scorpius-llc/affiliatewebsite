@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Pool Lab Deploy to test" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;thomas@scorpius-llc.com&quot;,&quot;projectId&quot;:&quot;the-pool-lab&quot;,&quot;projectName&quot;:&quot;The-Pool-Lab&quot;,&quot;projectNumber&quot;:797634543823}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
+  <configuration default="false" name="ThermaPeak deploy to test" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;thomas@scorpius-llc.com&quot;,&quot;projectId&quot;:&quot;thermapeak&quot;,&quot;projectName&quot;:&quot;ThermaPeak&quot;,&quot;projectNumber&quot;:925569592209}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
     <option name="allowRunningInParallel" value="false" />
     <option name="buildEnvironment" value="Local" />
     <option name="buildpacksEnv">
@@ -17,7 +17,7 @@
     <option name="environmentVariables">
       <map />
     </option>
-    <option name="imagePath" value="us-east1-docker.pkg.dev/the-pool-lab/the-pool-lab-repo/the-pool-lab-test" />
+    <option name="imagePath" value="us-east1-docker.pkg.dev/thermapeak/thermapeak-repo/thermapeak-test" />
     <option name="loadingAvailableBuilders" value="false" />
     <option name="managedAuthentication" value="ALLOW_UNAUTHENTICATED" />
     <option name="managedRegion" value="us-east1" />
@@ -29,7 +29,7 @@
       <list />
     </option>
     <option name="serviceAccount" value="" />
-    <option name="serviceName" value="the-pool-lab-test" />
+    <option name="serviceName" value="thermapeak-test" />
     <option name="timeout" value="300" />
     <option name="vpcConnector" value="" />
     <method v="2" />

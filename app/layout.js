@@ -29,7 +29,7 @@ export const metadata = {
     siteName: config.siteName,
     images: [
       {
-        url: '/images/ThePoolLabOG.png', // Relative path to your image
+        url: '/images/ThermaPeakOG.png', // Relative path to your image
         width: 1200,
         height: 630,
       },
@@ -41,7 +41,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: ['/images/ThePoolLabOG.png'], // Must be an array
+    images: ['/images/ThermaPeakOG.png'], // Must be an array
   },
 };
 

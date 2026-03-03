@@ -3,18 +3,18 @@ import config from '../data/config.json';
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <Link href="/" className="navbar-brand d-flex align-items-center">
           {/* Logo - 16:9 Aspect Ratio */}
-          <div style={{ width: '160px', height: '90px', position: 'relative', marginRight: '10px' }}>
+          <div style={{ width: '160px', height: '90px', position: 'relative' }}>
             <img 
               src={config.logoPath}
               alt={`${config.siteName} Logo`} 
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
           </div>
-          <span className="d-none d-sm-inline">{config.siteName}</span>
+          <span className="visually-hidden">{config.siteName}</span>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
