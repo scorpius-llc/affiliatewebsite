@@ -1,482 +1,145 @@
 [
   {
-    "sku": "Dolphin-Nautilus-CC-Plus",
-    "brand": "Dolphin",
-    "name": "Dolphin Nautilus CC Plus",
-    "asin": "B00Q8M0NWE",
-    "description": "A popular choice for many pool owners. It features clever cleaning technology and easy-to-clean filters.",
-    "long_description": "The Dolphin Nautilus CC Plus has cemented its status as a best-seller for a reason: it strikes the perfect balance between performance and simplicity. Designed for in-ground pools up to 50 feet, this workhorse doesn't rely on your pool's pump or filter, operating independently to scrub floors and walls with impressive efficiency. Its 'set it and forget it' philosophy appeals to pool owners who want a sparkling clean pool without the hassle of complex programming.",
-    "who_is_this_for": "<p>The Dolphin Nautilus CC Plus is ideal for <strong>pool owners who value simplicity and reliability</strong> over high-tech features. It is perfect for those who want a 'plug-and-play' solution—simply drop it in and walk away.</p><p>It is best suited for:</p><ul><li><strong>In-ground pools up to 50 feet</strong> in length.</li><li>Owners who <strong>don't need smartphone control</strong> or Wi-Fi connectivity.</li><li>Anyone looking for a low-maintenance machine with <strong>easy-to-clean filters</strong>.</li><li>All pool surface types (gunite, vinyl, fiberglass, tile).</li></ul>",
-    "who_should_skip": "<p>You should skip this model if:</p><ul><li><strong>You want smart features:</strong> If you want to control your cleaner with a smartphone app or receive push notifications, look at the <strong>Polaris 9650iQ Sport</strong> instead.</li><li><strong>You have a lot of fine dust/sand:</strong> While it can handle fine debris, you'll need to buy the ultra-fine filters separately. The <strong>Dolphin Premier</strong> comes with multiple filter options out of the box.</li><li><strong>You want a caddy included:</strong> This unit is heavy, and carrying it can be a chore. A caddy is an extra expense with this model.</li></ul>",
-    "detailed_analysis": "<p><strong>Cleaning Performance:</strong> The Nautilus CC Plus utilizes Maytronics' <em>CleverClean</em> technology, which scans your pool to determine the most efficient path. In practice, this means it doesn't just wander aimlessly; it systematically covers the entire pool floor and climbs the walls to scrub the waterline. The dual scrubbing brushes spin twice as fast as the unit moves, effectively dislodging stuck-on algae and stubborn dirt that suction cleaners often miss.</p><p><strong>Filtration System:</strong> One of the biggest upgrades over older models is the top-load cartridge system. Instead of wrestling with a messy debris bag on the bottom of the unit, you simply pop open the top hatch and lift out the two large filter cartridges. They rinse clean in seconds with a garden hose. The standard filters are excellent for leaves and larger debris, though you might want to invest in the ultra-fine filters (sold separately) if you deal with fine dust or sand.</p><p><strong>Ease of Use:</strong> This is a true plug-and-play device. There is no assembly required. You simply plug the power supply into a standard outlet, drop the cleaner in the pool, and press the single button on the control unit. It runs a standard 2-hour cycle and then shuts off automatically. The lack of Bluetooth or Wi-Fi might be a downside for tech enthusiasts, but for most users, the simplicity is a major plus.</p><p><strong>Durability & Maintenance:</strong> The unit feels robust and well-built. The tracks provide excellent traction on gunite, vinyl, and fiberglass surfaces. Maintenance is minimal—mostly just rinsing the filters and occasionally checking the impeller for debris. However, the lack of a swivel on the 60-foot cable can lead to tangling if you don't properly coil the cord after each use.</p>",
-    "features": "<ul><li><strong>CleverClean Navigation:</strong> Smart scanning ensures complete pool coverage in a 2-hour cycle.</li><li><strong>Dual Scrubbing Brushes:</strong> Active brushing attacks algae and bacteria on floors and walls.</li><li><strong>Top-Load Filter Cartridges:</strong> Easy-access system makes cleaning the filters a breeze.</li><li><strong>Energy Efficient:</strong> Costs about 5 cents per hour to operate, independent of your pool's filtration system.</li><li><strong>Weekly Scheduler:</strong> The power supply allows you to schedule cleanings for every day, every other day, or every 3rd day.</li></ul>",
+    "sku": "SunHome-Cold-Plunge-Pro",
+    "brand": "Sun Home",
+    "name": "Sun Home Cold Plunge Pro",
+    "product_type": "Cold Plunge",
+    "category": "cold-plunge",
+    "price_range": "luxury",
+    "cooling_type": "integrated-chiller",
+    "heating_type": null,
+    "footprint": "large",
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": false,
+      "outdoor_ready": true,
+      "beginner_friendly": false,
+      "portable": false,
+      "diy_friendly": false
+    },
+    "tags": ["luxury", "chiller", "all-in-one", "premium", "recovery"],
+    "score": {
+      "temperature_control": 9,
+      "insulation": 8,
+      "durability": 9,
+      "ease_of_use": 9,
+      "maintenance": 7,
+      "value": 7
+    },
+    "asin": null,
+    "description": "A premium all-in-one cold plunge with an integrated cooling system designed for consistent low temperatures.",
+    "long_description": "The Sun Home Cold Plunge Pro is positioned as a high-end, turn-key cold immersion system for people who want reliable water temperatures without constantly buying ice. The core value is consistency: set a target temperature, keep the water cold day after day, and pair it with filtration/sanitation so the tub is practical for frequent use.",
+    "who_is_this_for": "<p>This is ideal for <strong>serious cold-plunge users</strong> who want an all-in-one system and plan to use it multiple times per week.</p><ul><li><strong>Home gym owners</strong> building a recovery corner</li><li>People who want <strong>minimal DIY</strong> and predictable temps</li><li>Users who value <strong>sanitation/filtration</strong> as part of the package</li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the <strong>lowest-cost entry</strong> into cold plunging</li><li>You only plunge occasionally and don’t mind <strong>buying ice</strong></li><li>You lack space, power access, or prefer a <strong>portable inflatable</strong> tub</li></ul>",
+    "detailed_analysis": "<p><strong>What matters most:</strong> premium cold plunges live or die by temperature stability, water hygiene, and overall convenience. This model targets the user who wants a repeatable routine, not a weekend experiment.</p><p><strong>Ownership experience:</strong> the win is that you avoid the \"bag-of-ice\" problem and can build a consistent protocol. The tradeoff is price and the reality that any integrated system requires basic maintenance (filters, water chemistry, cleaning).</p>",
+    "features": "<ul><li><strong>Integrated cooling</strong> for consistent cold water sessions</li><li><strong>All-in-one design</strong> built for routine use</li><li><strong>Filtration/sanitation</strong> oriented toward longer water life</li><li><strong>Premium build</strong> intended for durability</li></ul>",
     "pros": [
-      "Outstanding wall-climbing and waterline scrubbing",
-      "Top-access filters are incredibly easy to clean",
-      "Simple plug-and-play operation with no setup",
-      "Weekly scheduler function built into the power supply",
-      "Energy efficient and quiet operation"
+      "Designed for consistent cold-water routines",
+      "Convenience-focused all-in-one ownership experience",
+      "Better fit for frequent plungers than ice-based tubs"
     ],
     "cons": [
-      "Cable lacks a swivel, leading to occasional tangling",
-      "Does not include a caddy (sold separately)",
-      "No smartphone app or remote control features",
-      "Ultra-fine filters for sand/silt must be purchased separately"
+      "High upfront cost versus DIY/portable tubs",
+      "Still requires basic ongoing maintenance",
+      "Not the most portable option"
     ],
-    "verdict": "The Dolphin Nautilus CC Plus is the 'Goldilocks' of robotic pool cleaners—it's just right for the vast majority of pool owners. It skips the fancy bells and whistles like Wi-Fi and remote steering in favor of raw cleaning power and reliability. If you want a cleaner that you can drop in the pool and trust to do a fantastic job every single time, this is the one to buy. It's a solid investment that pays for itself in time saved and chemical costs reduced.",
+    "verdict": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
     "alternatives": [
-      { "name": "Dolphin Premier", "sku": "Dolphin-Premier" },
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
+      { "name": "Plunge All-In", "sku": "Plunge-All-In" },
+      { "name": "Renu Therapy Cold Stoic 2.0", "sku": "Renu-Cold-Stoic-2-0" }
     ],
-    "image_url": "https://brand.maytronics.com/m/4f1de64dc1be474a/EP_Large-Dolphin-Nautilus-CC-Plus-2025.webp",
-    "approx_price": 799
+    "image_url": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
+    "image_fallback": "/images/StockColdPlunge.png",
+    "approx_price": 13999
   },
   {
-    "sku": "Dolphin-Premier",
-    "brand": "Dolphin",
-    "name": "Dolphin Premier",
-    "asin": "B0124QB2EU",
-    "description": "Features multi-media filtration and an anti-tangle swivel cable, making it a top-tier choice.",
-    "long_description": "The Dolphin Premier represents the pinnacle of Maytronics' engineering, designed for pool owners who refuse to compromise on filtration versatility. Unlike most cleaners that force you to choose between a bag or a cartridge, the Premier gives you both. It's a machine built for variable conditions, handling everything from fine desert dust to heavy autumn leaf falls with equal aplomb.",
-    "who_is_this_for": "<p>The Dolphin Premier is the ultimate choice for <strong>owners who deal with varying types of debris</strong> throughout the year. It's particularly well-suited for:</p><ul><li>Pools surrounded by trees (thanks to the oversized leaf bag).</li><li>Areas with fine dust or pollen (using the micro-cartridges).</li><li>Users who are tired of untangling cables.</li><li>Those who want a single machine that can adapt to any season.</li></ul>",
-    "who_should_skip": "<p>Consider looking elsewhere if:</p><ul><li><strong>You are on a strict budget:</strong> The premium features come with a premium price tag. The <strong>Nautilus CC Plus</strong> is cheaper if you don't need the swivel or leaf bag.</li><li><strong>You want Wi-Fi control:</strong> Like the Nautilus, the Premier is not a 'smart' cleaner. It focuses on cleaning performance over app connectivity.</li></ul>",
-    "detailed_analysis": "<p><strong>Filtration Versatility:</strong> The Premier's claim to fame is its <em>Multi-Media Filtration</em> system. Out of the box, you get three options: micro-filters for invisible algae and dust, standard cartridges for daily cleaning, and an oversized debris bag for leaves. This flexibility is unmatched in the industry. Swapping them takes seconds, allowing you to customize the robot for the specific mess in your pool that day.</p><p><strong>Navigation & Mobility:</strong> Equipped with <em>Smart Nav</em> software, the Premier calculates the optimal pattern for your pool shape. What truly sets it apart, however, is the patented 360-degree anti-tangle swivel. This mechanical device on the cable prevents the cord from knotting up, a common frustration with lesser models. This ensures the robot can reach every corner of a 50-foot pool without getting leashed by its own power cord.</p><p><strong>Power & Efficiency:</strong> Dual 24-volt DC motors deliver immense torque, allowing the Premier to scale vertical walls with ease. It scrubs the waterline aggressively, removing the oily buildup that often accumulates there. Despite this power, it is highly energy-efficient, costing pennies to run per cycle compared to a pressure-side cleaner that requires a booster pump.</p>",
-    "features": "<ul><li><strong>Multi-Media Filtration:</strong> Includes micro-cartridges, standard cartridges, and an oversized leaf bag.</li><li><strong>Anti-Tangle Swivel:</strong> Patented 360-degree swivel cable prevents knotting and ensures full pool coverage.</li><li><strong>Smart Nav Software:</strong> Advanced microprocessor scans and maps the pool for an optimized cleaning path.</li><li><strong>Dual DC Motors:</strong> Provides powerful suction and wall-climbing torque while reducing energy consumption by 90%.</li><li><strong>3-Year Warranty:</strong> One of the best warranties in the residential market, offering long-term peace of mind.</li></ul>",
-    "pros": [
-      "Unmatched filtration options for every debris type",
-      "Swivel cable effectively eliminates tangling issues",
-      "Powerful dual motors for superior wall climbing",
-      "Full 3-year warranty covers parts and labor",
-      "Includes an oversized leaf bag for heavy debris"
-    ],
-    "cons": [
-      "Significantly heavier than other models",
-      "No Wi-Fi or smartphone app control",
-      "Higher price point than the Nautilus series",
-      "Changing filter media requires swapping bottom plates"
-    ],
-    "verdict": "The Dolphin Premier is a filtration beast. If your pool faces a barrage of leaves in the fall and fine pollen in the spring, this is the only robot you should consider. The inclusion of the anti-tangle swivel solves the single biggest complaint about robotic cleaners. While it lacks 'smart' features, its mechanical intelligence and brute cleaning force make it a superior choice for maintaining a pristine pool year-round.",
+    "sku": "SunHome-Cold-Plunge-Portable-Horizontal",
+    "brand": "Sun Home",
+    "name": "Sun Home Cold Plunge Portable (Horizontal)",
+    "product_type": "Cold Plunge",
+    "category": "cold-plunge",
+    "price_range": "mid-range",
+    "cooling_type": "external-chiller-compatible",
+    "heating_type": null,
+    "footprint": "medium",
+    "suitability": {
+      "tall_user_friendly": false,
+      "small_space_friendly": true,
+      "outdoor_ready": true,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "tags": ["portable", "mid-range", "small-space", "beginner-friendly"],
+    "score": {
+      "temperature_control": 6,
+      "insulation": 7,
+      "durability": 7,
+      "ease_of_use": 8,
+      "maintenance": 6,
+      "value": 8
+    },
+    "asin": null,
+    "description": "A more portable cold plunge format from Sun Home aimed at convenient at-home cold therapy.",
+    "long_description": "The Sun Home Portable Cold Plunge is designed to bring a more flexible footprint to cold immersion. Compared with rigid, heavier premium tubs, a portable format can make placement easier while still aiming for an upgraded ownership experience compared with basic inflatables.",
+    "who_is_this_for": "<p>Best for <strong>users who want a more flexible setup</strong> than a permanent tub.</p><ul><li>Apartment/garage users who may need to <strong>move or reposition</strong> the unit</li><li>People who want a <strong>step up from cheap inflatables</strong></li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want a fully built-in luxury aesthetic</li><li>You want the absolute cheapest way to try plunging</li></ul>",
+    "detailed_analysis": "<p>Portable plunges are about <strong>space efficiency</strong> and convenience. The key evaluation points are insulation, ease of draining/cleaning, and whether the system supports repeatable cold sessions without feeling flimsy.</p>",
+    "features": "<ul><li><strong>Portable format</strong> for flexible placement</li><li><strong>Cold immersion oriented design</strong></li><li><strong>Recovery-focused</strong> for frequent routines</li></ul>",
+    "pros": ["More flexible placement than rigid tubs", "Better long-term routine fit than basic ice-only setups"],
+    "cons": ["Not as premium-feeling as top-tier fixed tubs", "Still requires maintenance and cleaning"],
+    "verdict": "A solid middle ground for someone who wants an upgraded plunge routine but values portability and footprint flexibility.",
     "alternatives": [
-      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" },
-      { "name": "Polaris P39", "sku": "Polaris-P39" }
+      { "name": "Plunge (Standard)", "sku": "Plunge-Standard" },
+      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
     ],
-    "image_url": "https://brand.maytronics.com/m/a588d1bffdb4c27/EP_Medium-Dolphin-Premier.jpg",
-    "approx_price": 1599
+    "image_url": "https://sunhomesaunas.com/products/portable-cold-plunge-tub",
+    "image_fallback": "/images/StockColdPlunge.png",
+    "approx_price": 4099
   },
   {
-    "sku": "Dolphin-Nautilus-Titan",
-    "brand": "Dolphin",
-    "name": "Dolphin Nautilus Titan",
-    "asin": "B09XFCQJPH",
-    "description": "The newest evolution of the Nautilus line, featuring Wi-Fi connectivity and enhanced agility.",
-    "long_description": "The Dolphin Nautilus Titan is the next-generation successor to the legendary Nautilus series. It takes everything people loved about the CC Plus—reliability, scrubbing power, and simplicity—and drags it into the modern era with Wi-Fi connectivity and a lighter, more agile body. It represents the new standard for mid-range robotic pool cleaners.",
-    "who_is_this_for": "<p>The Titan is the perfect upgrade for:</p><ul><li><strong>Tech-forward owners</strong> who want to control their cleaner from the MyDolphin Plus app.</li><li>Those who want a <strong>lighter robot</strong> that is easier to lift (it's significantly lighter than the CC Plus).</li><li>Pools with <strong>vertical tile lines</strong> that need aggressive scrubbing.</li><li>Anyone who wants the latest and greatest technology.</li></ul>",
-    "who_should_skip": "<p>You might stick with the CC Plus if:</p><ul><li><strong>You don't care about apps:</strong> If you just want to push a button, the CC Plus is cheaper and just as effective.</li><li><strong>You have a weak Wi-Fi signal:</strong> The smart features require a good connection at the pool pad.</li></ul>",
-    "detailed_analysis": "<p><strong>Smart Connectivity:</strong> The biggest headline is the addition of Wi-Fi. Unlike the CC Plus, the Titan connects to the MyDolphin Plus app. This allows you to schedule cleanings, check the robot's status, and even steer it manually (on some models) right from your phone. It brings the convenience of the high-end Sigma to a more affordable price point.</p><p><strong>Enhanced Agility:</strong> The Titan features a redesigned body that is lighter and more hydrodynamic. This allows it to move faster and climb walls with less effort. The water release system has also been improved, so when you pull it out, the water dumps instantly, saving your back.</p><p><strong>Filtration:</strong> It retains the excellent top-load basket design but with a slightly larger capacity. The basket is easy to rinse and comes with fine filters standard, ensuring your water stays polished.</p>",
-    "features": "<ul><li><strong>Wi-Fi Connectivity:</strong> Control and schedule from anywhere with the MyDolphin Plus app.</li><li><strong>Lightweight Design:</strong> Ergonomic build makes it easy to lift and handle.</li><li><strong>PowerStream Mobility:</strong> Enhanced navigation for better wall and waterline coverage.</li><li><strong>Top-Load Basket:</strong> Large capacity filter basket for easy maintenance.</li><li><strong>Quick Water Release:</strong> Drains rapidly upon removal from the pool.</li></ul>",
-    "pros": [
-      "Wi-Fi app control is a major upgrade over the CC Plus",
-      "Lighter and easier to handle than older models",
-      "Excellent waterline scrubbing performance",
-      "Modern, sleek design",
-      "Energy efficient operation"
-    ],
-    "cons": [
-      "More expensive than the standard Nautilus CC Plus",
-      "Requires a strong Wi-Fi signal to use smart features",
-      "No swivel on the cable (still!)",
-      "Caddy is sold separately"
-    ],
-    "verdict": "The Dolphin Nautilus Titan is a worthy successor to the throne. It successfully modernizes the Nautilus line without losing the core reliability that made it famous. If you've been waiting for a Nautilus with an app, this is it. While it costs a bit more than the classic CC Plus, the added convenience of Wi-Fi and the lighter weight make it a compelling upgrade for the modern pool owner.",
+    "sku": "Plunge-Standard",
+    "brand": "Plunge",
+    "name": "Plunge (Standard)",
+    "product_type": "Cold Plunge",
+    "category": "cold-plunge",
+    "price_range": "premium",
+    "cooling_type": "integrated-chiller",
+    "heating_type": null,
+    "footprint": "large",
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": false,
+      "outdoor_ready": true,
+      "beginner_friendly": false,
+      "portable": false,
+      "diy_friendly": false
+    },
+    "tags": ["premium", "chiller", "all-in-one", "recovery"],
+    "score": {
+      "temperature_control": 8,
+      "insulation": 8,
+      "durability": 8,
+      "ease_of_use": 9,
+      "maintenance": 7,
+      "value": 8
+    },
+    "asin": null,
+    "description": "A popular dedicated cold plunge tub brand focused on at-home cold water therapy with a purpose-built system.",
+    "long_description": "Plunge is one of the best-known consumer cold plunge brands. The Standard model is aimed at people who want a purpose-built tub rather than a DIY stock-tank setup, with a more refined ownership experience and better consistency than ice-only solutions.",
+    "who_is_this_for": "<p>Ideal for <strong>regular plungers</strong> who want a dedicated system and a more premium user experience than DIY builds.</p><ul><li>Users prioritizing <strong>consistency</strong></li><li>People building a <strong>recovery routine</strong> around training</li></ul>",
+    "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You’re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
+    "detailed_analysis": "<p>With brand-name plunges, the difference is typically consistency and convenience: easier setup, more polished design, and a system meant to be used frequently. Evaluate: cooling performance, sanitation approach, maintenance overhead, and footprint.</p>",
+    "features": "<ul><li><strong>Purpose-built tub</strong> for cold immersion</li><li><strong>Designed for repeat use</strong></li><li><strong>Premium ownership experience</strong> compared with DIY tubs</li></ul>",
+    "pros": ["Purpose-built and refined experience", "Better routine consistency than ice-only setups"],
+    "cons": ["Higher cost than portable tubs", "Maintenance still required"],
+    "verdict": "A mainstream, purpose-built choice for frequent cold plungers who want less DIY and more repeatability.",
     "alternatives": [
-      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" },
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
+      { "name": "Plunge All-In", "sku": "Plunge-All-In" },
+      { "name": "Sun Home Cold Plunge Pro", "sku": "SunHome-Cold-Plunge-Pro" }
     ],
-    "image_url": "https://www.maytronics.com/dw/image/v2/BGGP_PRD/on/demandware.static/-/Library-Sites-MaytronicsSharedLibrary/default/dw67795726/MTNA/Excci_Titan_Image_OnWhite%20673x850.jpg",
-    "approx_price": 1599
-  },
-  {
-    "sku": "Dolphin-Sigma",
-    "brand": "Dolphin",
-    "name": "Dolphin Sigma",
-    "asin": "B07CZ1XVZX",
-    "description": "A high-end model with a gyroscope and triple motors for unparalleled navigation and cleaning coverage.",
-    "long_description": "The Dolphin Sigma is the flagship of the Dolphin residential line, combining every advanced feature Maytronics has to offer into a single unit. It is the world's first robotic pool cleaner to feature a gyroscope for navigation, ensuring precise tracking in even the most irregularly shaped pools. If you want the smartest, most powerful Dolphin available, the Sigma is it.",
-    "who_is_this_for": "<p>The Sigma is built for the <strong>uncompromising pool owner</strong> who wants the best of the best. It is the right choice for:</p><ul><li><strong>Large or irregularly shaped pools</strong> where standard robots get lost.</li><li>Tech lovers who want <strong>Bluetooth app control</strong> and advanced scheduling.</li><li>Owners who need the <strong>anti-tangle swivel</strong> but also want top-load filters.</li><li>Those dealing with heavy algae who need the power of <strong>triple motors</strong>.</li></ul>",
-    "who_should_skip": "<p>Skip the Sigma if:</p><ul><li><strong>You are budget-conscious:</strong> This is one of the most expensive residential robots on the market.</li><li><strong>You prefer simplicity:</strong> If you don't want to mess with an app or Bluetooth connection, the <strong>Premier</strong> offers similar cleaning power with simpler operation.</li></ul>",
-    "detailed_analysis": "<p><strong>Navigation Technology:</strong> The Sigma's gyroscope is a game-changer. While other robots rely on algorithms and wheel rotations to guess their position, the Sigma knows exactly where it is and where it's heading. This allows it to clean complex free-form pools with 90-degree turns and islands without missing a beat. It moves in straight lines and corrects its course instantly if pushed by a jet.</p><p><strong>Triple Motor Power:</strong> Unlike standard dual-motor robots, the Sigma boasts three commercial-grade 24V motors. This provides immense flow rate for suction and dedicated power for the dual scrubbing brushes. It creates a vacuum seal against the wall that is virtually unbreakable, allowing it to scrub the tile line aggressively.</p><p><strong>Smart Connectivity:</strong> The Sigma connects to your smartphone via Bluetooth, allowing you to schedule cleanings, manually steer the robot for spot cleaning, and view cleaning history. While not Wi-Fi (so you can't control it from work), the local app control is responsive and feature-rich.</p><p><strong>Best-of-Both-Worlds Design:</strong> It combines the best features of the Premier (swivel cable, multi-media filtration) with the best of the Nautilus (top-load access). You get the massive top-load cartridges that are easy to clean, plus the swivel cable that prevents tangles—a combination rarely found in other models.</p>",
-    "features": "<ul><li><strong>Gyroscopic Navigation:</strong> Commercial-grade guidance system for precise tracking in complex pools.</li><li><strong>Triple 24V Motors:</strong> Delivers higher suction power and independent drive control.</li><li><strong>Bluetooth App Control:</strong> Schedule and steer the robot from your smartphone.</li><li><strong>Anti-Tangle Swivel:</strong> Ensures the 60-foot cable remains knot-free during operation.</li><li><strong>Massive Top-Load Filters:</strong> Includes both fine and ultra-fine cartridges for customizable filtration.</li></ul>",
-    "pros": [
-      "Gyroscope ensures 100% pool coverage even in complex shapes",
-      "Combines top-load filters with a swivel cable (rare feature)",
-      "Triple motors provide unmatched suction and scrubbing power",
-      "Bluetooth app allows for manual steering and scheduling",
-      "3-year bumper-to-bumper warranty"
-    ],
-    "cons": [
-      "Very high price point",
-      "Bluetooth range is limited compared to Wi-Fi",
-      "Heavier unit due to triple motors",
-      "Does not include a caddy standard"
-    ],
-    "verdict": "The Dolphin Sigma is the Tesla of pool cleaners—high-tech, powerful, and expensive. It solves every minor annoyance of other models by combining a swivel cable, top-load filters, and gyroscopic navigation into one package. If your budget allows, it is arguably the best residential pool cleaner money can buy, offering a level of precision and power that cheaper models simply cannot match.",
-    "alternatives": [
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" },
-      { "name": "Dolphin Premier", "sku": "Dolphin-Premier" }
-    ],
-    "image_url": "https://brand.maytronics.com/m/3b41b1f63de46e30/EP_Medium-Dolphin-Sigma.jpg",
-    "approx_price": 1899
-  },
-  {
-    "sku": "Polaris-9650iQ-Sport",
-    "brand": "Polaris",
-    "name": "Polaris 9650iQ Sport",
-    "asin": "B08H5X1WZ9",
-    "description": "This smart cleaner connects to Wi-Fi and can be controlled via an app. Excellent for tech-savvy users.",
-    "long_description": "The Polaris 9650iQ Sport is a 4-wheel drive robotic cleaner that brings the legendary Polaris power into the smart home era. It connects directly to your home's Wi-Fi network, allowing you to control it from anywhere in the world via the iAquaLink app. Beyond its brains, it features a rugged 4WD system that can tackle stairs and obstacles that leave other robots spinning their wheels.",
-    "who_is_this_for": "<p>This robot is the top choice for:</p><ul><li><strong>Tech-savvy homeowners</strong> who want full control from their phone.</li><li>Pools with <strong>stairs, benches, and obstacles</strong> that require 4-wheel drive.</li><li>Users who hate lifting heavy robots (thanks to the Lift System).</li><li>Those who want a cleaner that comes with a <strong>premium caddy included</strong>.</li></ul>",
-    "who_should_skip": "<p>Look elsewhere if:</p><ul><li><strong>You have weak Wi-Fi by the pool:</strong> The smart features rely on a strong signal. Without it, you're paying for features you can't use.</li><li><strong>You prefer a simple cleaner:</strong> If you don't want to set up an account and connect to Wi-Fi, a Dolphin Nautilus is simpler.</li></ul>",
-    "detailed_analysis": "<p><strong>iAquaLink Control:</strong> The 9650iQ's standout feature is its connectivity. Unlike Bluetooth models, this robot connects to Wi-Fi. This means you can start a cleaning cycle from your office, check the filter status while on vacation, or update the firmware over the air. The app is intuitive and allows for custom cleaning schedules and modes.</p><p><strong>4-Wheel Drive Agility:</strong> While most robots use tracks, the Polaris uses four large, rugged wheels with dedicated drive motors. This allows it to climb over main drains, scale stairs effortlessly, and navigate rough pool surfaces like pebble tec without getting stuck. The front brushes scrub the surface while the powerful vortex vacuum sucks up debris.</p><p><strong>Easy Lift System:</strong> One of the most practical features is the 'Easy Lift' button. When you press it in the app or on the control box, the robot climbs the wall to the waterline and waits for you. As you pull it out, it automatically evacuates all the water, making it incredibly light to lift onto the deck. No more hauling a heavy, water-filled machine.</p><p><strong>Dirty Canister Indicator:</strong> The robot takes the guesswork out of maintenance. A sensor detects when the filter canister is full and alerts you via the app, ensuring you never run a cycle with a clogged filter.</p>",
-    "features": "<ul><li><strong>Wi-Fi Connectivity:</strong> Full control via the iAquaLink app from anywhere.</li><li><strong>4-Wheel Drive:</strong> Superior traction for climbing stairs and navigating obstacles.</li><li><strong>Easy Lift System:</strong> Automatically surfaces and drains water for effortless removal.</li><li><strong>Dirty Canister Indicator:</strong> Alerts you when it's time to empty the debris.</li><li><strong>Premium Caddy Included:</strong> Comes with a high-quality transport caddy, a rare inclusion at this price point.</li></ul>",
-    "pros": [
-      "True Wi-Fi connectivity for remote control",
-      "4WD system handles stairs better than tracked robots",
-      "Lift system makes removal effortless",
-      "Includes a premium caddy (saves ~$150)",
-      "Large 5-liter debris canister"
-    ],
-    "cons": [
-      "Requires strong Wi-Fi signal at the pool pad",
-      "Can struggle with very fine dust compared to Dolphin's micro-filters",
-      "Cord can still tangle despite the swivel",
-      "Wheels can sometimes leave marks on very soft vinyl liners"
-    ],
-    "verdict": "The Polaris 9650iQ Sport is the smartest robot on this list. If you love smart home tech, this is the cleaner for you. The convenience of the Easy Lift system and the included caddy make it a joy to use daily. While its fine-dust filtration isn't quite as elite as the Dolphin Premier, its ability to navigate complex pools and be controlled from anywhere makes it a top-tier contender.",
-    "alternatives": [
-      { "name": "Dolphin Sigma", "sku": "Dolphin-Sigma" },
-      { "name": "Polaris F9550 Sport", "sku": "Polaris-F9550-Sport" }
-    ],
-    "image_url": "https://cdn.fluidrausa.com/-/media/media-database/products/cleaners/polaris-9650iq/26_polaris_9650iqmmin.png?rev=b52abb68ba60459dad6096751a68b7c6",
-    "approx_price": 1099
-  },
-  {
-    "sku": "Polaris-F9550-Sport",
-    "brand": "Polaris",
-    "name": "Polaris F9550 Sport",
-    "asin": "B00JJ5I7GQ",
-    "description": "Features a rear water propulsion system that allows it to reach debris under stairs and in tight corners.",
-    "long_description": "The Polaris F9550 Sport is the direct predecessor to the 9650iQ. It offers nearly identical mechanical performance—the same rugged 4WD system, the same powerful suction, and the same motion-sensing remote—but without the Wi-Fi connectivity. It's the perfect choice for those who want the power of a top-tier Polaris but don't care about internet-connected appliances.",
-    "who_is_this_for": "<p>This model is perfect for:</p><ul><li>Owners who want <strong>4WD power</strong> for stairs and obstacles.</li><li>Those who want a <strong>motion-sensing remote</strong> (you point, it goes).</li><li>People who want the <strong>Easy Lift system</strong> but don't need an app.</li><li>Pools with heavy leaf loads (large canister).</li></ul>",
-    "who_should_skip": "<p>Skip it if:</p><ul><li><strong>You want app control:</strong> You'll need the 9650iQ for that.</li><li><strong>You have a simple rectangular pool:</strong> A tracked robot like the Dolphin Nautilus might be cheaper and just as effective.</li></ul>",
-    "detailed_analysis": "<p><strong>Motion-Sensing Remote:</strong> Instead of an app, the F9550 comes with a unique kinetic remote. You tilt the remote in the direction you want the robot to go, and it follows. It's like playing a video game and is surprisingly fun and effective for spot cleaning.</p><p><strong>Vortex Vacuum Technology:</strong> The F9550 uses 'Vortex' vacuum technology, which keeps debris suspended in the canister rather than plastering it against the filter walls. This ensures that suction power remains strong from the beginning of the cycle to the end, even as the basket fills up.</p><p><strong>Intelligent Navigation:</strong> It uses <em>ActivMotion Sensor</em> technology to automatically sense its position and adapt its path. This prevents it from getting stuck in corners or flipping over on stairs, a common issue with wheeled robots.</p>",
-    "features": "<ul><li><strong>4-Wheel Drive:</strong> Climbs over obstacles and stairs with ease.</li><li><strong>Motion-Sensing Remote:</strong> Kinetic remote for fun and easy manual control.</li><li><strong>Easy Lift System:</strong> Surfaces on command for easy removal.</li><li><strong>Vortex Vacuum:</strong> Maintains suction power throughout the cleaning cycle.</li><li><strong>7-Day Programmable Timer:</strong> Set your cleaning schedule directly on the control unit.</li></ul>",
-    "pros": [
-      "Excellent traction and stair climbing",
-      "Fun and responsive kinetic remote control",
-      "Large debris canister is easy to empty",
-      "Includes a caddy for storage",
-      "Easy Lift system saves your back"
-    ],
-    "cons": [
-      "No Wi-Fi or app connectivity",
-      "Remote requires line-of-sight",
-      "Slightly older model compared to the iQ series",
-      "Can be aggressive on delicate pool finishes"
-    ],
-    "verdict": "The Polaris F9550 Sport is a proven workhorse. It offers 95% of the performance of the flagship 9650iQ for a lower price, simply by trading Wi-Fi for a physical remote. If you don't need to control your pool cleaner from the grocery store, this is a smarter financial choice that delivers the same rugged, 4-wheel-drive cleaning power.",
-    "alternatives": [
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" },
-      { "name": "Hayward TigerShark QC", "sku": "Hayward-TigerShark-QC" }
-    ],
-    "image_url": "https://cdn.fluidrausa.com/-/media/media-database/products/cleaners/polaris-9550/polaris9550_remote.png?rev=f5eabf30e6324ca294ee427932e2dc1c",
-    "approx_price": 1099
-  },
-  {
-    "sku": "Polaris-P39",
-    "brand": "Polaris",
-    "name": "Polaris P39",
-    "asin": "B01GWSJMQ6",
-    "description": "A pressure-side cleaner that works in all in-ground pools and sweeps, scrubs, and vacuums the bottom and walls.",
-    "long_description": "The Polaris P39 is a different beast entirely. It is a **pressure-side** cleaner, meaning it requires a dedicated booster pump to operate. While this makes installation more complex, it offers unrivaled power for picking up large debris. It is widely considered the best pressure-side cleaner on the market, combining the classic Polaris reliability with modern aerodynamics and a dual-chamber bag.",
-    "who_is_this_for": "<p>The P39 is the specific choice for:</p><ul><li>Pools that <strong>already have a booster pump</strong> installed.</li><li>Owners dealing with <strong>heavy leaf loads</strong> and large debris.</li><li>Those who prefer the reliability of a non-robotic (no electronics in the water) system.</li><li>Pools where fine dust is less of a concern than acorns and twigs.</li></ul>",
-    "who_should_skip": "<p>Definitely skip this if:</p><ul><li><strong>You don't have a booster pump:</strong> Installing one costs hundreds of dollars. Buy a robotic cleaner instead.</li><li><strong>You want energy efficiency:</strong> Running a booster pump + main pump uses significantly more electricity than a low-voltage robot.</li></ul>",
-    "detailed_analysis": "<p><strong>Hydraulic Power:</strong> The P39 uses the water pressure from your booster pump to create a venturi effect, sucking debris into its bag. Because it doesn't have an onboard motor or computer, there are fewer delicate parts to break. It's purely mechanical, which many long-time pool owners prefer for its longevity.</p><p><strong>PosiDrive System:</strong> Unlike older belt-driven Polaris models (like the 280), the P39 uses a stainless steel chain drive. This eliminates belt stretching and slipping, providing consistent torque to the wheels for better climbing and maneuvering.</p><p><strong>Dual-Chamber Bag:</strong> The SuperBag collects 40% more debris than standard bags. Its dual-chamber design prevents debris from getting trapped in the intake, ensuring suction remains strong even when the bag is nearly full of leaves.</p>",
-    "features": "<ul><li><strong>Pressure-Side Operation:</strong> Powered by a dedicated booster pump for massive suction.</li><li><strong>PosiDrive Chain:</strong> Stainless steel chain drive for durable, slip-free traction.</li><li><strong>Wide Trax Tires:</strong> Provides superior grip on walls and floors.</li><li><strong>TailSweep Pro:</strong> Included tail scrubber sweeps the floor without spraying water out of the pool.</li><li><strong>Dual-Chamber SuperBag:</strong> Massive capacity for leaves and large debris.</li></ul>",
-    "pros": [
-      "Unbeatable for large leaves and acorns",
-      "Extremely durable with few electronic parts",
-      "TailSweep Pro prevents wet windows/decks",
-      "Fast cleaning cycles (often under 2 hours)",
-      "Chain drive is virtually maintenance-free"
-    ],
-    "cons": [
-      "Requires a dedicated booster pump (high energy cost)",
-      "Not a 'robotic' cleaner (no smart mapping)",
-      "Does not filter fine dust as well as cartridges",
-      "Bag must be emptied frequently during leaf season"
-    ],
-    "verdict": "If your pool setup includes a booster pump and you live in a wooded area, the Polaris P39 is likely your best bet. It handles heavy biological debris better than any robotic cartridge cleaner ever could. It's a brute-force tool for a messy job. However, for most modern pools without a booster pump, a robotic cleaner like the Dolphin Nautilus is a more energy-efficient and easier-to-install solution.",
-    "alternatives": [
-      { "name": "Dolphin Premier", "sku": "Dolphin-Premier" },
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
-    ],
-    "image_url": "https://cdn.fluidrausa.com/-/media/media-database/products/cleaners/polaris-p39/p39_1.png?rev=369f337662f24b9ebb56f3a33acc0e4f",
-    "approx_price": 974
-  },
-  {
-    "sku": "Hayward-TigerShark-QC",
-    "brand": "Hayward",
-    "name": "Hayward TigerShark QC",
-    "asin": "B07SS4G926",
-    "description": "Known for its durability and quick cleaning cycle. A workhorse for larger pools.",
-    "long_description": "The Hayward TigerShark QC (Quick Clean) is the tank of the robotic pool cleaner world. It has been around for years and has earned a reputation for being virtually indestructible. While it lacks the sleek looks and smart features of newer models, it makes up for it with raw durability and a simple, effective cleaning cycle that gets the job done year after year.",
-    "who_is_this_for": "<p>The TigerShark is built for:</p><ul><li>Owners who value <strong>longevity and durability</strong> above all else.</li><li>Pools with <strong>heavy debris</strong> that might damage flimsier robots.</li><li>Those who want a fast cleaning option (90-minute Quick Clean cycle).</li><li>Users who prefer a simple cartridge system over bags.</li></ul>",
-    "who_should_skip": "<p>Pass on this if:</p><ul><li><strong>You have a bad back:</strong> This unit is heavy (over 21 lbs) and holds water, making it tough to pull out.</li><li><strong>You want smart features:</strong> It's old-school technology. No apps, no Wi-Fi.</li><li><strong>You have a vinyl liner:</strong> While it works, its aggressive tracks are better suited for gunite.</li></ul>",
-    "detailed_analysis": "<p><strong>Built to Last:</strong> The TigerShark feels substantial. The plastic is thick, the tracks are heavy-duty, and the internal motor is sealed tight. It's not uncommon to hear of TigerSharks lasting 7-10 years with minimal maintenance, which is rare in the world of pool robotics.</p><p><strong>Quick Clean Cycle:</strong> The 'QC' stands for Quick Clean. This mode allows the robot to perform a rapid 90-minute cleaning cycle, perfect for touch-ups before a party. The standard cycle is 3 hours and covers every inch of the pool, including walls and the waterline.</p><p><strong>Filtration:</strong> It uses a reinforced cartridge filter that slides out from the bottom. While bottom-access filters are less convenient than top-load ones (you have to flip the robot over), the TigerShark's filters are huge and easy to hose off. They trap everything from leaves to fine silt.</p>",
-    "features": "<ul><li><strong>Quick Clean Mode:</strong> 90-minute rapid cycle for fast touch-ups.</li><li><strong>Intelligent Microprocessor:</strong> Learns your pool's size for an efficient cleaning pattern.</li><li><strong>Powerful Vacuum:</strong> On-board pump sucks up debris while scrubbing brushes clean the surface.</li><li><strong>Reinforced Cartridges:</strong> Durable filter elements that last longer than standard mesh.</li><li><strong>3-Hour Standard Cycle:</strong> Deep cleaning mode for floors, walls, and waterline.</li></ul>",
-    "pros": [
-      "Legendary durability and build quality",
-      "Quick Clean cycle is a great time-saver",
-      "Excellent climbing ability on gunite pools",
-      "Simple, mechanical operation with few failure points",
-      "Filters are easy to clean once removed"
-    ],
-    "cons": [
-      "Heavy and difficult to remove from the pool",
-      "Bottom-access filters are inconvenient",
-      "Dated design compared to modern competitors",
-      "Can be rough on vinyl liners"
-    ],
-    "verdict": "The Hayward TigerShark QC is an oldie but a goodie. It's the pickup truck of pool cleaners—not pretty, not smart, but it works hard and lasts forever. If you are tired of replacing flimsy plastic robots every two years, the TigerShark is a refreshing change of pace. Just be prepared for a bit of a workout when lifting it out of the water.",
-    "alternatives": [
-      { "name": "Hayward SharkVac XL", "sku": "Hayward-SharkVac-XL" },
-      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" }
-    ],
-    "image_url": "https://commerce.hayward-pool-assets.com/magento/2026/W3RC9990CUB/TigerShark_QC_Robotic_Cleaner_RC9990CUB_LEFT_3561.png",
-    "approx_price": 1489
-  },
-  {
-    "sku": "Hayward-SharkVac-XL",
-    "brand": "Hayward",
-    "name": "Hayward SharkVac XL",
-    "asin": "B07SR4M42F",
-    "description": "Features smart steering technology for an efficient cleaning pattern and a large debris container.",
-    "long_description": "The Hayward SharkVac XL is the smarter, slightly more modern sibling to the TigerShark. It introduces top-access filtration to the Hayward line, addressing the biggest complaint about the TigerShark. It uses smart steering technology to clean the pool floor and walls efficiently, making it a solid mid-range option for those loyal to the Hayward brand.",
-    "who_is_this_for": "<p>This cleaner is a great fit for:</p><ul><li>Hayward equipment owners who want to stick with the brand.</li><li>Users who want <strong>top-access filters</strong> for easy cleaning.</li><li>Pools up to 20x40 feet.</li><li>Those looking for a reliable floor and wall cleaner.</li></ul>",
-    "who_should_skip": "<p>Consider alternatives if:</p><ul><li><strong>You need waterline scrubbing:</strong> The SharkVac XL climbs walls but isn't as aggressive on the waterline as the Dolphin Triton PS.</li><li><strong>You want a swivel cable:</strong> Cord tangling can be an issue here.</li></ul>",
-    "detailed_analysis": "<p><strong>Top-Access Convenience:</strong> The standout feature of the SharkVac XL is the top-access debris container. You simply pop the lid, lift out the cartridge, and rinse it. It's a massive improvement over flipping the unit upside down.</p><p><strong>Smart Steering:</strong> It utilizes an efficient cleaning pattern that covers the pool floor thoroughly. While it doesn't map the pool like the high-end Dolphins, it's much more logical than random-bounce cleaners, ensuring it doesn't miss large patches.</p><p><strong>Energy Efficiency:</strong> The SharkVac XL is designed to be energy efficient, using about the same amount of energy as a standard light bulb. It runs independently of your pool's filtration system, reducing backpressure on your main pump.</p>",
-    "features": "<ul><li><strong>Top-Access Filter:</strong> Easy removal for quick cleaning.</li><li><strong>Smart Steering:</strong> Efficient cleaning pattern reduces cycle time.</li><li><strong>Floor and Wall Cleaning:</strong> Covers the entire pool surface up to the waterline.</li><li><strong>Out-of-Water Sensor:</strong> Protects the motor by shutting off if the unit drives out of the pool.</li><li><strong>Simple Operation:</strong> No hoses or hookups required.</li></ul>",
-    "pros": [
-      "Top-access filters are very convenient",
-      "Solid build quality typical of Hayward",
-      "Good floor and wall coverage",
-      "Energy efficient operation",
-      "Easy to maintain"
-    ],
-    "cons": [
-      "Struggles with aggressive waterline scrubbing",
-      "No swivel on the cable",
-      "Heavier than comparable Dolphin models",
-      "Filter cartridges can be pricey to replace"
-    ],
-    "verdict": "The Hayward SharkVac XL is a solid, dependable cleaner that fixes the ergonomic flaws of the TigerShark. It's a great middle-of-the-road option that offers good cleaning performance and Hayward reliability. While it lacks the advanced features of the latest Dolphins or Polaris iQ models, it's a safe, durable choice for a straightforward pool.",
-    "alternatives": [
-      { "name": "Hayward TigerShark QC", "sku": "Hayward-TigerShark-QC" },
-      { "name": "Dolphin Nautilus Titan", "sku": "Dolphin-Nautilus-Titan" }
-    ],
-    "image_url": "https://commerce.hayward-pool-assets.com/magento/2026/RC9742WCCUBY/sharkvac_xl_left_3434.png",
-    "approx_price": 1599
-  },
-  {
-    "sku": "Hayward-W3PVS20JST-Poolvergnuegen",
-    "brand": "Hayward",
-    "name": "Hayward Poolvergnuegen",
-    "asin": "B07SPM1Z5X",
-    "description": "A 2-wheel suction cleaner with patented self-adjusting turbine vanes for maximum power at any flow.",
-    "long_description": "The Hayward Poolvergnuegen (The PoolCleaner) is a legendary suction-side cleaner. Unlike the robots on this list, it plugs into your skimmer or dedicated suction line and uses your pool pump's power to move. It is famous for its ability to handle large debris without clogging and its robust 2-wheel drive system that navigates obstacles with ease.",
-    "who_is_this_for": "<p>This is the best choice for:</p><ul><li>Owners who want a <strong>suction-side cleaner</strong> (no electricity in the pool).</li><li>Pools with <strong>variable speed pumps</strong> (it works well at low flow).</li><li>Those who want a 'set it and forget it' cleaner that stays in the pool 24/7.</li><li>Budget-conscious buyers who don't want to spend $800+.</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li><strong>Your pump is weak:</strong> It relies entirely on your pool pump's suction.</li><li><strong>You want walls scrubbed:</strong> It climbs walls but doesn't scrub them like a robot with brushes.</li><li><strong>You want fine dust filtration:</strong> It sends debris to your pool filter, so you'll be backwashing more often.</li></ul>",
-    "detailed_analysis": "<p><strong>Uncloggable Design:</strong> The Poolvergnuegen features patented self-adjusting turbine vanes. These flexible paddles allow large debris like leaves and rocks to pass through the cleaner without jamming the engine. This makes it incredibly reliable in leafy pools.</p><p><strong>2-Wheel Drive:</strong> The robust tires have deep treads that allow it to climb over main drains and uneven surfaces. It has a pre-programmed steering sequence that causes the left wheel to periodically reverse, turning the cleaner to ensure it covers the whole pool and doesn't get stuck in corners.</p><p><strong>Low Flow Efficiency:</strong> One of its biggest selling points is its ability to operate at low suction/flow rates. This makes it the ideal companion for modern variable-speed pumps, allowing you to clean the pool while running the pump on a low, energy-saving setting.</p>",
-    "features": "<ul><li><strong>Self-Adjusting Turbine Vanes:</strong> Allows passage of large debris without clogging.</li><li><strong>2-Wheel Drive:</strong> Deep-tread tires for obstacle climbing.</li><li><strong>Pre-Programmed Steering:</strong> Ensures full pool coverage and prevents getting stuck.</li><li><strong>Adjustable Roller Skirt:</strong> Maintains suction on uneven surfaces.</li><li><strong>Interchangeable Throats:</strong> Optimize suction for different pump strengths.</li></ul>",
-    "pros": [
-      "Extremely reliable and clog-resistant",
-      "Works great with variable speed pumps",
-      "No electricity required in the pool",
-      "Can stay in the pool permanently",
-      "Lower purchase price than robots"
-    ],
-    "cons": [
-      "Increases load on your pool filter",
-      "Does not scrub surfaces (only vacuums)",
-      "Hose can be unsightly in the pool",
-      "Requires proper suction balancing"
-    ],
-    "verdict": "If you prefer the simplicity of a suction cleaner, the Hayward Poolvergnuegen is the gold standard. It's a mechanical marvel that rarely jams and works happily with modern pumps. While it won't scrub your tile line like a Dolphin, it keeps the pool floor spotless with zero effort and zero electricity costs (beyond your pump).",
-    "alternatives": [
-      { "name": "Zodiac Voyager RE4200", "sku": "Zodiac-Voyager-RE4200" },
-      { "name": "Aquabot Breeze IQ", "sku": "Aquabot-Breeze-IQ" }
-    ],
-    "image_url": "https://commerce.hayward-pool-assets.com/magento/2026/W3PVS20JST/2024_The_PoolCleaner_W3PVS20JST_Amazon_Assets_Carousel_02_173e.png",
-    "approx_price": 529
-  },
-  {
-    "sku": "Pentair-Prowler-930",
-    "brand": "Pentair",
-    "name": "Pentair Prowler 930",
-    "asin": "B01N7IZSZJ",
-    "description": "A high-speed scrubbing robotic cleaner with all-surface deep cleaning and a top-access filtration basket.",
-    "long_description": "The Pentair Prowler 930 is essentially a re-badged Dolphin S300i (built by Maytronics for Pentair), which is fantastic news. It means you get the legendary Dolphin cleaning performance and reliability backed by the massive support network of Pentair. It is a premium robot with Bluetooth control, multi-layer filtration, and a caddy included.",
-    "who_is_this_for": "<p>The Prowler 930 is perfect for:</p><ul><li><strong>Pentair loyalists</strong> who want a robot that matches their equipment pad.</li><li>Owners who want <strong>smart control</strong> via Bluetooth.</li><li>Those who need <strong>multi-layer filtration</strong> (fine and ultra-fine).</li><li>Anyone who wants a complete package with a caddy.</li></ul>",
-    "who_should_skip": "<p>Think twice if:</p><ul><li><strong>You are on a budget:</strong> You pay a premium for the Pentair name and the included accessories.</li><li><strong>You don't need the caddy:</strong> You can get similar performance from the Dolphin Nautilus Titan for less.</li></ul>",
-    "detailed_analysis": "<p><strong>Dolphin DNA:</strong> Because it's built on the Maytronics S-Series platform, the Prowler 930 shares the excellent PowerStream mobility system. This allows it to move laterally along the waterline and scrub aggressively. It is fast, efficient, and rarely gets stuck.</p><p><strong>Multi-Layer Filtration:</strong> The basket includes both rough and ultra-fine filters nested together. This allows it to capture leaves and fine silt in a single pass without clogging. It's one of the best filtration systems on the market.</p><p><strong>Smart Control:</strong> You can control the Prowler 930 via the Pentair Home app (Bluetooth). This lets you drive the robot for spot cleaning and set delayed starts. It's a convenient feature for tech-forward pool owners.</p>",
-    "features": "<ul><li><strong>PowerStream Mobility:</strong> Superior waterline scrubbing and navigation.</li><li><strong>Multi-Layer Filtration:</strong> Captures large and fine debris simultaneously.</li><li><strong>Bluetooth Connectivity:</strong> App control for scheduling and steering.</li><li><strong>Premium Caddy Included:</strong> Easy transport and storage.</li><li><strong>Active Scrubbing:</strong> High-speed front brush.</li></ul>",
-    "pros": [
-      "Top-tier cleaning performance (Dolphin tech)",
-      "Excellent multi-layer filtration system",
-      "Includes a high-quality caddy",
-      "Bluetooth app control is useful",
-      "Backed by Pentair's support network"
-    ],
-    "cons": [
-      "Expensive compared to similar Dolphin models",
-      "Bluetooth range is limited",
-      "No swivel on the cable",
-      "App can be finicky to pair"
-    ],
-    "verdict": "The Pentair Prowler 930 is a luxury robot that delivers luxury results. It takes the proven mechanics of the Dolphin S-Series and packages it with Pentair branding and a full accessory kit. If you want a complete, high-performance cleaning solution and don't mind paying for the best, the Prowler 930 is an outstanding choice.",
-    "alternatives": [
-      { "name": "Dolphin Nautilus Titan", "sku": "Dolphin-Nautilus-Titan" },
-      { "name": "Polaris 9650iQ Sport", "sku": "Polaris-9650iQ-Sport" }
-    ],
-    "image_url": "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/cleaners/prowler-cleaners/prowler-910/prowler-910-images/Prowler910-front-whtRT_cr_rez.png.thumb.1280.1280.jpg",
-    "approx_price": 423
-  },
-  {
-    "sku": "Aiper-Scuba-S1",
-    "brand": "Aiper",
-    "name": "Aiper Scuba S1",
-    "asin": "B0FNMJMGXC",
-    "description": "A premium cordless robotic cleaner with caterpillar treads for superior mobility on all pool surfaces.",
-    "long_description": "The Aiper Scuba S1 represents the new wave of **cordless** robotic cleaners. It eliminates the biggest hassle of traditional robots—the cable—replacing it with a rechargeable battery and caterpillar treads. It's designed for those who want a sleek, modern cleaning experience without the tether.",
-    "who_is_this_for": "<p>The Scuba S1 is the future for:</p><ul><li>Owners who <strong>hate dealing with cords</strong>.</li><li>Pools where <strong>power outlets are far away</strong>.</li><li>Those who want a simple, sleek, modern device.</li><li>Pools up to 1600 sq. ft.</li></ul>",
-    "who_should_skip": "<p>Stick to a corded robot if:</p><ul><li><strong>You forget to charge things:</strong> If you don't charge it, you can't clean.</li><li><strong>You have a massive pool:</strong> Battery life is limited (approx. 150 mins).</li><li><strong>You want 'set it and forget it':</strong> You have to fish it out and charge it after every use.</li></ul>",
-    "detailed_analysis": "<p><strong>Cordless Freedom:</strong> The freedom of having no cable cannot be overstated. There is no tangling, no tripping hazard, and no ugly wire floating in your pool. You just drop it in and let it go. It uses caterpillar treads to climb walls effectively, a significant upgrade over older wheel-based cordless models.</p><p><strong>WavePath Navigation:</strong> Aiper uses inertial sensors to map the pool and clean in systematic S-shaped lines. This is much more efficient than random bouncing and ensures better coverage on a single battery charge.</p><p><strong>Eco-Mode:</strong> A unique feature is the Eco-Mode, which wakes the robot up for 45 minutes every 48 hours. This allows you to leave it in the pool for a week (technically), though you still have to charge it eventually.</p>",
-    "features": "<ul><li><strong>Cordless Design:</strong> 100% wire-free operation.</li><li><strong>Caterpillar Treads:</strong> Superior traction for wall climbing.</li><li><strong>WavePath Navigation:</strong> Systematic cleaning pattern.</li><li><strong>150-Minute Runtime:</strong> Sufficient for most standard pools.</li><li><strong>Eco-Mode:</strong> Periodic cleaning for maintenance.</li></ul>",
-    "pros": [
-      "Completely cordless convenience",
-      "Systematic cleaning path (not random)",
-      "Climbs walls effectively",
-      "Sleek, modern design",
-      "Lower price than many corded rivals"
-    ],
-    "cons": [
-      "Must be charged after every use",
-      "Retrieval can be tricky (hook included)",
-      "Debris basket is smaller than corded units",
-      "Long-term battery durability is unproven"
-    ],
-    "verdict": "The Aiper Scuba S1 is a compelling look at the future of pool cleaning. For many owners, the convenience of going cordless outweighs the hassle of charging. It cleans surprisingly well and climbs walls with ease. If you are disciplined enough to charge it regularly, it offers a liberating cleaning experience that corded robots simply can't match.",
-    "alternatives": [
-      { "name": "Aiper Seagull Pro", "sku": "Aiper-Seagull-Pro" },
-      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" }
-    ],
-    "image_url": "https://m.media-amazon.com/images/I/71U00J06E4L._AC_SL1500_.jpg",
-    "approx_price": 579
-  },
-  {
-    "sku": "Aiper-Seagull-Pro",
-    "brand": "Aiper",
-    "name": "Aiper Seagull Pro",
-    "asin": "B0GGHMHD5W",
-    "description": "The world's first cordless robotic cleaner that can clean the floor, walls, and waterline.",
-    "long_description": "The Aiper Seagull Pro is the big brother to the Scuba series, boasting a quad-motor system that delivers serious power in a cordless package. It claims to be the world's first cordless robot that can effectively clean the floor, walls, and waterline, challenging the dominance of corded units.",
-    "who_is_this_for": "<p>This is the ultimate cordless choice for:</p><ul><li>Owners who want <strong>cordless freedom AND waterline cleaning</strong>.</li><li>Larger pools (up to 3200 sq. ft.).</li><li>Those who want a powerful vacuum without the wire.</li><li>Early adopters of new technology.</li></ul>",
-    "who_should_skip": "<p>Pass if:</p><ul><li><strong>You want proven longevity:</strong> Cordless tech is newer and batteries degrade.</li><li><strong>You hate heavy lifting:</strong> It's heavier than the Scuba S1.</li></ul>",
-    "detailed_analysis": "<p><strong>Quad-Motor System:</strong> The Seagull Pro uses a dual-suction and dual-drain motor system. This allows it to process a massive amount of water (130 GPM), giving it suction power comparable to corded units. It can pick up leaves and debris that smaller cordless units leave behind.</p><p><strong>Wall & Waterline Cleaning:</strong> Unlike many battery robots that just do floors, the Seagull Pro climbs all the way to the top. It has a dedicated mode for wall cleaning, allowing you to focus its battery life where you need it most.</p><p><strong>Fast Charging:</strong> It features a rapid charging system that gets the battery full in about 90 minutes, which is impressive for a unit with a 3-hour runtime. This minimizes downtime between cleans.</p>",
-    "features": "<ul><li><strong>Quad-Motor System:</strong> Powerful suction and drive.</li><li><strong>Wall & Waterline Cleaning:</strong> Full pool coverage cordless.</li><li><strong>3-Hour Runtime:</strong> Long-lasting battery for large pools.</li><li><strong>Rapid Charge:</strong> Full recharge in ~90 minutes.</li><li><strong>Dial Control:</strong> Select Floor, Wall, or Auto mode via a dial.</li></ul>",
-    "pros": [
-      "Most powerful cordless robot available",
-      "True waterline cleaning capability",
-      "Long battery life and fast charging",
-      "Large debris inlet",
-      "No cables to tangle"
-    ],
-    "cons": [
-      "Heavy to lift out of the pool",
-      "Charging port plug can be finicky",
-      "Pricey for a cordless unit",
-      "Retrieval requires patience"
-    ],
-    "verdict": "The Aiper Seagull Pro proves that cordless robots are ready for the big leagues. It offers power and coverage that rivals corded units, with the ultimate convenience of being wire-free. While it requires the daily ritual of charging, the trade-off is a pool deck completely free of trip hazards. It's the best cordless cleaner on the market today.",
-    "alternatives": [
-      { "name": "Aiper Scuba S1", "sku": "Aiper-Scuba-S1" },
-      { "name": "Dolphin Premier", "sku": "Dolphin-Premier" }
-    ],
-    "image_url": "https://m.media-amazon.com/images/I/71avyX9pZUL._AC_SL1500_.jpg",
-    "approx_price": 429
-  },
-  {
-    "sku": "BWT-Pool-Robot-ES-Nano",
-    "brand": "BWT",
-    "name": "BWT Pool Robot ES Nano",
-    "asin": "B0GGZ49DZX",
-    "description": "A compact, budget-friendly cleaner designed for smaller pools and above-ground setups.",
-    "long_description": "The BWT Pool Robot ES Nano is a compact powerhouse designed specifically for smaller in-ground pools and above-ground pools. BWT (Best Water Technology) brings its European engineering expertise to this entry-level robot, offering premium filtration and smart navigation at a price that competes with suction-side cleaners. It proves that you don't need a massive machine to get a clean pool.",
-    "who_is_this_for": "<p>The ES Nano is the perfect fit for:</p><ul><li><strong>Small in-ground or above-ground pools</strong> (up to 25 feet).</li><li>Owners on a <strong>tight budget</strong> who still want robotic cleaning.</li><li>Those who want <strong>ultra-fine filtration</strong> (4D filter) standard.</li><li>Users who want a lightweight, easy-to-store unit.</li></ul>",
-    "who_should_skip": "<p>This isn't for you if:</p><ul><li><strong>You have a large pool:</strong> The cable is short and the cleaning cycle is designed for small spaces.</li><li><strong>You need waterline scrubbing:</strong> It focuses primarily on the floor and cove.</li></ul>",
-    "detailed_analysis": "<p><strong>4D Filter Technology:</strong> The standout feature of BWT robots is their 4D filter. It uses elastic loops to trap even the finest particles, down to 2 microns. This is significantly better than standard mesh filters and ensures crystal clear water.</p><p><strong>Smart Navigation:</strong> Despite its small size, it uses a gyroscope and algorithm to scan and map the pool. It adjusts its path to ensure coverage of the entire floor area.</p><p><strong>Compact Design:</strong> Weighing significantly less than standard robots, the ES Nano is incredibly easy to lift in and out of the pool. Its small footprint also makes it easy to store during the off-season.</p>",
-    "features": "<ul><li><strong>4D Hyperfine Filter:</strong> Traps particles as small as 2 microns.</li><li><strong>Smart Navigation:</strong> Gyroscope ensures efficient cleaning patterns.</li><li><strong>Compact & Lightweight:</strong> Easy to handle for any user.</li><li><strong>Floor & Cove Cleaning:</strong> Focuses on the bottom of the pool where dirt settles.</li><li><strong>Plug & Play:</strong> Simple one-button operation.</li></ul>",
-    "pros": [
-      "Incredible filtration performance for the price",
-      "Very lightweight and easy to manage",
-      "Smart navigation avoids random bouncing",
-      "Great value for small pool owners",
-      "Modern, attractive design"
-    ],
-    "cons": [
-      "Short cable limits pool size",
-      "Does not climb walls to the waterline",
-      "Small debris basket fills up quickly",
-      "Not suitable for large debris like big leaves"
-    ],
-    "verdict": "The BWT Pool Robot ES Nano is a fantastic entry-level robot. It brings high-end filtration technology to the budget market. While it won't scrub your waterline like a $1000 robot, it will keep your pool floor spotless and your water clearer than you thought possible. For small pool owners, it's a no-brainer upgrade from manual vacuuming.",
-    "alternatives": [
-      { "name": "Aquabot Breeze IQ", "sku": "Aquabot-Breeze-IQ" },
-      { "name": "Dolphin Nautilus CC Plus", "sku": "Dolphin-Nautilus-CC-Plus" }
-    ],
-    "image_url": "https://m.media-amazon.com/images/I/51KidbjJW2L._AC_SL1416_.jpg",
-    "approx_price": 899
-  },
-  {
-    "sku": "Beatbot-AquaSense-2",
-    "brand": "Beatbot",
-    "name": "Beatbot AquaSense 2",
-    "asin": "B0DPMDQ2RD",
-    "description": "A cutting-edge cordless robot with 5-in-1 cleaning capabilities and intelligent path planning.",
-    "long_description": "The Beatbot AquaSense 2 is a futuristic leap forward in pool cleaning technology. As a fully cordless unit, it eliminates the hassle of cables while delivering a comprehensive 5-in-1 cleaning solution: floor, walls, waterline, surface skimming, and water clarification. It's designed for the modern pool owner who wants a truly autonomous, set-it-and-forget-it experience.",
-    "who_is_this_for": "<p>The AquaSense 2 is perfect for:</p><ul><li><strong>Early adopters</strong> who love the latest tech gadgets.</li><li>Owners who want <strong>surface skimming</strong> included in their robot (a rare feature).</li><li>Those who demand a <strong>cordless experience</strong> without sacrificing power.</li><li>Pools with complex shapes that benefit from advanced mapping.</li></ul>",
-    "who_should_skip": "<p>You might want to wait if:</p><ul><li><strong>You prefer established brands:</strong> Beatbot is a newer player compared to Dolphin or Polaris.</li><li><strong>You have a very deep pool:</strong> Check the depth rating, as some cordless units struggle with extreme depths.</li></ul>",
-    "detailed_analysis": "<p><strong>5-in-1 Cleaning:</strong> Most robots just do floors and walls. The AquaSense 2 goes further by skimming the surface for floating debris and clarifying the water with a built-in agent dispenser (optional). This holistic approach aims to replace multiple pool tools with one device.</p><p><strong>Intelligent Path Planning:</strong> Powered by a quad-core processor and 20 sensors, it maps your pool with precision. It doesn't just bounce around; it plans an S-shaped route for the floor and an N-shaped route for walls, ensuring 100% coverage with no missed spots.</p><p><strong>Cordless Convenience:</strong> The freedom from cords is its biggest selling point. It parks itself at the waterline when the battery is low or the cycle is finished, making retrieval easy. The charging dock is simple and unobtrusive.</p>",
-    "features": "<ul><li><strong>5-in-1 Cleaning:</strong> Floor, walls, waterline, surface skimming, and water clarification.</li><li><strong>Cordless Design:</strong> No cables to tangle or trip over.</li><li><strong>Intelligent Mapping:</strong> Advanced sensors for precise navigation and coverage.</li><li><strong>Auto-Parking:</strong> Surfaces automatically for easy retrieval.</li><li><strong>App Control:</strong> Monitor status and cleaning history via smartphone.</li></ul>",
-    "pros": [
-      "Unique surface skimming capability",
-      "Completely cordless operation",
-      "Advanced mapping technology",
-      "Sleek, futuristic design",
-      "Easy to retrieve with auto-parking"
-    ],
-    "cons": [
-      "Newer brand with less long-term reliability data",
-      "Premium price point",
-      "Battery life limits cleaning time for massive pools",
-      "Clarifying agent is a consumable cost"
-    ],
-    "verdict": "The Beatbot AquaSense 2 is an ambitious and impressive machine. It attempts to do everything—and largely succeeds. The addition of surface skimming is a game-changer for pools near trees. If you are willing to invest in the latest technology and want a truly all-in-one cleaning solution, the AquaSense 2 offers a glimpse into the future of pool maintenance.",
-    "alternatives": [
-      { "name": "Aiper Seagull Pro", "sku": "Aiper-Seagull-Pro" },
-      { "name": "Dolphin Sigma", "sku": "Dolphin-Sigma" }
-    ],
-    "image_url": "https://m.media-amazon.com/images/I/71Eb7aj+5gL._AC_SL1500_.jpg",
-    "approx_price": 899
+    "image_url": "https://plunge.com/products/plunge",
+    "image_fallback": "/images/StockColdPlunge.png",
+    "approx_price": 4990
   }
 ]

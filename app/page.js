@@ -89,7 +89,12 @@ export default function Home() {
               <div key={product.sku} className="col-lg-4 mb-4">
                 <div className="featured-card">
                   <div className="featured-card-img-container">
-                    <img src={product.image_url} className="featured-card-img" alt={product.name} />
+                    <img 
+                      src={product.image_url || (product.category === 'cold-plunge' ? product.image_fallback : '')} 
+                      onError={(e) => { if (product.category === 'cold-plunge') e.currentTarget.src = product.image_fallback }}
+                      className="featured-card-img" 
+                      alt={product.name} 
+                    />
                   </div>
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{product.name}</h5>

@@ -3,16 +3,52 @@
     --bg-card: #1A1A1A;
     --accent-orange: #FF5A1F;
     --accent-blue: #00B3FF;
-    --text-light: #F5F5F5;
-    --text-muted: #a0a0a0;
+    --text-light: #FFFFFF; /* Pure White for max contrast */
+    --text-body: #F5F5F5;  /* Very bright off-white for body copy */
+    --text-muted: #dddddd;  /* High-contrast light gray for muted text */
     --border-color: #333333;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-dark);
-    color: var(--text-light);
+    color: var(--text-body); /* Default to bright body text */
 }
+
+/* --- Global Overrides for Readability --- */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+p {
+    color: var(--text-body);
+}
+
+/* --- General Card Styles for Dark Theme --- */
+.card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-body) !important;
+}
+.card .card-title {
+    color: var(--accent-blue) !important;
+}
+.card .card-text {
+    color: var(--text-body) !important;
+}
+.card .btn-primary {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+.card .btn-outline-primary {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+.card .btn-outline-primary:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
 
 /* --- Hero Section --- */
 .hero-section {
@@ -37,7 +73,7 @@ body {
 .hero-subtitle {
     font-size: 1.3rem;
     font-weight: 300;
-    color: var(--text-muted);
+    color: var(--text-body);
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
 }
@@ -93,7 +129,7 @@ body {
     flex-shrink: 0;
 }
 
-/* --- Featured Products --- */
+/* --- Featured Products (Homepage) --- */
 .featured-section {
     padding: 100px 0;
 }
@@ -114,7 +150,7 @@ body {
 .featured-card-img-container {
     background-color: #fff;
     padding: 1rem;
-    height: 180px; /* Smaller, uniform height */
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,30 +161,6 @@ body {
     max-height: 100%;
     object-fit: contain;
 }
-
-.featured-card .card-body {
-    background-color: var(--bg-card);
-    color: var(--text-light);
-}
-
-.featured-card .card-title {
-    color: var(--accent-blue);
-}
-
-.featured-card .card-text {
-    color: var(--text-muted);
-}
-
-.featured-card .btn-outline-primary {
-    color: var(--accent-blue);
-    border-color: var(--accent-blue);
-}
-
-.featured-card .btn-outline-primary:hover {
-    background-color: var(--accent-blue);
-    color: var(--bg-dark);
-}
-
 
 /* --- General Styles --- */
 .section-title {

@@ -5,227 +5,168 @@ import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import PageFaqs from '../../../components/PageFaqs';
 
-// Generate segments for all lists
+// Helper function to format titles from snake_case
+const formatTitle = (str) => {
+  return str
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 export async function generateStaticParams() {
   return bestLists.map((list) => ({
     listId: list.id,
   }));
 }
 
-// Generate SEO metadata
 export async function generateMetadata({ params }) {
   const list = bestLists.find((l) => l.id === params.listId);
   if (!list) return {};
 
-  return {
-    title: `${list.title} - The Pool Lab`,
+  const listProducts = list.products.map(item => products.find(p => p.sku === item.sku)).filter(Boolean);
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: list.title,
     description: list.description,
+    itemListElement: listProducts.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `https://${config.domain}/reviews/${product.sku}`,
+      name: product.name,
+    })),
+  };
+
+  return {
+    title: `${list.title} | ${config.siteName}`,
+    description: list.description,
+    alternates: {
+      canonical: `https://${config.domain}/best-of/${params.listId}`,
+    },
     openGraph: {
       title: list.title,
       description: list.description,
-      images: ['https://via.placeholder.com/1200x630?text=The+Pool+Lab'],
+      url: `https://${config.domain}/best-of/${params.listId}`,
+    },
+    twitter: {
+      title: list.title,
+      description: list.description,
+    },
+    other: {
+      'script[type="application/ld+json"]': JSON.stringify(itemListSchema),
     },
   };
 }
 
 export default function BestOfPage({ params }) {
   const list = bestLists.find((l) => l.id === params.listId);
-  const amazonTag = config.amazonAffiliateTag;
+  if (!list) notFound();
 
-  if (!list) {
-    notFound();
-  }
-
-  // Create a map of product SKUs to their ASINs for easy lookup
-  const productAsinMap = products.reduce((acc, product) => {
-    acc[product.sku] = product.asin;
-    return acc;
-  }, {});
-
-  // Function to process placeholders in a string
-  const processPlaceholders = (text) => {
-    let processedText = text || '';
-    const placeholders = processedText.match(/\{\{.*?\}\}/g) || [];
-    placeholders.forEach(placeholder => {
-      const key = placeholder.replace(/\{\{AFFILIATE_|\}\}/g, '');
-      const sku = Object.keys(productAsinMap).find(k => k.toUpperCase().includes(key));
-      if (sku) {
-        const asin = productAsinMap[sku];
-        const url = `https://www.amazon.com/dp/${asin}?tag=${amazonTag}`;
-        processedText = processedText.replace(placeholder, url);
-      }
-    });
-    return processedText;
-  };
-
-  // Merge list-specific product data with full product details
   const listProducts = list.products.map(item => {
     const productData = products.find(p => p.sku === item.sku);
     return productData ? { ...productData, ...item } : null;
   }).filter(Boolean);
 
+  const comparisonProducts = list.featured_skus 
+    ? list.featured_skus.map(sku => listProducts.find(p => p.sku === sku)).filter(Boolean)
+    : listProducts;
+
   return (
     <div className="container my-5">
-      {/* Header & Intro */}
       <header className="mb-5 text-center">
-        <h1 className="display-4 mb-3">{list.title}</h1>
-        <p className="lead">{list.description}</p>
+        <h1 className="section-title">{list.title}</h1>
+        <p className="section-subtitle">{list.description}</p>
       </header>
 
       <div className="row">
-        <div className="col-lg-8 mx-auto">
-          <div className="mb-4" dangerouslySetInnerHTML={{ __html: list.intro }} />
+        <div className="col-lg-10 mx-auto">
+          {list.intro && <div className="mb-5" dangerouslySetInnerHTML={{ __html: list.intro }} />}
           
-          <div className="card bg-light mb-5">
-            <div className="card-body">
-              <h5 className="card-title">Selection Criteria</h5>
-              <ul className="mb-0">
-                {list.criteria.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Shortlist Summary (Cards) */}
-      <h2 className="text-center mb-4">The Shortlist</h2>
-      <div className="row mb-5">
-        {listProducts.map(product => (
-          <div key={product.sku} className="col-md-6 col-lg-3 mb-4">
-            <div className="card h-100 border-primary">
-              <div className="card-header bg-primary text-white text-center fw-bold">
-                {product.badge}
+          {list.comparison_table_title && list.comparison_columns && (
+            <section className="mb-5">
+              <h2 className="text-center section-title">{list.comparison_table_title}</h2>
+              {list.comparison_table_intro && <p className="text-center text-muted mb-4">{list.comparison_table_intro}</p>}
+              <div className="table-responsive">
+                <table className="table table-striped table-hover border">
+                  <thead className="table-dark">
+                    <tr>
+                      <th>Product</th>
+                      {list.comparison_columns.map(col => <th key={col}>{formatTitle(col)}</th>)}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonProducts.map(product => (
+                      <tr key={product.sku}>
+                        <td className="fw-bold"><Link href={`/reviews/${product.sku}`}>{product.name}</Link></td>
+                        {list.comparison_columns.map(col => {
+                          const value = product[col] || (product.score ? product.score[col] : undefined);
+                          return <td key={col}>{value !== undefined ? String(value) : 'N/A'}</td>;
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              <div className="p-3 bg-white d-flex align-items-center justify-content-center" style={{ height: '200px' }}>
-                <img 
-                  src={product.image_url || 'https://via.placeholder.com/300x200'} 
-                  className="img-fluid" 
-                  alt={product.name}
-                  style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
-                />
-              </div>
-              <div className="card-body text-center d-flex flex-column">
-                <h5 className="card-title h6">{product.name}</h5>
-                <div 
-                  className="card-text small text-muted flex-grow-1"
-                  dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} 
-                />
-                <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary btn-sm mt-2">Read Full Review</Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </section>
+          )}
 
-      {/* Comparison Table */}
-      <h2 className="text-center mb-4">Comparison Table</h2>
-      <div className="table-responsive mb-5">
-        <table className="table table-striped table-hover border">
-          <thead className="table-dark">
-            <tr>
-              <th>Model</th>
-              <th>Best For</th>
-              <th>Approx. Price</th>
-              <th>Key Feature</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {listProducts.map(product => {
-              // Extract a key feature (first bullet point or generic)
-              let keyFeature = "High Performance";
-              if (product.features && product.features.includes('<li>')) {
-                   const match = product.features.match(/<li><strong>(.*?)<\/strong>/);
-                   if (match) keyFeature = match[1];
-              }
-
-              return (
-                <tr key={product.sku}>
-                  <td className="fw-bold">
-                    <Link href={`/reviews/${product.sku}`} className="text-decoration-none">{product.name}</Link>
-                  </td>
-                  <td><span className="badge bg-info text-dark">{product.badge}</span></td>
-                  <td>${product.approx_price}</td>
-                  <td>{keyFeature}</td>
-                  <td>
-                    <a 
-                      href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}` : '#'} 
-                      target="_blank" 
-                      className={`btn btn-warning btn-sm fw-bold text-nowrap ${!product.asin ? 'disabled' : ''}`}
-                    >
-                      Check Price
-                    </a>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Mini Reviews */}
-      <h2 className="text-center mb-4">In-Depth Mini Reviews</h2>
-      <div>
-        {listProducts.map(product => (
-          <div key={product.sku} id={`review-${product.sku}`} className="card mb-4">
-            <div className="row g-0">
-              <div className="col-md-4 text-center p-4 d-flex align-items-center justify-content-center bg-white">
-                <img 
-                  src={product.image_url || 'https://via.placeholder.com/300x200'} 
-                  className="img-fluid rounded-start" 
-                  alt={product.name} 
-                  style={{ maxHeight: '200px', objectFit: 'contain' }}
-                />
-              </div>
-              <div className="col-md-8">
-                <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-start">
-                    <div>
-                      <h3 className="card-title h4">{product.name}</h3>
-                      <span className="badge bg-primary mb-2">{product.badge}</span>
+          <h2 className="text-center section-title mt-5">Our Top Picks</h2>
+          
+          {listProducts.map((product, index) => (
+            <div key={product.sku} id={`review-${product.sku}`} className="card mb-4">
+              <div className="row g-0">
+                <div className="col-md-4 text-center p-4 d-flex align-items-center justify-content-center bg-white">
+                  <img 
+                    src={product.image_url || (product.category === 'cold-plunge' ? product.image_fallback : '')} 
+                    onError={(e) => { if (product.category === 'cold-plunge') e.currentTarget.src = product.image_fallback }}
+                    className="img-fluid rounded-start" 
+                    alt={product.name} 
+                    style={{ maxHeight: '200px', objectFit: 'contain' }} 
+                  />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <div className="d-flex justify-content-between align-items-start">
+                      <div>
+                        <h3 className="card-title h4">{`${index + 1}. ${product.name}`}</h3>
+                        <span className="badge bg-primary mb-2">{product.badge}</span>
+                      </div>
+                      <div className="text-end">
+                        <div className="h4 mb-0 text-primary">${product.approx_price}</div>
+                      </div>
                     </div>
-                    <div className="text-end">
-                      <div className="h4 mb-0 text-primary">${product.approx_price}</div>
+                    <div className="card-text mt-3" dangerouslySetInnerHTML={{ __html: product.reason }} />
+                    <div className="d-flex gap-2 mt-4">
+                      <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary">Read Full Review</Link>
+                      {product.asin && <a href={`https://www.amazon.com/dp/${product.asin}?tag=${config.amazonAffiliateTag}`} target="_blank" className="btn btn-warning fw-bold">Check Price</a>}
                     </div>
-                  </div>
-                  
-                  <div className="card-text mt-3" dangerouslySetInnerHTML={{ __html: processPlaceholders(product.description) }} />
-                  <p className="card-text"><strong>Why we picked it:</strong></p>
-                  <div className="card-text" dangerouslySetInnerHTML={{ __html: processPlaceholders(product.reason) }} />
-                  
-                  <div className="d-flex gap-2 mt-4">
-                    <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary">Read Full Review</Link>
-                    <a 
-                      href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}` : '#'} 
-                      target="_blank" 
-                      className={`btn btn-warning fw-bold ${!product.asin ? 'disabled' : ''}`}
-                    >
-                      Check Price on Amazon
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
 
-      {/* Buying Advice */}
-      <div className="row mt-5">
-        <div className="col-lg-8 mx-auto">
-          <div className="card border-primary">
-            <div className="card-header bg-primary text-white">
-              <h3 className="h5 mb-0">Buying Advice</h3>
-            </div>
-            <div className="card-body" dangerouslySetInnerHTML={{ __html: list.buying_advice }} />
-          </div>
+          {list.ranking_methodology_title && (
+            <section className="my-5 py-5 bg-card rounded">
+              <div className="container">
+                <h3 className="text-center section-title">{list.ranking_methodology_title}</h3>
+                <div className="text-muted" dangerouslySetInnerHTML={{ __html: list.ranking_methodology }} />
+              </div>
+            </section>
+          )}
+
+          {list.buying_advice && (
+            <section className="my-5">
+              <div className="container">
+                <h3 className="text-center section-title">Buying Advice</h3>
+                <div className="text-muted" dangerouslySetInnerHTML={{ __html: list.buying_advice }} />
+              </div>
+            </section>
+          )}
+
+          <PageFaqs />
         </div>
       </div>
-
-      <PageFaqs />
-
     </div>
   );
 }
