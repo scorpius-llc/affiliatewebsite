@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import config from '../data/config.json';
 import products from '../data/products.json';
+import ProductImage from '../components/ProductImage';
 
 // Helper function to replace placeholders
 const replacePlaceholders = (text) => {
@@ -89,11 +90,11 @@ export default function Home() {
               <div key={product.sku} className="col-lg-4 mb-4">
                 <div className="featured-card">
                   <div className="featured-card-img-container">
-                    <img 
-                      src={product.image_url || (product.category === 'cold-plunge' ? product.image_fallback : '')} 
-                      onError={(e) => { if (product.category === 'cold-plunge') e.currentTarget.src = product.image_fallback }}
-                      className="featured-card-img" 
-                      alt={product.name} 
+                    <ProductImage 
+                      src={product.image_url} 
+                      fallbackSrc={product.category === 'cold-plunge' ? product.image_fallback : ''}
+                      alt={product.name}
+                      className="featured-card-img"
                     />
                   </div>
                   <div className="card-body d-flex flex-column">

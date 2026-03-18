@@ -4,6 +4,7 @@ import bestLists from '../../../data/best-lists.json';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import PageFaqs from '../../../components/PageFaqs';
+import ProductImage from '../../../components/ProductImage';
 
 // Helper function to format titles from snake_case
 const formatTitle = (str) => {
@@ -13,10 +14,18 @@ const formatTitle = (str) => {
     .join(' ');
 };
 
+const getScoreBadgeClass = (score) => {
+  if (score >= 8) return 'score-high';
+  if (score >= 5) return 'score-medium';
+  return 'score-low';
+};
+
 export async function generateStaticParams() {
-  return bestLists.map((list) => ({
-    listId: list.id,
-  }));
+  return bestLists
+    .filter(list => list && list.id) // Filter out invalid entries
+    .map((list) => ({
+      listId: list.id,
+    }));
 }
 
 export async function generateMetadata({ params }) {
@@ -71,6 +80,20 @@ export default function BestOfPage({ params }) {
     ? list.featured_skus.map(sku => listProducts.find(p => p.sku === sku)).filter(Boolean)
     : listProducts;
 
+  // Dynamically generate the full list of columns
+  const allColumns = [...(list.comparison_columns || [])];
+  const scoreKeys = new Set();
+  comparisonProducts.forEach(p => {
+    if (p.score) {
+      Object.keys(p.score).forEach(key => scoreKeys.add(key));
+    }
+  });
+  scoreKeys.forEach(key => {
+    if (!allColumns.includes(key)) {
+      allColumns.push(key);
+    }
+  });
+
   return (
     <div className="container my-5">
       <header className="mb-5 text-center">
@@ -82,25 +105,35 @@ export default function BestOfPage({ params }) {
         <div className="col-lg-10 mx-auto">
           {list.intro && <div className="mb-5" dangerouslySetInnerHTML={{ __html: list.intro }} />}
           
-          {list.comparison_table_title && list.comparison_columns && (
+          {list.comparison_table_title && allColumns.length > 0 && (
             <section className="mb-5">
               <h2 className="text-center section-title">{list.comparison_table_title}</h2>
               {list.comparison_table_intro && <p className="text-center text-muted mb-4">{list.comparison_table_intro}</p>}
               <div className="table-responsive">
-                <table className="table table-striped table-hover border">
+                <table className="table table-striped table-hover border table-comparison">
                   <thead className="table-dark">
                     <tr>
-                      <th>Product</th>
-                      {list.comparison_columns.map(col => <th key={col}>{formatTitle(col)}</th>)}
+                      <th className="col-product">Product</th>
+                      {allColumns.map(col => <th key={col} className={col === 'ease_of_use' ? 'col-ease-of-use' : ''}>{formatTitle(col)}</th>)}
                     </tr>
                   </thead>
                   <tbody>
                     {comparisonProducts.map(product => (
                       <tr key={product.sku}>
-                        <td className="fw-bold"><Link href={`/reviews/${product.sku}`}>{product.name}</Link></td>
-                        {list.comparison_columns.map(col => {
+                        <td className="fw-bold col-product"><Link href={`/reviews/${product.sku}`}>{product.name}</Link></td>
+                        {allColumns.map(col => {
+                          const isScoreColumn = Object.keys(product.score || {}).includes(col);
                           const value = product[col] || (product.score ? product.score[col] : undefined);
-                          return <td key={col}>{value !== undefined ? String(value) : 'N/A'}</td>;
+                          
+                          return (
+                            <td key={col} className={col === 'ease_of_use' ? 'col-ease-of-use' : ''}>
+                              {isScoreColumn && typeof value === 'number' ? (
+                                <span className={`score-badge ${getScoreBadgeClass(value)}`}>{value}</span>
+                              ) : (
+                                value !== undefined ? String(value) : 'N/A'
+                              )}
+                            </td>
+                          );
                         })}
                       </tr>
                     ))}
@@ -116,12 +149,12 @@ export default function BestOfPage({ params }) {
             <div key={product.sku} id={`review-${product.sku}`} className="card mb-4">
               <div className="row g-0">
                 <div className="col-md-4 text-center p-4 d-flex align-items-center justify-content-center bg-white">
-                  <img 
-                    src={product.image_url || (product.category === 'cold-plunge' ? product.image_fallback : '')} 
-                    onError={(e) => { if (product.category === 'cold-plunge') e.currentTarget.src = product.image_fallback }}
-                    className="img-fluid rounded-start" 
-                    alt={product.name} 
-                    style={{ maxHeight: '200px', objectFit: 'contain' }} 
+                  <ProductImage
+                    src={product.image_url}
+                    fallbackSrc={product.category === 'cold-plunge' ? product.image_fallback : ''}
+                    alt={product.name}
+                    className="img-fluid rounded-start"
+                    style={{ maxHeight: '200px', objectFit: 'contain' }}
                   />
                 </div>
                 <div className="col-md-8">

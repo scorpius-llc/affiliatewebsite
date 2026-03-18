@@ -162,6 +162,34 @@ p {
     object-fit: contain;
 }
 
+/* --- Comparison Table --- */
+.table-comparison {
+    width: 100%;
+}
+.table-comparison .col-product {
+    width: 30%;
+}
+.table-comparison .col-ease-of-use {
+    width: 15%;
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--bg-dark);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.score-high { background-color: #28a745; } /* Green */
+.score-medium { background-color: #ffc107; } /* Yellow */
+.score-low { background-color: #dc3545; } /* Red */
+
+
 /* --- General Styles --- */
 .section-title {
     font-size: 2.5rem;

@@ -112,9 +112,6 @@
       "Space efficiency",
       "Good entry-level ownership experience"
     ],
-    "schema_type": "ItemList",
-    "primary_category": "cold-plunge",
-    "sort_by": "score.value",
     "featured_skus": [
       "TheColdPod-IceBath",
       "VEVOR-Ice-Bath-Tub",
@@ -131,6 +128,9 @@
     ],
     "ranking_methodology_title": "How We Rank Budget Cold Plunges",
     "ranking_methodology": "<p>Budget cold plunges are evaluated primarily on value and ease of ownership. The most important factors are durability, ease of draining and cleaning, and overall usability for beginners.</p>",
+    "schema_type": "ItemList",
+    "primary_category": "cold-plunge",
+    "sort_by": "score.value",
     "products": [
       {
         "sku": "TheColdPod-IceBath",
@@ -235,9 +235,6 @@
       "Temperature stability",
       "Long-term structural durability"
     ],
-    "schema_type": "ItemList",
-    "primary_category": "cold-plunge",
-    "sort_by": "score.durability",
     "featured_skus": [
       "SunHome-Cold-Plunge-Pro",
       "Renu-Cold-Stoic-2-0",
@@ -254,6 +251,9 @@
     ],
     "ranking_methodology_title": "How We Rank Outdoor Cold Plunges",
     "ranking_methodology": "<p>Outdoor plunges are ranked based on insulation performance, durability, and ability to maintain stable temperatures in changing climates. Systems built for permanent outdoor installations rank highest.</p>",
+    "schema_type": "ItemList",
+    "primary_category": "cold-plunge",
+    "sort_by": "score.durability",
     "products": [
       {
         "sku": "SunHome-Cold-Plunge-Pro",

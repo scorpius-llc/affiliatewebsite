@@ -49,7 +49,7 @@ export default function BestOf() {
       <p className="lead text-center mb-5 section-subtitle">{replacePlaceholders(pageContent.subtitle)}</p>
 
       <div className="row mb-5">
-        {bestLists.map((list, index) => (
+        {bestLists.filter(list => list && list.id).map((list, index) => (
           <div key={list.id} className="col-md-4 mb-3">
             <div className={`card text-center h-100 ${index === 0 ? 'border-primary' : ''}`}>
               <div className="card-body d-flex flex-column">
