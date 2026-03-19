@@ -5,8 +5,8 @@
     --accent-blue: #00B3FF;
     --text-light: #FFFFFF; /* Pure White for max contrast */
     --text-body: #F5F5F5;  /* Very bright off-white for body copy */
-    --text-muted: #dddddd;  /* High-contrast light gray for muted text */
-    --border-color: #333333;
+    --text-muted: #E7E7E7;  /* High-contrast light gray for muted text */
+    --border-color: #4A4A4A;
 }
 
 body {
@@ -92,11 +92,13 @@ p {
 .btn-primary-cta:hover {
     background-color: #e04e1b;
     transform: scale(1.05);
+    color: #fff;
 }
 
 .btn-secondary-cta {
     color: var(--text-light);
-    border-color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.04);
     font-weight: 600;
     padding: 1rem 3rem;
     border-radius: 8px;
@@ -104,7 +106,7 @@ p {
 }
 
 .btn-secondary-cta:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.16);
     color: #fff;
 }
 
@@ -254,5 +256,459 @@ footer a {
     }
     .featured-section, .trust-strip {
         padding: 60px 0;
+    }
+}
+
+/* --- Best-Of Money Page --- */
+.best-of-page {
+    background:
+        radial-gradient(circle at top right, rgba(0, 179, 255, 0.1), transparent 28%),
+        radial-gradient(circle at top left, rgba(255, 90, 31, 0.12), transparent 32%),
+        var(--bg-dark);
+}
+
+.best-of-shell {
+    width: min(100%, 1160px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.best-of-hero {
+    padding: 24px 0 12px;
+}
+
+.best-of-eyebrow,
+.inline-cta-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 0.75rem;
+}
+
+.best-of-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.money-section {
+    margin-top: clamp(60px, 7vw, 100px);
+}
+
+.rich-copy p:last-child,
+.rich-copy ul:last-child {
+    margin-bottom: 0;
+}
+
+.best-of-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.06rem;
+    line-height: 1.75;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.section-heading p {
+    color: var(--text-light);
+    max-width: 780px;
+    margin-bottom: 0;
+    opacity: 0.92;
+}
+
+.top-pick-card,
+.money-product-card,
+.inline-cta-banner,
+.info-card,
+.final-cta-panel,
+.comparison-mobile-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(26, 26, 26, 0.96));
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+.top-pick-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+    padding: 32px;
+    margin-top: 32px;
+    align-items: center;
+    border-color: rgba(255, 90, 31, 0.35);
+}
+
+.top-pick-image-wrap,
+.money-product-image-wrap {
+    background: #fff;
+    border-radius: 20px;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.top-pick-image,
+.money-product-image {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.top-pick-header,
+.money-product-topline,
+.comparison-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.top-pick-badge,
+.best-for-chip,
+.product-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.top-pick-badge,
+.product-rank {
+    color: var(--bg-dark);
+    background: linear-gradient(135deg, #ffd166, #ff9f1c);
+}
+
+.best-for-chip {
+    color: var(--text-light);
+    background: rgba(0, 179, 255, 0.18);
+    border: 1px solid rgba(0, 179, 255, 0.35);
+}
+
+.score-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 74px;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 800;
+    color: var(--bg-dark);
+}
+
+.top-pick-content h2,
+.money-product-body h3,
+.comparison-mobile-card h3,
+.final-cta-panel h2 {
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.top-pick-summary,
+.product-summary {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-body);
+}
+
+.top-pick-meta,
+.money-product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: 18px 0 24px;
+    color: var(--text-light);
+    opacity: 0.94;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-primary-cta {
+    min-width: 170px;
+    text-align: center;
+}
+
+.btn-secondary-cta {
+    min-width: 170px;
+    text-align: center;
+}
+
+.comparison-scroll {
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    background: rgba(17, 17, 17, 0.75);
+}
+
+.comparison-table {
+    margin-bottom: 0;
+    color: var(--text-body);
+}
+
+.comparison-table a,
+.rich-copy a,
+.best-of-page a:not(.btn) {
+    color: #7dd8ff;
+    font-weight: 600;
+    text-decoration-color: rgba(125, 216, 255, 0.7);
+}
+
+.comparison-table a:hover,
+.rich-copy a:hover,
+.best-of-page a:not(.btn):hover {
+    color: #b4ebff;
+}
+
+.comparison-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #10161a;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 16px;
+    white-space: nowrap;
+}
+
+.comparison-table tbody td {
+    padding: 18px 16px;
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.07);
+    background: transparent;
+    color: var(--text-light);
+}
+
+.comparison-product-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.comparison-product-cell a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.comparison-cta {
+    min-width: 0;
+    padding: 0.7rem 1rem;
+}
+
+.comparison-table-mobile {
+    display: none;
+}
+
+.comparison-mobile-card {
+    padding: 22px;
+}
+
+.comparison-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 18px 0 22px;
+}
+
+.comparison-mobile-grid dt {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.comparison-mobile-grid dd {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.product-card-stack {
+    display: grid;
+    gap: 32px;
+}
+
+.money-product-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    padding: 28px;
+}
+
+.product-copy {
+    margin: 18px 0 22px;
+}
+
+.pros-cons-grid,
+.info-grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pros-card,
+.cons-card,
+.score-grid-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.pros-card h4,
+.cons-card h4,
+.score-grid-card h3 {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.pros-card ul,
+.cons-card ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+
+.pros-card li,
+.cons-card li {
+    margin-bottom: 0.55rem;
+    color: var(--text-body);
+}
+
+.inline-cta-banner,
+.final-cta-panel,
+.info-card {
+    padding: 28px;
+}
+
+.inline-cta-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.banner-cta-row,
+.center-cta-row {
+    justify-content: center;
+}
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.final-cta-panel {
+    text-align: center;
+    border-color: rgba(255, 90, 31, 0.28);
+}
+
+.inline-cta-banner p,
+.info-card p,
+.final-cta-panel p,
+.best-of-intro p,
+.product-copy p {
+    color: var(--text-light);
+    opacity: 0.94;
+}
+
+.info-card li,
+.best-of-intro li,
+.product-copy li {
+    color: var(--text-light);
+}
+
+.accordion-item,
+.accordion-button,
+.accordion-body {
+    background-color: var(--bg-card);
+    color: var(--text-body);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 179, 255, 0.12);
+    color: var(--text-light);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 179, 255, 0.35);
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+@media (max-width: 991px) {
+    .top-pick-card,
+    .money-product-card,
+    .info-grid-section,
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inline-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .best-of-shell {
+        padding: 0 16px;
+    }
+
+    .top-pick-card,
+    .money-product-card,
+    .inline-cta-banner,
+    .info-card,
+    .final-cta-panel,
+    .comparison-mobile-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .comparison-table-desktop {
+        display: none;
+    }
+
+    .comparison-table-mobile {
+        display: grid;
+        gap: 18px;
+    }
+
+    .comparison-mobile-grid,
+    .score-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-cta-row,
+    .cta-row {
+        flex-direction: column;
+    }
+
+    .btn-primary-cta,
+    .btn-secondary-cta {
+        width: 100%;
     }
 }
