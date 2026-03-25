@@ -22,6 +22,151 @@ const getAverageScore = (product) => {
   return Number((total / values.length).toFixed(1));
 };
 
+const clampScore = (value) => Math.max(0, Math.min(10, value));
+
+const getBudgetFitScore = (product) => {
+  const price = product.approx_price;
+  if (price == null) {
+    if (product.price_range === 'budget') return 8.5;
+    if (product.price_range === 'mid-range') return 5.5;
+    return 3.5;
+  }
+
+  if (price <= 200) return 10;
+  if (price <= 500) return 9;
+  if (price <= 1000) return 7;
+  if (price <= 3000) return 5;
+  if (price <= 8000) return 3.5;
+  return 2;
+};
+
+const getChillerFitScore = (product) => {
+  const type = product.cooling_type;
+  if (['integrated-chiller', 'integrated_chiller', 'external-chiller', 'external_chiller', 'hybrid'].includes(type)) {
+    return 10;
+  }
+  if (['external-chiller-compatible', 'external_chiller_compatible'].includes(type)) {
+    return 8.5;
+  }
+  return 2.5;
+};
+
+const getFeatureScore = (product, key) => {
+  const baseScore = product.score || {};
+  const suitability = product.suitability || {};
+
+  const featureMap = {
+    temperature_control: baseScore.temperature_control,
+    insulation: baseScore.insulation,
+    durability: baseScore.durability,
+    ease_of_use: baseScore.ease_of_use,
+    maintenance: baseScore.maintenance,
+    value: baseScore.value,
+    beginner_friendly: suitability.beginner_friendly ? 10 : getBudgetFitScore(product),
+    small_space_friendly: suitability.small_space_friendly ? 10 : product.footprint === 'small' ? 8 : product.footprint === 'medium' ? 5.5 : 3,
+    tall_user_friendly: suitability.tall_user_friendly ? 10 : product.footprint === 'large' ? 7 : 4,
+    outdoor_ready: suitability.outdoor_ready ? 10 : 3,
+    portable: suitability.portable ? 10 : 2.5,
+    budget_fit: getBudgetFitScore(product),
+    chiller_fit: getChillerFitScore(product),
+  };
+
+  return featureMap[key];
+};
+
+const contextualScoreWeights = {
+  'best-cold-plunge-tubs': {
+    temperature_control: 0.24,
+    insulation: 0.2,
+    durability: 0.18,
+    ease_of_use: 0.16,
+    maintenance: 0.1,
+    value: 0.12,
+  },
+  'best-cold-plunge-with-chiller': {
+    chiller_fit: 0.15,
+    temperature_control: 0.25,
+    insulation: 0.2,
+    maintenance: 0.12,
+    durability: 0.13,
+    ease_of_use: 0.08,
+    value: 0.07,
+  },
+  'best-budget-cold-plunge': {
+    budget_fit: 0.24,
+    value: 0.24,
+    maintenance: 0.16,
+    ease_of_use: 0.14,
+    portable: 0.1,
+    beginner_friendly: 0.12,
+  },
+  'best-budget-cold-plunge-tubs-under-200': {
+    budget_fit: 0.32,
+    value: 0.24,
+    maintenance: 0.14,
+    ease_of_use: 0.12,
+    portable: 0.08,
+    beginner_friendly: 0.1,
+  },
+  'best-cold-plunge-for-tall-people': {
+    tall_user_friendly: 0.34,
+    durability: 0.16,
+    insulation: 0.12,
+    temperature_control: 0.12,
+    maintenance: 0.1,
+    ease_of_use: 0.08,
+    value: 0.08,
+  },
+  'best-cold-plunge-for-small-spaces': {
+    small_space_friendly: 0.3,
+    portable: 0.2,
+    maintenance: 0.15,
+    value: 0.15,
+    ease_of_use: 0.12,
+    budget_fit: 0.08,
+  },
+  'best-cold-plunge-outdoor': {
+    outdoor_ready: 0.24,
+    insulation: 0.24,
+    durability: 0.2,
+    temperature_control: 0.14,
+    maintenance: 0.08,
+    value: 0.1,
+  },
+  'best-cold-plunge-for-beginners': {
+    beginner_friendly: 0.28,
+    ease_of_use: 0.24,
+    maintenance: 0.16,
+    value: 0.16,
+    budget_fit: 0.1,
+    portable: 0.06,
+  },
+};
+
+const getContextualScore = (listId, product) => {
+  const weights = contextualScoreWeights[listId];
+  if (!weights) {
+    return getAverageScore(product);
+  }
+
+  let weightedTotal = 0;
+  let totalWeight = 0;
+
+  Object.entries(weights).forEach(([key, weight]) => {
+    const featureScore = getFeatureScore(product, key);
+    if (typeof featureScore === 'number') {
+      weightedTotal += clampScore(featureScore) * weight;
+      totalWeight += weight;
+    }
+  });
+
+  if (!totalWeight) {
+    return getAverageScore(product);
+  }
+
+  return Number((weightedTotal / totalWeight).toFixed(1));
+};
+
 const getScoreBadgeClass = (score) => {
   if (score >= 8.5) return 'score-high';
   if (score >= 7) return 'score-medium';
@@ -136,45 +281,6 @@ const renderCta = (product, className = 'btn btn-primary-cta') => {
   );
 };
 
-const getFaqsForList = (listId) => {
-  if (listId !== 'best-cold-plunge-tubs') {
-    return [];
-  }
-
-  return [
-    {
-      question: 'Are cold plunge tubs worth it?',
-      answer:
-        'Cold plunge tubs are worth it for people who plan to use them consistently. The higher-end systems reduce setup friction, hold temperature better, and make long-term ownership much easier than constantly buying ice.',
-    },
-    {
-      question: 'What temperature should a cold plunge be?',
-      answer:
-        'Most home users target roughly 50 to 59 degrees Fahrenheit when starting out, then move colder as tolerance improves. The right temperature is the coldest range you can use consistently with safe, controlled sessions.',
-    },
-    {
-      question: 'Do you need a chiller for a cold plunge tub?',
-      answer:
-        'You do not need a chiller to start, but a chiller matters if you want repeatable temperatures with less effort. Ice-based tubs are cheaper upfront, while electric chillers are the better fit for frequent use.',
-    },
-    {
-      question: 'How much do cold plunge tubs cost?',
-      answer:
-        'Portable ice tubs can start under a few hundred dollars, while premium integrated systems can run several thousand dollars or more. The main pricing jump comes from insulation, integrated chilling, filtration, and overall build quality.',
-    },
-    {
-      question: 'How often should you use a cold plunge?',
-      answer:
-        'Many users start with two to four sessions per week and adjust based on recovery goals and tolerance. Consistency matters more than extreme session length or very low temperatures.',
-    },
-    {
-      question: 'What is the difference between a cold plunge and an ice bath?',
-      answer:
-        'In practice, the terms overlap, but buyers usually use ice bath for manual ice-filled tubs and cold plunge for more purpose-built systems. The key ownership difference is whether you rely on bagged ice or a powered chilling setup.',
-    },
-  ];
-};
-
 const scoreCriteria = [
   { title: 'Build Quality', description: 'Materials, finish quality, insulation, and long-term durability.' },
   { title: 'Cooling Performance', description: 'How reliably the tub reaches and holds target temperatures.' },
@@ -238,23 +344,29 @@ export default function BestOfPage({ params }) {
   if (!list) notFound();
 
   const listProducts = list.products
-    .map((item) => {
+    .map((item, index) => {
       const productData = products.find((product) => product.sku === item.sku);
       if (!productData) return null;
 
       const mergedProduct = { ...productData, ...item };
       return {
         ...mergedProduct,
-        overallScore: getAverageScore(mergedProduct),
+        originalIndex: index,
+        contextualScore: getContextualScore(params.listId, mergedProduct),
       };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort((a, b) => {
+      const scoreDiff = (b.contextualScore || 0) - (a.contextualScore || 0);
+      if (scoreDiff !== 0) return scoreDiff;
+      return a.originalIndex - b.originalIndex;
+    });
 
   const topPick = listProducts[0];
   const comparisonProducts = list.featured_skus
-    ? list.featured_skus.map((sku) => listProducts.find((product) => product.sku === sku)).filter(Boolean)
+    ? listProducts.filter((product) => list.featured_skus.includes(product.sku))
     : listProducts;
-  const faqs = getFaqsForList(params.listId);
+  const faqs = list.faqs || [];
 
   const faqJsonLd = faqs.length
     ? {
@@ -310,8 +422,8 @@ export default function BestOfPage({ params }) {
               <div className="top-pick-content">
                 <div className="top-pick-header">
                   <span className="top-pick-badge">Top Pick</span>
-                  <div className={`score-pill ${getScoreBadgeClass(topPick.overallScore || 0)}`}>
-                    {topPick.overallScore ? `${topPick.overallScore}/10` : 'N/A'}
+                  <div className={`score-pill ${getScoreBadgeClass(topPick.contextualScore || 0)}`}>
+                    {topPick.contextualScore ? `${topPick.contextualScore}/10` : 'N/A'}
                   </div>
                 </div>
                 <h2>{topPick.name}</h2>
@@ -354,7 +466,7 @@ export default function BestOfPage({ params }) {
                       <th>Size / Capacity</th>
                       <th>Best For</th>
                       <th>Score</th>
-                      <th>CTA</th>
+                      <th>Check Price</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -371,8 +483,8 @@ export default function BestOfPage({ params }) {
                         <td>{getSizeLabel(product)}</td>
                         <td>{getBestForLabel(product)}</td>
                         <td>
-                          <span className={`score-pill ${getScoreBadgeClass(product.overallScore || 0)}`}>
-                            {product.overallScore ? `${product.overallScore}/10` : 'N/A'}
+                          <span className={`score-pill ${getScoreBadgeClass(product.contextualScore || 0)}`}>
+                            {product.contextualScore ? `${product.contextualScore}/10` : 'N/A'}
                           </span>
                         </td>
                         <td>{renderCta(product, 'btn btn-primary-cta btn-sm comparison-cta')}</td>
@@ -388,8 +500,8 @@ export default function BestOfPage({ params }) {
                 <article key={product.sku} className="comparison-mobile-card">
                   <div className="comparison-mobile-header">
                     <h3>{product.name}</h3>
-                    <span className={`score-pill ${getScoreBadgeClass(product.overallScore || 0)}`}>
-                      {product.overallScore ? `${product.overallScore}/10` : 'N/A'}
+                    <span className={`score-pill ${getScoreBadgeClass(product.contextualScore || 0)}`}>
+                      {product.contextualScore ? `${product.contextualScore}/10` : 'N/A'}
                     </span>
                   </div>
                   <dl className="comparison-mobile-grid">
@@ -449,8 +561,8 @@ export default function BestOfPage({ params }) {
                     <div className="money-product-topline">
                       <span className="product-rank">#{index + 1}</span>
                       <span className="best-for-chip">{getBestForLabel(product)}</span>
-                      <span className={`score-pill ${getScoreBadgeClass(product.overallScore || 0)}`}>
-                        {product.overallScore ? `${product.overallScore}/10` : 'N/A'}
+                      <span className={`score-pill ${getScoreBadgeClass(product.contextualScore || 0)}`}>
+                        {product.contextualScore ? `${product.contextualScore}/10` : 'N/A'}
                       </span>
                     </div>
                     <h3>{product.name}</h3>
