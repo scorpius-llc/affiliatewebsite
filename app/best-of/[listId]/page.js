@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import bestLists from '../../../data/best-lists.json';
+import comparisons from '../../../data/comparisons.json';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import FaqSection from '../../../components/FaqSection';
@@ -367,6 +368,9 @@ export default function BestOfPage({ params }) {
     ? listProducts.filter((product) => list.featured_skus.includes(product.sku))
     : listProducts;
   const faqs = list.faqs || [];
+  const relatedComparisons = comparisons.filter((comparison) =>
+    (comparison.related_best_of || []).includes(list.id)
+  );
 
   const faqJsonLd = faqs.length
     ? {
@@ -529,6 +533,31 @@ export default function BestOfPage({ params }) {
                     </Link>
                   </div>
                 </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {relatedComparisons.length > 0 && (
+          <section className="money-section">
+            <div className="section-heading">
+              <h2>Compare Options</h2>
+              <p>Still deciding between two directions? These direct comparisons can help you narrow the field before you choose a ranked product list.</p>
+            </div>
+            <div className="row g-4">
+              {relatedComparisons.map((comparison) => (
+                <div key={comparison.slug} className="col-md-6">
+                  <article className="card h-100 comparison-index-card">
+                    <div className="card-body d-flex flex-column">
+                      <p className="comparison-card-label">{comparison.eyebrow || 'Comparison'}</p>
+                      <h3 className="card-title h5">{comparison.title}</h3>
+                      <p className="card-text flex-grow-1">{comparison.description}</p>
+                      <Link href={`/comparisons/${comparison.slug}`} className="btn btn-outline-primary mt-3">
+                        View Comparison
+                      </Link>
+                    </div>
+                  </article>
+                </div>
               ))}
             </div>
           </section>

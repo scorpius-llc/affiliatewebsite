@@ -2,6 +2,15 @@ import Link from 'next/link';
 import config from '../data/config.json';
 
 export default function Navbar() {
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/best-of', label: 'Best Of' },
+    { href: '/comparisons', label: 'Comparisons' },
+    { href: '/guides', label: 'Guides' },
+    { href: '/reviews', label: 'Reviews' },
+    { href: '/about', label: 'About' },
+  ];
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
@@ -21,21 +30,11 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link href="/" className="nav-link">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/reviews" className="nav-link">Reviews</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/best-of" className="nav-link">Best of</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/guides" className="nav-link">Guides</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/about" className="nav-link">About</Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href} className="nav-item">
+                <Link href={item.href} className="nav-link">{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

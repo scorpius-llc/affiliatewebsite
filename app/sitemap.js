@@ -1,5 +1,6 @@
 import articles from '../data/articles.json';
 import bestLists from '../data/best-lists.json';
+import comparisons from '../data/comparisons.json';
 import products from '../data/products.json';
 import config from '../data/config.json';
 
@@ -23,6 +24,10 @@ export default function sitemap() {
       url: `${URL}/reviews/`,
       lastModified: new Date(),
     },
+    {
+      url: `${URL}/comparisons/`,
+      lastModified: new Date(),
+    },
   ];
 
   const articleRoutes = articles.map((article) => ({
@@ -40,5 +45,10 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...articleRoutes, ...bestOfRoutes, ...reviewRoutes];
+  const comparisonRoutes = comparisons.map((comparison) => ({
+    url: `${URL}/comparisons/${comparison.slug}/`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticRoutes, ...articleRoutes, ...bestOfRoutes, ...reviewRoutes, ...comparisonRoutes];
 }
