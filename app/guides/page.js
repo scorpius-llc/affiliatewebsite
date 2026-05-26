@@ -13,6 +13,9 @@ const replacePlaceholders = (text) => {
 export const metadata = {
   title: `Guides & Resources - ${config.siteName}`,
   description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+  alternates: {
+    canonical: '/guides',
+  },
 };
 
 export default function Guides() {

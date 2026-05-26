@@ -2,6 +2,12 @@ import PageFaqs from '../../components/PageFaqs';
 import config from '../../data/config.json';
 import aboutContent from '../../data/about-page.json';
 
+export const metadata = {
+  alternates: {
+    canonical: '/about',
+  },
+};
+
 export default function About() {
   // Replace placeholders in the about page content
   const processedWhoWeAre = aboutContent.whoWeAre

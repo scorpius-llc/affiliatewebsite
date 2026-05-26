@@ -16,10 +16,7 @@ const siteTitle = `${config.siteName} - ${replacePlaceholders(config.tagline)}`;
 const siteDescription = replacePlaceholders(config.tagline);
 
 export const metadata = {
-  metadataBase: new URL(`https://${config.domain}`),
-  alternates: {
-    canonical: '/',
-  },
+  metadataBase: new URL('https://www.the-pool-lab.com'),
   title: siteTitle,
   description: siteDescription,
   openGraph: {

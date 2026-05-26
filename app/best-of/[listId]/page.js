@@ -20,6 +20,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${list.title} - The Pool Lab`,
     description: list.description,
+    alternates: {
+      canonical: `/best-of/${list.id}`,
+    },
     openGraph: {
       title: list.title,
       description: list.description,

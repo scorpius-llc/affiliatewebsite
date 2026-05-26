@@ -3,6 +3,12 @@ import bestLists from '../../data/best-lists.json';
 import PageFaqs from '../../components/PageFaqs';
 import pageContent from '../../data/best-of-page.json';
 
+export const metadata = {
+  alternates: {
+    canonical: '/best-of',
+  },
+};
+
 export default function BestOf() {
   return (
     <div className="container my-5">

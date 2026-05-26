@@ -2,6 +2,12 @@ import Link from 'next/link';
 import articles from '../data/articles.json';
 import config from '../data/config.json';
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 // Function to replace topic placeholders
 const replacePlaceholders = (text) => {
   return text

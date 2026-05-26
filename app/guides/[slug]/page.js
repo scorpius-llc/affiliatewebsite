@@ -25,6 +25,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${guide.title} - ${config.siteName}`,
     description: replacePlaceholders(guide.description),
+    alternates: {
+      canonical: `/guides/${guide.id}`,
+    },
   };
 }
 
@@ -41,7 +44,7 @@ export default function GuidePage({ params }) {
     <div className="container my-5">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link href="/guides/">Guides</Link></li>
+          <li className="breadcrumb-item"><Link href="/guides">Guides</Link></li>
           <li className="breadcrumb-item active" aria-current="page">{guide.title}</li>
         </ol>
       </nav>
