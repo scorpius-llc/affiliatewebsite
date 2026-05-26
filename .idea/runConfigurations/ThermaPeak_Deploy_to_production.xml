@@ -1,22 +1,16 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Pool Lab Deploy to production" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;thomas@scorpius-llc.com&quot;,&quot;projectId&quot;:&quot;the-pool-lab&quot;,&quot;projectName&quot;:&quot;The-Pool-Lab&quot;,&quot;projectNumber&quot;:797634543823}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
+  <configuration default="false" name="ThermaPeak Deploy to production" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;thomas@scorpius-llc.com&quot;,&quot;projectId&quot;:&quot;the-pool-lab&quot;,&quot;projectName&quot;:&quot;The-Pool-Lab&quot;,&quot;projectNumber&quot;:797634543823}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
     <option name="allowRunningInParallel" value="false" />
     <option name="buildEnvironment" value="Local" />
-    <option name="buildpacksEnv">
-      <map />
-    </option>
+    <option name="buildpacksEnv" />
     <option name="cloudSqlConnections">
       <list />
     </option>
     <option name="concurrency" value="80" />
     <option name="cpuAllocated" value="1" />
-    <option name="dockerBuildArgs">
-      <map />
-    </option>
+    <option name="dockerBuildArgs" />
     <option name="dockerTarget" value="" />
-    <option name="environmentVariables">
-      <map />
-    </option>
+    <option name="environmentVariables" />
     <option name="imagePath" value="us-east1-docker.pkg.dev/the-pool-lab/the-pool-lab-repo/the-pool-lab-service" />
     <option name="loadingAvailableBuilders" value="false" />
     <option name="managedAuthentication" value="ALLOW_UNAUTHENTICATED" />

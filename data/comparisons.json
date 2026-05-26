@@ -20,9 +20,9 @@
       "title": "Stock Tank (DIY)",
       "summary": "Best for buyers who want a sturdier DIY cold plunge build and do not mind a more hands-on setup."
     },
-    "optionBProductUrl": "/reviews/TuffStuff-Stock-Tank-100gal",
+    "optionBProductUrl": "/reviews/tuffstuff-stock-tank-100gal",
     "optionBProductLabel": "View Stock Tank Option",
-    "optionBReviewUrl": "/reviews/TuffStuff-Stock-Tank-100gal",
+    "optionBReviewUrl": "/reviews/tuffstuff-stock-tank-100gal",
     "optionBBullets": [
       "More DIY-friendly",
       "Sturdier utility-style feel",
@@ -98,9 +98,9 @@
       "title": "Ice Barrel (Barrel Style)",
       "summary": "Best for buyers who want an upright plunge with a smaller footprint and a simpler path into regular cold exposure."
     },
-    "optionAProductUrl": "/reviews/IceBarrel-400",
+    "optionAProductUrl": "/reviews/icebarrel-400",
     "optionAProductLabel": "View Ice Barrel",
-    "optionAReviewUrl": "/reviews/IceBarrel-400",
+    "optionAReviewUrl": "/reviews/icebarrel-400",
     "optionABullets": [
       "Smaller footprint",
       "Upright immersion style",
@@ -183,9 +183,9 @@
       "title": "Ice Barrel 300",
       "summary": "Best for buyers who want an Ice Barrel-style plunge at a lower cost and with a simpler entry into the category."
     },
-    "optionAProductUrl": "/reviews/IceBarrel-300",
+    "optionAProductUrl": "/reviews/icebarrel-300",
     "optionAProductLabel": "View Ice Barrel 300",
-    "optionAReviewUrl": "/reviews/IceBarrel-300",
+    "optionAReviewUrl": "/reviews/icebarrel-300",
     "optionABullets": [
       "Lower upfront cost",
       "Easier entry into the Ice Barrel format",
@@ -195,9 +195,9 @@
       "title": "Ice Barrel 400",
       "summary": "Best for buyers who want the more established upright Ice Barrel option with stronger long-term appeal."
     },
-    "optionBProductUrl": "/reviews/IceBarrel-400",
+    "optionBProductUrl": "/reviews/icebarrel-400",
     "optionBProductLabel": "View Ice Barrel 400",
-    "optionBReviewUrl": "/reviews/IceBarrel-400",
+    "optionBReviewUrl": "/reviews/icebarrel-400",
     "optionBBullets": [
       "More established category position",
       "Better fit for taller and more committed users",
@@ -271,7 +271,7 @@
     },
     "optionAProductUrl": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
     "optionAProductLabel": "Check Price",
-    "optionAReviewUrl": "/reviews/SunHome-Cold-Plunge-Pro",
+    "optionAReviewUrl": "/reviews/sunhome-cold-plunge-pro",
     "optionABullets": [
       "Strong cooling performance",
       "Premium all-in-one ownership",
@@ -283,7 +283,7 @@
     },
     "optionBProductUrl": "https://plunge.com/products/plunge-all-in",
     "optionBProductLabel": "Check Price",
-    "optionBReviewUrl": "/reviews/Plunge-All-In",
+    "optionBReviewUrl": "/reviews/plunge-all-in",
     "optionBBullets": [
       "More convenience-focused",
       "Stronger app and routine feel",
@@ -356,7 +356,7 @@
     },
     "optionAProductUrl": "https://plunge.com/products/plunge",
     "optionAProductLabel": "Check Price",
-    "optionAReviewUrl": "/reviews/Plunge-Standard",
+    "optionAReviewUrl": "/reviews/plunge-standard",
     "optionABullets": [
       "Lower upfront cost",
       "Simpler premium ownership",
@@ -368,7 +368,7 @@
     },
     "optionBProductUrl": "https://plunge.com/products/plunge-all-in",
     "optionBProductLabel": "Check Price",
-    "optionBReviewUrl": "/reviews/Plunge-All-In",
+    "optionBReviewUrl": "/reviews/plunge-all-in",
     "optionBBullets": [
       "More convenience-focused",
       "Stronger plug-and-plunge experience",
@@ -591,7 +591,10 @@
         "answer": "That depends on whether you value easier ownership or a more traditional experience. Infrared often wins on home practicality, while traditional sauna can be the better investment for buyers committed to the classic sauna format."
       }
     ],
-    "related_best_of": []
+    "related_best_of": [
+      "best-home-saunas",
+      "best-infrared-saunas"
+    ]
   },
   {
     "slug": "cold-plunge-vs-cryotherapy",
@@ -688,9 +691,9 @@
       "title": "Penguin Chiller Setup",
       "summary": "Best for buyers who want a modular cold plunge build with strong temperature control and more flexibility around components, upgrades, and serviceability."
     },
-    "optionAProductUrl": "/reviews/PenguinChillers-Tub-Setup",
+    "optionAProductUrl": "/reviews/penguinchillers-tub-setup",
     "optionAProductLabel": "View Penguin Setup",
-    "optionAReviewUrl": "/reviews/PenguinChillers-Tub-Setup",
+    "optionAReviewUrl": "/reviews/penguinchillers-tub-setup",
     "optionABullets": [
       "More modular and serviceable",
       "Better for DIY-leaning buyers",
@@ -841,6 +844,9 @@
         "answer": "Sauna usually offers better long-term value for most home buyers because it is easier to integrate into a realistic home setup. Steam room can still be worth it, but only for buyers committed to that specific experience."
       }
     ],
-    "related_best_of": []
+    "related_best_of": [
+      "best-home-saunas",
+      "best-outdoor-saunas"
+    ]
   }
 ]

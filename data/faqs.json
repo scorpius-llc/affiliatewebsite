@@ -1,123 +1,22 @@
 [
   {
-    "id": "how-to-choose-the-right-robotic-pool-cleaner-for-your-pool",
-    "questions": [
-      {
-        "question": "How do I know which robotic pool cleaner is right for my pool?",
-        "answer": "Start by identifying your pool size, surface type, and typical debris load. Larger pools require longer runtime and stronger suction, while vinyl liner pools may benefit from balanced weight and gentler brushes. Matching the robot to your pool’s specific conditions is more important than choosing the model with the most features."
-      },
-      {
-        "question": "Are more expensive robotic pool cleaners worth it?",
-        "answer": "Higher-priced models often include better navigation systems, stronger motors, and more durable components. For large or complex pools, those upgrades can improve coverage and reduce cleaning time. For smaller or simple pools, mid-range models often deliver excellent results without paying for features you may not need."
-      },
-      {
-        "question": "How long do robotic pool cleaners typically last?",
-        "answer": "With proper maintenance, most robotic pool cleaners last between 3 and 7 years. Longevity depends on usage frequency, debris load, and how well filters and brushes are maintained."
-      },
-      {
-        "question": "Do robotic pool cleaners replace manual brushing completely?",
-        "answer": "In most cases, robotic pool cleaners significantly reduce or eliminate the need for manual vacuuming and brushing. However, occasional manual touch-ups may still be needed, especially along steps or tight corners."
-      }
-    ]
-  },
-  {
-    "id": "corded-vs-cordless-robotic-pool-cleaners",
-    "questions": [
-      {
-        "question": "Are cordless robotic pool cleaners as powerful as corded models?",
-        "answer": "Modern cordless models provide strong cleaning performance, but corded robots generally maintain more consistent suction throughout longer cleaning cycles. For large pools or heavy debris, corded units often have an advantage."
-      },
-      {
-        "question": "How long do cordless robotic pool cleaner batteries last?",
-        "answer": "Most cordless robotic pool cleaners run between 60 and 120 minutes per charge. Battery lifespan over time depends on usage frequency and charging habits, but many last several years before noticeable degradation."
-      },
-      {
-        "question": "Is cord tangling a major issue with corded pool robots?",
-        "answer": "Many modern corded robots include swivel cables designed to reduce tangling. While some cord management is required, tangling is far less common than it was in older designs."
-      },
-      {
-        "question": "Which is better for large pools: corded or cordless?",
-        "answer": "Corded robotic pool cleaners are generally better for large pools because they provide continuous power and longer cleaning cycles. High-capacity cordless models can work, but may require multiple cycles for very large pools."
-      }
-    ]
-  },
-  {
-    "id": "best-robotic-pool-cleaner-for-large-pools",
-    "questions": [
-      {
-        "question": "What size pool requires a heavy-duty robotic pool cleaner?",
-        "answer": "Pools over 40 feet in length or with significant depth variation typically benefit from robots designed for extended runtime and strong wall climbing performance."
-      },
-      {
-        "question": "How long should a robotic pool cleaner run in a large pool?",
-        "answer": "In large pools, cleaning cycles typically range from two to three hours depending on surface area and debris levels. Longer runtimes help ensure full floor and wall coverage."
-      },
-      {
-        "question": "Can a cordless robotic pool cleaner handle a large pool?",
-        "answer": "Some high-capacity cordless models can clean large pools effectively, but battery runtime may limit coverage in very large or complex layouts. Corded models are often more reliable for extended cycles."
-      },
-      {
-        "question": "Do robotic pool cleaners clean walls and waterlines in large pools?",
-        "answer": "Many mid-range and premium robotic pool cleaners are designed to climb walls and scrub the waterline. Performance can vary by model, but strong traction and consistent power improve wall-cleaning reliability."
-      }
-    ]
-  },
-  {
-    "id": "best-robotic-pool-cleaner-for-deep-pools",
-    "questions": [
-      {
-        "question": "Do robotic pool cleaners work well in deep pools?",
-        "answer": "Yes, robotic pool cleaners can perform very well in deep pools when they offer strong wall climbing ability and sufficient runtime to cover both floor and vertical surfaces."
-      },
-      {
-        "question": "What features matter most in a deep pool?",
-        "answer": "Traction, wall climbing performance, balanced weight, and efficient navigation are especially important in deep pools to prevent slipping and missed areas."
-      },
-      {
-        "question": "Will a robotic pool cleaner reach the bottom of an 8-foot deep end?",
-        "answer": "Most quality robotic pool cleaners are designed to operate at standard residential pool depths, including deep ends around 8 feet. Always confirm manufacturer specifications for maximum depth compatibility."
-      },
-      {
-        "question": "Are corded models better for deep pools?",
-        "answer": "Corded models often perform well in deep pools because they provide consistent power during long cleaning cycles. However, some advanced cordless models can also handle deep pools effectively if runtime is sufficient."
-      }
-    ]
-  },
-  {
-    "id": "overall",
-    "questions": [
-      {
-        "question": "What makes a robot pool cleaner the 'best overall'?",
-        "answer": "Best overall models provide a strong balance of cleaning performance on all surfaces (floor, walls, and waterline), ease of use (top-load filters, anti-tangle cables), and long-term reliability, all at a competitive price point."
-      },
-      {
-        "question": "Do I need smart features like Wi-Fi control?",
-        "answer": "While app control is a convenient feature for scheduling and spot cleaning, it is not essential for a great clean. Many 'best overall' models focus on core cleaning power and reliability rather than smart features."
-      }
-    ]
-  },
-  {
     "id": "best-of",
     "questions": [
       {
         "question": "How do you rank the best cold plunges and saunas?",
-        "answer": "Our rankings are based on a combination of performance testing, material quality analysis, user feedback, and long-term value. We focus on what matters for daily use, not just marketing claims."
+        "answer": "Our rankings compare product specifications, design tradeoffs, maintenance demands, user fit, and category value. We do not claim hands-on testing unless it has occurred."
       },
       {
-        "question": "Which best-of list should I start with?",
-        "answer": "If you're new to recovery equipment, start with our 'Best for Beginners' or 'Best Value' lists. If you have a specific goal, like finding a compact unit for a small space, choose the list that matches your primary constraint."
+        "question": "Which Best Of list should I start with?",
+        "answer": "Start with the primary category list for cold plunges or home saunas, then narrow by format, installation, budget, or space constraints."
       },
       {
-        "question": "What’s the difference between a portable cold plunge and a chiller-based system?",
-        "answer": "Portable plunges are typically insulated tubs that you fill with ice and water, making them affordable and easy to set up. Chiller-based systems use a refrigeration unit to maintain a constant, precise temperature, offering a more powerful and convenient (but more expensive) experience."
+        "question": "What is the difference between a portable cold plunge and a chiller-based system?",
+        "answer": "Portable plunges are generally lower cost and require ice or added cooling effort. Chiller systems cost more upfront but provide more consistent temperature control and simpler repeated use."
       },
       {
-        "question": "Are infrared saunas better than traditional saunas for home use?",
-        "answer": "Infrared saunas are often preferred for home use because they operate at lower temperatures, heat the body directly, and typically have lower electrical requirements. Traditional saunas use higher air temperatures and humidity, which some users prefer for a more intense sweat."
-      },
-      {
-        "question": "What should beginners prioritize when choosing recovery equipment?",
-        "answer": "Beginners should prioritize ease of use, setup simplicity, and a manageable price point. It's better to start with a quality entry-level product you'll use consistently than an expensive, complex system that gathers dust."
+        "question": "Are infrared saunas easier to install than traditional saunas?",
+        "answer": "Infrared cabins are often simpler for home installation, while traditional saunas may require more planning for heater, power, ventilation, or outdoor placement."
       }
     ]
   }

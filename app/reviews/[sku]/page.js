@@ -1,24 +1,27 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
+import { getReviewPath, getReviewSlug } from '../../../lib/routes';
 
 // Generate segments for all products
 export async function generateStaticParams() {
   return products.map((product) => ({
-    sku: product.sku,
+    sku: getReviewSlug(product.sku),
   }));
 }
 
 // Generate SEO metadata
 export async function generateMetadata({ params }) {
-  const product = products.find((p) => p.sku === params.sku);
+  const product = products.find((p) => getReviewSlug(p.sku) === params.sku);
   if (!product) return {};
 
   return {
     title: `${product.name} Review - ${config.siteName}`,
     description: product.description,
+    alternates: {
+      canonical: `https://${config.domain}${getReviewPath(product.sku)}`,
+    },
     openGraph: {
       title: `${product.name} Review`,
       description: product.description,
@@ -28,7 +31,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default function ReviewPage({ params }) {
-  const product = products.find((p) => p.sku === params.sku);
+  const product = products.find((p) => getReviewSlug(p.sku) === params.sku);
   const amazonTag = config.amazonAffiliateTag;
 
   if (!product) {
@@ -40,6 +43,9 @@ export default function ReviewPage({ params }) {
     const fullAlt = products.find(p => p.sku === alt.sku);
     return fullAlt ? { ...alt, price: fullAlt.approx_price } : alt;
   }) || [];
+  const merchantHref = product.asin
+    ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}`
+    : product.image_url;
 
   return (
     <div className="container my-5">
@@ -118,11 +124,12 @@ export default function ReviewPage({ params }) {
               <h5 className="card-title">{product.name}</h5>
               <p className="card-text">Ready to buy? Get the best price online.</p>
               <a 
-                href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${amazonTag}` : '#'} 
+                href={merchantHref}
                 target="_blank" 
-                className={`btn btn-warning btn-lg fw-bold w-100 ${!product.asin ? 'disabled' : ''}`}
+                rel="noopener noreferrer sponsored"
+                className={`btn btn-warning btn-lg fw-bold w-100 ${!merchantHref ? 'disabled' : ''}`}
               >
-                Check Price on Amazon
+                Check Current Price
               </a>
               
               <small className="text-muted d-block mt-2">We may earn a commission on qualifying purchases.</small>
@@ -134,7 +141,7 @@ export default function ReviewPage({ params }) {
                 <ul className="list-group list-group-flush">
                   {alternatives.map(alt => (
                     <li key={alt.sku} className="list-group-item d-flex justify-content-between align-items-center">
-                      <Link href={`/reviews/${alt.sku}`} className="text-decoration-none fw-bold">
+                      <Link href={getReviewPath(alt.sku)} className="text-decoration-none fw-bold">
                         {alt.name}
                       </Link>
                       <span className="badge bg-secondary rounded-pill">${alt.price}</span>

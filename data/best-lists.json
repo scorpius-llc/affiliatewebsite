@@ -607,5 +607,77 @@
       }
     ],
     "buying_advice": "<h3>How to Choose a Cold Plunge Tub for Beginners</h3><p>If you are new to cold exposure, prioritize <strong>simple setup, low maintenance, and manageable cost</strong> before anything else. The best beginner tub is the one that makes it easy to start and easy to keep using.</p><p>Start with short sessions, focus on consistency, and choose a tub that fits your space and budget without adding unnecessary friction. Once the routine is established, it becomes much easier to decide whether you want to upgrade to a more premium or chiller-powered system later.</p>"
+  },
+  {
+    "id": "best-home-saunas",
+    "title": "Best Home Saunas (2026)",
+    "description": "Our top home sauna picks balance heat experience, installation practicality, comfort, materials, and long-term value.",
+    "intro": "<p>The best home sauna is the one whose heat style, capacity, electrical needs, and placement fit your actual routine. This shortlist covers practical infrared cabins and classic traditional sauna options.</p>",
+    "criteria": ["Heat performance", "Home installation requirements", "Build quality and comfort", "Ease of ownership", "Long-term value"],
+    "schema_type": "ItemList",
+    "primary_category": "sauna",
+    "featured_skus": ["SunHome-Equinox-2P-Infrared", "AlmostHeaven-Bluestone-3P", "Dynamic-Barcelona-1-2P"],
+    "comparison_table_title": "Home Sauna Comparison",
+    "comparison_table_intro": "Compare leading home sauna choices by price, heat format, footprint, and buyer fit.",
+    "ranking_methodology_title": "How We Rank Home Saunas",
+    "ranking_methodology": "<p>We prioritize usable heat experience, installation practicality, comfort, materials, maintenance, and value for a repeatable home sauna routine.</p>",
+    "products": [
+      {"sku": "SunHome-Equinox-2P-Infrared", "badge": "Best Overall", "reason": "<p>A comfortable full-spectrum infrared cabin with a practical two-person home footprint.</p>"},
+      {"sku": "AlmostHeaven-Bluestone-3P", "badge": "Best Traditional Indoor Sauna", "reason": "<p>A classic sauna option for buyers prioritizing a hotter traditional heat experience.</p>"},
+      {"sku": "Dynamic-Barcelona-1-2P", "badge": "Best Value Infrared", "reason": "<p>A more approachable infrared cabin for routine home use.</p>"}
+    ],
+    "faqs": [
+      {"question": "What type of sauna is best for a home?", "answer": "Infrared cabins often suit buyers seeking simpler installation, while traditional saunas suit buyers prioritizing classic high heat."},
+      {"question": "What should I check before buying a home sauna?", "answer": "Confirm placement, electrical requirements, assembly access, capacity, ventilation needs, and the heat style you actually prefer."}
+    ],
+    "buying_advice": "<p>Read our <a href=\"/guides/how-to-choose-a-home-sauna\">home sauna buying guide</a> and <a href=\"/comparisons/infrared-vs-traditional-sauna\">infrared vs traditional sauna comparison</a> before choosing a product review.</p>"
+  },
+  {
+    "id": "best-infrared-saunas",
+    "title": "Best Infrared Saunas (2026)",
+    "description": "The best infrared saunas for at-home use, selected for heat performance, comfort, installation practicality, and value.",
+    "intro": "<p>Infrared saunas are a practical home category for buyers who want radiant heat, manageable installation, and convenient repeated sessions.</p>",
+    "criteria": ["Infrared heat performance", "Comfort and cabin size", "Installation requirements", "Build quality", "Value"],
+    "schema_type": "ItemList",
+    "primary_category": "sauna",
+    "featured_skus": ["SunHome-Equinox-2P-Infrared", "Clearlight-Sanctuary-2", "Dynamic-Barcelona-1-2P"],
+    "comparison_table_title": "Infrared Sauna Comparison",
+    "comparison_table_intro": "Compare leading infrared sauna cabins for home recovery routines.",
+    "ranking_methodology_title": "How We Rank Infrared Saunas",
+    "ranking_methodology": "<p>We assess radiant heat experience, materials, comfort, home installation demands, controls, and long-term ownership value.</p>",
+    "products": [
+      {"sku": "SunHome-Equinox-2P-Infrared", "badge": "Best Overall Infrared Sauna", "reason": "<p>A strong full-spectrum choice with space for two and a polished home ownership experience.</p>"},
+      {"sku": "Clearlight-Sanctuary-2", "badge": "Best Premium Alternative", "reason": "<p>A premium infrared option for buyers comparing higher-end cabins.</p>"},
+      {"sku": "Dynamic-Barcelona-1-2P", "badge": "Best Value Pick", "reason": "<p>A compact infrared option for buyers balancing space and budget.</p>"}
+    ],
+    "faqs": [
+      {"question": "Are infrared saunas practical for home use?", "answer": "They are often practical because cabin options commonly fit indoor spaces and have simpler installation demands than traditional sauna builds."},
+      {"question": "How do infrared and traditional sauna experiences differ?", "answer": "Infrared heats with radiant energy at lower air temperatures, while traditional saunas produce hotter ambient air for a classic experience."}
+    ],
+    "buying_advice": "<p>Use our <a href=\"/guides/infrared-sauna-benefits\">infrared sauna benefits guide</a> and <a href=\"/comparisons/infrared-vs-traditional-sauna\">comparison</a> to confirm this is the right heat format before choosing a review.</p>"
+  },
+  {
+    "id": "best-outdoor-saunas",
+    "title": "Best Outdoor Saunas (2026)",
+    "description": "The best outdoor saunas for backyards and dedicated recovery spaces, compared for heat, construction, assembly, and weather-ready ownership.",
+    "intro": "<p>Outdoor sauna buyers need to plan for base preparation, weather exposure, delivery, assembly, electrical or heater requirements, and long-term wood care.</p>",
+    "criteria": ["Outdoor suitability", "Traditional heat experience", "Materials and construction", "Assembly and site planning", "Value"],
+    "schema_type": "ItemList",
+    "primary_category": "sauna",
+    "featured_skus": ["AlmostHeaven-Barrel-Morgan", "Dundalk-Barrel-Sauna", "ALEKO-Barrel-Sauna"],
+    "comparison_table_title": "Outdoor Sauna Comparison",
+    "comparison_table_intro": "Compare backyard sauna choices by footprint, heat style, price, and installation fit.",
+    "ranking_methodology_title": "How We Rank Outdoor Saunas",
+    "ranking_methodology": "<p>We prioritize weather-suitable construction, heat experience, site and assembly demands, comfort, maintenance expectations, and ownership value.</p>",
+    "products": [
+      {"sku": "AlmostHeaven-Barrel-Morgan", "badge": "Best Overall Outdoor Sauna", "reason": "<p>A recognizable barrel sauna format for buyers seeking the classic backyard sauna ritual.</p>"},
+      {"sku": "Dundalk-Barrel-Sauna", "badge": "Best Premium Outdoor Pick", "reason": "<p>A strong outdoor alternative for buyers comparing barrel sauna craftsmanship.</p>"},
+      {"sku": "ALEKO-Barrel-Sauna", "badge": "Best Value Outdoor Pick", "reason": "<p>A practical outdoor barrel option for buyers weighing budget against installation needs.</p>"}
+    ],
+    "faqs": [
+      {"question": "What does an outdoor sauna installation require?", "answer": "Plan for a level base, delivery and assembly access, heater or electrical requirements, weather exposure, and ongoing material care."},
+      {"question": "Are barrel saunas good for outdoor home use?", "answer": "Barrel saunas are a popular outdoor format when buyers want traditional heat and can support the installation and upkeep."}
+    ],
+    "buying_advice": "<p>Start with our <a href=\"/guides/how-to-choose-a-home-sauna\">home sauna guide</a> and <a href=\"/comparisons/sauna-vs-steam-room\">sauna vs steam room comparison</a> before selecting an outdoor product review.</p>"
   }
 ]

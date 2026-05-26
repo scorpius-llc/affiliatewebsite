@@ -2,6 +2,7 @@ import Link from 'next/link';
 import config from '../data/config.json';
 import products from '../data/products.json';
 import ProductImage from '../components/ProductImage';
+import { getReviewPath } from '../lib/routes';
 
 // Helper function to replace placeholders
 const replacePlaceholders = (text) => {
@@ -104,7 +105,7 @@ export default function Home() {
                       <li><strong>Price Range:</strong> ${product.approx_price}</li>
                       <li><strong>Key Feature:</strong> High Performance</li>
                     </ul>
-                    <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary mt-3">View Review</Link>
+                    <Link href={getReviewPath(product.sku)} className="btn btn-outline-primary mt-3">View Review</Link>
                   </div>
                 </div>
               </div>

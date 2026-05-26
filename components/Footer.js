@@ -9,6 +9,7 @@ export default function Footer() {
         <p className="mb-1">{config.siteName} specializes in cold plunge and sauna recovery recommendations.</p>
         <ul className="list-inline mb-3">
           <li className="list-inline-item"><Link href="/best-of/best-cold-plunge-tubs">Best Cold Plunge Tubs</Link></li>
+          <li className="list-inline-item"><Link href="/best-of/best-home-saunas">Best Home Saunas</Link></li>
           <li className="list-inline-item"><Link href="/comparisons">Comparisons</Link></li>
           <li className="list-inline-item"><Link href="/guides">Guides</Link></li>
           <li className="list-inline-item"><Link href="/reviews">Reviews</Link></li>

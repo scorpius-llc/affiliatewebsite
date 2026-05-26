@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import guides from '../../../data/guides.json';
 import config from '../../../data/config.json';
-import MaintenanceGuide from '../../../components/guides/MaintenanceGuide';
 
 // Function to replace topic placeholders
 const replacePlaceholders = (text) => {
@@ -35,8 +34,6 @@ export default function GuidePage({ params }) {
     notFound();
   }
 
-  const isMaintenanceGuide = guide.id === 'maintenance-care';
-
   return (
     <div className="container my-5">
       <nav aria-label="breadcrumb">
@@ -51,11 +48,7 @@ export default function GuidePage({ params }) {
 
       <div className="row">
         <div className="col-lg-8">
-          {isMaintenanceGuide ? (
-            <MaintenanceGuide />
-          ) : (
-            <div dangerouslySetInnerHTML={{ __html: replacePlaceholders(guide.content) }} />
-          )}
+          <div dangerouslySetInnerHTML={{ __html: replacePlaceholders(guide.content) }} />
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import products from '../../data/products.json';
 import config from '../../data/config.json';
+import { getReviewPath } from '../../lib/routes';
 
 export default function Reviews() {
   const [selectedBrand, setSelectedBrand] = useState('all');
@@ -21,10 +22,13 @@ export default function Reviews() {
     const priceMatch = maxPrice >= SLIDER_MAX ? true : product.approx_price <= maxPrice;
     return brandMatch && priceMatch;
   });
+  const getMerchantHref = (product) => product.asin
+    ? `https://www.amazon.com/dp/${product.asin}?tag=${config.amazonAffiliateTag}`
+    : product.image_url;
 
   return (
     <div className="container my-5">
-      <h1 className="mb-4">Robot Pool Cleaner Reviews</h1>
+      <h1 className="mb-4">Cold Plunge & Sauna Reviews</h1>
 
       <div className="row mb-4 p-3 bg-light rounded">
         <div className="col-md-4">
@@ -80,11 +84,12 @@ export default function Reviews() {
                 
                 <p className="card-text fw-bold mt-auto">Approx. Price: ${product.approx_price}</p>
                 <div className="d-flex gap-2">
-                  <Link href={`/reviews/${product.sku}`} className="btn btn-outline-primary flex-grow-1">Read Review</Link>
+                  <Link href={getReviewPath(product.sku)} className="btn btn-outline-primary flex-grow-1">Read Review</Link>
                   <a 
-                    href={product.asin ? `https://www.amazon.com/dp/${product.asin}?tag=${config.amazonAffiliateTag}` : '#'}
+                    href={getMerchantHref(product)}
                     target="_blank" 
-                    className={`btn btn-warning flex-grow-1 fw-bold ${!product.asin ? 'disabled' : ''}`}
+                    rel="noopener noreferrer sponsored"
+                    className={`btn btn-warning flex-grow-1 fw-bold ${!getMerchantHref(product) ? 'disabled' : ''}`}
                   >
                     Check Price
                   </a>

@@ -6,6 +6,7 @@ import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import FaqSection from '../../../components/FaqSection';
 import ProductImage from '../../../components/ProductImage';
+import { getReviewPath } from '../../../lib/routes';
 
 const FALLBACK_IMAGE = '/images/ThermaPeakLogo.png';
 
@@ -253,7 +254,7 @@ const getPrimaryCta = (product) => {
   }
 
   return {
-    href: `/reviews/${product.sku}`,
+    href: getReviewPath(product.sku),
     label: 'Check Price',
     external: false,
   };
@@ -289,6 +290,13 @@ const scoreCriteria = [
   { title: 'Maintenance', description: 'Cleaning effort, drainage, filtration, and water-care demands.' },
   { title: 'Value for Price', description: 'Whether the ownership experience justifies the total spend.' },
 ];
+const saunaScoreCriteria = [
+  { title: 'Heat Experience', description: 'Heat format, performance, comfort, and suitability for repeat sessions.' },
+  { title: 'Installation', description: 'Electrical, assembly, placement, and outdoor-readiness demands.' },
+  { title: 'Build Quality', description: 'Materials, cabin comfort, durability, and finish quality.' },
+  { title: 'Maintenance', description: 'Cleaning, material care, and long-term ownership effort.' },
+  { title: 'Value for Price', description: 'Whether the ownership experience justifies the total spend.' },
+];
 
 export async function generateStaticParams() {
   return bestLists
@@ -314,7 +322,7 @@ export async function generateMetadata({ params }) {
     itemListElement: listProducts.map((product, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: `https://${config.domain}/reviews/${product.sku}`,
+      url: `https://${config.domain}${getReviewPath(product.sku)}`,
       name: product.name,
     })),
   };
@@ -371,6 +379,15 @@ export default function BestOfPage({ params }) {
   const relatedComparisons = comparisons.filter((comparison) =>
     (comparison.related_best_of || []).includes(list.id)
   );
+  const isSaunaList = list.primary_category === 'sauna';
+  const categoryLabel = isSaunaList ? 'Saunas' : 'Cold Plunge Tubs';
+  const evaluationFocus = isSaunaList
+    ? 'heat performance, installation practicality, comfort, material quality, and realistic repeat use'
+    : 'temperature consistency, insulation, ease of cleaning, and realistic repeat use';
+  const topPickContext = isSaunaList
+    ? 'It stands out for a practical home heat experience, ownership fit, and the likelihood that buyers can use it consistently.'
+    : 'It stands out because it reduces common ownership friction around temperature control, ice use, and upkeep.';
+  const displayedScoreCriteria = isSaunaList ? saunaScoreCriteria : scoreCriteria;
 
   const faqJsonLd = faqs.length
     ? {
@@ -398,7 +415,7 @@ export default function BestOfPage({ params }) {
 
       <div className="best-of-shell">
         <header className="best-of-hero text-center">
-          <p className="best-of-eyebrow">Best Cold Plunge Tubs</p>
+          <p className="best-of-eyebrow">Best {categoryLabel}</p>
           <h1 className="section-title">{list.title}</h1>
           <p className="section-subtitle best-of-subtitle">{list.description}</p>
         </header>
@@ -432,18 +449,16 @@ export default function BestOfPage({ params }) {
                 </div>
                 <h2>{topPick.name}</h2>
                 <p className="top-pick-summary">
-                  {topPick.description} It stands out because it reduces the biggest ownership pain points:
-                  inconsistent water temperature, repeated ice buying, and higher-effort upkeep. For most buyers
-                  who want a serious at-home setup, this is the fastest path to a reliable long-term plunge routine.
+                  {topPick.description} {topPickContext}
                 </p>
                 <div className="top-pick-meta">
                   <span><strong>Best For:</strong> {getBestForLabel(topPick)}</span>
                   <span><strong>Price Range:</strong> {getPriceLabel(topPick)}</span>
-                  <span><strong>Cooling:</strong> {getCoolingLabel(topPick.cooling_type)}</span>
+                  <span><strong>Format:</strong> {getCoolingLabel(topPick.cooling_type || topPick.heating_type)}</span>
                 </div>
                 <div className="cta-row">
                   {renderCta(topPick)}
-                  <Link href={`/reviews/${topPick.sku}`} className="btn btn-secondary-cta">
+                  <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                     Read Review
                   </Link>
                 </div>
@@ -455,7 +470,7 @@ export default function BestOfPage({ params }) {
         {comparisonProducts.length > 0 && (
           <section className="money-section">
             <div className="section-heading">
-              <h2>{list.comparison_table_title || 'Cold Plunge Comparison'}</h2>
+              <h2>{list.comparison_table_title || `${categoryLabel} Comparison`}</h2>
               {list.comparison_table_intro && <p>{list.comparison_table_intro}</p>}
             </div>
 
@@ -466,7 +481,7 @@ export default function BestOfPage({ params }) {
                     <tr>
                       <th>Product</th>
                       <th>Price Range</th>
-                      <th>Cooling Type</th>
+                      <th>System Type</th>
                       <th>Size / Capacity</th>
                       <th>Best For</th>
                       <th>Score</th>
@@ -479,11 +494,11 @@ export default function BestOfPage({ params }) {
                         <td>
                           <div className="comparison-product-cell">
                             <strong>{product.name}</strong>
-                            <Link href={`/reviews/${product.sku}`}>Read review</Link>
+                            <Link href={getReviewPath(product.sku)}>Read review</Link>
                           </div>
                         </td>
                         <td>{getPriceLabel(product)}</td>
-                        <td>{getCoolingLabel(product.cooling_type)}</td>
+                        <td>{getCoolingLabel(product.cooling_type || product.heating_type)}</td>
                         <td>{getSizeLabel(product)}</td>
                         <td>{getBestForLabel(product)}</td>
                         <td>
@@ -514,8 +529,8 @@ export default function BestOfPage({ params }) {
                       <dd>{getPriceLabel(product)}</dd>
                     </div>
                     <div>
-                      <dt>Cooling Type</dt>
-                      <dd>{getCoolingLabel(product.cooling_type)}</dd>
+                      <dt>System Type</dt>
+                      <dd>{getCoolingLabel(product.cooling_type || product.heating_type)}</dd>
                     </div>
                     <div>
                       <dt>Size / Capacity</dt>
@@ -528,7 +543,7 @@ export default function BestOfPage({ params }) {
                   </dl>
                   <div className="cta-row mobile-cta-row">
                     {renderCta(product)}
-                    <Link href={`/reviews/${product.sku}`} className="btn btn-secondary-cta">
+                    <Link href={getReviewPath(product.sku)} className="btn btn-secondary-cta">
                       Read Review
                     </Link>
                   </div>
@@ -565,7 +580,7 @@ export default function BestOfPage({ params }) {
 
         <section className="money-section">
           <div className="section-heading">
-            <h2>Best Cold Plunge Tubs Ranked</h2>
+            <h2>Best {categoryLabel} Ranked</h2>
             <p>
               Start with the option that fits your budget and ownership style, then use the review links to confirm
               the tradeoffs before you click through.
@@ -622,7 +637,7 @@ export default function BestOfPage({ params }) {
                     </div>
                     <div className="cta-row">
                       {renderCta(product)}
-                      <Link href={`/reviews/${product.sku}`} className="btn btn-secondary-cta">
+                      <Link href={getReviewPath(product.sku)} className="btn btn-secondary-cta">
                         Read Review
                       </Link>
                     </div>
@@ -641,7 +656,7 @@ export default function BestOfPage({ params }) {
                     </div>
                     <div className="cta-row banner-cta-row">
                       {renderCta(topPick)}
-                      <Link href={`/reviews/${topPick.sku}`} className="btn btn-secondary-cta">
+                      <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                         Read Review
                       </Link>
                     </div>
@@ -655,11 +670,11 @@ export default function BestOfPage({ params }) {
         <section className="money-section info-grid-section">
           <div className="info-card">
             <div className="section-heading">
-              <h2>How We Score Cold Plunge Tubs</h2>
+              <h2>How We Score {categoryLabel}</h2>
               <p>Scores are meant to help you compare buyers' tradeoffs quickly, not hide them behind marketing language.</p>
             </div>
             <div className="score-grid">
-              {scoreCriteria.map((criterion) => (
+              {displayedScoreCriteria.map((criterion) => (
                 <div key={criterion.title} className="score-grid-card">
                   <h3>{criterion.title}</h3>
                   <p>{criterion.description}</p>
@@ -670,16 +685,15 @@ export default function BestOfPage({ params }) {
 
           <div className="info-card">
             <div className="section-heading">
-              <h2>How We Evaluate Cold Plunge Tubs</h2>
+              <h2>How We Evaluate {categoryLabel}</h2>
             </div>
             <div className="rich-copy">
               <p>
-                We evaluate cold plunge tubs by comparing specifications, design tradeoffs, maintenance demands,
+                We evaluate {categoryLabel.toLowerCase()} by comparing specifications, design tradeoffs, maintenance demands,
                 user-fit considerations, and overall category value.
               </p>
               <p>
-                For this page, the heaviest weighting goes to temperature consistency, insulation, ease of cleaning,
-                and whether the tub realistically supports repeat use for the buyer it targets.
+                For this page, the heaviest weighting goes to {evaluationFocus}.
               </p>
               <p>
                 We do not claim hands-on testing when it has not occurred. Rankings are based on available product
@@ -699,29 +713,32 @@ export default function BestOfPage({ params }) {
             </div>
             <div className="rich-copy">
               {list.buying_advice && <div dangerouslySetInnerHTML={{ __html: list.buying_advice }} />}
-              <p>
-                If budget is the main constraint, start with our{' '}
-                <Link href="/best-of/best-budget-cold-plunge">Best Budget Cold Plunge</Link>{' '}
-                picks before paying premium-system prices.
-              </p>
-              <p>
-                If you are new to cold exposure, the{' '}
-                <Link href="/best-of/best-cold-plunge-for-beginners">Best Cold Plunge for Beginners</Link>{' '}
-                page is the fastest way to narrow the field to easy-to-live-with options.
-              </p>
-              <p>
-                Buyers deciding between manual ice use and powered systems should compare the ownership tradeoffs
-                in our{' '}
-                <Link href="/best-of/best-cold-plunge-with-chiller">cold plunge vs. ice bath decision path</Link>{' '}
-                before spending chiller-system money.
-              </p>
-              <p>
-                For upkeep and ownership basics, review the{' '}
-                <Link href="/guides/maintenance-care">maintenance guide</Link>{' '}
-                and the general{' '}
-                <Link href="/guides/buying-guides">setup and buying guide</Link>{' '}
-                before choosing your final shortlist.
-              </p>
+              {isSaunaList ? (
+                <p>
+                  Before choosing a review, use our{' '}
+                  <Link href="/guides/how-to-choose-a-home-sauna">home sauna buying guide</Link>{' '}
+                  and{' '}
+                  <Link href="/comparisons/infrared-vs-traditional-sauna">infrared vs traditional sauna comparison</Link>.
+                </p>
+              ) : (
+                <>
+                  <p>
+                    If budget is the main constraint, start with our{' '}
+                    <Link href="/best-of/best-budget-cold-plunge">Best Budget Cold Plunge</Link>{' '}
+                    picks before paying premium-system prices.
+                  </p>
+                  <p>
+                    Buyers deciding between manual ice use and powered systems should compare{' '}
+                    <Link href="/comparisons/cold-plunge-vs-ice-bath">Cold Plunge vs Ice Bath</Link>{' '}
+                    before spending chiller-system money.
+                  </p>
+                  <p>
+                    For upkeep basics, review the{' '}
+                    <Link href="/guides/cold-plunge-maintenance-guide">cold plunge maintenance guide</Link>{' '}
+                    before choosing your final shortlist.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -737,7 +754,7 @@ export default function BestOfPage({ params }) {
               </p>
               <div className="cta-row center-cta-row">
                 {renderCta(topPick)}
-                <Link href={`/reviews/${topPick.sku}`} className="btn btn-secondary-cta">
+                <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                   Read Review
                 </Link>
               </div>

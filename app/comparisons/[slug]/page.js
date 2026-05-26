@@ -230,17 +230,19 @@ export default function ComparisonPage({ params }) {
                 </div>
               </>
             ) : (
-              <div className="col-md-6">
-                <article className="card h-100 comparison-index-card">
-                  <div className="card-body d-flex flex-column">
-                    <h3 className="card-title h5">Want more ranked buyer guides?</h3>
-                    <p className="card-text flex-grow-1">Browse the site’s ranked Best Of pages to compare category leaders after you finish this side-by-side decision page.</p>
-                    <Link href="/best-of" className="btn btn-outline-primary mt-3">
-                      Browse Best Of Guides
-                    </Link>
-                  </div>
-                </article>
-              </div>
+              (comparison.related_best_of?.length ? comparison.related_best_of : []).map((listId) => (
+                <div key={listId} className="col-md-6">
+                  <article className="card h-100 comparison-index-card">
+                    <div className="card-body d-flex flex-column">
+                      <h3 className="card-title h5">Continue to ranked sauna picks</h3>
+                      <p className="card-text flex-grow-1">Use a ranked buyer guide after comparing the sauna formats that fit your home and heat preference.</p>
+                      <Link href={`/best-of/${listId}`} className="btn btn-outline-primary mt-3">
+                        View {listId.replaceAll('-', ' ')}
+                      </Link>
+                    </div>
+                  </article>
+                </div>
+              ))
             )}
             {(comparison.optionAReviewUrl || comparison.optionBReviewUrl) && (
               <>
