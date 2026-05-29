@@ -4,6 +4,8 @@ import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import { getReviewPath, getReviewSlug } from '../../../lib/routes';
 
+const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
+
 // Generate segments for all products
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -25,7 +27,20 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${product.name} Review`,
       description: product.description,
-      images: [product.image_url || 'https://via.placeholder.com/1200x630'],
+      url: `https://${config.domain}${getReviewPath(product.sku)}`,
+      images: [
+        {
+          url: OG_IMAGE_URL,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${product.name} Review`,
+      description: product.description,
+      images: [OG_IMAGE_URL],
     },
   };
 }

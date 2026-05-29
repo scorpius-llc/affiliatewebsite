@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import guides from '../../../data/guides.json';
 import config from '../../../data/config.json';
 
+const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
+
 // Function to replace topic placeholders
 const replacePlaceholders = (text) => {
   if (!text) return '';
@@ -24,6 +26,27 @@ export async function generateMetadata({ params }) {
   return {
     title: `${guide.title} - ${config.siteName}`,
     description: replacePlaceholders(guide.description),
+    alternates: {
+      canonical: `https://${config.domain}/guides/${guide.id}`,
+    },
+    openGraph: {
+      title: guide.title,
+      description: replacePlaceholders(guide.description),
+      url: `https://${config.domain}/guides/${guide.id}`,
+      images: [
+        {
+          url: OG_IMAGE_URL,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: guide.title,
+      description: replacePlaceholders(guide.description),
+      images: [OG_IMAGE_URL],
+    },
   };
 }
 
@@ -38,7 +61,7 @@ export default function GuidePage({ params }) {
     <div className="container my-5">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link href="/guides/">Guides</Link></li>
+          <li className="breadcrumb-item"><Link href="/guides">Guides</Link></li>
           <li className="breadcrumb-item active" aria-current="page">{guide.title}</li>
         </ol>
       </nav>

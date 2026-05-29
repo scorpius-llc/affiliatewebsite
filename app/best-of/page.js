@@ -12,6 +12,8 @@ const replacePlaceholders = (text) => {
     .replace(/{topicSingular}/g, config.topicSingular);
 };
 
+const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
+
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
   alternates: {
@@ -26,7 +28,7 @@ export const metadata = {
     siteName: config.siteName,
     images: [
       {
-        url: '/images/ThermaPeakOG.png',
+        url: ogImageUrl,
         width: 1200,
         height: 630,
       },
@@ -38,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: `Best Cold Plunges, Saunas & Recovery Gear (2026) | ${config.siteName}`,
     description: `Explore our curated lists of the best cold plunges, home saunas, sauna blankets, and recovery gear for different budgets, spaces, and goals.`,
-    images: ['/images/ThermaPeakOG.png'],
+    images: [ogImageUrl],
   },
 };
 

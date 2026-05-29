@@ -3,6 +3,8 @@ import guides from '../../data/guides.json';
 import pageContent from '../../data/guides-page.json';
 import config from '../../data/config.json';
 
+const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
+
 // Function to replace topic placeholders
 const replacePlaceholders = (text) => {
   return text
@@ -11,8 +13,30 @@ const replacePlaceholders = (text) => {
 };
 
 export const metadata = {
+  metadataBase: new URL(`https://${config.domain}`),
+  alternates: {
+    canonical: `https://${config.domain}/guides`,
+  },
   title: `Guides & Resources - ${config.siteName}`,
   description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+  openGraph: {
+    title: `Guides & Resources - ${config.siteName}`,
+    description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+    url: `https://${config.domain}/guides`,
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Guides & Resources - ${config.siteName}`,
+    description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+    images: [ogImageUrl],
+  },
 };
 
 export default function Guides() {
@@ -28,7 +52,7 @@ export default function Guides() {
               <div className="card-body text-center d-flex flex-column">
                 <h5 className="card-title">{guide.title}</h5>
                 <p className="card-text">{replacePlaceholders(guide.description)}</p>
-                <Link href={guide.link} className="btn btn-outline-primary mt-auto">Read Guide</Link>
+                <Link href={`/guides/${guide.id}`} className="btn btn-outline-primary mt-auto">Read Guide</Link>
               </div>
             </div>
           </div>

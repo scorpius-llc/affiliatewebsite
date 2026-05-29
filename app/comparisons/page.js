@@ -2,6 +2,8 @@ import Link from 'next/link';
 import comparisons from '../../data/comparisons.json';
 import config from '../../data/config.json';
 
+const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
+
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
   alternates: {
@@ -13,6 +15,19 @@ export const metadata = {
     title: `Recovery Equipment Comparisons | ${config.siteName}`,
     description: `Direct, decision-focused comparisons for cold plunge tubs, saunas, and recovery gear.`,
     url: `https://${config.domain}/comparisons`,
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Recovery Equipment Comparisons | ${config.siteName}`,
+    description: `Direct, decision-focused comparisons for cold plunge tubs, saunas, and recovery gear.`,
+    images: [ogImageUrl],
   },
 };
 

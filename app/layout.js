@@ -14,6 +14,7 @@ const replacePlaceholders = (text) => {
 
 const siteTitle = `${config.siteName} - ${replacePlaceholders(config.tagline)}`;
 const siteDescription = replacePlaceholders(config.tagline);
+const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
@@ -29,7 +30,7 @@ export const metadata = {
     siteName: config.siteName,
     images: [
       {
-        url: '/images/ThermaPeakOG.png', // Relative path to your image
+        url: ogImageUrl,
         width: 1200,
         height: 630,
       },
@@ -41,7 +42,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: ['/images/ThermaPeakOG.png'], // Must be an array
+    images: [ogImageUrl],
   },
 };
 

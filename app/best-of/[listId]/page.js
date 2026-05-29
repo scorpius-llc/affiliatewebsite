@@ -9,6 +9,7 @@ import ProductImage from '../../../components/ProductImage';
 import { getReviewPath } from '../../../lib/routes';
 
 const FALLBACK_IMAGE = '/images/ThermaPeakLogo.png';
+const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 const formatTitle = (str) =>
   str
@@ -337,10 +338,19 @@ export async function generateMetadata({ params }) {
       title: list.title,
       description: list.description,
       url: `https://${config.domain}/best-of/${params.listId}`,
+      images: [
+        {
+          url: OG_IMAGE_URL,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
     twitter: {
+      card: 'summary_large_image',
       title: list.title,
       description: list.description,
+      images: [OG_IMAGE_URL],
     },
     other: {
       'script[type="application/ld+json"]': JSON.stringify(itemListSchema),

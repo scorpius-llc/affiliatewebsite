@@ -6,6 +6,7 @@ import ComparisonFAQ, { getComparisonFaqs } from '../../../components/Comparison
 import ProductImage from '../../../components/ProductImage';
 
 const FALLBACK_IMAGE = '/images/ThermaPeakLogo.png';
+const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 const renderComparisonButton = (href, label, variant = 'primary') => {
   if (!href) return null;
@@ -48,6 +49,19 @@ export async function generateMetadata({ params }) {
       title: comparison.title,
       description: comparison.description,
       url: `https://${config.domain}/comparisons/${params.slug}`,
+      images: [
+        {
+          url: OG_IMAGE_URL,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: comparison.title,
+      description: comparison.description,
+      images: [OG_IMAGE_URL],
     },
   };
 }
