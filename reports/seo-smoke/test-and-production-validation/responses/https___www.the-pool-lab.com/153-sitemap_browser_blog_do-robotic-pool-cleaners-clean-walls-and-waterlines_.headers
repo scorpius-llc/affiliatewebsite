@@ -1,0 +1,14 @@
+HTTP/2 301 
+content-type: text/html
+location: http://www.the-pool-lab.com/blog/do-robotic-pool-cleaners-clean-walls-and-waterlines
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: 5d5938b83dbf4bdc6fd668933495ca1c
+date: Tue, 26 May 2026 12:25:43 GMT
+server: Google Frontend
+content-length: 169
+

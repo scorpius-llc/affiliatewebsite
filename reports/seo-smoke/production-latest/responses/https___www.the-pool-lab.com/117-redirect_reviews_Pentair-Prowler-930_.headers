@@ -1,0 +1,14 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/reviews/Pentair-Prowler-930
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: 8b00ad429e6ad8c5780b7a866202a5fb
+date: Tue, 26 May 2026 12:37:22 GMT
+server: Google Frontend
+content-length: 169
+

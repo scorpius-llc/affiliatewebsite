@@ -1,0 +1,14 @@
+HTTP/2 301 
+content-type: text/html
+location: http://www.the-pool-lab.com/best-of/value
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: 3099fd4f0d1f1406be54e1210ef55927
+date: Tue, 26 May 2026 12:30:46 GMT
+server: Google Frontend
+content-length: 169
+

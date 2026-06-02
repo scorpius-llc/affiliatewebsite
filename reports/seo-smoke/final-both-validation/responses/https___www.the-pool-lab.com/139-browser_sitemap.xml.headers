@@ -1,0 +1,16 @@
+HTTP/2 200 
+content-type: text/xml
+last-modified: Mon, 25 May 2026 01:34:04 GMT
+etag: "6a13a70c-1399"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: b07297604551381c3f6b4db3cd64ea9b
+date: Tue, 26 May 2026 12:30:22 GMT
+server: Google Frontend
+content-length: 5017
+

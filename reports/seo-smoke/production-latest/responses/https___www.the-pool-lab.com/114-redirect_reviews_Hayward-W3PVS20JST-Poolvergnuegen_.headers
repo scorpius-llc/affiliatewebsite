@@ -1,0 +1,14 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/reviews/Hayward-W3PVS20JST-Poolvergnuegen
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: b6f375ab411d7e0a6500ac805a072c2a
+date: Tue, 26 May 2026 12:37:21 GMT
+server: Google Frontend
+content-length: 169
+

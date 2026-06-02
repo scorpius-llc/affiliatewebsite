@@ -1,0 +1,14 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/blog/robotic-pool-cleaners-for-leaves-vs-fine-debris
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: 71b6d37379348c3f1031c3bb8328b4a3
+date: Tue, 26 May 2026 12:36:38 GMT
+server: Google Frontend
+content-length: 169
+
