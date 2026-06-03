@@ -1,0 +1,24 @@
+HTTP/1.1 302 Found
+location: https://www.the-pool-lab.com/
+x-cloud-trace-context: 983b12bca6746c1475098666f6bbd710
+date: Wed, 03 Jun 2026 14:29:39 GMT
+content-type: text/html
+server: Google Frontend
+Content-Length: 0
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-7adc"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: e0fd97cf89fd17bace2103c3c765b3b1
+date: Wed, 03 Jun 2026 14:29:39 GMT
+server: Google Frontend
+content-length: 31452
+

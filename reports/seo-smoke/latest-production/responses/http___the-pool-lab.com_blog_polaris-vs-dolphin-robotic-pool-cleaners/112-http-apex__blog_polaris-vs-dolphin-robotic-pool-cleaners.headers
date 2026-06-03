@@ -1,0 +1,38 @@
+HTTP/1.1 302 Found
+location: https://the-pool-lab.com/blog/polaris-vs-dolphin-robotic-pool-cleaners
+x-cloud-trace-context: 1314024316cad8aba5078f8e9a72a2b7
+date: Wed, 03 Jun 2026 14:29:46 GMT
+content-type: text/html
+server: Google Frontend
+Content-Length: 0
+
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/blog/polaris-vs-dolphin-robotic-pool-cleaners
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: c0ab8608d682e031a58dedf31b9824d6
+date: Wed, 03 Jun 2026 14:29:46 GMT
+server: Google Frontend
+content-length: 169
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-ab0b"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: 6755d8846ce4f330716afd2734975a5b
+date: Wed, 03 Jun 2026 14:29:46 GMT
+server: Google Frontend
+content-length: 43787
+

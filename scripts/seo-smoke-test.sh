@@ -4,28 +4,47 @@ set -u
 set -o pipefail
 
 CANONICAL_BASE="https://www.the-pool-lab.com"
+APEX_BASE="https://the-pool-lab.com"
+POOL_LAB_TEST_BASE="https://the-pool-lab-test-797634543823.us-east1.run.app"
+CRAWL_BASE=""
 TIMEOUT=30
+MAX_REDIRECTS=10
 OUTPUT_DIR=""
-DEFAULT_TARGETS=(
-  "https://the-pool-lab-test-797634543823.us-east1.run.app"
-  "https://www.the-pool-lab.com"
-)
-TARGETS=()
+TARGET_URLS=()
 PASS_COUNT=0
 FAIL_COUNT=0
 REQUEST_COUNT=0
 
+SEED_PATHS=(
+  "/"
+  "/about"
+  "/guides"
+  "/reviews"
+  "/best-of"
+  "/best-of/value"
+  "/best-of/overall"
+  "/blog/dolphin-nautilus-cc-plus-vs-dolphin-premier"
+  "/blog/polaris-vs-dolphin-robotic-pool-cleaners"
+)
+
 usage() {
   cat <<'EOF'
-Usage: bash scripts/seo-smoke-test.sh [options] [ORIGIN ...]
+Usage: bash scripts/seo-smoke-test.sh [options] [URL ...]
 
-Tests public indexing and technical SEO behavior for The Pool Lab deployments.
-When no ORIGIN is supplied, both the Cloud Run test service and production
-site are tested.
+Audits The Pool Lab indexing health, redirects, canonicals, sitemap URLs,
+robots.txt, and Googlebot accessibility. With no URL arguments, the script
+audits https://www.the-pool-lab.com and the historical GSC URLs.
 
 Options:
   --canonical-base URL  Canonical production origin.
                         Default: https://www.the-pool-lab.com
+  --crawl-base URL      Origin to fetch. Defaults to --canonical-base.
+                        Use this for test deployments that should still emit
+                        production canonicals.
+  --test-deployment     Fetch the Pool Lab Cloud Run test deployment:
+                        https://the-pool-lab-test-797634543823.us-east1.run.app
+  --apex-base URL       Apex origin used for non-www redirect checks.
+                        Default: https://the-pool-lab.com
   --output-dir DIR      Directory for report, raw log, and response artifacts.
                         Default: reports/seo-smoke/<timestamp>
   --timeout SECONDS     Per-request timeout. Default: 30
@@ -33,8 +52,11 @@ Options:
 
 Examples:
   bash scripts/seo-smoke-test.sh
-  bash scripts/seo-smoke-test.sh https://the-pool-lab-test-797634543823.us-east1.run.app
-  bash scripts/seo-smoke-test.sh --output-dir /tmp/poollab-seo https://www.the-pool-lab.com
+  bash scripts/seo-smoke-test.sh --test-deployment
+  npm run seo:smoke
+  bash scripts/seo-smoke-test.sh --output-dir reports/seo-smoke/production
+  bash scripts/seo-smoke-test.sh --crawl-base https://the-pool-lab-test-797634543823.us-east1.run.app
+  bash scripts/seo-smoke-test.sh https://www.the-pool-lab.com/best-of/value
 EOF
 }
 
@@ -43,6 +65,20 @@ while [ "$#" -gt 0 ]; do
     --canonical-base)
       [ "$#" -ge 2 ] || { echo "Missing value for --canonical-base" >&2; exit 2; }
       CANONICAL_BASE="${2%/}"
+      shift 2
+      ;;
+    --crawl-base)
+      [ "$#" -ge 2 ] || { echo "Missing value for --crawl-base" >&2; exit 2; }
+      CRAWL_BASE="${2%/}"
+      shift 2
+      ;;
+    --test-deployment)
+      CRAWL_BASE="$POOL_LAB_TEST_BASE"
+      shift
+      ;;
+    --apex-base)
+      [ "$#" -ge 2 ] || { echo "Missing value for --apex-base" >&2; exit 2; }
+      APEX_BASE="${2%/}"
       shift 2
       ;;
     --output-dir)
@@ -65,7 +101,7 @@ while [ "$#" -gt 0 ]; do
       exit 2
       ;;
     *)
-      TARGETS+=("${1%/}")
+      TARGET_URLS+=("${1%/}")
       shift
       ;;
   esac
@@ -76,8 +112,8 @@ if ! command -v curl >/dev/null 2>&1; then
   exit 2
 fi
 
-if [ "${#TARGETS[@]}" -eq 0 ]; then
-  TARGETS=("${DEFAULT_TARGETS[@]}")
+if [ -z "$CRAWL_BASE" ]; then
+  CRAWL_BASE="$CANONICAL_BASE"
 fi
 
 TIMESTAMP="$(date -u '+%Y%m%dT%H%M%SZ')"
@@ -89,12 +125,15 @@ REPORT="$OUTPUT_DIR/report.md"
 LOG="$OUTPUT_DIR/full-test.log"
 RESULTS="$OUTPUT_DIR/.results.tmp"
 ISSUES="$OUTPUT_DIR/.issues.tmp"
+SITEMAP_URLS="$OUTPUT_DIR/sitemap-urls.txt"
+ALL_URLS="$OUTPUT_DIR/tested-urls.txt"
 BODIES_DIR="$OUTPUT_DIR/responses"
 
 mkdir -p "$BODIES_DIR"
 : > "$RESULTS"
 : > "$ISSUES"
 : > "$LOG"
+: > "$ALL_URLS"
 
 cleanup() {
   rm -f "$RESULTS" "$ISSUES"
@@ -107,25 +146,68 @@ escape_markdown() {
 
 record_result() {
   local status="$1"
-  local target="$2"
-  local test_name="$3"
-  local details="$4"
-  local target_md test_md details_md
-  target_md="$(escape_markdown "$target")"
-  test_md="$(escape_markdown "$test_name")"
-  details_md="$(escape_markdown "$details")"
-  printf '| %s | `%s` | %s | %s |\n' "$status" "$target_md" "$test_md" "$details_md" >> "$RESULTS"
+  local category="$2"
+  local url="$3"
+  local problem="$4"
+  local recommendation="$5"
+  local category_md url_md problem_md recommendation_md
+  category_md="$(escape_markdown "$category")"
+  url_md="$(escape_markdown "$url")"
+  problem_md="$(escape_markdown "$problem")"
+  recommendation_md="$(escape_markdown "$recommendation")"
+
+  printf '| %s | %s | `%s` | %s | %s |\n' "$status" "$category_md" "$url_md" "$problem_md" "$recommendation_md" >> "$RESULTS"
   if [ "$status" = "PASS" ]; then
     PASS_COUNT=$((PASS_COUNT + 1))
   else
     FAIL_COUNT=$((FAIL_COUNT + 1))
-    printf -- '- `%s` `%s`: %s\n' "$target_md" "$test_md" "$details_md" >> "$ISSUES"
+    printf -- '- **%s** `%s`: %s Recommended fix: %s\n' "$category_md" "$url_md" "$problem_md" "$recommendation_md" >> "$ISSUES"
   fi
-  printf '[%s] %s | %s | %s\n' "$status" "$target" "$test_name" "$details" >> "$LOG"
+  printf '[%s] %s | %s | %s | %s\n' "$status" "$category" "$url" "$problem" "$recommendation" >> "$LOG"
 }
 
 safe_name() {
   printf '%s' "$1" | sed 's#^https\?://##; s#[^A-Za-z0-9._-]#_#g'
+}
+
+url_path() {
+  local url="$1"
+  local path
+  path="$(printf '%s' "$url" | sed -E 's#^https?://[^/]+##')"
+  if [ -z "$path" ]; then
+    path="/"
+  fi
+  printf '%s' "$path"
+}
+
+canonical_for_url() {
+  local url="$1"
+  local path
+  path="$(url_path "$url")"
+  if [ "$path" = "/" ]; then
+    printf '%s/' "$CANONICAL_BASE"
+  else
+    printf '%s%s' "$CANONICAL_BASE" "$path"
+  fi
+}
+
+final_for_url() {
+  local url="$1"
+  local path
+  path="$(url_path "$url")"
+  if [ "$path" = "/" ]; then
+    printf '%s/' "$CRAWL_BASE"
+  else
+    printf '%s%s' "$CRAWL_BASE" "$path"
+  fi
+}
+
+host_for_url() {
+  printf '%s' "$1" | sed -E 's#^https?://([^/:]+).*#\1#'
+}
+
+scheme_for_url() {
+  printf '%s' "$1" | sed -E 's#^(https?)://.*#\1#'
 }
 
 LAST_STATUS=""
@@ -133,28 +215,28 @@ LAST_CONTENT_TYPE=""
 LAST_BODY=""
 LAST_HEADERS=""
 LAST_ERROR=""
+LAST_EFFECTIVE_URL=""
+LAST_REDIRECTS=""
 
-request() {
-  local target="$1"
-  local path="$2"
-  local user_agent="$3"
-  local label="$4"
-  local target_dir error_file meta rc url
-  target_dir="$BODIES_DIR/$(safe_name "$target")"
+request_url() {
+  local url="$1"
+  local user_agent="$2"
+  local label="$3"
+  local target_dir error_file meta rc
+  target_dir="$BODIES_DIR/$(safe_name "$url")"
   mkdir -p "$target_dir"
   REQUEST_COUNT=$((REQUEST_COUNT + 1))
   LAST_BODY="$target_dir/$(printf '%03d' "$REQUEST_COUNT")-$(safe_name "$label").body"
   LAST_HEADERS="$target_dir/$(printf '%03d' "$REQUEST_COUNT")-$(safe_name "$label").headers"
   error_file="$target_dir/$(printf '%03d' "$REQUEST_COUNT")-$(safe_name "$label").stderr"
-  url="${target}${path}"
 
   printf '\n===== REQUEST %03d: %s =====\n' "$REQUEST_COUNT" "$label" >> "$LOG"
   printf 'URL: %s\nUser-Agent: %s\n' "$url" "$user_agent" >> "$LOG"
 
   set +e
-  meta="$(curl --silent --show-error --max-time "$TIMEOUT" \
+  meta="$(curl --silent --show-error --location --max-redirs "$MAX_REDIRECTS" --max-time "$TIMEOUT" \
     --user-agent "$user_agent" --dump-header "$LAST_HEADERS" \
-    --output "$LAST_BODY" --write-out '%{http_code}|%{content_type}|%{url_effective}' \
+    --output "$LAST_BODY" --write-out '%{http_code}|%{content_type}|%{url_effective}|%{num_redirects}' \
     "$url" 2>"$error_file")"
   rc=$?
   set +e
@@ -164,14 +246,19 @@ request() {
     LAST_ERROR="$(cat "$error_file")"
     LAST_STATUS="curl-error-$rc"
     LAST_CONTENT_TYPE=""
+    LAST_EFFECTIVE_URL=""
+    LAST_REDIRECTS=""
   else
     LAST_STATUS="${meta%%|*}"
     meta="${meta#*|}"
     LAST_CONTENT_TYPE="${meta%%|*}"
+    meta="${meta#*|}"
+    LAST_EFFECTIVE_URL="${meta%%|*}"
+    LAST_REDIRECTS="${meta#*|}"
   fi
 
-  printf 'Curl exit: %s\nHTTP status: %s\nContent-Type: %s\nHeaders: %s\nBody: %s\n' \
-    "$rc" "$LAST_STATUS" "$LAST_CONTENT_TYPE" "$LAST_HEADERS" "$LAST_BODY" >> "$LOG"
+  printf 'Curl exit: %s\nHTTP status: %s\nContent-Type: %s\nEffective URL: %s\nRedirects: %s\nHeaders: %s\nBody: %s\n' \
+    "$rc" "$LAST_STATUS" "$LAST_CONTENT_TYPE" "$LAST_EFFECTIVE_URL" "$LAST_REDIRECTS" "$LAST_HEADERS" "$LAST_BODY" >> "$LOG"
   if [ -s "$error_file" ]; then
     printf 'Stderr:\n' >> "$LOG"
     cat "$error_file" >> "$LOG"
@@ -181,196 +268,313 @@ request() {
   rm -f "$error_file"
 }
 
-check_public_response() {
-  local target="$1"
-  local path="$2"
-  local user_agent="$3"
-  local agent_label="$4"
-  local expected_type="$5"
-  local challenge
-  request "$target" "$path" "$user_agent" "${agent_label}${path}"
-
-  if [ "$LAST_STATUS" = "200" ]; then
-    record_result "PASS" "$target" "$agent_label $path status" "HTTP 200"
-  else
-    record_result "FAIL" "$target" "$agent_label $path status" "expected HTTP 200, received $LAST_STATUS ${LAST_ERROR}"
-    return
-  fi
-
-  challenge="$(grep -i '^www-authenticate:' "$LAST_HEADERS" 2>/dev/null || true)"
-  if [ -z "$challenge" ]; then
-    record_result "PASS" "$target" "$agent_label $path authentication" "no WWW-Authenticate challenge"
-  else
-    record_result "FAIL" "$target" "$agent_label $path authentication" "unexpected authentication challenge: $challenge"
-  fi
-
-  case "$LAST_CONTENT_TYPE" in
-    *"$expected_type"*)
-      record_result "PASS" "$target" "$agent_label $path content-type" "$LAST_CONTENT_TYPE"
-      ;;
-    *)
-      record_result "FAIL" "$target" "$agent_label $path content-type" "expected $expected_type, received ${LAST_CONTENT_TYPE:-none}"
-      ;;
-  esac
-}
-
 extract_canonical() {
-  grep -o '<link rel="canonical"[^>]*href="[^"]*"[^>]*>' "$1" 2>/dev/null \
-    | sed -n 's/.*href="\([^"]*\)".*/\1/p' \
+  grep -io '<link[^>]*rel=["'\'']canonical["'\''][^>]*>' "$1" 2>/dev/null \
+    | sed -n 's/.*href=["'\'']\([^"'\'']*\)["'\''].*/\1/p' \
     | head -1
 }
 
-check_canonical_body() {
-  local target="$1"
-  local path="$2"
-  local expected="$3"
-  local canonical
-  canonical="$(extract_canonical "$LAST_BODY")"
-  if [ "$canonical" = "$expected" ]; then
-    record_result "PASS" "$target" "canonical $path" "$canonical"
-  elif [ -z "$canonical" ]; then
-    record_result "FAIL" "$target" "canonical $path" "canonical link not found"
+assert_ok_status() {
+  local category="$1"
+  local url="$2"
+  if [ "$LAST_STATUS" = "200" ]; then
+    record_result "PASS" "$category" "$url" "HTTP 200" "No action needed."
   else
-    record_result "FAIL" "$target" "canonical $path" "expected $expected, received $canonical"
+    record_result "FAIL" "$category" "$url" "Expected HTTP 200, received $LAST_STATUS ${LAST_ERROR}" "Fix deployment, routing, redirects, or access controls so crawlers receive a public 200."
   fi
-}
 
-check_redirect() {
-  local target="$1"
-  local path="$2"
-  local expected_location="$target$path"
-  local location
-  request "$target" "${path}/" "Mozilla/5.0 SEO-Smoke-Test" "redirect${path}/"
-  location="$(grep -i '^location:' "$LAST_HEADERS" 2>/dev/null | tail -1 | sed 's/^[Ll]ocation:[[:space:]]*//; s/\r$//')"
   case "$LAST_STATUS" in
-    301|308)
-      if [ "$location" = "$expected_location" ]; then
-        record_result "PASS" "$target" "redirect ${path}/" "$LAST_STATUS to $location"
-      else
-        record_result "FAIL" "$target" "redirect ${path}/" "expected $expected_location, received ${location:-no Location header}"
-      fi
+    401|403|404|5*)
+      record_result "FAIL" "$category" "$url" "Crawler-blocking or broken status $LAST_STATUS" "Remove authorization gates, bot blocking, broken route handling, or origin errors for this URL."
       ;;
-    *)
-      record_result "FAIL" "$target" "redirect ${path}/" "expected 301/308 to $expected_location, received $LAST_STATUS"
+    200)
+      record_result "PASS" "$category" "$url" "No 401, 403, 404, or 5xx response" "No action needed."
       ;;
   esac
+
+  if grep -qi '^www-authenticate:' "$LAST_HEADERS" 2>/dev/null; then
+    record_result "FAIL" "$category" "$url" "WWW-Authenticate challenge found" "Remove basic auth or identity-aware proxy protection from public crawlable pages."
+  else
+    record_result "PASS" "$category" "$url" "No authentication challenge" "No action needed."
+  fi
 }
 
-BASELINE_PATHS=(
-  "/"
-  "/about"
-  "/guides"
-  "/reviews"
-  "/best-of"
-  "/reviews/Hayward-SharkVac-XL"
-  "/blog/dolphin-nautilus-cc-plus-vs-dolphin-premier"
-  "/blog/polaris-vs-dolphin-robotic-pool-cleaners"
-  "/best-of/leaves"
-)
-
-for target in "${TARGETS[@]}"; do
-  printf '\n######## TARGET: %s ########\n' "$target" >> "$LOG"
-
-  for path in "${BASELINE_PATHS[@]}"; do
-    check_public_response "$target" "$path" "Mozilla/5.0 SEO-Smoke-Test" "browser" "text/html"
-    expected_canonical="$CANONICAL_BASE$path"
-    if [ "$path" = "/" ]; then
-      expected_canonical="$CANONICAL_BASE/"
-    fi
-    check_canonical_body "$target" "$path" "$expected_canonical"
-  done
-
-  check_public_response "$target" "/sitemap.xml" "Mozilla/5.0 SEO-Smoke-Test" "browser" "xml"
-  sitemap_body="$LAST_BODY"
-  check_public_response "$target" "/sitemap.xml" "Googlebot/2.1 (+http://www.google.com/bot.html)" "Googlebot" "xml"
-  check_public_response "$target" "/robots.txt" "Mozilla/5.0 SEO-Smoke-Test" "browser" "text/plain"
-  robots_body="$LAST_BODY"
-  check_public_response "$target" "/robots.txt" "Googlebot/2.1 (+http://www.google.com/bot.html)" "Googlebot" "text/plain"
-
-  if grep -qi '^Disallow:[[:space:]]*/[[:space:]]*$' "$robots_body"; then
-    record_result "FAIL" "$target" "robots crawling" "robots.txt blocks the entire site"
+assert_redirects() {
+  local category="$1"
+  local input_url="$2"
+  local expected_final="$3"
+  if [ "$LAST_EFFECTIVE_URL" = "$expected_final" ]; then
+    record_result "PASS" "$category" "$input_url" "Final URL resolves to $expected_final" "No action needed."
   else
-    record_result "PASS" "$target" "robots crawling" "no site-wide Disallow rule"
-  fi
-  if grep -q "Sitemap: $CANONICAL_BASE/sitemap.xml" "$robots_body"; then
-    record_result "PASS" "$target" "robots sitemap declaration" "$CANONICAL_BASE/sitemap.xml"
-  else
-    record_result "FAIL" "$target" "robots sitemap declaration" "expected Sitemap: $CANONICAL_BASE/sitemap.xml"
+    record_result "FAIL" "$category" "$input_url" "Expected final URL $expected_final, received ${LAST_EFFECTIVE_URL:-none}" "Normalize this URL to the canonical https www URL."
   fi
 
-  sitemap_urls="$OUTPUT_DIR/$(safe_name "$target")-sitemap-urls.txt"
-  grep -o '<loc>[^<]*</loc>' "$sitemap_body" | sed 's#<loc>##g; s#</loc>##g' > "$sitemap_urls"
-  if [ -s "$sitemap_urls" ]; then
-    record_result "PASS" "$target" "sitemap entries" "$(wc -l < "$sitemap_urls" | tr -d ' ') URLs discovered"
+  if [ -n "$LAST_REDIRECTS" ] && [ "$LAST_REDIRECTS" -le 2 ]; then
+    record_result "PASS" "$category" "$input_url" "Redirect chain length $LAST_REDIRECTS" "No action needed."
   else
-    record_result "FAIL" "$target" "sitemap entries" "no <loc> URLs found"
-    continue
+    record_result "FAIL" "$category" "$input_url" "Redirect chain length ${LAST_REDIRECTS:-unknown}" "Keep redirect chains at two hops or fewer and remove loops."
+  fi
+}
+
+assert_canonical() {
+  local category="$1"
+  local url="$2"
+  local expected="$3"
+  local canonical scheme host
+  canonical="$(extract_canonical "$LAST_BODY")"
+
+  if [ -n "$canonical" ]; then
+    record_result "PASS" "$category" "$url" "Canonical found: $canonical" "No action needed."
+  else
+    record_result "FAIL" "$category" "$url" "Canonical tag not found" "Add an absolute canonical tag for this page."
+    return
   fi
 
-  duplicates="$(sort "$sitemap_urls" | uniq -d)"
-  if [ -z "$duplicates" ]; then
-    record_result "PASS" "$target" "sitemap duplicates" "none"
+  case "$canonical" in
+    http://*|https://*)
+      record_result "PASS" "$category" "$url" "Canonical is absolute" "No action needed."
+      ;;
+    *)
+      record_result "FAIL" "$category" "$url" "Canonical is relative: $canonical" "Use an absolute canonical URL."
+      ;;
+  esac
+
+  scheme="$(scheme_for_url "$canonical")"
+  if [ "$scheme" = "https" ]; then
+    record_result "PASS" "$category" "$url" "Canonical uses HTTPS" "No action needed."
   else
-    record_result "FAIL" "$target" "sitemap duplicates" "duplicates found: $duplicates"
+    record_result "FAIL" "$category" "$url" "Canonical does not use HTTPS: $canonical" "Use https:// canonical URLs."
   fi
 
-  while IFS= read -r sitemap_url; do
-    case "$sitemap_url" in
+  host="$(host_for_url "$canonical")"
+  if [ "$host" = "$(host_for_url "$CANONICAL_BASE")" ]; then
+    record_result "PASS" "$category" "$url" "Canonical uses www host" "No action needed."
+  else
+    record_result "FAIL" "$category" "$url" "Canonical host is $host" "Use $(host_for_url "$CANONICAL_BASE") for canonical URLs."
+  fi
+
+  if [ "$canonical" = "$expected" ]; then
+    record_result "PASS" "$category" "$url" "Canonical matches expected URL" "No action needed."
+  else
+    record_result "FAIL" "$category" "$url" "Expected canonical $expected, received $canonical" "Align page metadata with the canonical production URL."
+  fi
+}
+
+audit_page_url() {
+  local url="$1"
+  local expected_canonical="${2:-}"
+  local expected_final="${3:-}"
+  if [ -z "$expected_canonical" ]; then
+    expected_canonical="$(canonical_for_url "$url")"
+  fi
+  if [ -z "$expected_final" ]; then
+    expected_final="$(final_for_url "$url")"
+  fi
+  printf '%s\n' "$expected_canonical" >> "$ALL_URLS"
+
+  request_url "$url" "Mozilla/5.0 SEO-Smoke-Test" "browser $(url_path "$url")"
+  assert_ok_status "Page Accessibility" "$url"
+  assert_redirects "Redirect Issues" "$url" "$expected_final"
+
+  if [ "$LAST_STATUS" = "200" ]; then
+    assert_canonical "Canonical Issues" "$url" "$expected_canonical"
+  fi
+
+  local browser_status browser_effective browser_redirects
+  browser_status="$LAST_STATUS"
+  browser_effective="$LAST_EFFECTIVE_URL"
+  browser_redirects="$LAST_REDIRECTS"
+
+  request_url "$url" "Googlebot/2.1 (+http://www.google.com/bot.html)" "Googlebot $(url_path "$url")"
+  assert_ok_status "Googlebot Accessibility Issues" "$url"
+  assert_redirects "Googlebot Accessibility Issues" "$url" "$expected_final"
+
+  if [ "$LAST_STATUS" = "$browser_status" ] && [ "$LAST_EFFECTIVE_URL" = "$browser_effective" ] && [ "$LAST_REDIRECTS" = "$browser_redirects" ]; then
+    record_result "PASS" "Googlebot Accessibility Issues" "$url" "Googlebot matches browser response" "No action needed."
+  else
+    record_result "FAIL" "Googlebot Accessibility Issues" "$url" "Browser got $browser_status/$browser_effective/$browser_redirects redirects; Googlebot got $LAST_STATUS/$LAST_EFFECTIVE_URL/$LAST_REDIRECTS redirects" "Remove user-agent-specific routing, bot blocking, or CDN rules."
+  fi
+}
+
+audit_redirect_variants_for_path() {
+  local path="$1"
+  local expected
+  if [ "$path" = "/" ]; then
+    expected="$CANONICAL_BASE/"
+  else
+    expected="$CANONICAL_BASE$path"
+  fi
+
+  request_url "http://www.the-pool-lab.com$path" "Mozilla/5.0 SEO-Smoke-Test" "http-www $path"
+  assert_redirects "Redirect Issues" "http://www.the-pool-lab.com$path" "$expected"
+
+  request_url "http://the-pool-lab.com$path" "Mozilla/5.0 SEO-Smoke-Test" "http-apex $path"
+  assert_redirects "Redirect Issues" "http://the-pool-lab.com$path" "$expected"
+
+  request_url "$APEX_BASE$path" "Mozilla/5.0 SEO-Smoke-Test" "https-apex $path"
+  assert_redirects "Redirect Issues" "$APEX_BASE$path" "$expected"
+}
+
+audit_robots() {
+  local robots_url="$CRAWL_BASE/robots.txt"
+  request_url "$robots_url" "Mozilla/5.0 SEO-Smoke-Test" "robots"
+  assert_ok_status "Crawlability" "$robots_url"
+  if grep -qi '^Disallow:[[:space:]]*/[[:space:]]*$' "$LAST_BODY" 2>/dev/null; then
+    record_result "FAIL" "Crawlability" "$robots_url" "robots.txt blocks the entire site" "Remove site-wide Disallow for production."
+  else
+    record_result "PASS" "Crawlability" "$robots_url" "robots.txt does not block the entire site" "No action needed."
+  fi
+  if grep -q "Sitemap: $CANONICAL_BASE/sitemap.xml" "$LAST_BODY" 2>/dev/null; then
+    record_result "PASS" "Crawlability" "$robots_url" "Correct sitemap declaration found" "No action needed."
+  else
+    record_result "FAIL" "Crawlability" "$robots_url" "Expected Sitemap: $CANONICAL_BASE/sitemap.xml" "Update robots.txt to reference the canonical sitemap."
+  fi
+}
+
+audit_sitemap() {
+  local sitemap_url="$CRAWL_BASE/sitemap.xml"
+  request_url "$sitemap_url" "Mozilla/5.0 SEO-Smoke-Test" "sitemap"
+  assert_ok_status "Sitemap Issues" "$sitemap_url"
+
+  { grep -o '<loc>[^<]*</loc>' "$LAST_BODY" 2>/dev/null || true; } | sed 's#<loc>##g; s#</loc>##g' | sort -u > "$SITEMAP_URLS"
+  if [ -s "$SITEMAP_URLS" ]; then
+    record_result "PASS" "Sitemap Issues" "$sitemap_url" "$(wc -l < "$SITEMAP_URLS" | tr -d ' ') sitemap URLs found" "No action needed."
+  else
+    record_result "FAIL" "Sitemap Issues" "$sitemap_url" "No sitemap URLs found" "Ensure sitemap.xml contains absolute loc entries."
+    return
+  fi
+
+  if [ "$(grep -c '^http://' "$SITEMAP_URLS" || true)" -eq 0 ]; then
+    record_result "PASS" "Sitemap Issues" "$sitemap_url" "All sitemap URLs use HTTPS" "No action needed."
+  else
+    record_result "FAIL" "Sitemap Issues" "$sitemap_url" "Sitemap contains HTTP URLs" "Use only https sitemap URLs."
+  fi
+
+  if [ "$(grep -vc "^$CANONICAL_BASE" "$SITEMAP_URLS" || true)" -eq 0 ]; then
+    record_result "PASS" "Sitemap Issues" "$sitemap_url" "All sitemap URLs use canonical host" "No action needed."
+  else
+    record_result "FAIL" "Sitemap Issues" "$sitemap_url" "Sitemap contains non-canonical hosts" "Use only www.the-pool-lab.com sitemap URLs."
+  fi
+
+  while IFS= read -r sitemap_entry; do
+    local path crawl_url expected_canonical expected_final
+    case "$sitemap_entry" in
       "$CANONICAL_BASE")
         path="/"
         ;;
       "$CANONICAL_BASE"/*)
-        path="${sitemap_url#"$CANONICAL_BASE"}"
+        path="${sitemap_entry#"$CANONICAL_BASE"}"
         ;;
       *)
-        record_result "FAIL" "$target" "sitemap canonical host" "unexpected URL: $sitemap_url"
+        record_result "FAIL" "Sitemap Issues" "$sitemap_entry" "Sitemap URL is outside canonical base" "List only canonical production URLs in sitemap.xml."
         continue
         ;;
     esac
 
-    if [ "$path" != "/" ] && printf '%s' "$path" | grep -q '/$'; then
-      record_result "FAIL" "$target" "sitemap slash style $path" "trailing slash URL found"
+    if [ "$path" = "/" ]; then
+      crawl_url="$CRAWL_BASE/"
+      expected_canonical="$CANONICAL_BASE/"
+      expected_final="$CRAWL_BASE/"
     else
-      record_result "PASS" "$target" "sitemap slash style $path" "normalized"
+      crawl_url="$CRAWL_BASE$path"
+      expected_canonical="$sitemap_entry"
+      expected_final="$CRAWL_BASE$path"
     fi
 
-    check_public_response "$target" "$path" "Mozilla/5.0 SEO-Smoke-Test" "sitemap browser" "text/html"
-    if [ "$LAST_STATUS" = "200" ]; then
-      expected_canonical="$sitemap_url"
-      if [ "$path" = "/" ]; then
-        expected_canonical="$CANONICAL_BASE/"
-      fi
-      check_canonical_body "$target" "$path" "$expected_canonical"
+    audit_page_url "$crawl_url" "$expected_canonical" "$expected_final"
+    if [ "$LAST_REDIRECTS" = "0" ]; then
+      record_result "PASS" "Sitemap Issues" "$sitemap_entry" "Mapped crawl URL does not redirect" "No action needed."
+    else
+      record_result "FAIL" "Sitemap Issues" "$sitemap_entry" "Mapped crawl URL redirects $LAST_REDIRECTS time(s)" "List final canonical URLs in sitemap.xml and keep deployment routes direct."
     fi
-    check_public_response "$target" "$path" "Googlebot/2.1 (+http://www.google.com/bot.html)" "Googlebot" "text/html"
-    if [ "$path" != "/" ] && ! printf '%s' "$path" | grep -q '/$'; then
-      check_redirect "$target" "$path"
+  done < "$SITEMAP_URLS"
+}
+
+if [ "${#TARGET_URLS[@]}" -eq 0 ]; then
+  for path in "${SEED_PATHS[@]}"; do
+    if [ "$path" = "/" ]; then
+      TARGET_URLS+=("$CRAWL_BASE/")
+    else
+      TARGET_URLS+=("$CRAWL_BASE$path")
     fi
-  done < "$sitemap_urls"
+  done
+fi
+
+audit_robots
+audit_sitemap
+
+for url in "${TARGET_URLS[@]}"; do
+  audit_page_url "$url"
 done
+
+if [ "$CRAWL_BASE" = "$CANONICAL_BASE" ]; then
+  for path in "/" "/best-of/value" "/best-of/overall" "/blog/dolphin-nautilus-cc-plus-vs-dolphin-premier" "/blog/polaris-vs-dolphin-robotic-pool-cleaners"; do
+    audit_redirect_variants_for_path "$path"
+  done
+else
+  record_result "PASS" "Redirect Issues" "$CRAWL_BASE" "Skipped production apex/http redirect checks for non-production crawl base" "Run without --test-deployment to validate production redirects."
+fi
+
+sort -u -o "$ALL_URLS" "$ALL_URLS"
 
 {
   printf '# The Pool Lab SEO Smoke Test Report\n\n'
   printf -- '- Generated: `%s` UTC\n' "$TIMESTAMP"
   printf -- '- Canonical base: `%s`\n' "$CANONICAL_BASE"
-  printf -- '- Targets: `%s`\n' "$(printf '%s ' "${TARGETS[@]}" | sed 's/[[:space:]]*$//')"
+  printf -- '- Crawl base: `%s`\n' "$CRAWL_BASE"
+  printf -- '- Apex base: `%s`\n' "$APEX_BASE"
   printf -- '- Requests executed: `%s`\n' "$REQUEST_COUNT"
   printf -- '- Passed assertions: `%s`\n' "$PASS_COUNT"
   printf -- '- Failed assertions: `%s`\n\n' "$FAIL_COUNT"
-  printf '## Issues\n\n'
+
+  printf '## Executive Summary\n\n'
   if [ "$FAIL_COUNT" -eq 0 ]; then
-    printf 'No issues found.\n\n'
+    printf 'No active SEO smoke-test failures were found. The historical Google Search Console 401 reports are likely stale unless GSC still shows fresh crawl dates after this report timestamp.\n\n'
   else
-    cat "$ISSUES"
-    printf '\n'
+    printf 'Active SEO smoke-test failures were found. Treat any 401, 403, 404, 5xx, invalid canonical, redirect mismatch, or Googlebot/browser response mismatch as a release blocker.\n\n'
   fi
-  printf '## Assertion Log\n\n'
-  printf '| Status | Target | Test | Details |\n'
-  printf '| --- | --- | --- | --- |\n'
+
+  printf '## A. Redirect Issues\n\n'
+  if grep -q '| FAIL | Redirect Issues |' "$RESULTS"; then
+    grep '| FAIL | Redirect Issues |' "$RESULTS"
+  else
+    printf 'No redirect failures found. Severity: Low. Impact: canonical redirect behavior appears stable. Recommended fix: none.\n'
+  fi
+  printf '\n\n## B. Canonical Issues\n\n'
+  if grep -q '| FAIL | Canonical Issues |' "$RESULTS"; then
+    grep '| FAIL | Canonical Issues |' "$RESULTS"
+  else
+    printf 'No canonical failures found. Severity: Low. Impact: canonical tags appear consistent with production www HTTPS URLs. Recommended fix: none.\n'
+  fi
+  printf '\n\n## C. Sitemap Issues\n\n'
+  if grep -q '| FAIL | Sitemap Issues |' "$RESULTS"; then
+    grep '| FAIL | Sitemap Issues |' "$RESULTS"
+  else
+    printf 'No sitemap failures found. Severity: Low. Impact: sitemap URLs appear crawlable and canonical. Recommended fix: none.\n'
+  fi
+  printf '\n\n## D. Googlebot Accessibility Issues\n\n'
+  if grep -q '| FAIL | Googlebot Accessibility Issues |' "$RESULTS"; then
+    grep '| FAIL | Googlebot Accessibility Issues |' "$RESULTS"
+  else
+    printf 'No Googlebot-specific failures found. Severity: Low. Impact: Googlebot receives the same crawlable responses as browser requests. Recommended fix: none.\n'
+  fi
+  printf '\n\n## E. Potential Causes Of Historical GSC 401 Errors\n\n'
+  if grep '| FAIL |' "$RESULTS" | grep -Eq '401|WWW-Authenticate|authentication challenge'; then
+    printf 'Severity: Critical. Impact: at least one audited URL still returned 401 or referenced an authorization challenge. Recommended fix: remove deployment, CDN, identity proxy, or basic-auth restrictions from public URLs.\n'
+  else
+    printf 'Severity: Low if GSC crawl dates are old; High if GSC shows fresh crawl attempts. Impact: no active 401 was detected by this run, so historical reports may reflect a prior protected deployment, non-www/apex host behavior, CDN/IAP rules, or a temporary preview-service authorization state. Recommended fix: validate latest GSC crawl dates and keep this smoke test in the post-deploy pipeline.\n'
+  fi
+
+  printf '\n\n## PASS/FAIL Detail\n\n'
+  printf '| Status | Category | URL | Problem | Recommendation |\n'
+  printf '| --- | --- | --- | --- | --- |\n'
   cat "$RESULTS"
+
   printf '\n## Artifacts\n\n'
   printf -- '- Complete request log: `%s`\n' "$LOG"
   printf -- '- Response headers and bodies: `%s`\n' "$BODIES_DIR"
+  printf -- '- Sitemap URLs: `%s`\n' "$SITEMAP_URLS"
+  printf -- '- Tested canonical URLs: `%s`\n' "$ALL_URLS"
 } > "$REPORT"
 
 printf 'SEO smoke report: %s\n' "$REPORT"

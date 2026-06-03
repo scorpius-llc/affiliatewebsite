@@ -1,0 +1,30 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: d5715f43ed56b316b8ca91eebb7b0957
+date: Wed, 03 Jun 2026 14:29:40 GMT
+server: Google Frontend
+content-length: 169
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-7adc"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: 62ff68a6a9a890bb7a9f4c2508fc1c4b
+date: Wed, 03 Jun 2026 14:29:40 GMT
+server: Google Frontend
+content-length: 31452
+

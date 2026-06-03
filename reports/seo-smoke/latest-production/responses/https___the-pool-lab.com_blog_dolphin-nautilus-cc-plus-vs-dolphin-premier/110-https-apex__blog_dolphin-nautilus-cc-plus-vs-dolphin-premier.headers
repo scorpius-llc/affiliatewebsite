@@ -1,0 +1,30 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/blog/dolphin-nautilus-cc-plus-vs-dolphin-premier
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: b7d86b4a07ed15dd706325a5303f2975
+date: Wed, 03 Jun 2026 14:29:45 GMT
+server: Google Frontend
+content-length: 169
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-8d7e"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: 4124ec4faf29a97c8f88751c9f856619
+date: Wed, 03 Jun 2026 14:29:45 GMT
+server: Google Frontend
+content-length: 36222
+

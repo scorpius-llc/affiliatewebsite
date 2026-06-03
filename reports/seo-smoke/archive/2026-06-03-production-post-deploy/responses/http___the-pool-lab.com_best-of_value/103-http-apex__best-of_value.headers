@@ -1,0 +1,38 @@
+HTTP/1.1 302 Found
+location: https://the-pool-lab.com/best-of/value
+x-cloud-trace-context: 0aed6c59a5cbda042171c5707b2ed4e3
+date: Wed, 03 Jun 2026 14:29:41 GMT
+content-type: text/html
+server: Google Frontend
+Content-Length: 0
+
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/best-of/value
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: d0bcac230f00495dc992b3729cfae777
+date: Wed, 03 Jun 2026 14:29:42 GMT
+server: Google Frontend
+content-length: 169
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-946e"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: c76c75b0a324bf36a84a3c1a9aef266b
+date: Wed, 03 Jun 2026 14:29:42 GMT
+server: Google Frontend
+content-length: 37998
+

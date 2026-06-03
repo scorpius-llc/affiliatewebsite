@@ -1,0 +1,30 @@
+HTTP/2 301 
+content-type: text/html
+location: https://www.the-pool-lab.com/blog/polaris-vs-dolphin-robotic-pool-cleaners
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cloud-trace-context: 1764fb04287cf738f16fca6e0f7f0bb9;o=1
+date: Wed, 03 Jun 2026 14:29:46 GMT
+server: Google Frontend
+content-length: 169
+
+HTTP/2 200 
+content-type: text/html
+last-modified: Wed, 03 Jun 2026 14:25:35 GMT
+etag: "6a20395f-ab0b"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';
+strict-transport-security: max-age=31536000; includeSubDomains
+accept-ranges: bytes
+x-cloud-trace-context: d0cc1fdb537fd9b7e11945c8b2c46042
+date: Wed, 03 Jun 2026 14:29:47 GMT
+server: Google Frontend
+content-length: 43787
+

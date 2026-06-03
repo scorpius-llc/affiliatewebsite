@@ -39,23 +39,21 @@ export default function BlogPost({ params }) {
     notFound();
   }
 
-  // Create a map of product SKUs to their ASINs for easy lookup
-  const productAsinMap = products.reduce((acc, product) => {
-    acc[product.sku] = product.asin;
-    return acc;
-  }, {});
-
   // Function to process placeholders in a string
   const processPlaceholders = (text) => {
     let processedText = text || '';
     const placeholders = processedText.match(/\{\{.*?\}\}/g) || [];
     placeholders.forEach(placeholder => {
       const key = placeholder.replace(/\{\{AFFILIATE_|\}\}/g, '');
-      const sku = Object.keys(productAsinMap).find(k => k.toUpperCase().includes(key));
-      if (sku) {
-        const asin = productAsinMap[sku];
+      const keyParts = key.split('_').filter(Boolean);
+      const product = products.find((p) => {
+        const searchable = `${p.sku} ${p.name}`.toUpperCase().replace(/[^A-Z0-9]+/g, '');
+        return keyParts.every((part) => searchable.includes(part));
+      });
+      if (product?.asin) {
+        const asin = product.asin;
         const url = `https://www.amazon.com/dp/${asin}?tag=${config.amazonAffiliateTag}`;
-        processedText = processedText.replace(placeholder, url);
+        processedText = processedText.replaceAll(placeholder, url);
       }
     });
     return processedText;

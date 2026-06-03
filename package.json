@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:smoke": "bash scripts/seo-smoke-test.sh --output-dir reports/seo-smoke/latest-production",
+    "seo:smoke:test": "bash scripts/seo-smoke-test.sh --test-deployment --output-dir reports/seo-smoke/latest-test",
+    "seo:crawl": "python3 scripts/seo_crawler.py --output-dir reports/seo-crawl/latest-production",
+    "seo:crawl:test": "python3 scripts/seo_crawler.py --test-deployment --output-dir reports/seo-crawl/latest-test"
   },
   "dependencies": {
     "next": "14.0.0",

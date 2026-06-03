@@ -1,0 +1,10 @@
+source_url,hop,status,from,to
+http://www.the-pool-lab.com/,final,200,http://www.the-pool-lab.com/,https://www.the-pool-lab.com/
+http://the-pool-lab.com/,final,200,http://the-pool-lab.com/,https://www.the-pool-lab.com/
+https://the-pool-lab.com/,final,200,https://the-pool-lab.com/,https://www.the-pool-lab.com/
+http://www.the-pool-lab.com/best-of/value,final,200,http://www.the-pool-lab.com/best-of/value,https://www.the-pool-lab.com/best-of/value
+http://the-pool-lab.com/best-of/value,final,200,http://the-pool-lab.com/best-of/value,https://www.the-pool-lab.com/best-of/value
+https://the-pool-lab.com/best-of/value,final,200,https://the-pool-lab.com/best-of/value,https://www.the-pool-lab.com/best-of/value
+http://www.the-pool-lab.com/best-of/overall,final,200,http://www.the-pool-lab.com/best-of/overall,https://www.the-pool-lab.com/best-of/overall
+http://the-pool-lab.com/best-of/overall,final,200,http://the-pool-lab.com/best-of/overall,https://www.the-pool-lab.com/best-of/overall
+https://the-pool-lab.com/best-of/overall,final,200,https://the-pool-lab.com/best-of/overall,https://www.the-pool-lab.com/best-of/overall

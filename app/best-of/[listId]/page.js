@@ -39,23 +39,21 @@ export default function BestOfPage({ params }) {
     notFound();
   }
 
-  // Create a map of product SKUs to their ASINs for easy lookup
-  const productAsinMap = products.reduce((acc, product) => {
-    acc[product.sku] = product.asin;
-    return acc;
-  }, {});
-
   // Function to process placeholders in a string
   const processPlaceholders = (text) => {
     let processedText = text || '';
     const placeholders = processedText.match(/\{\{.*?\}\}/g) || [];
     placeholders.forEach(placeholder => {
       const key = placeholder.replace(/\{\{AFFILIATE_|\}\}/g, '');
-      const sku = Object.keys(productAsinMap).find(k => k.toUpperCase().includes(key));
-      if (sku) {
-        const asin = productAsinMap[sku];
+      const keyParts = key.split('_').filter(Boolean);
+      const product = products.find((p) => {
+        const searchable = `${p.sku} ${p.name}`.toUpperCase().replace(/[^A-Z0-9]+/g, '');
+        return keyParts.every((part) => searchable.includes(part));
+      });
+      if (product?.asin) {
+        const asin = product.asin;
         const url = `https://www.amazon.com/dp/${asin}?tag=${amazonTag}`;
-        processedText = processedText.replace(placeholder, url);
+        processedText = processedText.replaceAll(placeholder, url);
       }
     });
     return processedText;
@@ -77,7 +75,7 @@ export default function BestOfPage({ params }) {
 
       <div className="row">
         <div className="col-lg-8 mx-auto">
-          <div className="mb-4" dangerouslySetInnerHTML={{ __html: list.intro }} />
+          <div className="mb-4" dangerouslySetInnerHTML={{ __html: processPlaceholders(list.intro) }} />
           
           <div className="card bg-light mb-5">
             <div className="card-body">
@@ -222,7 +220,7 @@ export default function BestOfPage({ params }) {
             <div className="card-header bg-primary text-white">
               <h3 className="h5 mb-0">Buying Advice</h3>
             </div>
-            <div className="card-body" dangerouslySetInnerHTML={{ __html: list.buying_advice }} />
+            <div className="card-body" dangerouslySetInnerHTML={{ __html: processPlaceholders(list.buying_advice) }} />
           </div>
         </div>
       </div>
