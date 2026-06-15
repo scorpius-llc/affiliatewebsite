@@ -13,6 +13,13 @@ const replacePlaceholders = (text) => {
 };
 
 const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
+const featuredListIds = [
+  'best-cold-plunge-tubs',
+  'best-cold-plunge-with-chiller',
+  'best-home-saunas',
+  'best-infrared-saunas',
+  'best-outdoor-saunas',
+];
 
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
@@ -45,50 +52,94 @@ export const metadata = {
 };
 
 export default function BestOf() {
+  const featuredLists = featuredListIds
+    .map((id) => bestLists.find((list) => list.id === id))
+    .filter(Boolean);
+  const remainingLists = bestLists.filter((list) => list?.id && !featuredListIds.includes(list.id));
+
   return (
-    <div className="container my-5">
-      <h1 className="mb-4 text-center section-title">{replacePlaceholders(pageContent.title)}</h1>
-      <p className="lead text-center mb-5 section-subtitle">{replacePlaceholders(pageContent.subtitle)}</p>
-
-      <div className="row mb-5">
-        {bestLists.filter(list => list && list.id).map((list, index) => (
-          <div key={list.id} className="col-md-4 mb-3">
-            <div className={`card text-center h-100 ${index === 0 ? 'border-primary' : ''}`}>
-              <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{list.title}</h5>
-                <p className="card-text">{list.description}</p>
-                <Link href={`/best-of/${list.id}`} className={`btn ${index === 0 ? 'btn-primary' : 'btn-outline-primary'} mt-auto`}>View List</Link>
-              </div>
-            </div>
+    <div className="best-of-index-page py-5">
+      <div className="container">
+        <header className="commercial-index-hero text-center">
+          <p className="best-of-eyebrow">Buyer Guides</p>
+          <h1 className="section-title">{replacePlaceholders(pageContent.title)}</h1>
+          <p className="section-subtitle mx-auto">{replacePlaceholders(pageContent.subtitle)}</p>
+          <div className="cta-row center-cta-row">
+            <Link href="/best-of/best-cold-plunge-tubs" className="btn btn-primary-cta">
+              Start With Cold Plunges
+            </Link>
+            <Link href="/best-of/best-home-saunas" className="btn btn-secondary-cta">
+              Start With Saunas
+            </Link>
           </div>
-        ))}
+        </header>
+
+        <section className="money-section">
+          <div className="section-heading text-center">
+            <p className="inline-cta-label">Start Here</p>
+            <h2>Most Popular Rankings</h2>
+            <p>Use these buyer guides first if you are still deciding what type of recovery setup belongs in your home.</p>
+          </div>
+          <div className="featured-category-grid">
+            {featuredLists.map((list, index) => (
+              <article key={list.id} className={`featured-category-card ${index === 0 ? 'featured-category-card-primary' : ''}`}>
+                <p className="comparison-card-label">{index === 0 ? 'Most Popular' : 'Featured Guide'}</p>
+                <h2>{list.title}</h2>
+                <p>{list.description}</p>
+                <Link href={`/best-of/${list.id}`} className="btn btn-primary-cta">
+                  View Rankings
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="money-section">
+          <div className="section-heading text-center">
+            <h2>All ThermaPeak Rankings</h2>
+            <p>Browse focused lists by budget, format, space, and ownership style.</p>
+          </div>
+          <div className="row g-4">
+            {remainingLists.map((list) => (
+              <div key={list.id} className="col-md-6 col-lg-4">
+                <article className="card h-100 comparison-index-card">
+                  <div className="card-body d-flex flex-column">
+                    <p className="comparison-card-label">Best Of</p>
+                    <h2 className="card-title h4">{list.title}</h2>
+                    <p className="card-text flex-grow-1">{list.description}</p>
+                    <Link href={`/best-of/${list.id}`} className="btn btn-outline-primary mt-3">
+                      View Rankings
+                    </Link>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="money-section info-grid-section">
+          <div className="info-card">
+            <div className="section-heading">
+              <h2>{pageContent.whyTrustTitle}</h2>
+            </div>
+            <p>{replacePlaceholders(pageContent.whyTrustContent)}</p>
+          </div>
+          <div className="info-card">
+            <div className="section-heading">
+              <h2>{pageContent.howToUseTitle}</h2>
+            </div>
+            <p>{replacePlaceholders(pageContent.howToUseContent)}</p>
+          </div>
+          <div className="info-card">
+            <div className="section-heading">
+              <h2>{pageContent.howWeEvaluateTitle}</h2>
+            </div>
+            <p>{replacePlaceholders(pageContent.howWeEvaluateContent)}</p>
+          </div>
+        </section>
+
+        <PageFaqs />
       </div>
-      
-      <div className="row">
-        <div className="col-lg-8 mx-auto text-center">
-          <h3 className="section-title">{pageContent.whyTrustTitle}</h3>
-          <p className="text-muted">{replacePlaceholders(pageContent.whyTrustContent)}</p>
-        </div>
-      </div>
-
-      {/* New Section: How to Use These Lists */}
-      <section className="my-5 py-5 bg-card rounded">
-        <div className="container">
-          <h3 className="text-center section-title">{pageContent.howToUseTitle}</h3>
-          <p className="text-muted text-center">{replacePlaceholders(pageContent.howToUseContent)}</p>
-        </div>
-      </section>
-
-      {/* New Section: How We Evaluate Recovery Equipment */}
-      <section className="my-5 py-5">
-        <div className="container">
-          <h3 className="text-center section-title">{pageContent.howWeEvaluateTitle}</h3>
-          <p className="text-muted text-center">{replacePlaceholders(pageContent.howWeEvaluateContent)}</p>
-        </div>
-      </section>
-
-      <PageFaqs />
-
     </div>
   );
 }

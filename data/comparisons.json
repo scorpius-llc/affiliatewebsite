@@ -594,7 +594,11 @@
     "related_best_of": [
       "best-home-saunas",
       "best-infrared-saunas"
-    ]
+    ],
+    "optionAProductUrl": "/best-of/best-infrared-saunas",
+    "optionAProductLabel": "View Best Infrared Saunas",
+    "optionBProductUrl": "/best-of/best-home-saunas",
+    "optionBProductLabel": "View Best Home Saunas"
   },
   {
     "slug": "cold-plunge-vs-cryotherapy",
@@ -847,6 +851,10 @@
     "related_best_of": [
       "best-home-saunas",
       "best-outdoor-saunas"
-    ]
+    ],
+    "optionAProductUrl": "/best-of/best-home-saunas",
+    "optionAProductLabel": "View Recommended Saunas",
+    "optionBProductUrl": "/best-of/best-outdoor-saunas",
+    "optionBProductLabel": "Compare Sauna Picks"
   }
 ]

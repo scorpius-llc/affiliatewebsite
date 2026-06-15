@@ -2,6 +2,40 @@ import PageFaqs from '../../components/PageFaqs';
 import config from '../../data/config.json';
 import aboutContent from '../../data/about-page.json';
 
+const title = `About ${config.siteName}`;
+const description = `Learn about ${config.siteName}, our affiliate disclosure, and how we evaluate cold plunge, sauna, and recovery equipment.`;
+const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
+
+export const metadata = {
+  metadataBase: new URL(`https://${config.domain}`),
+  alternates: {
+    canonical: `https://${config.domain}/about`,
+  },
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: `https://${config.domain}/about`,
+    siteName: config.siteName,
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: [ogImageUrl],
+  },
+};
+
 export default function About() {
   // Replace placeholders in the about page content
   const processedWhoWeAre = aboutContent.whoWeAre

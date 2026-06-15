@@ -57,8 +57,33 @@ export default function GuidePage({ params }) {
     notFound();
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: guide.title,
+    description: replacePlaceholders(guide.description),
+    url: `https://${config.domain}/guides/${guide.id}`,
+    image: `https://${config.domain}/images/ThermaPeakOG.png`,
+    publisher: {
+      '@type': 'Organization',
+      name: config.siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `https://${config.domain}${config.logoPath}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://${config.domain}/guides/${guide.id}`,
+    },
+  };
+
   return (
     <div className="container my-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link href="/guides">Guides</Link></li>

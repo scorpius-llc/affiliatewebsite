@@ -4,6 +4,7 @@ import bestLists from '../../../data/best-lists.json';
 import comparisons from '../../../data/comparisons.json';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
+import AffiliateButtons from '../../../components/AffiliateButtons';
 import FaqSection from '../../../components/FaqSection';
 import ProductImage from '../../../components/ProductImage';
 import { getReviewPath } from '../../../lib/routes';
@@ -237,53 +238,6 @@ const getBestForLabel = (product) => {
   return 'Best for home recovery';
 };
 
-const getPrimaryCta = (product) => {
-  if (product.asin) {
-    return {
-      href: `https://www.amazon.com/dp/${product.asin}?tag=${config.amazonAffiliateTag}`,
-      label: 'Check Price',
-      external: true,
-    };
-  }
-
-  if (product.image_url && product.image_url.startsWith('http')) {
-    return {
-      href: product.image_url,
-      label: 'Check Price',
-      external: true,
-    };
-  }
-
-  return {
-    href: getReviewPath(product.sku),
-    label: 'Check Price',
-    external: false,
-  };
-};
-
-const renderCta = (product, className = 'btn btn-primary-cta') => {
-  const cta = getPrimaryCta(product);
-
-  if (cta.external) {
-    return (
-      <a
-        href={cta.href}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className={className}
-      >
-        {cta.label}
-      </a>
-    );
-  }
-
-  return (
-    <Link href={cta.href} className={className}>
-      {cta.label}
-    </Link>
-  );
-};
-
 const scoreCriteria = [
   { title: 'Build Quality', description: 'Materials, finish quality, insulation, and long-term durability.' },
   { title: 'Cooling Performance', description: 'How reliably the tub reaches and holds target temperatures.' },
@@ -315,19 +269,6 @@ export async function generateMetadata({ params }) {
     .map((item) => products.find((product) => product.sku === item.sku))
     .filter(Boolean);
 
-  const itemListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: list.title,
-    description: list.description,
-    itemListElement: listProducts.map((product, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `https://${config.domain}${getReviewPath(product.sku)}`,
-      name: product.name,
-    })),
-  };
-
   return {
     title: `${list.title} | ${config.siteName}`,
     description: list.description,
@@ -351,9 +292,6 @@ export async function generateMetadata({ params }) {
       title: list.title,
       description: list.description,
       images: [OG_IMAGE_URL],
-    },
-    other: {
-      'script[type="application/ld+json"]': JSON.stringify(itemListSchema),
     },
   };
 }
@@ -413,9 +351,25 @@ export default function BestOfPage({ params }) {
         })),
       }
     : null;
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: list.title,
+    description: list.description,
+    itemListElement: listProducts.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: product.name,
+      url: `https://${config.domain}${getReviewPath(product.sku)}`,
+    })),
+  };
 
   return (
     <div className="best-of-page py-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -467,7 +421,7 @@ export default function BestOfPage({ params }) {
                   <span><strong>Format:</strong> {getCoolingLabel(topPick.cooling_type || topPick.heating_type)}</span>
                 </div>
                 <div className="cta-row">
-                  {renderCta(topPick)}
+                  <AffiliateButtons product={topPick} size="md" />
                   <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                     Read Review
                   </Link>
@@ -495,7 +449,7 @@ export default function BestOfPage({ params }) {
                       <th>Size / Capacity</th>
                       <th>Best For</th>
                       <th>Score</th>
-                      <th>Check Price</th>
+                      <th>Buying Options</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -516,7 +470,9 @@ export default function BestOfPage({ params }) {
                             {product.contextualScore ? `${product.contextualScore}/10` : 'N/A'}
                           </span>
                         </td>
-                        <td>{renderCta(product, 'btn btn-primary-cta btn-sm comparison-cta')}</td>
+                        <td>
+                          <AffiliateButtons product={product} size="sm" className="comparison-affiliate-buttons" />
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -552,7 +508,7 @@ export default function BestOfPage({ params }) {
                     </div>
                   </dl>
                   <div className="cta-row mobile-cta-row">
-                    {renderCta(product)}
+                    <AffiliateButtons product={product} size="md" />
                     <Link href={getReviewPath(product.sku)} className="btn btn-secondary-cta">
                       Read Review
                     </Link>
@@ -646,7 +602,7 @@ export default function BestOfPage({ params }) {
                       </div>
                     </div>
                     <div className="cta-row">
-                      {renderCta(product)}
+                      <AffiliateButtons product={product} size="md" />
                       <Link href={getReviewPath(product.sku)} className="btn btn-secondary-cta">
                         Read Review
                       </Link>
@@ -665,7 +621,7 @@ export default function BestOfPage({ params }) {
                       </p>
                     </div>
                     <div className="cta-row banner-cta-row">
-                      {renderCta(topPick)}
+                      <AffiliateButtons product={topPick} size="md" />
                       <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                         Read Review
                       </Link>
@@ -763,7 +719,7 @@ export default function BestOfPage({ params }) {
                 confirm fit, footprint, and maintenance expectations.
               </p>
               <div className="cta-row center-cta-row">
-                {renderCta(topPick)}
+                <AffiliateButtons product={topPick} size="md" />
                 <Link href={getReviewPath(topPick.sku)} className="btn btn-secondary-cta">
                   Read Review
                 </Link>

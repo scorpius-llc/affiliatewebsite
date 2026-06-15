@@ -18,9 +18,6 @@ const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 export const metadata = {
   metadataBase: new URL(`https://${config.domain}`),
-  alternates: {
-    canonical: '/',
-  },
   title: siteTitle,
   description: siteDescription,
   openGraph: {

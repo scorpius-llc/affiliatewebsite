@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import comparisons from '../../../data/comparisons.json';
+import products from '../../../data/products.json';
 import config from '../../../data/config.json';
+import AffiliateButtons from '../../../components/AffiliateButtons';
 import ComparisonFAQ, { getComparisonFaqs } from '../../../components/ComparisonFAQ';
 import ProductImage from '../../../components/ProductImage';
+import { getReviewPath } from '../../../lib/routes';
 
 const FALLBACK_IMAGE = '/images/ThermaPeakLogo.png';
 const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
@@ -27,6 +30,27 @@ const renderComparisonButton = (href, label, variant = 'primary') => {
       {label}
     </Link>
   );
+};
+
+const getOptionCtaLabel = (href, optionTitle, fallback = 'View Recommendation') => {
+  if (!href) return fallback;
+  if (href.startsWith('/best-of/')) return `View Rankings: ${optionTitle}`;
+  if (href.startsWith('/reviews/')) return `Read Full Review: ${optionTitle}`;
+  if (href.startsWith('http')) return `Check Current Price: ${optionTitle}`;
+  return fallback;
+};
+
+const getProductForReviewUrl = (reviewUrl) => {
+  if (!reviewUrl) return null;
+  return products.find((product) => getReviewPath(product.sku) === reviewUrl) || null;
+};
+
+const renderOptionCta = (product, href, label, variant = 'primary') => {
+  if (product) {
+    return <AffiliateButtons product={product} size="md" />;
+  }
+
+  return renderComparisonButton(href, label, variant);
 };
 
 export async function generateStaticParams() {
@@ -84,6 +108,8 @@ export default function ComparisonPage({ params }) {
     })),
   };
   const isColdPlungeComparison = comparison.slug.includes('cold-plunge') || comparison.slug.includes('ice-bath');
+  const optionAProduct = getProductForReviewUrl(comparison.optionAReviewUrl);
+  const optionBProduct = getProductForReviewUrl(comparison.optionBReviewUrl);
 
   return (
     <div className="container my-5 comparison-page">
@@ -130,7 +156,7 @@ export default function ComparisonPage({ params }) {
                 </ul>
               )}
               <div className="cta-row mt-auto">
-                {renderComparisonButton(comparison.optionAProductUrl, comparison.optionAProductLabel || 'Check Price')}
+                {renderOptionCta(optionAProduct, comparison.optionAProductUrl, comparison.optionAProductLabel || 'View Recommendation')}
                 {renderComparisonButton(comparison.optionAReviewUrl, 'Read Full Review', 'secondary')}
               </div>
             </article>
@@ -156,7 +182,7 @@ export default function ComparisonPage({ params }) {
                 </ul>
               )}
               <div className="cta-row mt-auto">
-                {renderComparisonButton(comparison.optionBProductUrl, comparison.optionBProductLabel || 'Check Price')}
+                {renderOptionCta(optionBProduct, comparison.optionBProductUrl, comparison.optionBProductLabel || 'View Recommendation')}
                 {renderComparisonButton(comparison.optionBReviewUrl, 'Read Full Review', 'secondary')}
               </div>
             </article>
@@ -194,8 +220,8 @@ export default function ComparisonPage({ params }) {
               </p>
             </div>
             <div className="cta-row banner-cta-row">
-              {renderComparisonButton(comparison.optionAProductUrl, `View ${comparison.left_option.title}`)}
-              {renderComparisonButton(comparison.optionBProductUrl, `View ${comparison.right_option.title}`)}
+              {renderOptionCta(optionAProduct, comparison.optionAProductUrl, `View ${comparison.left_option.title}`)}
+              {renderOptionCta(optionBProduct, comparison.optionBProductUrl, `View ${comparison.right_option.title}`)}
             </div>
           </div>
         </section>
@@ -205,8 +231,16 @@ export default function ComparisonPage({ params }) {
             <p className="inline-cta-label">{comparison.verdict_title || 'Bottom Line'}</p>
             <div className="rich-copy" dangerouslySetInnerHTML={{ __html: comparison.verdict }} />
             <div className="cta-row mt-4">
-              {renderComparisonButton(comparison.optionAProductUrl, `Check Price: ${comparison.left_option.title}`)}
-              {renderComparisonButton(comparison.optionBProductUrl, `Check Price: ${comparison.right_option.title}`)}
+              {renderOptionCta(
+                optionAProduct,
+                comparison.optionAProductUrl,
+                getOptionCtaLabel(comparison.optionAProductUrl, comparison.left_option.title)
+              )}
+              {renderOptionCta(
+                optionBProduct,
+                comparison.optionBProductUrl,
+                getOptionCtaLabel(comparison.optionBProductUrl, comparison.right_option.title)
+              )}
             </div>
             <p className="comparison-helper-text mt-3">Still unsure? See our ranked buyer guides below.</p>
           </div>
@@ -303,8 +337,16 @@ export default function ComparisonPage({ params }) {
               </p>
             </div>
             <div className="cta-row banner-cta-row">
-              {renderComparisonButton(comparison.optionAProductUrl, `See Latest Pricing: ${comparison.left_option.title}`)}
-              {renderComparisonButton(comparison.optionBProductUrl, `See Latest Pricing: ${comparison.right_option.title}`)}
+              {renderOptionCta(
+                optionAProduct,
+                comparison.optionAProductUrl,
+                getOptionCtaLabel(comparison.optionAProductUrl, comparison.left_option.title)
+              )}
+              {renderOptionCta(
+                optionBProduct,
+                comparison.optionBProductUrl,
+                getOptionCtaLabel(comparison.optionBProductUrl, comparison.right_option.title)
+              )}
             </div>
           </div>
         </section>

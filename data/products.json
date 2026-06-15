@@ -17,7 +17,13 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "chiller", "all-in-one", "premium", "recovery"],
+    "tags": [
+      "luxury",
+      "chiller",
+      "all-in-one",
+      "premium",
+      "recovery"
+    ],
     "score": {
       "temperature_control": 9,
       "insulation": 8,
@@ -45,11 +51,47 @@
     ],
     "verdict": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
     "alternatives": [
-      { "name": "Plunge All-In", "sku": "Plunge-All-In" },
-      { "name": "Renu Therapy Cold Stoic 2.0", "sku": "Renu-Cold-Stoic-2-0" }
+      {
+        "name": "Plunge All-In",
+        "sku": "Plunge-All-In"
+      },
+      {
+        "name": "Renu Therapy Cold Stoic 2.0",
+        "sku": "Renu-Cold-Stoic-2-0"
+      }
     ],
     "image_url": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
-    "approx_price": 13999
+    "approx_price": 13999,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
+    "officialWebsite": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium all-in-one cold plunge with an integrated cooling system designed for consistent low temperatures.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.2,
+    "faqs": [
+      {
+        "question": "Is Sun Home Cold Plunge Pro worth it?",
+        "answer": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs."
+      },
+      {
+        "question": "Who is Sun Home Cold Plunge Pro best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Sun Home Cold Plunge Pro?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub"
+    }
   },
   {
     "sku": "SunHome-Cold-Plunge-Portable-Horizontal",
@@ -69,7 +111,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["portable", "mid-range", "small-space", "beginner-friendly"],
+    "tags": [
+      "portable",
+      "mid-range",
+      "small-space",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 6,
       "insulation": 7,
@@ -85,15 +132,57 @@
     "who_should_skip": "<p>Skip this if:</p><ul><li>You want a fully built-in luxury aesthetic</li><li>You want the absolute cheapest way to try plunging</li></ul>",
     "detailed_analysis": "<p>Portable plunges are about <strong>space efficiency</strong> and convenience. The key evaluation points are insulation, ease of draining/cleaning, and whether the system supports repeatable cold sessions without feeling flimsy.</p>",
     "features": "<ul><li><strong>Portable format</strong> for flexible placement</li><li><strong>Cold immersion oriented design</strong></li><li><strong>Recovery-focused</strong> for frequent routines</li></ul>",
-    "pros": ["More flexible placement than rigid tubs", "Better long-term routine fit than basic ice-only setups"],
-    "cons": ["Not as premium-feeling as top-tier fixed tubs", "Still requires maintenance and cleaning"],
+    "pros": [
+      "More flexible placement than rigid tubs",
+      "Better long-term routine fit than basic ice-only setups"
+    ],
+    "cons": [
+      "Not as premium-feeling as top-tier fixed tubs",
+      "Still requires maintenance and cleaning"
+    ],
     "verdict": "A solid middle ground for someone who wants an upgraded plunge routine but values portability and footprint flexibility.",
     "alternatives": [
-      { "name": "Plunge (Standard)", "sku": "Plunge-Standard" },
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
+      {
+        "name": "Plunge (Standard)",
+        "sku": "Plunge-Standard"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
     ],
     "image_url": "https://sunhomesaunas.com/products/portable-cold-plunge-tub",
-    "approx_price": 4099
+    "approx_price": 4099,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://sunhomesaunas.com/products/portable-cold-plunge-tub",
+    "officialWebsite": "https://sunhomesaunas.com/products/portable-cold-plunge-tub",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A more portable cold plunge format from Sun Home aimed at convenient at-home cold therapy.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7,
+    "faqs": [
+      {
+        "question": "Is Sun Home Cold Plunge Portable (Horizontal) worth it?",
+        "answer": "A solid middle ground for someone who wants an upgraded plunge routine but values portability and footprint flexibility."
+      },
+      {
+        "question": "Who is Sun Home Cold Plunge Portable (Horizontal) best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Sun Home Cold Plunge Portable (Horizontal)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://sunhomesaunas.com/products/portable-cold-plunge-tub",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://sunhomesaunas.com/products/portable-cold-plunge-tub"
+    }
   },
   {
     "sku": "Plunge-Standard",
@@ -113,7 +202,12 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "chiller", "all-in-one", "recovery"],
+    "tags": [
+      "premium",
+      "chiller",
+      "all-in-one",
+      "recovery"
+    ],
     "score": {
       "temperature_control": 8,
       "insulation": 8,
@@ -129,15 +223,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You’re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
     "detailed_analysis": "<p>With brand-name plunges, the difference is typically consistency and convenience: easier setup, more polished design, and a system meant to be used frequently. Evaluate: cooling performance, sanitation approach, maintenance overhead, and footprint.</p>",
     "features": "<ul><li><strong>Purpose-built tub</strong> for cold immersion</li><li><strong>Designed for repeat use</strong></li><li><strong>Premium ownership experience</strong> compared with DIY tubs</li></ul>",
-    "pros": ["Purpose-built and refined experience", "Better routine consistency than ice-only setups"],
-    "cons": ["Higher cost than portable tubs", "Maintenance still required"],
+    "pros": [
+      "Purpose-built and refined experience",
+      "Better routine consistency than ice-only setups"
+    ],
+    "cons": [
+      "Higher cost than portable tubs",
+      "Maintenance still required"
+    ],
     "verdict": "A mainstream, purpose-built choice for frequent cold plungers who want less DIY and more repeatability.",
     "alternatives": [
-      { "name": "Plunge All-In", "sku": "Plunge-All-In" },
-      { "name": "Sun Home Cold Plunge Pro", "sku": "SunHome-Cold-Plunge-Pro" }
+      {
+        "name": "Plunge All-In",
+        "sku": "Plunge-All-In"
+      },
+      {
+        "name": "Sun Home Cold Plunge Pro",
+        "sku": "SunHome-Cold-Plunge-Pro"
+      }
     ],
     "image_url": "https://plunge.com/products/plunge",
-    "approx_price": 4990
+    "approx_price": 4990,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://plunge.com/products/plunge",
+    "officialWebsite": "https://plunge.com/products/plunge",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A popular dedicated cold plunge tub brand focused on at-home cold water therapy with a purpose-built system.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8,
+    "faqs": [
+      {
+        "question": "Is Plunge (Standard) worth it?",
+        "answer": "A mainstream, purpose-built choice for frequent cold plungers who want less DIY and more repeatability."
+      },
+      {
+        "question": "Who is Plunge (Standard) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Plunge (Standard)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://plunge.com/products/plunge",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://plunge.com/products/plunge"
+    }
   },
   {
     "sku": "Plunge-All-In",
@@ -157,7 +293,13 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "chiller", "hybrid", "all-in-one", "premium"],
+    "tags": [
+      "luxury",
+      "chiller",
+      "hybrid",
+      "all-in-one",
+      "premium"
+    ],
     "score": {
       "temperature_control": 10,
       "insulation": 9,
@@ -173,15 +315,58 @@
     "who_should_skip": "<p>Skip this if:</p><ul><li>You want the cheapest cold plunge option</li><li>You don’t care about tech features and are fine with <strong>ice-only</strong></li></ul>",
     "detailed_analysis": "<p>All-in systems are evaluated on: cooling/heating performance, sanitation approach, noise, energy use, warranty, and how annoying (or easy) maintenance is. The All-In leans hard into the convenience layer, which is exactly what many buyers want once they decide plunging is a long-term habit.</p>",
     "features": "<ul><li><strong>Plug-and-plunge setup</strong> (no plumbing in typical installs)</li><li><strong>App-enabled</strong> temperature setting and session tracking</li><li><strong>Ozone/filtration</strong> oriented toward cleaner water</li></ul>",
-    "pros": ["Convenience-first design", "Better for frequent use than ice-only tubs", "Modern feature set for routine building"],
-    "cons": ["Premium pricing", "Still requires upkeep (filters, cleaning)"],
+    "pros": [
+      "Convenience-first design",
+      "Better for frequent use than ice-only tubs",
+      "Modern feature set for routine building"
+    ],
+    "cons": [
+      "Premium pricing",
+      "Still requires upkeep (filters, cleaning)"
+    ],
     "verdict": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option.",
     "alternatives": [
-      { "name": "Renu Therapy Cold Stoic 2.0", "sku": "Renu-Cold-Stoic-2-0" },
-      { "name": "Sun Home Cold Plunge Pro", "sku": "SunHome-Cold-Plunge-Pro" }
+      {
+        "name": "Renu Therapy Cold Stoic 2.0",
+        "sku": "Renu-Cold-Stoic-2-0"
+      },
+      {
+        "name": "Sun Home Cold Plunge Pro",
+        "sku": "SunHome-Cold-Plunge-Pro"
+      }
     ],
     "image_url": "https://plunge.com/products/plunge-all-in",
-    "approx_price": 8990
+    "approx_price": 8990,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://plunge.com/products/plunge-all-in",
+    "officialWebsite": "https://plunge.com/products/plunge-all-in",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A smart cold plunge system positioned around plug-and-plunge convenience, app tracking, and upgraded filtration/sanitation.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 9,
+    "faqs": [
+      {
+        "question": "Is Plunge All-In (Heated + Cooled) worth it?",
+        "answer": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option."
+      },
+      {
+        "question": "Who is Plunge All-In (Heated + Cooled) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Plunge All-In (Heated + Cooled)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://plunge.com/products/plunge-all-in",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://plunge.com/products/plunge-all-in"
+    }
   },
   {
     "sku": "Renu-Cold-Stoic-Classic",
@@ -201,7 +386,12 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "chiller", "premium", "recovery"],
+    "tags": [
+      "luxury",
+      "chiller",
+      "premium",
+      "recovery"
+    ],
     "score": {
       "temperature_control": 9,
       "insulation": 9,
@@ -217,15 +407,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want the lowest price</li><li>You don’t care about aesthetics and just want a functional container</li></ul>",
     "detailed_analysis": "<p>With premium lifestyle plunges, judge: temperature capability, insulation, sanitation method, and practical maintenance. The “best” unit is the one you’ll actually use consistently.</p>",
     "features": "<ul><li><strong>Premium aesthetic</strong> positioning</li><li><strong>System-style ownership</strong> rather than DIY</li></ul>",
-    "pros": ["Premium presentation", "Designed as a complete consumer product"],
-    "cons": ["Higher cost than portable tubs", "Maintenance is still part of ownership"],
+    "pros": [
+      "Premium presentation",
+      "Designed as a complete consumer product"
+    ],
+    "cons": [
+      "Higher cost than portable tubs",
+      "Maintenance is still part of ownership"
+    ],
     "verdict": "A premium option for people who want a cold plunge that looks intentional and supports a consistent routine.",
     "alternatives": [
-      { "name": "Renu Therapy Cold Stoic 2.0", "sku": "Renu-Cold-Stoic-2-0" },
-      { "name": "Plunge All-In", "sku": "Plunge-All-In" }
+      {
+        "name": "Renu Therapy Cold Stoic 2.0",
+        "sku": "Renu-Cold-Stoic-2-0"
+      },
+      {
+        "name": "Plunge All-In",
+        "sku": "Plunge-All-In"
+      }
     ],
     "image_url": "https://www.renutherapy.com/",
-    "approx_price": 8999
+    "approx_price": 8999,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://www.renutherapy.com/",
+    "officialWebsite": "https://www.renutherapy.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium cold plunge line known for strong aesthetics and a lifestyle-forward positioning.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.2,
+    "faqs": [
+      {
+        "question": "Is Renu Therapy Cold Stoic (Classic) worth it?",
+        "answer": "A premium option for people who want a cold plunge that looks intentional and supports a consistent routine."
+      },
+      {
+        "question": "Who is Renu Therapy Cold Stoic (Classic) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Renu Therapy Cold Stoic (Classic)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://www.renutherapy.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.renutherapy.com/"
+    }
   },
   {
     "sku": "Renu-Cold-Stoic-2-0",
@@ -245,7 +477,12 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "chiller", "premium", "recovery"],
+    "tags": [
+      "luxury",
+      "chiller",
+      "premium",
+      "recovery"
+    ],
     "score": {
       "temperature_control": 9,
       "insulation": 10,
@@ -261,15 +498,59 @@
     "who_should_skip": "<p>Skip this if:</p><ul><li>You’re experimenting and want a sub-$200 portable tub first</li><li>You want a multi-person plunge; many premium tubs are <strong>single-user optimized</strong></li></ul>",
     "detailed_analysis": "<p>At this tier, insulation and temperature stability matter because they influence cost and convenience. The Stoic 2.0 is for someone who wants the routine to be easy: fill, set, maintain, repeat—without turning every plunge into an ice run.</p>",
     "features": "<ul><li><strong>Upgraded insulation</strong> aimed at better efficiency</li><li><strong>Premium build</strong> for a consistent routine</li><li><strong>Designed for long-term ownership</strong></li></ul>",
-    "pros": ["Designed for consistent cold immersion", "Premium look and feel", "Better long-term usability than ice-only tubs"],
-    "cons": ["High upfront price", "Ongoing maintenance is still required", "Not the best choice for casual users"],
+    "pros": [
+      "Designed for consistent cold immersion",
+      "Premium look and feel",
+      "Better long-term usability than ice-only tubs"
+    ],
+    "cons": [
+      "High upfront price",
+      "Ongoing maintenance is still required",
+      "Not the best choice for casual users"
+    ],
     "verdict": "A premium, aesthetic-forward cold plunge built for consistency. Worth it if cold plunging is already a habit and you want a refined, repeatable setup.",
     "alternatives": [
-      { "name": "Plunge All-In", "sku": "Plunge-All-In" },
-      { "name": "Sun Home Cold Plunge Pro", "sku": "SunHome-Cold-Plunge-Pro" }
+      {
+        "name": "Plunge All-In",
+        "sku": "Plunge-All-In"
+      },
+      {
+        "name": "Sun Home Cold Plunge Pro",
+        "sku": "SunHome-Cold-Plunge-Pro"
+      }
     ],
     "image_url": "https://www.renutherapy.com/products/cold-stoic-2-0",
-    "approx_price": 9699
+    "approx_price": 9699,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://www.renutherapy.com/products/cold-stoic-2-0",
+    "officialWebsite": "https://www.renutherapy.com/products/cold-stoic-2-0",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium cold plunge model emphasizing insulation, efficiency, and a refined look.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.3,
+    "faqs": [
+      {
+        "question": "Is Renu Therapy Cold Stoic 2.0 worth it?",
+        "answer": "A premium, aesthetic-forward cold plunge built for consistency. Worth it if cold plunging is already a habit and you want a refined, repeatable setup."
+      },
+      {
+        "question": "Who is Renu Therapy Cold Stoic 2.0 best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Renu Therapy Cold Stoic 2.0?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://www.renutherapy.com/products/cold-stoic-2-0",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.renutherapy.com/products/cold-stoic-2-0"
+    }
   },
   {
     "sku": "EdgeTheoryLabs-Tub-Chiller-Setup",
@@ -289,7 +570,12 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "chiller", "modular", "diy"],
+    "tags": [
+      "premium",
+      "chiller",
+      "modular",
+      "diy"
+    ],
     "score": {
       "temperature_control": 8,
       "insulation": 7,
@@ -305,15 +591,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a single-box, appliance-like experience</li><li>You want the simplest possible setup</li></ul>",
     "detailed_analysis": "<p>Modular cold plunge builds can be excellent when engineered well: replaceability and tuning. Evaluate connection hardware, filtration approach, insulation, and real-world noise/energy use.</p>",
     "features": "<ul><li><strong>Modular tub + chiller</strong> design</li><li><strong>Replaceable components</strong> for long-term ownership</li></ul>",
-    "pros": ["Modular and serviceable ownership model", "Can be upgraded over time"],
-    "cons": ["More setup complexity than all-in-one plunges", "Quality varies widely by exact configuration"],
+    "pros": [
+      "Modular and serviceable ownership model",
+      "Can be upgraded over time"
+    ],
+    "cons": [
+      "More setup complexity than all-in-one plunges",
+      "Quality varies widely by exact configuration"
+    ],
     "verdict": "Best for buyers who like modular systems and want the flexibility to service or upgrade components over time.",
     "alternatives": [
-      { "name": "Penguin Chillers + Tub Setup", "sku": "PenguinChillers-Tub-Setup" },
-      { "name": "Plunge (Standard)", "sku": "Plunge-Standard" }
+      {
+        "name": "Penguin Chillers + Tub Setup",
+        "sku": "PenguinChillers-Tub-Setup"
+      },
+      {
+        "name": "Plunge (Standard)",
+        "sku": "Plunge-Standard"
+      }
     ],
     "image_url": "https://edgetheorylabs.com/",
-    "approx_price": 6500
+    "approx_price": 6500,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://edgetheorylabs.com/",
+    "officialWebsite": "https://edgetheorylabs.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A performance-oriented cold plunge setup pairing a tub with an external chiller solution.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.5,
+    "faqs": [
+      {
+        "question": "Is Edge Theory Labs Tub + Chiller Setup worth it?",
+        "answer": "Best for buyers who like modular systems and want the flexibility to service or upgrade components over time."
+      },
+      {
+        "question": "Who is Edge Theory Labs Tub + Chiller Setup best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Edge Theory Labs Tub + Chiller Setup?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://edgetheorylabs.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://edgetheorylabs.com/"
+    }
   },
   {
     "sku": "IceBarrel-Pro",
@@ -333,7 +661,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "chiller", "portable", "small-space", "barrel-style"],
+    "tags": [
+      "mid-range",
+      "chiller",
+      "portable",
+      "small-space",
+      "barrel-style"
+    ],
     "score": {
       "temperature_control": 7,
       "insulation": 7,
@@ -349,15 +683,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down style tub</li><li>You strongly dislike upright immersion</li></ul>",
     "detailed_analysis": "<p>Barrel-style plunges are convenient for footprint and typically easy entry/exit with a step. If you want consistency, plan for temperature control via a chiller (otherwise you’re back to buying ice and dealing with variability).</p>",
     "features": "<ul><li><strong>Upright barrel form factor</strong></li><li><strong>Pairs well with a chiller</strong> for consistent temps</li><li><strong>Space-efficient footprint</strong></li></ul>",
-    "pros": ["Space-efficient design", "Great routine fit when paired with a chiller"],
-    "cons": ["Upright immersion isn’t for everyone", "Chiller pairing increases total cost"],
+    "pros": [
+      "Space-efficient design",
+      "Great routine fit when paired with a chiller"
+    ],
+    "cons": [
+      "Upright immersion isn’t for everyone",
+      "Chiller pairing increases total cost"
+    ],
     "verdict": "A strong footprint-friendly plunge option, especially if you plan to pair it with a chiller for consistency.",
     "alternatives": [
-      { "name": "Ice Barrel 400", "sku": "IceBarrel-400" },
-      { "name": "Plunge (Standard)", "sku": "Plunge-Standard" }
+      {
+        "name": "Ice Barrel 400",
+        "sku": "IceBarrel-400"
+      },
+      {
+        "name": "Plunge (Standard)",
+        "sku": "Plunge-Standard"
+      }
     ],
     "image_url": "https://icebarrel.com/",
-    "approx_price": 2499
+    "approx_price": 2499,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://icebarrel.com/",
+    "officialWebsite": "https://icebarrel.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium upright barrel-style cold plunge option often paired with a chiller for consistent temps.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.2,
+    "faqs": [
+      {
+        "question": "Is Ice Barrel Pro (with optional chiller pairing) worth it?",
+        "answer": "A strong footprint-friendly plunge option, especially if you plan to pair it with a chiller for consistency."
+      },
+      {
+        "question": "Who is Ice Barrel Pro (with optional chiller pairing) best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Ice Barrel Pro (with optional chiller pairing)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://icebarrel.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://icebarrel.com/"
+    }
   },
   {
     "sku": "PenguinChillers-Tub-Setup",
@@ -377,7 +753,12 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "chiller", "modular", "diy"],
+    "tags": [
+      "premium",
+      "chiller",
+      "modular",
+      "diy"
+    ],
     "score": {
       "temperature_control": 9,
       "insulation": 7,
@@ -393,15 +774,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a single integrated product with minimal setup</li></ul>",
     "detailed_analysis": "<p>Chiller-based builds can be excellent, but success depends on insulation, flow rate, filtration, and how cleanly everything connects. The upside is modularity; the downside is more decisions and setup.</p>",
     "features": "<ul><li><strong>Dedicated chiller</strong> paired with tub of choice</li><li><strong>Modular ownership</strong> and serviceability</li></ul>",
-    "pros": ["High flexibility and modularity", "Can scale performance with the right tub"],
-    "cons": ["Requires more setup and planning", "Total cost can climb quickly"],
+    "pros": [
+      "High flexibility and modularity",
+      "Can scale performance with the right tub"
+    ],
+    "cons": [
+      "Requires more setup and planning",
+      "Total cost can climb quickly"
+    ],
     "verdict": "A strong path if you want chiller-grade temperature control but prefer modular components over an all-in-one plunge appliance.",
     "alternatives": [
-      { "name": "Edge Theory Labs Tub + Chiller Setup", "sku": "EdgeTheoryLabs-Tub-Chiller-Setup" },
-      { "name": "Plunge All-In", "sku": "Plunge-All-In" }
+      {
+        "name": "Edge Theory Labs Tub + Chiller Setup",
+        "sku": "EdgeTheoryLabs-Tub-Chiller-Setup"
+      },
+      {
+        "name": "Plunge All-In",
+        "sku": "Plunge-All-In"
+      }
     ],
     "image_url": "https://penguinchillers.com/",
-    "approx_price": 5500
+    "approx_price": 5500,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://penguinchillers.com/",
+    "officialWebsite": "https://penguinchillers.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A modular approach pairing a tub with a dedicated chiller brand often used in DIY-to-pro cold plunge builds.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.8,
+    "faqs": [
+      {
+        "question": "Is Penguin Chillers + Tub Setups worth it?",
+        "answer": "A strong path if you want chiller-grade temperature control but prefer modular components over an all-in-one plunge appliance."
+      },
+      {
+        "question": "Who is Penguin Chillers + Tub Setups best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Penguin Chillers + Tub Setups?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://penguinchillers.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://penguinchillers.com/"
+    }
   },
   {
     "sku": "IceBarrel-400",
@@ -421,7 +844,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "ice-based", "portable", "small-space", "barrel-style"],
+    "tags": [
+      "mid-range",
+      "ice-based",
+      "portable",
+      "small-space",
+      "barrel-style"
+    ],
     "score": {
       "temperature_control": 3,
       "insulation": 6,
@@ -437,15 +866,58 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down tub experience</li><li>You want a built-in chiller at purchase (you may need an add-on)</li></ul>",
     "detailed_analysis": "<p>Barrel-style immersion is different: less \"float and stretch\" and more upright plunge posture. The 400’s core value is footprint and usability—particularly if you’re consistent and want a dedicated tool rather than a collapsible tub.</p>",
     "features": "<ul><li><strong>Upright barrel design</strong> for small footprint</li><li><strong>Cold therapy focused</strong> for routine use</li><li><strong>Simple ownership</strong> vs complicated integrated systems</li></ul>",
-    "pros": ["Space-efficient", "Simple routine ownership", "Dedicated cold therapy tool"],
-    "cons": ["Not a lay-down tub", "Consistency improves significantly with a chiller add-on"],
+    "pros": [
+      "Space-efficient",
+      "Simple routine ownership",
+      "Dedicated cold therapy tool"
+    ],
+    "cons": [
+      "Not a lay-down tub",
+      "Consistency improves significantly with a chiller add-on"
+    ],
     "verdict": "A strong upright plunge choice if you want footprint efficiency and a dedicated cold therapy tool.",
     "alternatives": [
-      { "name": "Ice Barrel 300", "sku": "IceBarrel-300" },
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
+      {
+        "name": "Ice Barrel 300",
+        "sku": "IceBarrel-300"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
     ],
     "image_url": "https://icebarrel.com/",
-    "approx_price": 1999
+    "approx_price": 1999,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://icebarrel.com/",
+    "officialWebsite": "https://icebarrel.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A popular upright cold therapy barrel designed for space-efficient cold immersion routines.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 6.5,
+    "faqs": [
+      {
+        "question": "Is Ice Barrel 400 worth it?",
+        "answer": "A strong upright plunge choice if you want footprint efficiency and a dedicated cold therapy tool."
+      },
+      {
+        "question": "Who is Ice Barrel 400 best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Ice Barrel 400?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://icebarrel.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://icebarrel.com/"
+    }
   },
   {
     "sku": "IceBarrel-300",
@@ -465,7 +937,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "ice-based", "portable", "small-space", "barrel-style"],
+    "tags": [
+      "mid-range",
+      "ice-based",
+      "portable",
+      "small-space",
+      "barrel-style"
+    ],
     "score": {
       "temperature_control": 3,
       "insulation": 6,
@@ -481,15 +959,57 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You need extra room for larger body sizes</li><li>You want a long, lay-down plunge tub</li></ul>",
     "detailed_analysis": "<p>Like most upright barrels, the major decision is whether you prefer upright posture. If yes, the 300 is a straightforward dedicated plunge tool. If no, you’ll be happier with a long tub.</p>",
     "features": "<ul><li><strong>Upright barrel design</strong></li><li><strong>Footprint-friendly</strong></li><li><strong>Routine-oriented</strong> cold immersion</li></ul>",
-    "pros": ["Small footprint", "Dedicated cold therapy form factor"],
-    "cons": ["Not a lay-down experience", "May be tight for some body sizes"],
+    "pros": [
+      "Small footprint",
+      "Dedicated cold therapy form factor"
+    ],
+    "cons": [
+      "Not a lay-down experience",
+      "May be tight for some body sizes"
+    ],
     "verdict": "A solid choice for upright-plunge fans who want a dedicated barrel format with a smaller footprint.",
     "alternatives": [
-      { "name": "Ice Barrel 400", "sku": "IceBarrel-400" },
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
+      {
+        "name": "Ice Barrel 400",
+        "sku": "IceBarrel-400"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
     ],
     "image_url": "https://icebarrel.com/products/ice-barrel-300-bundle",
-    "approx_price": 1799
+    "approx_price": 1799,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://icebarrel.com/products/ice-barrel-300-bundle",
+    "officialWebsite": "https://icebarrel.com/products/ice-barrel-300-bundle",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A smaller upright ice barrel option for cold immersion with a footprint-friendly design.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 6.5,
+    "faqs": [
+      {
+        "question": "Is Ice Barrel 300 worth it?",
+        "answer": "A solid choice for upright-plunge fans who want a dedicated barrel format with a smaller footprint."
+      },
+      {
+        "question": "Who is Ice Barrel 300 best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Ice Barrel 300?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://icebarrel.com/products/ice-barrel-300-bundle",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://icebarrel.com/products/ice-barrel-300-bundle"
+    }
   },
   {
     "sku": "TheColdPod-IceBath",
@@ -509,7 +1029,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly", "small-space"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly",
+      "small-space"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 4,
@@ -525,15 +1051,58 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want automatic temperature control</li><li>You want a premium aesthetic piece</li></ul>",
     "detailed_analysis": "<p>Portable tubs are about habit formation. If you can build the habit first, you can always upgrade later. The biggest variable is how you keep water cold (ice cost/time) and how you keep it clean.</p>",
     "features": "<ul><li><strong>Portable construction</strong> for easy storage</li><li><strong>Multiple sizes</strong> to fit different users</li><li><strong>Fast setup</strong> and drainage</li></ul>",
-    "pros": ["Low-cost entry to plunging", "Portable and easy to store", "Good for habit-building"],
-    "cons": ["Ice-dependent temperature control", "Less premium durability than rigid tubs"],
+    "pros": [
+      "Low-cost entry to plunging",
+      "Portable and easy to store",
+      "Good for habit-building"
+    ],
+    "cons": [
+      "Ice-dependent temperature control",
+      "Less premium durability than rigid tubs"
+    ],
     "verdict": "One of the easiest ways to start cold plunging. Great for beginners; upgrade later if the habit sticks.",
     "alternatives": [
-      { "name": "Nurecover Ice Bath", "sku": "Nurecover-Ice-Bath" },
-      { "name": "VEVOR Ice Bath Tub", "sku": "VEVOR-Ice-Bath-Tub" }
+      {
+        "name": "Nurecover Ice Bath",
+        "sku": "Nurecover-Ice-Bath"
+      },
+      {
+        "name": "VEVOR Ice Bath Tub",
+        "sku": "VEVOR-Ice-Bath-Tub"
+      }
     ],
     "image_url": "https://thecoldpod.com/",
-    "approx_price": 129
+    "approx_price": 129,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://thecoldpod.com/",
+    "officialWebsite": "https://thecoldpod.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A popular portable ice bath tub line known for multiple size options and easy storage.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.5,
+    "faqs": [
+      {
+        "question": "Is The Cold Pod (Ice Bath, multiple sizes) worth it?",
+        "answer": "One of the easiest ways to start cold plunging. Great for beginners; upgrade later if the habit sticks."
+      },
+      {
+        "question": "Who is The Cold Pod (Ice Bath, multiple sizes) best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for The Cold Pod (Ice Bath, multiple sizes)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://thecoldpod.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://thecoldpod.com/"
+    }
   },
   {
     "sku": "GGanen-Ice-Bath-Tub",
@@ -553,7 +1122,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 3,
@@ -569,15 +1143,57 @@
     "who_should_skip": "<p>Skip if you want integrated temperature control or premium aesthetics.</p>",
     "detailed_analysis": "<p>Evaluate portability, insulation, seams, included cover, drain quality, and stability. With budget tubs, durability and insulation are the usual weak points.</p>",
     "features": "<ul><li><strong>Budget-friendly</strong> plunge container</li><li><strong>Portable</strong> and easy to drain</li></ul>",
-    "pros": ["Affordable entry point", "Simple to use"],
-    "cons": ["Likely ice-dependent", "Durability varies by batch and use"],
+    "pros": [
+      "Affordable entry point",
+      "Simple to use"
+    ],
+    "cons": [
+      "Likely ice-dependent",
+      "Durability varies by batch and use"
+    ],
     "verdict": "A functional, low-cost option if you want cold plunging without committing to premium systems.",
     "alternatives": [
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" },
-      { "name": "CalmMax Portable Ice Bath", "sku": "CalmMax-Portable-Ice-Bath" }
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      },
+      {
+        "name": "CalmMax Portable Ice Bath",
+        "sku": "CalmMax-Portable-Ice-Bath"
+      }
     ],
     "image_url": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
-    "approx_price": 99
+    "approx_price": 99,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
+    "officialWebsite": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable ice bath tub option designed for simple cold water immersion at a budget-friendly price.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.3,
+    "faqs": [
+      {
+        "question": "Is G Ganen Ice Bath Tub worth it?",
+        "answer": "A functional, low-cost option if you want cold plunging without committing to premium systems."
+      },
+      {
+        "question": "Who is G Ganen Ice Bath Tub best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for G Ganen Ice Bath Tub?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub"
+    }
   },
   {
     "sku": "Polar-Recovery-Tub",
@@ -597,7 +1213,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "mid-range",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 4,
       "insulation": 6,
@@ -613,15 +1234,57 @@
     "who_should_skip": "<p>Skip if you want fully integrated heating/cooling and sanitation in one unit.</p>",
     "detailed_analysis": "<p>Mid-range tubs are judged on insulation, stability, drainage, and whether accessories (cover, insulation lid, step) make routine use easier.</p>",
     "features": "<ul><li><strong>Mid-range durability</strong> positioning</li><li><strong>Routine-focused</strong> design</li></ul>",
-    "pros": ["More durable than many budget inflatables", "Better routine fit for frequent use"],
-    "cons": ["May still be ice-dependent", "Not as turnkey as integrated systems"],
+    "pros": [
+      "More durable than many budget inflatables",
+      "Better routine fit for frequent use"
+    ],
+    "cons": [
+      "May still be ice-dependent",
+      "Not as turnkey as integrated systems"
+    ],
     "verdict": "A sensible upgrade tier if you plunge often and want sturdier ownership than the cheapest pods.",
     "alternatives": [
-      { "name": "Ice Barrel 300", "sku": "IceBarrel-300" },
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
+      {
+        "name": "Ice Barrel 300",
+        "sku": "IceBarrel-300"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
     ],
     "image_url": "https://polarrecovery.com/",
-    "approx_price": 799
+    "approx_price": 799,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://polarrecovery.com/",
+    "officialWebsite": "https://polarrecovery.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A mid-range cold tub option aimed at more durable, repeatable cold immersion than entry-level inflatables.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 6.2,
+    "faqs": [
+      {
+        "question": "Is Polar Recovery Tub worth it?",
+        "answer": "A sensible upgrade tier if you plunge often and want sturdier ownership than the cheapest pods."
+      },
+      {
+        "question": "Who is Polar Recovery Tub best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Polar Recovery Tub?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://polarrecovery.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://polarrecovery.com/"
+    }
   },
   {
     "sku": "TuffStuff-Stock-Tank-100gal",
@@ -641,7 +1304,12 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["budget", "diy", "ice-based", "outdoor"],
+    "tags": [
+      "budget",
+      "diy",
+      "ice-based",
+      "outdoor"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 2,
@@ -657,15 +1325,59 @@
     "who_should_skip": "<p>Skip if you want a polished, indoor-friendly aesthetic and zero-setup ownership.</p>",
     "detailed_analysis": "<p>The tank itself is only part of the system. The real work is insulation strategy, filtration, and temperature control. Done well, DIY stock-tank builds can perform extremely well for the money.</p>",
     "features": "<ul><li><strong>Rugged base tub</strong> for DIY plunge builds</li><li><strong>Highly modular</strong> (pair with chiller, filter, ozone)</li></ul>",
-    "pros": ["Excellent durability", "Strong DIY value", "Modular upgrade path"],
-    "cons": ["No built-in cooling or sanitation", "Aesthetic is utilitarian", "DIY setup required"],
+    "pros": [
+      "Excellent durability",
+      "Strong DIY value",
+      "Modular upgrade path"
+    ],
+    "cons": [
+      "No built-in cooling or sanitation",
+      "Aesthetic is utilitarian",
+      "DIY setup required"
+    ],
     "verdict": "A great base if you’re willing to build a system. Not ideal if you want a polished turnkey product.",
     "alternatives": [
-      { "name": "Penguin Chillers + Tub Setup", "sku": "PenguinChillers-Tub-Setup" },
-      { "name": "Plunge (Standard)", "sku": "Plunge-Standard" }
+      {
+        "name": "Penguin Chillers + Tub Setup",
+        "sku": "PenguinChillers-Tub-Setup"
+      },
+      {
+        "name": "Plunge (Standard)",
+        "sku": "Plunge-Standard"
+      }
     ],
     "image_url": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
-    "approx_price": 269
+    "approx_price": 269,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
+    "officialWebsite": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A classic DIY cold plunge base: a rugged stock tank often paired with a chiller and filtration for a semi-pro setup.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.5,
+    "faqs": [
+      {
+        "question": "Is Tuff Stuff Stock Tank (DIY Cold Plunge Build) worth it?",
+        "answer": "A great base if you’re willing to build a system. Not ideal if you want a polished turnkey product."
+      },
+      {
+        "question": "Who is Tuff Stuff Stock Tank (DIY Cold Plunge Build) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Tuff Stuff Stock Tank (DIY Cold Plunge Build)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank"
+    }
   },
   {
     "sku": "Nurecover-Ice-Bath",
@@ -685,7 +1397,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 4,
@@ -701,15 +1418,58 @@
     "who_should_skip": "<p>Skip if you want premium aesthetics or built-in temperature control.</p>",
     "detailed_analysis": "<p>These pods are habit builders. If you can build the habit first, you can always upgrade later. The biggest variable is how you keep water cold (ice cost/time) and how you keep it clean.</p>",
     "features": "<ul><li><strong>Portable</strong> and easy to store</li><li><strong>Fast setup</strong> for beginners</li></ul>",
-    "pros": ["Low-cost entry point", "Easy setup and storage", "Good for building the habit"],
-    "cons": ["Ice-dependent", "Less durable than rigid tubs"],
+    "pros": [
+      "Low-cost entry point",
+      "Easy setup and storage",
+      "Good for building the habit"
+    ],
+    "cons": [
+      "Ice-dependent",
+      "Less durable than rigid tubs"
+    ],
     "verdict": "A solid starter plunge if you want to try cold immersion without committing to premium systems.",
     "alternatives": [
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" },
-      { "name": "VEVOR Ice Bath Tub", "sku": "VEVOR-Ice-Bath-Tub" }
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      },
+      {
+        "name": "VEVOR Ice Bath Tub",
+        "sku": "VEVOR-Ice-Bath-Tub"
+      }
     ],
     "image_url": "https://nurecover.com/",
-    "approx_price": 129
+    "approx_price": 129,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://nurecover.com/",
+    "officialWebsite": "https://nurecover.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable ice bath pod designed for easy setup, storage, and beginner-friendly cold plunging.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.5,
+    "faqs": [
+      {
+        "question": "Is Nurecover Ice Bath worth it?",
+        "answer": "A solid starter plunge if you want to try cold immersion without committing to premium systems."
+      },
+      {
+        "question": "Who is Nurecover Ice Bath best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Nurecover Ice Bath?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://nurecover.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://nurecover.com/"
+    }
   },
   {
     "sku": "Lumi-Recovery-Pod",
@@ -729,7 +1489,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 4,
@@ -745,15 +1510,57 @@
     "who_should_skip": "<p>Skip if you want an integrated chiller appliance or premium furniture-grade aesthetics.</p>",
     "detailed_analysis": "<p>Portable pods vary widely in insulation and durability. Your experience depends on how often you plunge, how you keep water cold, and whether you keep the tub clean.</p>",
     "features": "<ul><li><strong>Portable</strong> plunge format</li><li><strong>Storage-friendly</strong> design</li></ul>",
-    "pros": ["Portable and simple", "Good starter option"],
-    "cons": ["Ice-dependent for temperature", "Durability depends on materials"],
+    "pros": [
+      "Portable and simple",
+      "Good starter option"
+    ],
+    "cons": [
+      "Ice-dependent for temperature",
+      "Durability depends on materials"
+    ],
     "verdict": "A convenient pod for people who want cold plunging to be easy and portable.",
     "alternatives": [
-      { "name": "Nurecover Ice Bath", "sku": "Nurecover-Ice-Bath" },
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" }
+      {
+        "name": "Nurecover Ice Bath",
+        "sku": "Nurecover-Ice-Bath"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
     ],
     "image_url": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
-    "approx_price": 169
+    "approx_price": 169,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
+    "officialWebsite": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable cold plunge pod designed for recovery routines, travel, and easy storage.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.5,
+    "faqs": [
+      {
+        "question": "Is Lumi Recovery Pod worth it?",
+        "answer": "A convenient pod for people who want cold plunging to be easy and portable."
+      },
+      {
+        "question": "Who is Lumi Recovery Pod best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Lumi Recovery Pod?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://recoverfit.com/collections/lumi-therapy-ice-baths"
+    }
   },
   {
     "sku": "VEVOR-Ice-Bath-Tub",
@@ -773,7 +1580,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 3,
@@ -789,15 +1601,57 @@
     "who_should_skip": "<p>Skip if you want built-in cooling or a premium look.</p>",
     "detailed_analysis": "<p>For budget tubs, prioritize: stability, seams, drain quality, cover fit, and whether the insulation is meaningful. Expect to manage water hygiene actively.</p>",
     "features": "<ul><li><strong>Budget pricing</strong></li><li><strong>Portable</strong> and easy to drain</li></ul>",
-    "pros": ["Affordable", "Easy to try plunging quickly"],
-    "cons": ["Ice-dependent", "Less premium durability and insulation"],
+    "pros": [
+      "Affordable",
+      "Easy to try plunging quickly"
+    ],
+    "cons": [
+      "Ice-dependent",
+      "Less premium durability and insulation"
+    ],
     "verdict": "A fine starter tub if your goal is to try cold plunging with minimal spend.",
     "alternatives": [
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" },
-      { "name": "CalmMax Portable Ice Bath", "sku": "CalmMax-Portable-Ice-Bath" }
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      },
+      {
+        "name": "CalmMax Portable Ice Bath",
+        "sku": "CalmMax-Portable-Ice-Bath"
+      }
     ],
     "image_url": "https://www.amazon.com/s?k=vevor+ice+bath+tub",
-    "approx_price": 79
+    "approx_price": 79,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://www.amazon.com/s?k=vevor+ice+bath+tub",
+    "officialWebsite": "https://www.amazon.com/s?k=vevor+ice+bath+tub",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A budget-friendly portable ice bath tub option commonly purchased for entry-level cold plunging.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.3,
+    "faqs": [
+      {
+        "question": "Is VEVOR Ice Bath Tub worth it?",
+        "answer": "A fine starter tub if your goal is to try cold plunging with minimal spend."
+      },
+      {
+        "question": "Who is VEVOR Ice Bath Tub best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for VEVOR Ice Bath Tub?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/s?k=vevor+ice+bath+tub",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.amazon.com/s?k=vevor+ice+bath+tub"
+    }
   },
   {
     "sku": "CalmMax-Portable-Ice-Bath",
@@ -817,7 +1671,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 2,
       "insulation": 4,
@@ -833,15 +1692,57 @@
     "who_should_skip": "<p>Skip if you want automatic temperature control or premium aesthetics.</p>",
     "detailed_analysis": "<p>At this tier, the biggest variables are insulation, stability, and how quickly the water warms. Plan to use a cover and establish a basic cleaning routine.</p>",
     "features": "<ul><li><strong>Portable</strong> format</li><li><strong>Fast setup</strong></li></ul>",
-    "pros": ["Portable and easy to store", "Low barrier to entry"],
-    "cons": ["Ice-dependent", "Build quality varies"],
+    "pros": [
+      "Portable and easy to store",
+      "Low barrier to entry"
+    ],
+    "cons": [
+      "Ice-dependent",
+      "Build quality varies"
+    ],
     "verdict": "A practical portable plunge tub if you value convenience and a low cost of entry.",
     "alternatives": [
-      { "name": "VEVOR Ice Bath Tub", "sku": "VEVOR-Ice-Bath-Tub" },
-      { "name": "Nurecover Ice Bath", "sku": "Nurecover-Ice-Bath" }
+      {
+        "name": "VEVOR Ice Bath Tub",
+        "sku": "VEVOR-Ice-Bath-Tub"
+      },
+      {
+        "name": "Nurecover Ice Bath",
+        "sku": "Nurecover-Ice-Bath"
+      }
     ],
     "image_url": "https://www.amazon.com/s?k=calmmax+ice+bath",
-    "approx_price": 89
+    "approx_price": 89,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://www.amazon.com/s?k=calmmax+ice+bath",
+    "officialWebsite": "https://www.amazon.com/s?k=calmmax+ice+bath",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable ice bath tub aimed at quick setup and convenient recovery sessions.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 5.5,
+    "faqs": [
+      {
+        "question": "Is CalmMax Portable Ice Bath worth it?",
+        "answer": "A practical portable plunge tub if you value convenience and a low cost of entry."
+      },
+      {
+        "question": "Who is CalmMax Portable Ice Bath best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for CalmMax Portable Ice Bath?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/s?k=calmmax+ice+bath",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.amazon.com/s?k=calmmax+ice+bath"
+    }
   },
   {
     "sku": "Hydragun-Supertub",
@@ -861,7 +1762,12 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "ice-based", "portable", "beginner-friendly"],
+    "tags": [
+      "mid-range",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
     "score": {
       "temperature_control": 4,
       "insulation": 6,
@@ -877,15 +1783,57 @@
     "who_should_skip": "<p>Skip if you want integrated heating/cooling or the absolute lowest-cost pod.</p>",
     "detailed_analysis": "<p>As with other portable tubs, evaluate insulation, stability, and drainage. Brand-led products may offer better support/accessories, but performance still depends on ice and hygiene.</p>",
     "features": "<ul><li><strong>Recovery-brand positioning</strong></li><li><strong>Portable plunge</strong> format</li></ul>",
-    "pros": ["Recovery-focused brand positioning", "Portable and routine-friendly"],
-    "cons": ["Ice-dependent unless paired with external cooling", "Not as turnkey as premium all-in-one plunges"],
+    "pros": [
+      "Recovery-focused brand positioning",
+      "Portable and routine-friendly"
+    ],
+    "cons": [
+      "Ice-dependent unless paired with external cooling",
+      "Not as turnkey as premium all-in-one plunges"
+    ],
     "verdict": "A good mid-entry option if you want a known recovery brand and a portable plunge approach.",
     "alternatives": [
-      { "name": "The Cold Pod", "sku": "TheColdPod-IceBath" },
-      { "name": "Polar Recovery Tub", "sku": "Polar-Recovery-Tub" }
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      },
+      {
+        "name": "Polar Recovery Tub",
+        "sku": "Polar-Recovery-Tub"
+      }
     ],
     "image_url": "https://hydragun.com/",
-    "approx_price": 399
+    "approx_price": 399,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://hydragun.com/",
+    "officialWebsite": "https://hydragun.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable cold tub product line from a recovery brand, aimed at at-home cold immersion routines.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 6.2,
+    "faqs": [
+      {
+        "question": "Is Hydragun Supertub (Entry Model) worth it?",
+        "answer": "A good mid-entry option if you want a known recovery brand and a portable plunge approach."
+      },
+      {
+        "question": "Who is Hydragun Supertub (Entry Model) best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Hydragun Supertub (Entry Model)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://hydragun.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://hydragun.com/"
+    }
   },
   {
     "sku": "SunHome-Equinox-2P-Infrared",
@@ -905,7 +1853,12 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "infrared", "2-person", "recovery"],
+    "tags": [
+      "premium",
+      "infrared",
+      "2-person",
+      "recovery"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 8,
@@ -921,15 +1874,58 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You need a <strong>portable</strong> sauna solution</li><li>You want the cheapest entry point (consider a blanket or portable tent)</li></ul>",
     "detailed_analysis": "<p>With 2-person infrared saunas, evaluate footprint, heat-up time, temperature ceiling, and overall build quality. The best units feel comfortable enough that you’ll use them consistently.</p>",
     "features": "<ul><li><strong>2-person cabin</strong> size</li><li><strong>Full-spectrum infrared</strong> positioning</li><li><strong>At-home routine</strong> oriented design</li></ul>",
-    "pros": ["Strong at-home routine fit", "Roomier than 1-person units", "Better comfort for consistent use"],
-    "cons": ["Not portable", "Higher cost than blankets or steam tents"],
+    "pros": [
+      "Strong at-home routine fit",
+      "Roomier than 1-person units",
+      "Better comfort for consistent use"
+    ],
+    "cons": [
+      "Not portable",
+      "Higher cost than blankets or steam tents"
+    ],
     "verdict": "A strong 2-person infrared sauna choice if you want a consistent at-home routine and enough room to actually enjoy longer sessions.",
     "alternatives": [
-      { "name": "Dynamic Saunas Barcelona (1–2 Person)", "sku": "Dynamic-Barcelona-1-2P" },
-      { "name": "Golden Designs Monaco 3-Person", "sku": "GoldenDesigns-Monaco-3P" }
+      {
+        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "sku": "Dynamic-Barcelona-1-2P"
+      },
+      {
+        "name": "Golden Designs Monaco 3-Person",
+        "sku": "GoldenDesigns-Monaco-3P"
+      }
     ],
     "image_url": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna",
-    "approx_price": 6099
+    "approx_price": 6099,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna",
+    "officialWebsite": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A 2-person full-spectrum infrared sauna designed for at-home recovery, relaxation, and routine sessions.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.3,
+    "faqs": [
+      {
+        "question": "Is Sun Home Equinox 2-Person Full-Spectrum Infrared Sauna worth it?",
+        "answer": "A strong 2-person infrared sauna choice if you want a consistent at-home routine and enough room to actually enjoy longer sessions."
+      },
+      {
+        "question": "Who is Sun Home Equinox 2-Person Full-Spectrum Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Sun Home Equinox 2-Person Full-Spectrum Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna"
+    }
   },
   {
     "sku": "SunHome-Luminar-1P-Infrared",
@@ -949,7 +1945,12 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "infrared", "1-person", "small-space"],
+    "tags": [
+      "premium",
+      "infrared",
+      "1-person",
+      "small-space"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 8,
@@ -965,15 +1966,57 @@
     "who_should_skip": "<p>Skip if you want extra room to stretch or plan to sauna with another person.</p>",
     "detailed_analysis": "<p>With 1-person cabins, comfort is the real differentiator. If you feel cramped you’ll use it less. Also consider ceiling height, bench comfort, and how easy it is to assemble in your chosen space.</p>",
     "features": "<ul><li><strong>Solo cabin footprint</strong></li><li><strong>Infrared heat</strong> for at-home sessions</li></ul>",
-    "pros": ["More space-efficient than 2-person units", "Better experience than blankets for many users"],
-    "cons": ["Can feel tight for tall/broad users", "Not portable"],
+    "pros": [
+      "More space-efficient than 2-person units",
+      "Better experience than blankets for many users"
+    ],
+    "cons": [
+      "Can feel tight for tall/broad users",
+      "Not portable"
+    ],
     "verdict": "A good fit if you want a real cabin sauna experience but need a solo footprint.",
     "alternatives": [
-      { "name": "SereneLife Portable Infrared Sauna", "sku": "SereneLife-Portable-Infrared" },
-      { "name": "HigherDOSE Infrared Sauna Blanket", "sku": "HigherDOSE-Infrared-Sauna-Blanket" }
+      {
+        "name": "SereneLife Portable Infrared Sauna",
+        "sku": "SereneLife-Portable-Infrared"
+      },
+      {
+        "name": "HigherDOSE Infrared Sauna Blanket",
+        "sku": "HigherDOSE-Infrared-Sauna-Blanket"
+      }
     ],
     "image_url": "https://sunhomesaunas.com/collections/all",
-    "approx_price": 6599
+    "approx_price": 6599,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://sunhomesaunas.com/collections/all",
+    "officialWebsite": "https://sunhomesaunas.com/collections/all",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A 1-person infrared sauna format aimed at solo daily sessions in a smaller footprint.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8,
+    "faqs": [
+      {
+        "question": "Is Sun Home Luminar 1-Person Infrared Sauna worth it?",
+        "answer": "A good fit if you want a real cabin sauna experience but need a solo footprint."
+      },
+      {
+        "question": "Who is Sun Home Luminar 1-Person Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Sun Home Luminar 1-Person Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://sunhomesaunas.com/collections/all",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://sunhomesaunas.com/collections/all"
+    }
   },
   {
     "sku": "Dynamic-Barcelona-1-2P",
@@ -993,7 +2036,13 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "infrared", "1-person", "2-person", "small-space"],
+    "tags": [
+      "mid-range",
+      "infrared",
+      "1-person",
+      "2-person",
+      "small-space"
+    ],
     "score": {
       "heat_performance": 7,
       "build_quality": 7,
@@ -1009,15 +2058,57 @@
     "who_should_skip": "<p>Skip if you want the most premium materials/finish or a larger multi-person layout.</p>",
     "detailed_analysis": "<p>In the value cabin tier, the key questions are: does it heat evenly, is assembly manageable, and does the interior feel comfortable enough for consistent use?</p>",
     "features": "<ul><li><strong>1–2 person cabin</strong></li><li><strong>Low-EMF positioning</strong> (brand-dependent specs)</li><li><strong>Value pricing</strong> relative to premium lines</li></ul>",
-    "pros": ["Strong value for a cabin sauna", "Good entry point into at-home sauna routines"],
-    "cons": ["Less premium fit/finish than luxury models", "May have fewer high-end features"],
+    "pros": [
+      "Strong value for a cabin sauna",
+      "Good entry point into at-home sauna routines"
+    ],
+    "cons": [
+      "Less premium fit/finish than luxury models",
+      "May have fewer high-end features"
+    ],
     "verdict": "A sensible entry cabin sauna if you want the real experience at a more approachable price.",
     "alternatives": [
-      { "name": "Dynamic Saunas Andora 2 Person", "sku": "Dynamic-Andora-2P" },
-      { "name": "SereneLife Portable Infrared Sauna", "sku": "SereneLife-Portable-Infrared" }
+      {
+        "name": "Dynamic Saunas Andora 2 Person",
+        "sku": "Dynamic-Andora-2P"
+      },
+      {
+        "name": "SereneLife Portable Infrared Sauna",
+        "sku": "SereneLife-Portable-Infrared"
+      }
     ],
     "image_url": "https://dynamicsaunasdirect.com/collections/new-sauna",
-    "approx_price": 1999
+    "approx_price": 1999,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://dynamicsaunasdirect.com/collections/new-sauna",
+    "officialWebsite": "https://dynamicsaunasdirect.com/collections/new-sauna",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A popular value-oriented 1–2 person infrared sauna model focused on practical at-home use.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.7,
+    "faqs": [
+      {
+        "question": "Is Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna worth it?",
+        "answer": "A sensible entry cabin sauna if you want the real experience at a more approachable price."
+      },
+      {
+        "question": "Who is Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://dynamicsaunasdirect.com/collections/new-sauna",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://dynamicsaunasdirect.com/collections/new-sauna"
+    }
   },
   {
     "sku": "Dynamic-Andora-2P",
@@ -1037,7 +2128,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "infrared", "2-person"],
+    "tags": [
+      "mid-range",
+      "infrared",
+      "2-person"
+    ],
     "score": {
       "heat_performance": 7,
       "build_quality": 7,
@@ -1053,15 +2148,57 @@
     "who_should_skip": "<p>Skip if you want ultra-premium materials or a larger (3–4 person) sauna.</p>",
     "detailed_analysis": "<p>Two-person cabins are often the sweet spot: big enough to be comfortable, small enough to fit many homes. Evaluate assembly, heat-up time, and whether the seating height and backrests feel comfortable.</p>",
     "features": "<ul><li><strong>2-person interior</strong></li><li><strong>Infrared panel heating</strong></li><li><strong>Common retail availability</strong></li></ul>",
-    "pros": ["Strong value tier option", "Comfortable size for regular use"],
-    "cons": ["Not luxury-grade finish", "Not portable"],
+    "pros": [
+      "Strong value tier option",
+      "Comfortable size for regular use"
+    ],
+    "cons": [
+      "Not luxury-grade finish",
+      "Not portable"
+    ],
     "verdict": "A practical, widely available 2-person infrared cabin with a strong value proposition for regular home use.",
     "alternatives": [
-      { "name": "Dynamic Saunas Barcelona (1–2 Person)", "sku": "Dynamic-Barcelona-1-2P" },
-      { "name": "Sun Home Equinox 2-Person", "sku": "SunHome-Equinox-2P-Infrared" }
+      {
+        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "sku": "Dynamic-Barcelona-1-2P"
+      },
+      {
+        "name": "Sun Home Equinox 2-Person",
+        "sku": "SunHome-Equinox-2P-Infrared"
+      }
     ],
     "image_url": "https://www.amazon.com/dp/B002063VYY",
-    "approx_price": 2499
+    "approx_price": 2499,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://www.amazon.com/dp/B002063VYY",
+    "officialWebsite": "https://www.amazon.com/dp/B002063VYY",
+    "amazonUrl": "https://www.amazon.com/dp/B002063VYY?tag=scorpiusllc-20",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A widely sold 2-person infrared sauna model positioned around low-EMF heating panels and efficient home use.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.8,
+    "faqs": [
+      {
+        "question": "Is Dynamic Saunas Andora 2 Person Infrared Sauna worth it?",
+        "answer": "A practical, widely available 2-person infrared cabin with a strong value proposition for regular home use."
+      },
+      {
+        "question": "Who is Dynamic Saunas Andora 2 Person Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Dynamic Saunas Andora 2 Person Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B002063VYY?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.amazon.com/dp/B002063VYY"
+    }
   },
   {
     "sku": "JNH-Joyous-2P",
@@ -1081,7 +2218,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "infrared", "2-person"],
+    "tags": [
+      "premium",
+      "infrared",
+      "2-person"
+    ],
     "score": {
       "heat_performance": 8,
       "build_quality": 8,
@@ -1097,15 +2238,57 @@
     "who_should_skip": "<p>Skip if you want the cheapest possible cabin sauna or if you need a 3–4 person size.</p>",
     "detailed_analysis": "<p>At the mid-to-premium cabin tier, comfort and materials matter more. If the bench, back support, and headroom feel good, you’ll actually build the habit.</p>",
     "features": "<ul><li><strong>2-person cabin</strong></li><li><strong>Infrared heating</strong> designed for home use</li></ul>",
-    "pros": ["More premium feel than entry models", "Good routine fit for recovery"],
-    "cons": ["Higher cost than budget cabins", "Not portable"],
+    "pros": [
+      "More premium feel than entry models",
+      "Good routine fit for recovery"
+    ],
+    "cons": [
+      "Higher cost than budget cabins",
+      "Not portable"
+    ],
     "verdict": "A solid upgrade pick if you want a nicer at-home 2-person cabin sauna and plan to use it consistently.",
     "alternatives": [
-      { "name": "Dynamic Saunas Andora 2 Person", "sku": "Dynamic-Andora-2P" },
-      { "name": "Golden Designs Maxxus 2-Person", "sku": "GoldenDesigns-Maxxus-2P" }
+      {
+        "name": "Dynamic Saunas Andora 2 Person",
+        "sku": "Dynamic-Andora-2P"
+      },
+      {
+        "name": "Golden Designs Maxxus 2-Person",
+        "sku": "GoldenDesigns-Maxxus-2P"
+      }
     ],
     "image_url": "https://jnhlifestyles.com/",
-    "approx_price": 3499
+    "approx_price": 3499,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://jnhlifestyles.com/",
+    "officialWebsite": "https://jnhlifestyles.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A 2-person infrared sauna designed for comfortable at-home sessions with a premium-leaning build.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.8,
+    "faqs": [
+      {
+        "question": "Is JNH Lifestyles Joyous 2 Person Infrared Sauna worth it?",
+        "answer": "A solid upgrade pick if you want a nicer at-home 2-person cabin sauna and plan to use it consistently."
+      },
+      {
+        "question": "Who is JNH Lifestyles Joyous 2 Person Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for JNH Lifestyles Joyous 2 Person Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://jnhlifestyles.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://jnhlifestyles.com/"
+    }
   },
   {
     "sku": "SereneLife-Portable-Infrared",
@@ -1125,7 +2308,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["budget", "infrared", "portable", "beginner-friendly", "small-space"],
+    "tags": [
+      "budget",
+      "infrared",
+      "portable",
+      "beginner-friendly",
+      "small-space"
+    ],
     "score": {
       "heat_performance": 6,
       "build_quality": 5,
@@ -1141,15 +2330,58 @@
     "who_should_skip": "<p>Skip if you want the classic wood cabin experience or want to sauna with another person.</p>",
     "detailed_analysis": "<p>Portable saunas vary in comfort and heat feel. The main benefits are footprint and affordability. The main limitations are experience quality and durability.</p>",
     "features": "<ul><li><strong>Portable</strong> and space-saving</li><li><strong>Lower-cost entry</strong> vs cabin saunas</li></ul>",
-    "pros": ["Budget friendly", "Small footprint", "No cabin install"],
-    "cons": ["Less premium experience", "Durability varies"],
+    "pros": [
+      "Budget friendly",
+      "Small footprint",
+      "No cabin install"
+    ],
+    "cons": [
+      "Less premium experience",
+      "Durability varies"
+    ],
     "verdict": "A practical choice if your priority is small footprint and affordability over the full cabin sauna experience.",
     "alternatives": [
-      { "name": "HigherDOSE Infrared Sauna Blanket", "sku": "HigherDOSE-Infrared-Sauna-Blanket" },
-      { "name": "Dynamic Saunas Barcelona (1–2 Person)", "sku": "Dynamic-Barcelona-1-2P" }
+      {
+        "name": "HigherDOSE Infrared Sauna Blanket",
+        "sku": "HigherDOSE-Infrared-Sauna-Blanket"
+      },
+      {
+        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "sku": "Dynamic-Barcelona-1-2P"
+      }
     ],
     "image_url": "https://www.amazon.com/s?k=serenelife+portable+sauna",
-    "approx_price": 279
+    "approx_price": 279,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://www.amazon.com/s?k=serenelife+portable+sauna",
+    "officialWebsite": "https://www.amazon.com/s?k=serenelife+portable+sauna",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A portable personal sauna solution designed for budget-friendly home sweating sessions without a full cabin install.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.3,
+    "faqs": [
+      {
+        "question": "Is SereneLife Portable Infrared Sauna worth it?",
+        "answer": "A practical choice if your priority is small footprint and affordability over the full cabin sauna experience."
+      },
+      {
+        "question": "Who is SereneLife Portable Infrared Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for SereneLife Portable Infrared Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/s?k=serenelife+portable+sauna",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.amazon.com/s?k=serenelife+portable+sauna"
+    }
   },
   {
     "sku": "HigherDOSE-Infrared-Sauna-Blanket",
@@ -1169,7 +2401,13 @@
       "portable": true,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "portable", "beginner-friendly", "small-space", "recovery"],
+    "tags": [
+      "mid-range",
+      "portable",
+      "beginner-friendly",
+      "small-space",
+      "recovery"
+    ],
     "score": {
       "heat_performance": 7,
       "build_quality": 8,
@@ -1185,15 +2423,58 @@
     "who_should_skip": "<p>Skip if:</p><ul><li>You want the classic sauna cabin vibe</li><li>You dislike the feeling of a wrap/blanket during sessions</li></ul>",
     "detailed_analysis": "<p>Sauna blankets can be excellent when used consistently. Evaluate max temperature, comfort, materials, cleaning routine, and how easy it is to actually use weekly. The best blanket is the one you’ll pull out and use.</p>",
     "features": "<ul><li><strong>Portable infrared heat</strong> sessions</li><li><strong>Space-saving</strong> storage</li><li><strong>Good entry point</strong> into heat routines</li></ul>",
-    "pros": ["No installation", "Stores easily", "Often cheaper than cabin saunas"],
-    "cons": ["Different experience than a cabin sauna", "Requires cleaning/liner habits"],
+    "pros": [
+      "No installation",
+      "Stores easily",
+      "Often cheaper than cabin saunas"
+    ],
+    "cons": [
+      "Different experience than a cabin sauna",
+      "Requires cleaning/liner habits"
+    ],
     "verdict": "One of the best ways to get consistent heat sessions at home if space or budget makes a cabin sauna impractical.",
     "alternatives": [
-      { "name": "SereneLife Portable Infrared Sauna", "sku": "SereneLife-Portable-Infrared" },
-      { "name": "Sun Home Luminar 1-Person Infrared Sauna", "sku": "SunHome-Luminar-1P-Infrared" }
+      {
+        "name": "SereneLife Portable Infrared Sauna",
+        "sku": "SereneLife-Portable-Infrared"
+      },
+      {
+        "name": "Sun Home Luminar 1-Person Infrared Sauna",
+        "sku": "SunHome-Luminar-1P-Infrared"
+      }
     ],
     "image_url": "https://higherdose.com/products/infrared-sauna-blanket",
-    "approx_price": 699
+    "approx_price": 699,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://higherdose.com/products/infrared-sauna-blanket",
+    "officialWebsite": "https://higherdose.com/products/infrared-sauna-blanket",
+    "amazonUrl": "https://www.amazon.com/dp/B09M8YQ4KB?tag=scorpiusllc-20",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium infrared sauna blanket designed for portable, at-home heat sessions without a cabin sauna.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.2,
+    "faqs": [
+      {
+        "question": "Is HigherDOSE Infrared Sauna Blanket worth it?",
+        "answer": "One of the best ways to get consistent heat sessions at home if space or budget makes a cabin sauna impractical."
+      },
+      {
+        "question": "Who is HigherDOSE Infrared Sauna Blanket best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for HigherDOSE Infrared Sauna Blanket?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B09M8YQ4KB?tag=scorpiusllc-20",
+      "manufacturer": "https://higherdose.com/products/infrared-sauna-blanket",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://higherdose.com/products/infrared-sauna-blanket"
+    }
   },
   {
     "sku": "AlmostHeaven-Barrel-Morgan",
@@ -1213,7 +2494,13 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "traditional", "outdoor", "barrel-style", "diy"],
+    "tags": [
+      "premium",
+      "traditional",
+      "outdoor",
+      "barrel-style",
+      "diy"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 9,
@@ -1229,15 +2516,58 @@
     "who_should_skip": "<p>Skip if you can’t place it outdoors or you prefer infrared heat and indoor convenience.</p>",
     "detailed_analysis": "<p>Traditional outdoor saunas require planning: base/pad, delivery logistics, assembly time, and heater choice. The payoff is the authentic sauna experience and an outdoor wellness \"destination\".</p>",
     "features": "<ul><li><strong>Outdoor barrel design</strong></li><li><strong>Traditional sauna</strong> experience</li><li><strong>Strong brand reputation</strong></li></ul>",
-    "pros": ["Classic outdoor sauna ritual", "Aesthetic backyard upgrade", "Authentic heat experience"],
-    "cons": ["Outdoor install and assembly required", "Higher total cost and logistics"],
+    "pros": [
+      "Classic outdoor sauna ritual",
+      "Aesthetic backyard upgrade",
+      "Authentic heat experience"
+    ],
+    "cons": [
+      "Outdoor install and assembly required",
+      "Higher total cost and logistics"
+    ],
     "verdict": "If you want the classic backyard sauna experience, Almost Heaven barrel models are a mainstream, recognizable choice.",
     "alternatives": [
-      { "name": "Dundalk Leisure Barrel Sauna", "sku": "Dundalk-Barrel-Sauna" },
-      { "name": "ALEKO Outdoor Barrel Sauna", "sku": "ALEKO-Barrel-Sauna" }
+      {
+        "name": "Dundalk Leisure Barrel Sauna",
+        "sku": "Dundalk-Barrel-Sauna"
+      },
+      {
+        "name": "ALEKO Outdoor Barrel Sauna",
+        "sku": "ALEKO-Barrel-Sauna"
+      }
     ],
     "image_url": "https://almostheaven.com/collections/saunas",
-    "approx_price": 5715
+    "approx_price": 5715,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://almostheaven.com/collections/saunas",
+    "officialWebsite": "https://almostheaven.com/collections/saunas",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A well-known outdoor barrel sauna style offering a classic sauna experience with strong brand recognition.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.7,
+    "faqs": [
+      {
+        "question": "Is Almost Heaven Barrel Sauna (Morgan) worth it?",
+        "answer": "If you want the classic backyard sauna experience, Almost Heaven barrel models are a mainstream, recognizable choice."
+      },
+      {
+        "question": "Who is Almost Heaven Barrel Sauna (Morgan) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Almost Heaven Barrel Sauna (Morgan)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://almostheaven.com/collections/saunas"
+    }
   },
   {
     "sku": "AlmostHeaven-Barrel-Salem",
@@ -1257,7 +2587,13 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "traditional", "outdoor", "barrel-style", "diy"],
+    "tags": [
+      "premium",
+      "traditional",
+      "outdoor",
+      "barrel-style",
+      "diy"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 8,
@@ -1273,15 +2609,57 @@
     "who_should_skip": "<p>Skip if you need indoor-only placement or want an infrared cabin.</p>",
     "detailed_analysis": "<p>Plan for assembly and delivery, and confirm heater requirements (electrical/venting if applicable). Outdoor saunas reward planning.</p>",
     "features": "<ul><li><strong>Outdoor barrel design</strong></li><li><strong>Traditional sauna experience</strong></li></ul>",
-    "pros": ["Authentic sauna experience", "Strong backyard aesthetic"],
-    "cons": ["Outdoor logistics", "Assembly time and heater planning"],
+    "pros": [
+      "Authentic sauna experience",
+      "Strong backyard aesthetic"
+    ],
+    "cons": [
+      "Outdoor logistics",
+      "Assembly time and heater planning"
+    ],
     "verdict": "A good pick if you want the classic barrel sauna setup with a known brand model.",
     "alternatives": [
-      { "name": "Almost Heaven Morgan Barrel Sauna", "sku": "AlmostHeaven-Barrel-Morgan" },
-      { "name": "Dundalk Leisure Barrel Sauna", "sku": "Dundalk-Barrel-Sauna" }
+      {
+        "name": "Almost Heaven Morgan Barrel Sauna",
+        "sku": "AlmostHeaven-Barrel-Morgan"
+      },
+      {
+        "name": "Dundalk Leisure Barrel Sauna",
+        "sku": "Dundalk-Barrel-Sauna"
+      }
     ],
     "image_url": "https://almostheaven.com/collections/saunas",
-    "approx_price": 4770
+    "approx_price": 4770,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://almostheaven.com/collections/saunas",
+    "officialWebsite": "https://almostheaven.com/collections/saunas",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A popular Almost Heaven outdoor barrel sauna model aimed at classic backyard sauna builds.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.3,
+    "faqs": [
+      {
+        "question": "Is Almost Heaven Barrel Sauna (Salem) worth it?",
+        "answer": "A good pick if you want the classic barrel sauna setup with a known brand model."
+      },
+      {
+        "question": "Who is Almost Heaven Barrel Sauna (Salem) best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Almost Heaven Barrel Sauna (Salem)?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://almostheaven.com/collections/saunas"
+    }
   },
   {
     "sku": "AlmostHeaven-Bluestone-3P",
@@ -1301,7 +2679,12 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "traditional", "3-person", "diy"],
+    "tags": [
+      "premium",
+      "traditional",
+      "3-person",
+      "diy"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 8,
@@ -1317,15 +2700,57 @@
     "who_should_skip": "<p>Skip if you need ultra-compact footprint or want a portable solution.</p>",
     "detailed_analysis": "<p>In 3-person cabins, the main value is comfort. If you can sit and breathe without feeling cramped, you’ll use it more often.</p>",
     "features": "<ul><li><strong>3-person capacity</strong></li><li><strong>Traditional sauna</strong> layout</li></ul>",
-    "pros": ["More comfortable capacity", "Better for households"],
-    "cons": ["More space required", "More complex delivery/assembly than portable options"],
+    "pros": [
+      "More comfortable capacity",
+      "Better for households"
+    ],
+    "cons": [
+      "More space required",
+      "More complex delivery/assembly than portable options"
+    ],
     "verdict": "A solid size for households that want a traditional sauna experience without going huge.",
     "alternatives": [
-      { "name": "Golden Designs Monaco 3-Person", "sku": "GoldenDesigns-Monaco-3P" },
-      { "name": "Dynamic Saunas Venice 2-Person", "sku": "Dynamic-Venice-2P" }
+      {
+        "name": "Golden Designs Monaco 3-Person",
+        "sku": "GoldenDesigns-Monaco-3P"
+      },
+      {
+        "name": "Dynamic Saunas Venice 2-Person",
+        "sku": "Dynamic-Venice-2P"
+      }
     ],
     "image_url": "https://almostheaven.com/collections/saunas",
-    "approx_price": 4999
+    "approx_price": 4999,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://almostheaven.com/collections/saunas",
+    "officialWebsite": "https://almostheaven.com/collections/saunas",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A traditional-style sauna model from Almost Heaven aimed at a multi-person home sauna experience.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8,
+    "faqs": [
+      {
+        "question": "Is Almost Heaven Bluestone 3-Person worth it?",
+        "answer": "A solid size for households that want a traditional sauna experience without going huge."
+      },
+      {
+        "question": "Who is Almost Heaven Bluestone 3-Person best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for Almost Heaven Bluestone 3-Person?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://almostheaven.com/collections/saunas"
+    }
   },
   {
     "sku": "Dundalk-Barrel-Sauna",
@@ -1345,7 +2770,13 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["premium", "traditional", "outdoor", "barrel-style", "diy"],
+    "tags": [
+      "premium",
+      "traditional",
+      "outdoor",
+      "barrel-style",
+      "diy"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 9,
@@ -1361,15 +2792,57 @@
     "who_should_skip": "<p>Skip if you need indoor-only placement or want an infrared cabin experience.</p>",
     "detailed_analysis": "<p>Outdoor wood saunas require a plan: base, delivery, assembly, and heater selection. The payoff is the authentic ritual and backyard upgrade.</p>",
     "features": "<ul><li><strong>Outdoor barrel form</strong></li><li><strong>Traditional sauna experience</strong></li></ul>",
-    "pros": ["Classic outdoor sauna ritual", "Strong aesthetics"],
-    "cons": ["Logistics and assembly", "Space required"],
+    "pros": [
+      "Classic outdoor sauna ritual",
+      "Strong aesthetics"
+    ],
+    "cons": [
+      "Logistics and assembly",
+      "Space required"
+    ],
     "verdict": "A strong choice if you want a traditional outdoor wood sauna experience and are comfortable with outdoor installation logistics.",
     "alternatives": [
-      { "name": "Almost Heaven Barrel Sauna (Morgan)", "sku": "AlmostHeaven-Barrel-Morgan" },
-      { "name": "ALEKO Outdoor Barrel Sauna", "sku": "ALEKO-Barrel-Sauna" }
+      {
+        "name": "Almost Heaven Barrel Sauna (Morgan)",
+        "sku": "AlmostHeaven-Barrel-Morgan"
+      },
+      {
+        "name": "ALEKO Outdoor Barrel Sauna",
+        "sku": "ALEKO-Barrel-Sauna"
+      }
     ],
     "image_url": "https://www.dundalkleisurecraft.com/",
-    "approx_price": 6999
+    "approx_price": 6999,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://www.dundalkleisurecraft.com/",
+    "officialWebsite": "https://www.dundalkleisurecraft.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium-leaning outdoor barrel sauna brand known for classic wood sauna builds.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.7,
+    "faqs": [
+      {
+        "question": "Is Dundalk Leisure Barrel Sauna worth it?",
+        "answer": "A strong choice if you want a traditional outdoor wood sauna experience and are comfortable with outdoor installation logistics."
+      },
+      {
+        "question": "Who is Dundalk Leisure Barrel Sauna best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for Dundalk Leisure Barrel Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://www.dundalkleisurecraft.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://www.dundalkleisurecraft.com/"
+    }
   },
   {
     "sku": "ALEKO-Barrel-Sauna",
@@ -1389,7 +2862,13 @@
       "portable": false,
       "diy_friendly": true
     },
-    "tags": ["mid-range", "traditional", "outdoor", "barrel-style", "diy"],
+    "tags": [
+      "mid-range",
+      "traditional",
+      "outdoor",
+      "barrel-style",
+      "diy"
+    ],
     "score": {
       "heat_performance": 8,
       "build_quality": 7,
@@ -1405,15 +2884,57 @@
     "who_should_skip": "<p>Skip if you want premium wood/finish or white-glove delivery and support.</p>",
     "detailed_analysis": "<p>Value barrel saunas can be great, but verify included accessories, heater compatibility, and support. Assembly quality and instructions matter a lot.</p>",
     "features": "<ul><li><strong>Outdoor barrel style</strong></li><li><strong>Value pricing</strong></li></ul>",
-    "pros": ["Often more affordable than premium brands", "Classic barrel look"],
-    "cons": ["May require more patience during assembly", "Support and fit/finish can vary"],
+    "pros": [
+      "Often more affordable than premium brands",
+      "Classic barrel look"
+    ],
+    "cons": [
+      "May require more patience during assembly",
+      "Support and fit/finish can vary"
+    ],
     "verdict": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details.",
     "alternatives": [
-      { "name": "Almost Heaven Barrel Sauna (Salem)", "sku": "AlmostHeaven-Barrel-Salem" },
-      { "name": "Dundalk Leisure Barrel Sauna", "sku": "Dundalk-Barrel-Sauna" }
+      {
+        "name": "Almost Heaven Barrel Sauna (Salem)",
+        "sku": "AlmostHeaven-Barrel-Salem"
+      },
+      {
+        "name": "Dundalk Leisure Barrel Sauna",
+        "sku": "Dundalk-Barrel-Sauna"
+      }
     ],
     "image_url": "https://aleko.com/",
-    "approx_price": 4299
+    "approx_price": 4299,
+    "bestFor": "Outdoor recovery spaces and frequent use",
+    "affiliateUrl": "https://aleko.com/",
+    "officialWebsite": "https://aleko.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A value-oriented outdoor barrel sauna option commonly sold online for backyard sauna builds.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7,
+    "faqs": [
+      {
+        "question": "Is ALEKO Outdoor Barrel Sauna worth it?",
+        "answer": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details."
+      },
+      {
+        "question": "Who is ALEKO Outdoor Barrel Sauna best for?",
+        "answer": "Outdoor recovery spaces and frequent use"
+      },
+      {
+        "question": "Where can I check the current price for ALEKO Outdoor Barrel Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://aleko.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://aleko.com/"
+    }
   },
   {
     "sku": "GoldenDesigns-Monaco-3P",
@@ -1433,7 +2954,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "infrared", "3-person"],
+    "tags": [
+      "luxury",
+      "infrared",
+      "3-person"
+    ],
     "score": {
       "heat_performance": 9,
       "build_quality": 9,
@@ -1449,15 +2974,58 @@
     "who_should_skip": "<p>Skip if you need a compact footprint or want a low-cost first sauna.</p>",
     "detailed_analysis": "<p>With 3-person infrared cabins, comfort and consistency matter more than fancy add-ons. If it’s pleasant to sit in, you’ll use it more—and results come from consistency.</p>",
     "features": "<ul><li><strong>3-person capacity</strong></li><li><strong>Infrared cabin</strong> format</li><li><strong>Premium positioning</strong></li></ul>",
-    "pros": ["Roomier interior", "Better for households", "Premium cabin experience"],
-    "cons": ["Higher cost", "Requires more space and delivery planning"],
+    "pros": [
+      "Roomier interior",
+      "Better for households",
+      "Premium cabin experience"
+    ],
+    "cons": [
+      "Higher cost",
+      "Requires more space and delivery planning"
+    ],
     "verdict": "A great choice if you want a roomy infrared cabin that supports consistent use for a household or serious routine.",
     "alternatives": [
-      { "name": "Sun Home Equinox 2-Person", "sku": "SunHome-Equinox-2P-Infrared" },
-      { "name": "JNH Lifestyles Ensi 4-Person", "sku": "JNH-Ensi-4P" }
+      {
+        "name": "Sun Home Equinox 2-Person",
+        "sku": "SunHome-Equinox-2P-Infrared"
+      },
+      {
+        "name": "JNH Lifestyles Ensi 4-Person",
+        "sku": "JNH-Ensi-4P"
+      }
     ],
     "image_url": "https://goldendesigninc.com/collections/products",
-    "approx_price": 8999
+    "approx_price": 8999,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://goldendesigninc.com/collections/products",
+    "officialWebsite": "https://goldendesigninc.com/collections/products",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium-leaning 3-person infrared sauna model positioned around near-zero EMF marketing and higher-end cabin experience.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.3,
+    "faqs": [
+      {
+        "question": "Is Golden Designs Monaco 3-Person Sauna worth it?",
+        "answer": "A great choice if you want a roomy infrared cabin that supports consistent use for a household or serious routine."
+      },
+      {
+        "question": "Who is Golden Designs Monaco 3-Person Sauna best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for Golden Designs Monaco 3-Person Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://goldendesigninc.com/collections/products",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://goldendesigninc.com/collections/products"
+    }
   },
   {
     "sku": "GoldenDesigns-Maxxus-2P",
@@ -1477,7 +3045,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "infrared", "2-person"],
+    "tags": [
+      "premium",
+      "infrared",
+      "2-person"
+    ],
     "score": {
       "heat_performance": 8,
       "build_quality": 8,
@@ -1493,15 +3065,57 @@
     "who_should_skip": "<p>Skip if you need a 3–4 person size or want a portable solution.</p>",
     "detailed_analysis": "<p>In 2-person cabins, the key is whether you can sit comfortably and actually use it frequently. Evaluate assembly, footprint, and day-to-day usability.</p>",
     "features": "<ul><li><strong>2-person cabin</strong></li><li><strong>Infrared heating</strong></li></ul>",
-    "pros": ["Good comfort/footprint balance", "Strong routine fit"],
-    "cons": ["Not portable", "Assembly/delivery required"],
+    "pros": [
+      "Good comfort/footprint balance",
+      "Strong routine fit"
+    ],
+    "cons": [
+      "Not portable",
+      "Assembly/delivery required"
+    ],
     "verdict": "A solid 2-person cabin option if you want a stable, repeatable home sauna routine.",
     "alternatives": [
-      { "name": "Dynamic Saunas Andora 2 Person", "sku": "Dynamic-Andora-2P" },
-      { "name": "Sun Home Equinox 2-Person", "sku": "SunHome-Equinox-2P-Infrared" }
+      {
+        "name": "Dynamic Saunas Andora 2 Person",
+        "sku": "Dynamic-Andora-2P"
+      },
+      {
+        "name": "Sun Home Equinox 2-Person",
+        "sku": "SunHome-Equinox-2P-Infrared"
+      }
     ],
     "image_url": "https://goldendesigninc.com/collections/products",
-    "approx_price": 4999
+    "approx_price": 4999,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://goldendesigninc.com/collections/products",
+    "officialWebsite": "https://goldendesigninc.com/collections/products",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A 2-person infrared sauna line under Golden Designs/Maxxus positioned for home wellness routines.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.8,
+    "faqs": [
+      {
+        "question": "Is Golden Designs Maxxus 2-Person Sauna worth it?",
+        "answer": "A solid 2-person cabin option if you want a stable, repeatable home sauna routine."
+      },
+      {
+        "question": "Who is Golden Designs Maxxus 2-Person Sauna best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Golden Designs Maxxus 2-Person Sauna?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://goldendesigninc.com/collections/products",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://goldendesigninc.com/collections/products"
+    }
   },
   {
     "sku": "Dynamic-Venice-2P",
@@ -1521,7 +3135,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["mid-range", "infrared", "2-person"],
+    "tags": [
+      "mid-range",
+      "infrared",
+      "2-person"
+    ],
     "score": {
       "heat_performance": 7,
       "build_quality": 7,
@@ -1537,15 +3155,57 @@
     "who_should_skip": "<p>Skip if you want luxury-grade materials or a larger household size.</p>",
     "detailed_analysis": "<p>As a value cabin, focus on comfort and habit. If you use it consistently, the value is high. If it’s annoying to assemble or cramped, it becomes a garage ornament.</p>",
     "features": "<ul><li><strong>2-person infrared cabin</strong></li><li><strong>Value positioning</strong></li></ul>",
-    "pros": ["Good entry 2-person cabin value", "Comfortable size for regular use"],
-    "cons": ["Less premium than luxury brands", "Not portable"],
+    "pros": [
+      "Good entry 2-person cabin value",
+      "Comfortable size for regular use"
+    ],
+    "cons": [
+      "Less premium than luxury brands",
+      "Not portable"
+    ],
     "verdict": "A sensible 2-person cabin sauna if you want value and a real at-home sauna habit.",
     "alternatives": [
-      { "name": "Dynamic Saunas Andora 2 Person", "sku": "Dynamic-Andora-2P" },
-      { "name": "JNH Lifestyles Joyous 2 Person", "sku": "JNH-Joyous-2P" }
+      {
+        "name": "Dynamic Saunas Andora 2 Person",
+        "sku": "Dynamic-Andora-2P"
+      },
+      {
+        "name": "JNH Lifestyles Joyous 2 Person",
+        "sku": "JNH-Joyous-2P"
+      }
     ],
     "image_url": "https://dynamicsaunasdirect.com/",
-    "approx_price": 2799
+    "approx_price": 2799,
+    "bestFor": "Beginners building a repeatable recovery routine",
+    "affiliateUrl": "https://dynamicsaunasdirect.com/",
+    "officialWebsite": "https://dynamicsaunasdirect.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A 2-person infrared cabin option aimed at value-conscious home sauna buyers.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 7.8,
+    "faqs": [
+      {
+        "question": "Is Dynamic Saunas Venice 2-Person worth it?",
+        "answer": "A sensible 2-person cabin sauna if you want value and a real at-home sauna habit."
+      },
+      {
+        "question": "Who is Dynamic Saunas Venice 2-Person best for?",
+        "answer": "Beginners building a repeatable recovery routine"
+      },
+      {
+        "question": "Where can I check the current price for Dynamic Saunas Venice 2-Person?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://dynamicsaunasdirect.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://dynamicsaunasdirect.com/"
+    }
   },
   {
     "sku": "JNH-Ensi-4P",
@@ -1565,7 +3225,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["premium", "infrared", "4-person"],
+    "tags": [
+      "premium",
+      "infrared",
+      "4-person"
+    ],
     "score": {
       "heat_performance": 8,
       "build_quality": 8,
@@ -1581,15 +3245,58 @@
     "who_should_skip": "<p>Skip if you’re tight on space or want a low-cost first sauna.</p>",
     "detailed_analysis": "<p>Bigger cabins increase comfort, but also increase cost, footprint, and delivery complexity. Ensure your intended location can handle the size and assembly.</p>",
     "features": "<ul><li><strong>4-person cabin size</strong></li><li><strong>Roomier sessions</strong> for comfort</li></ul>",
-    "pros": ["Best comfort tier", "Great for households", "Easier to use consistently if you dislike cramped spaces"],
-    "cons": ["Large footprint", "Higher cost and delivery logistics"],
+    "pros": [
+      "Best comfort tier",
+      "Great for households",
+      "Easier to use consistently if you dislike cramped spaces"
+    ],
+    "cons": [
+      "Large footprint",
+      "Higher cost and delivery logistics"
+    ],
     "verdict": "A strong option if you have space and want a household-friendly, comfortable cabin for frequent sessions.",
     "alternatives": [
-      { "name": "Golden Designs Monaco 3-Person", "sku": "GoldenDesigns-Monaco-3P" },
-      { "name": "Sun Home Equinox 2-Person", "sku": "SunHome-Equinox-2P-Infrared" }
+      {
+        "name": "Golden Designs Monaco 3-Person",
+        "sku": "GoldenDesigns-Monaco-3P"
+      },
+      {
+        "name": "Sun Home Equinox 2-Person",
+        "sku": "SunHome-Equinox-2P-Infrared"
+      }
     ],
     "image_url": "https://jnhlifestyles.com/",
-    "approx_price": 5999
+    "approx_price": 5999,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://jnhlifestyles.com/",
+    "officialWebsite": "https://jnhlifestyles.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A larger 4-person infrared sauna option for households or people who want extra room for longer sessions.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.2,
+    "faqs": [
+      {
+        "question": "Is JNH Lifestyles Ensi 4-Person worth it?",
+        "answer": "A strong option if you have space and want a household-friendly, comfortable cabin for frequent sessions."
+      },
+      {
+        "question": "Who is JNH Lifestyles Ensi 4-Person best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for JNH Lifestyles Ensi 4-Person?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://jnhlifestyles.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://jnhlifestyles.com/"
+    }
   },
   {
     "sku": "Sunlighten-mPulse-Series",
@@ -1609,7 +3316,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "infrared", "premium"],
+    "tags": [
+      "luxury",
+      "infrared",
+      "premium"
+    ],
     "score": {
       "heat_performance": 10,
       "build_quality": 10,
@@ -1625,15 +3336,57 @@
     "who_should_skip": "<p>Skip if you want value pricing or you’re unsure you’ll use a sauna consistently.</p>",
     "detailed_analysis": "<p>Luxury sauna buyers should evaluate warranty, support, build quality, and comfort. At high price tiers, you’re paying for reliability, materials, and brand trust as much as heat output.</p>",
     "features": "<ul><li><strong>Premium brand</strong> authority</li><li><strong>Luxury positioning</strong></li><li><strong>Long-term ownership</strong> focus</li></ul>",
-    "pros": ["Strong brand authority", "Premium ownership experience"],
-    "cons": ["High price tier", "Overkill for casual users"],
+    "pros": [
+      "Strong brand authority",
+      "Premium ownership experience"
+    ],
+    "cons": [
+      "High price tier",
+      "Overkill for casual users"
+    ],
     "verdict": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul.",
     "alternatives": [
-      { "name": "Clearlight Sanctuary 2", "sku": "Clearlight-Sanctuary-2" },
-      { "name": "Sun Home Hybrid Series", "sku": "SunHome-Hybrid-Series" }
+      {
+        "name": "Clearlight Sanctuary 2",
+        "sku": "Clearlight-Sanctuary-2"
+      },
+      {
+        "name": "Sun Home Hybrid Series",
+        "sku": "SunHome-Hybrid-Series"
+      }
     ],
     "image_url": "https://shop-us.sunlighten.com/collections/all",
-    "approx_price": 9999
+    "approx_price": 9999,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://shop-us.sunlighten.com/collections/all",
+    "officialWebsite": "https://shop-us.sunlighten.com/collections/all",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A premium infrared sauna series known for brand authority, premium pricing, and wellness-market positioning.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.7,
+    "faqs": [
+      {
+        "question": "Is Sunlighten mPulse Series worth it?",
+        "answer": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul."
+      },
+      {
+        "question": "Who is Sunlighten mPulse Series best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for Sunlighten mPulse Series?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://shop-us.sunlighten.com/collections/all",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://shop-us.sunlighten.com/collections/all"
+    }
   },
   {
     "sku": "SunHome-Hybrid-Series",
@@ -1653,7 +3406,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "hybrid", "premium"],
+    "tags": [
+      "luxury",
+      "hybrid",
+      "premium"
+    ],
     "score": {
       "heat_performance": 10,
       "build_quality": 9,
@@ -1669,15 +3426,57 @@
     "who_should_skip": "<p>Skip if you want the lowest cost entry point or don’t need versatility.</p>",
     "detailed_analysis": "<p>Hybrid models should be evaluated on comfort and whether the versatility actually increases usage. If it encourages more consistent sessions, it’s worth paying for.</p>",
     "features": "<ul><li><strong>Hybrid heating approach</strong> (varies by model)</li><li><strong>Premium positioning</strong></li></ul>",
-    "pros": ["Versatile experience", "Premium ownership feel"],
-    "cons": ["Higher cost than single-style saunas", "More complexity than basics"],
+    "pros": [
+      "Versatile experience",
+      "Premium ownership feel"
+    ],
+    "cons": [
+      "Higher cost than single-style saunas",
+      "More complexity than basics"
+    ],
     "verdict": "A premium versatility pick if you sauna often and want a feature-rich cabin for long-term use.",
     "alternatives": [
-      { "name": "Sunlighten mPulse Series", "sku": "Sunlighten-mPulse-Series" },
-      { "name": "Sun Home Equinox 2-Person Infrared Sauna", "sku": "SunHome-Equinox-2P-Infrared" }
+      {
+        "name": "Sunlighten mPulse Series",
+        "sku": "Sunlighten-mPulse-Series"
+      },
+      {
+        "name": "Sun Home Equinox 2-Person Infrared Sauna",
+        "sku": "SunHome-Equinox-2P-Infrared"
+      }
     ],
     "image_url": "https://sunhomesaunas.com/",
-    "approx_price": 10599
+    "approx_price": 10599,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://sunhomesaunas.com/",
+    "officialWebsite": "https://sunhomesaunas.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A hybrid sauna line aimed at users who want a more premium, feature-rich sauna experience.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.7,
+    "faqs": [
+      {
+        "question": "Is Sun Home Hybrid Series worth it?",
+        "answer": "A premium versatility pick if you sauna often and want a feature-rich cabin for long-term use."
+      },
+      {
+        "question": "Who is Sun Home Hybrid Series best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for Sun Home Hybrid Series?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://sunhomesaunas.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://sunhomesaunas.com/"
+    }
   },
   {
     "sku": "Clearlight-Sanctuary-2",
@@ -1697,7 +3496,11 @@
       "portable": false,
       "diy_friendly": false
     },
-    "tags": ["luxury", "infrared", "premium"],
+    "tags": [
+      "luxury",
+      "infrared",
+      "premium"
+    ],
     "score": {
       "heat_performance": 10,
       "build_quality": 10,
@@ -1713,14 +3516,56 @@
     "who_should_skip": "<p>Skip if you’re budget-focused or unsure you’ll sauna consistently.</p>",
     "detailed_analysis": "<p>At luxury tiers, focus on comfort, warranty, support, materials, and how the sauna integrates into your home. If it’s comfortable and reliable, you’ll use it more and benefit more.</p>",
     "features": "<ul><li><strong>Luxury positioning</strong></li><li><strong>Premium cabin experience</strong></li></ul>",
-    "pros": ["High-end ownership experience", "Comfort-forward design"],
-    "cons": ["Expensive", "Overkill for casual use"],
+    "pros": [
+      "High-end ownership experience",
+      "Comfort-forward design"
+    ],
+    "cons": [
+      "Expensive",
+      "Overkill for casual use"
+    ],
     "verdict": "A luxury choice for buyers who want a premium sauna experience and plan to use it consistently for years.",
     "alternatives": [
-      { "name": "Sunlighten mPulse Series", "sku": "Sunlighten-mPulse-Series" },
-      { "name": "Golden Designs Monaco 3-Person", "sku": "GoldenDesigns-Monaco-3P" }
+      {
+        "name": "Sunlighten mPulse Series",
+        "sku": "Sunlighten-mPulse-Series"
+      },
+      {
+        "name": "Golden Designs Monaco 3-Person",
+        "sku": "GoldenDesigns-Monaco-3P"
+      }
     ],
     "image_url": "https://infraredsauna.com/",
-    "approx_price": 8999
+    "approx_price": 8999,
+    "bestFor": "Home recovery buyers comparing long-term ownership value",
+    "affiliateUrl": "https://infraredsauna.com/",
+    "officialWebsite": "https://infraredsauna.com/",
+    "amazonUrl": "",
+    "image": "/images/ThermaPeakLogo.png",
+    "reviewSummary": "A luxury infrared sauna line positioned for premium materials, comfort, and long-term ownership.",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "overallScore": 8.7,
+    "faqs": [
+      {
+        "question": "Is Clearlight Sanctuary 2 worth it?",
+        "answer": "A luxury choice for buyers who want a premium sauna experience and plan to use it consistently for years."
+      },
+      {
+        "question": "Who is Clearlight Sanctuary 2 best for?",
+        "answer": "Home recovery buyers comparing long-term ownership value"
+      },
+      {
+        "question": "Where can I check the current price for Clearlight Sanctuary 2?",
+        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ],
+    "affiliateLinks": {
+      "amazon": "",
+      "manufacturer": "https://infraredsauna.com/",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": "",
+      "other": "https://infraredsauna.com/"
+    }
   }
 ]

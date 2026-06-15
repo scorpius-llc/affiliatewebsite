@@ -1,0 +1,782 @@
+#!/usr/bin/env node
+
+const fs = require("fs/promises");
+const path = require("path");
+
+const config = {
+  baseUrl: "https://thermapeak-test-925569592209.us-east1.run.app",
+  outputDir: "audits",
+  maxPages: 250,
+  knownLegacyTerms: [
+    "Pool Lab",
+    "ThePoolLab",
+    "robotic pool cleaner",
+    "localhost",
+    "ThePoolLabOG.png",
+  ],
+  ctaKeywords: [
+    "buy",
+    "shop",
+    "check price",
+    "check current price",
+    "see price",
+    "view deal",
+    "view on",
+    "view at",
+    "view on official website",
+    "learn more",
+    "get",
+    "compare",
+    "read review",
+  ],
+  merchantCtaKeywords: [
+    "check current price",
+    "check price on amazon",
+    "view on official website",
+    "view at best buy",
+    "view at walmart",
+    "view at rei",
+  ],
+  affiliateLinkIndicators: [
+    "amazon.com",
+    "amzn.to",
+    "shareasale",
+    "impact.com",
+    "awin1.com",
+    "avantlink",
+    "cj.com",
+    "partner",
+    "affiliate",
+    "ref=",
+    "tag=",
+    "utm_",
+  ],
+  expectedContentTypes: ["home", "best-of", "comparison", "guide", "review", "about"],
+};
+
+const ISSUE_WEIGHTS = { high: 24, medium: 12, low: 5 };
+
+function normalizeBase(value) {
+  const url = new URL(value || config.baseUrl);
+  url.hash = "";
+  url.search = "";
+  return url.toString().replace(/\/$/, "");
+}
+
+function timestampParts(date = new Date()) {
+  const pad = (value) => String(value).padStart(2, "0");
+  return {
+    iso: date.toISOString(),
+    slug: `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}-${pad(date.getHours())}-${pad(date.getMinutes())}`,
+  };
+}
+
+function stripTags(html) {
+  return decodeEntities(html.replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " "));
+}
+
+function decodeEntities(value) {
+  return String(value || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getAttr(tag, attr) {
+  const pattern = new RegExp(`${attr}\\s*=\\s*(["'])(.*?)\\1`, "i");
+  const match = tag.match(pattern);
+  return match ? decodeEntities(match[2]) : "";
+}
+
+function firstMatch(html, pattern) {
+  const match = html.match(pattern);
+  return match ? decodeEntities(match[1]) : "";
+}
+
+function allMatches(html, pattern) {
+  const values = [];
+  let match;
+  while ((match = pattern.exec(html)) !== null) {
+    values.push(decodeEntities(match[1]));
+  }
+  return values;
+}
+
+function metaContent(html, selectorName, selectorValue) {
+  const pattern = new RegExp(`<meta\\b(?=[^>]*(?:${selectorName})\\s*=\\s*["']${escapeRegExp(selectorValue)}["'])[^>]*>`, "i");
+  const tag = html.match(pattern)?.[0] || "";
+  return tag ? getAttr(tag, "content") : "";
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function inferPageType(pathname) {
+  const cleanPath = pathname.replace(/\/$/, "") || "/";
+  if (cleanPath === "/") return "home";
+  if (cleanPath === "/about") return "about";
+  if (cleanPath === "/best-of" || cleanPath.startsWith("/best-of/")) return "best-of";
+  if (cleanPath === "/comparisons" || cleanPath.startsWith("/comparisons/")) return "comparison";
+  if (cleanPath === "/guides" || cleanPath.startsWith("/guides/")) return "guide";
+  if (cleanPath === "/reviews" || cleanPath.startsWith("/reviews/")) return "review";
+  return "other";
+}
+
+function isProductReviewPage(page) {
+  return page.pageType === "review" && page.path !== "/reviews";
+}
+
+function isBestOfIndex(page) {
+  return page.pageType === "best-of" && page.path === "/best-of";
+}
+
+function isBestOfDetail(page) {
+  return page.pageType === "best-of" && page.path !== "/best-of";
+}
+
+function isComparisonIndex(page) {
+  return page.pageType === "comparison" && page.path === "/comparisons";
+}
+
+function isComparisonDetail(page) {
+  return page.pageType === "comparison" && page.path !== "/comparisons";
+}
+
+function isGuideDetail(page) {
+  return page.pageType === "guide" && page.path !== "/guides";
+}
+
+function absoluteUrl(rawUrl, sourceUrl) {
+  try {
+    const url = new URL(rawUrl, sourceUrl);
+    url.hash = "";
+    return url.toString();
+  } catch {
+    return "";
+  }
+}
+
+function unique(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function extractSitemapUrls(xml, baseUrl) {
+  const urls = allMatches(xml, /<loc>\s*([^<\s]+)\s*<\/loc>/gi)
+    .map((value) => absoluteUrl(value, baseUrl))
+    .filter(Boolean);
+  return unique(urls);
+}
+
+function mapUrlToBaseOrigin(url, baseUrl) {
+  const source = new URL(url);
+  const base = new URL(baseUrl);
+  return `${base.origin}${source.pathname}${source.search}`.replace(/\/$/, source.pathname === "/" ? "/" : "");
+}
+
+function extractJsonLd(html) {
+  const blocks = [];
+  const pattern = /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let match;
+  while ((match = pattern.exec(html)) !== null) {
+    try {
+      blocks.push(JSON.parse(match[1].trim()));
+    } catch {
+      blocks.push({ parseError: true, rawSnippet: match[1].trim().slice(0, 200) });
+    }
+  }
+  return blocks;
+}
+
+function collectSchemaTypes(value, output = []) {
+  if (!value || typeof value !== "object") return output;
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectSchemaTypes(item, output));
+    return output;
+  }
+  if (value["@type"]) {
+    if (Array.isArray(value["@type"])) output.push(...value["@type"]);
+    else output.push(value["@type"]);
+  }
+  if (value["@graph"]) collectSchemaTypes(value["@graph"], output);
+  Object.keys(value).forEach((key) => {
+    if (key !== "@graph" && typeof value[key] === "object") collectSchemaTypes(value[key], output);
+  });
+  return output;
+}
+
+function countPattern(html, pattern) {
+  return (html.match(pattern) || []).length;
+}
+
+function hasText(html, patterns) {
+  const text = stripTags(html).toLowerCase();
+  return patterns.some((pattern) => text.includes(pattern));
+}
+
+function domPosition(html, needleTag) {
+  const index = html.indexOf(needleTag);
+  if (index < 0 || html.length === 0) return null;
+  return Number((index / html.length).toFixed(3));
+}
+
+function classifyRelatedLinks(links) {
+  const result = {
+    home: 0,
+    "best-of": 0,
+    comparison: 0,
+    guide: 0,
+    review: 0,
+    about: 0,
+    other: 0,
+  };
+  links.forEach((link) => {
+    result[inferPageType(new URL(link).pathname)] += 1;
+  });
+  return result;
+}
+
+function parseHtmlPage(html, url, baseUrl) {
+  const parsedUrl = new URL(url);
+  const baseOrigin = new URL(baseUrl).origin;
+  const title = firstMatch(html, /<title[^>]*>([\s\S]*?)<\/title>/i);
+  const canonicalTag = html.match(/<link\b(?=[^>]*rel\s*=\s*["']canonical["'])[^>]*>/i)?.[0] || "";
+  const anchors = [];
+  const anchorPattern = /<a\b[^>]*href\s*=\s*(["'])(.*?)\1[^>]*>([\s\S]*?)<\/a>/gi;
+  let anchorMatch;
+  while ((anchorMatch = anchorPattern.exec(html)) !== null) {
+    const href = absoluteUrl(anchorMatch[2], url);
+    if (!href || !href.startsWith("http")) continue;
+    anchors.push({
+      href,
+      text: stripTags(anchorMatch[3]),
+      tag: anchorMatch[0],
+    });
+  }
+
+  const internalLinks = unique(anchors
+    .filter((link) => new URL(link.href).origin === baseOrigin)
+    .map((link) => link.href));
+  const externalLinks = unique(anchors
+    .filter((link) => new URL(link.href).origin !== baseOrigin)
+    .map((link) => link.href));
+  const ctaAnchors = anchors.filter((link) => {
+    const text = link.text.toLowerCase();
+    const classes = getAttr(link.tag, "class").toLowerCase();
+    return config.ctaKeywords.some((keyword) => text.includes(keyword) || classes.includes("cta") || classes.includes("button"));
+  });
+  const affiliateLinks = anchors.filter((link) => {
+    const href = link.href.toLowerCase();
+    const text = link.text.toLowerCase();
+    const rel = getAttr(link.tag, "rel").toLowerCase();
+    const isOutbound = new URL(link.href).origin !== baseOrigin;
+    const looksCommercial = config.affiliateLinkIndicators.some((indicator) => href.includes(indicator)) ||
+      rel.includes("sponsored") ||
+      config.merchantCtaKeywords.some((keyword) => text.includes(keyword));
+    return isOutbound && looksCommercial;
+  });
+  const imageTags = html.match(/<img\b[^>]*>/gi) || [];
+  const jsonLd = extractJsonLd(html);
+  const schemaTypes = unique(jsonLd.flatMap((block) => collectSchemaTypes(block)));
+  const h1s = allMatches(html, /<h1\b[^>]*>([\s\S]*?)<\/h1>/gi);
+  const h2s = allMatches(html, /<h2\b[^>]*>([\s\S]*?)<\/h2>/gi);
+  const h3s = allMatches(html, /<h3\b[^>]*>([\s\S]*?)<\/h3>/gi);
+  const fullText = stripTags(html);
+  const lowerHtml = html.toLowerCase();
+  const legacyFindings = config.knownLegacyTerms
+    .filter((term) => html.toLowerCase().includes(term.toLowerCase()))
+    .map((term) => ({ term, count: countPattern(html, new RegExp(escapeRegExp(term), "gi")) }));
+
+  return {
+    url,
+    path: parsedUrl.pathname,
+    pageType: inferPageType(parsedUrl.pathname),
+    title,
+    metaDescription: metaContent(html, "name", "description"),
+    canonicalUrl: canonicalTag ? absoluteUrl(getAttr(canonicalTag, "href"), url) : "",
+    robotsMeta: metaContent(html, "name", "robots"),
+    openGraphTitle: metaContent(html, "property", "og:title"),
+    openGraphDescription: metaContent(html, "property", "og:description"),
+    openGraphImage: metaContent(html, "property", "og:image"),
+    twitterCard: metaContent(html, "name", "twitter:card"),
+    twitterTitle: metaContent(html, "name", "twitter:title"),
+    twitterDescription: metaContent(html, "name", "twitter:description"),
+    twitterImage: metaContent(html, "name", "twitter:image"),
+    h1s,
+    h2s,
+    h3s,
+    wordCount: fullText ? fullText.split(/\s+/).filter(Boolean).length : 0,
+    internalLinks,
+    externalLinks,
+    imageCount: imageTags.length,
+    imagesMissingAltText: imageTags.filter((tag) => !getAttr(tag, "alt")).length,
+    schemaTypes,
+    faqSchemaPresent: schemaTypes.includes("FAQPage"),
+    productSchemaPresent: schemaTypes.includes("Product"),
+    articleSchemaPresent: schemaTypes.includes("Article") || schemaTypes.includes("BlogPosting"),
+    itemListSchemaPresent: schemaTypes.includes("ItemList"),
+    ctaCount: ctaAnchors.length,
+    ctaTexts: unique(ctaAnchors.map((link) => link.text)).slice(0, 20),
+    firstCtaDomPosition: ctaAnchors[0] ? domPosition(html, ctaAnchors[0].tag) : null,
+    affiliateOrMerchantLinkCount: affiliateLinks.length,
+    internalLinksToRelatedContentTypes: classifyRelatedLinks(internalLinks),
+    legacyFindings,
+    hasTrustStrip: lowerHtml.includes("trust-strip") || hasText(html, ["why trust", "how we evaluate", "affiliate disclosure"]),
+    hasFeaturedCategoryCards: lowerHtml.includes("featured-category-card") || lowerHtml.includes("decision-card") || lowerHtml.includes("comparison-index-card"),
+    hasComparisonTable: lowerHtml.includes("<table") || hasText(html, ["comparison table", "compare features", "side-by-side"]),
+    hasTopPickOrBestOverall: hasText(html, ["top pick", "best overall"]),
+    hasFaqSection: hasText(html, ["frequently asked questions", "faq"]),
+    hasSideBySideComparison: hasText(html, ["side-by-side", "versus", " vs "]) || lowerHtml.includes("<table"),
+    hasProductCtaCards: hasText(html, ["check price", "check current price", "view on official website", "view at best buy", "view at walmart", "view at rei", "shop", "view deal", "buy now"]),
+    hasProsAndCons: hasText(html, ["pros", "cons"]),
+    hasScoreOrVerdict: hasText(html, ["score", "verdict", "rating", "bottom line"]),
+    hasBottomCta: hasText(html, ["final verdict", "bottom line", "final step", "best overall recommendation"]),
+    hasEducationalSignals: hasText(html, ["how to", "guide", "benefits", "risks", "maintenance", "setup", "choose"]),
+  };
+}
+
+function issue(severity, category, message, recommendation) {
+  return { severity, category, message, recommendation };
+}
+
+function addCommonIssues(page, issues) {
+  if (page.statusCode !== 200) {
+    issues.push(issue("high", "production", `Page returned HTTP ${page.statusCode}.`, "Ensure every sitemap URL returns HTTP 200."));
+    return;
+  }
+  if (!page.title) issues.push(issue("high", "seo", "Page is missing a title tag.", "Add a concise, keyword-aligned title tag."));
+  if (!page.metaDescription) issues.push(issue("high", "seo", "Page is missing a meta description.", "Add a conversion-focused meta description."));
+  if (!page.canonicalUrl) issues.push(issue("high", "seo", "Page is missing a canonical URL.", "Add a self-referencing canonical URL."));
+  if (page.h1s.length === 0) issues.push(issue("high", "seo", "Page is missing an H1.", "Add one descriptive H1."));
+  if (page.h1s.length > 1) issues.push(issue("medium", "seo", "Page has multiple H1s.", "Keep one primary H1 and demote secondary headings."));
+  if (page.imagesMissingAltText > 0) issues.push(issue("medium", "trust", `${page.imagesMissingAltText} image(s) are missing alt text.`, "Add descriptive alt text to meaningful images."));
+  page.legacyFindings.forEach((finding) => {
+    issues.push(issue("high", "production", `Legacy reference found: ${finding.term}.`, "Remove Pool Lab, localhost, or unrelated legacy references before launch."));
+  });
+}
+
+function addTypeSpecificIssues(page, issues) {
+  if (page.statusCode !== 200) return;
+  if (page.pageType === "home") {
+    if (page.ctaCount < 2) issues.push(issue("high", "conversion", "Homepage has too few CTAs.", "Add clear paths into Best Of, Comparisons, or Reviews."));
+    if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Homepage lacks clear trust or evaluation signals.", "Add visible trust, methodology, or editorial standards near the top."));
+    if (!page.hasFeaturedCategoryCards) issues.push(issue("medium", "conversion", "Homepage lacks featured category cards.", "Surface key buyer paths with prominent cards."));
+  }
+  if (isBestOfIndex(page)) {
+    if (page.ctaCount < 5) issues.push(issue("high", "conversion", "Best Of index has too few guide CTAs.", "Add prominent View Rankings CTAs to featured guide cards."));
+    if (!page.hasFeaturedCategoryCards) issues.push(issue("high", "conversion", "Best Of index lacks featured category cards.", "Add commercial guide cards for the most important buyer paths."));
+    if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Best Of index lacks evaluation or trust context.", "Explain how rankings are evaluated and how buyers should use the lists."));
+  }
+  if (isBestOfDetail(page)) {
+    if (!page.hasComparisonTable) issues.push(issue("medium", "conversion", "Best Of page does not appear to have a comparison table.", "Add a product comparison table near the top."));
+    if (!page.hasTopPickOrBestOverall) issues.push(issue("medium", "conversion", "Best Of page does not identify a Top Pick or Best Overall.", "Add a clear top recommendation section."));
+    if (page.ctaCount < 3) issues.push(issue("high", "conversion", "Best Of page has too few product CTAs.", "Add multiple product CTAs across the ranked recommendations."));
+    if (page.internalLinksToRelatedContentTypes.review < 1) issues.push(issue("medium", "internal-linking", "Best Of page does not link to review pages.", "Link ranked products to the corresponding review pages."));
+    if (!page.hasScoreOrVerdict) issues.push(issue("medium", "trust", "Best Of page lacks scoring or verdict language.", "Add score, verdict, or recommendation language for ranked products."));
+    if (!page.hasFaqSection) issues.push(issue("medium", "trust", "Best Of page is missing an FAQ section.", "Add buyer-intent FAQs near the bottom."));
+    if (!page.faqSchemaPresent) issues.push(issue("medium", "schema", "Best Of page is missing FAQ schema.", "Add FAQPage JSON-LD when FAQs are present."));
+    if (!page.itemListSchemaPresent) issues.push(issue("high", "schema", "Best Of page is missing ItemList schema.", "Add ItemList JSON-LD for ranked product lists."));
+  }
+  if (isComparisonIndex(page)) {
+    if (page.ctaCount < 5) issues.push(issue("high", "conversion", "Comparisons index has too few comparison CTAs.", "Add clear View Comparison CTAs for key decision pages."));
+    if (!page.hasFeaturedCategoryCards) issues.push(issue("high", "conversion", "Comparisons index lacks featured comparison cards.", "Add prominent cards for the highest-value decisions."));
+  }
+  if (isComparisonDetail(page)) {
+    if (!page.hasSideBySideComparison) issues.push(issue("medium", "conversion", "Comparison page lacks a side-by-side comparison section.", "Add a direct comparison section or table."));
+    if (page.ctaCount < 2) issues.push(issue("high", "conversion", "Comparison page has fewer than two CTA buttons.", "Add CTA buttons for both options."));
+    if (!page.hasBottomCta) issues.push(issue("high", "conversion", "Comparison page lacks a Bottom Line CTA section.", "Add CTAs in or near the bottom-line recommendation."));
+    if (page.internalLinksToRelatedContentTypes["best-of"] < 1) issues.push(issue("medium", "internal-linking", "Comparison page does not link to a related Best Of page.", "Link to the relevant Best Of buying guide."));
+    if (page.internalLinksToRelatedContentTypes.review < 1) issues.push(issue("medium", "internal-linking", "Comparison page does not link to review pages.", "Link compared products to full reviews where available."));
+    if (!page.hasFaqSection) issues.push(issue("medium", "trust", "Comparison page is missing an FAQ section.", "Add decision-stage FAQs."));
+    if (!page.faqSchemaPresent) issues.push(issue("medium", "schema", "Comparison page is missing FAQ schema.", "Add FAQPage JSON-LD."));
+  }
+  if (isProductReviewPage(page)) {
+    if (page.firstCtaDomPosition === null || page.firstCtaDomPosition > 0.35) issues.push(issue("high", "conversion", "Review page lacks a product CTA above the fold.", "Add a merchant CTA near the product summary."));
+    if (page.affiliateOrMerchantLinkCount < 1) issues.push(issue("high", "conversion", "Review page has no affiliate or merchant outbound link.", "Add a tracked merchant link."));
+    if (!page.hasProsAndCons) issues.push(issue("medium", "trust", "Review page is missing pros and cons.", "Add a concise pros and cons section."));
+    if (!page.hasScoreOrVerdict) issues.push(issue("medium", "trust", "Review page is missing score or verdict language.", "Add a verdict or score summary."));
+    if (!page.hasBottomCta) issues.push(issue("high", "conversion", "Review page lacks a bottom CTA section.", "Add a final verdict CTA near the conclusion."));
+    if (page.internalLinksToRelatedContentTypes["best-of"] < 1) issues.push(issue("medium", "internal-linking", "Review page does not link back to a relevant Best Of page.", "Link to a related buying guide."));
+    if (page.internalLinksToRelatedContentTypes.comparison < 1) issues.push(issue("medium", "internal-linking", "Review page does not link to related comparisons.", "Link to relevant comparison pages where available."));
+    if (!page.productSchemaPresent) issues.push(issue("high", "schema", "Review page is missing Product schema.", "Add Product JSON-LD when product data is stable."));
+  }
+  if (isGuideDetail(page)) {
+    if (!page.hasEducationalSignals) issues.push(issue("medium", "trust", "Guide page lacks clear evergreen educational signals.", "Frame the page around durable guidance, benefits, risks, setup, or maintenance."));
+    if (page.internalLinksToRelatedContentTypes["best-of"] < 1) issues.push(issue("high", "internal-linking", "Guide page does not link to a Best Of page.", "Add a contextual link to the relevant Best Of buying guide."));
+    if (page.internalLinksToRelatedContentTypes.comparison < 1) issues.push(issue("medium", "internal-linking", "Guide page does not link to a Comparison page.", "Add a relevant comparison link when it supports the topic."));
+    if (!page.articleSchemaPresent) issues.push(issue("high", "schema", "Guide page is missing Article schema.", "Add Article JSON-LD to guide pages."));
+    if (page.hasFaqSection && !page.faqSchemaPresent) issues.push(issue("medium", "schema", "Guide page has FAQs but no FAQ schema.", "Add FAQPage JSON-LD for visible FAQs."));
+  }
+}
+
+function scoreFromIssues(issues, category) {
+  const penalty = issues
+    .filter((entry) => !category || entry.category === category)
+    .reduce((sum, entry) => sum + ISSUE_WEIGHTS[entry.severity], 0);
+  return Math.max(0, 100 - penalty);
+}
+
+function scorePage(page) {
+  const issues = [];
+  addCommonIssues(page, issues);
+  addTypeSpecificIssues(page, issues);
+  return {
+    ...page,
+    issues,
+    seoScore: scoreFromIssues(issues, "seo"),
+    conversionScore: scoreFromIssues(issues, "conversion"),
+    trustScore: scoreFromIssues(issues, "trust"),
+    internalLinkingScore: scoreFromIssues(issues, "internal-linking"),
+    productionReadinessScore: scoreFromIssues(issues, "production"),
+  };
+}
+
+async function fetchText(url) {
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": "ThermaPeakSiteAuditor/1.0" },
+      redirect: "follow",
+    });
+    const text = await response.text();
+    return {
+      ok: response.ok,
+      statusCode: response.status,
+      finalUrl: response.url,
+      contentType: response.headers.get("content-type") || "",
+      text,
+      error: "",
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      statusCode: 0,
+      finalUrl: "",
+      contentType: "",
+      text: "",
+      error: error.message,
+    };
+  }
+}
+
+async function crawl(baseUrl) {
+  const robotsUrl = `${baseUrl}/robots.txt`;
+  const sitemapUrl = `${baseUrl}/sitemap.xml`;
+  const [robots, sitemap] = await Promise.all([fetchText(robotsUrl), fetchText(sitemapUrl)]);
+  const sitemapUrls = sitemap.ok ? extractSitemapUrls(sitemap.text, baseUrl) : [];
+  const sameOriginUrls = unique(sitemapUrls.map((url) => mapUrlToBaseOrigin(url, baseUrl)))
+    .filter((url) => new URL(url).origin === new URL(baseUrl).origin)
+    .slice(0, config.maxPages);
+  const sourceUrls = sameOriginUrls.length > 0 ? sameOriginUrls : [baseUrl];
+  const pages = [];
+
+  for (const url of sourceUrls) {
+    const response = await fetchText(url);
+    if (!response.ok) {
+      pages.push(scorePage({
+        url,
+        path: new URL(url).pathname,
+        statusCode: response.statusCode,
+        error: response.error,
+        pageType: inferPageType(new URL(url).pathname),
+        title: "",
+        metaDescription: "",
+        canonicalUrl: "",
+        robotsMeta: "",
+        openGraphTitle: "",
+        openGraphDescription: "",
+        openGraphImage: "",
+        twitterCard: "",
+        twitterTitle: "",
+        twitterDescription: "",
+        twitterImage: "",
+        h1s: [],
+        h2s: [],
+        h3s: [],
+        wordCount: 0,
+        internalLinks: [],
+        externalLinks: [],
+        imageCount: 0,
+        imagesMissingAltText: 0,
+        schemaTypes: [],
+        faqSchemaPresent: false,
+        productSchemaPresent: false,
+        articleSchemaPresent: false,
+        itemListSchemaPresent: false,
+        ctaCount: 0,
+        ctaTexts: [],
+        firstCtaDomPosition: null,
+        affiliateOrMerchantLinkCount: 0,
+        internalLinksToRelatedContentTypes: classifyRelatedLinks([]),
+        legacyFindings: [],
+      }));
+      continue;
+    }
+    const parsed = parseHtmlPage(response.text, url, baseUrl);
+    pages.push(scorePage({ ...parsed, statusCode: response.statusCode, error: response.error }));
+  }
+
+  return { robots, sitemap, sitemapUrls, pages };
+}
+
+function average(values) {
+  const usable = values.filter((value) => Number.isFinite(value));
+  if (usable.length === 0) return 0;
+  return Math.round(usable.reduce((sum, value) => sum + value, 0) / usable.length);
+}
+
+function siteScores(pages) {
+  return {
+    seoScore: average(pages.map((page) => page.seoScore)),
+    conversionScore: average(pages.map((page) => page.conversionScore)),
+    trustScore: average(pages.map((page) => page.trustScore)),
+    internalLinkingScore: average(pages.map((page) => page.internalLinkingScore)),
+    productionReadinessScore: average(pages.map((page) => page.productionReadinessScore)),
+  };
+}
+
+function summarize(baseUrl, crawlResult, auditTimestamp) {
+  const pages = crawlResult.pages;
+  const allIssues = pages.flatMap((page) => page.issues.map((entry) => ({ ...entry, url: page.url, pageType: page.pageType })));
+  const pageTypeCounts = pages.reduce((counts, page) => {
+    counts[page.pageType] = (counts[page.pageType] || 0) + 1;
+    return counts;
+  }, {});
+  const moneyPages = pages.filter((page) => isBestOfDetail(page) || isComparisonDetail(page) || isProductReviewPage(page));
+  const keyPages = pages.filter((page) => config.expectedContentTypes.includes(page.pageType));
+  const legacyReferenceFindings = pages.flatMap((page) => page.legacyFindings.map((finding) => ({ url: page.url, ...finding })));
+  const missingMetadataCounts = {
+    title: pages.filter((page) => !page.title).length,
+    metaDescription: pages.filter((page) => !page.metaDescription).length,
+    canonical: pages.filter((page) => !page.canonicalUrl).length,
+    h1: pages.filter((page) => page.h1s.length === 0).length,
+  };
+  const missingSchemaCounts = {
+    faq: pages.filter((page) => page.hasFaqSection && !page.faqSchemaPresent).length,
+    product: pages.filter((page) => isProductReviewPage(page) && !page.productSchemaPresent).length,
+    article: pages.filter((page) => isGuideDetail(page) && !page.articleSchemaPresent).length,
+    itemList: pages.filter((page) => isBestOfDetail(page) && !page.itemListSchemaPresent).length,
+  };
+  const missingCtaCounts = {
+    pagesWithoutCtas: pages.filter((page) => page.ctaCount === 0).length,
+    moneyPagesWithoutCtas: moneyPages.filter((page) => page.ctaCount === 0).length,
+    reviewPagesWithoutMerchantLinks: pages.filter((page) => isProductReviewPage(page) && page.affiliateOrMerchantLinkCount === 0).length,
+  };
+  const statusFailures = pages.filter((page) => page.statusCode >= 400 || page.statusCode === 0);
+  const schemaFailures = pages.filter((page) =>
+    (isProductReviewPage(page) && !page.productSchemaPresent) ||
+    (isBestOfDetail(page) && !page.itemListSchemaPresent) ||
+    (isGuideDetail(page) && !page.articleSchemaPresent)
+  );
+  const keyMetadataCoverage = keyPages.length === 0 ? 0 : keyPages.filter((page) => page.title && page.metaDescription && page.canonicalUrl && page.h1s.length > 0).length / keyPages.length;
+  const moneyPageCtaCoverage = moneyPages.length === 0 ? 0 : moneyPages.filter((page) => page.ctaCount > 0).length / moneyPages.length;
+  const productionChecks = {
+    robotsAccessible: crawlResult.robots.ok,
+    sitemapAccessible: crawlResult.sitemap.ok,
+    noLegacyReferences: legacyReferenceFindings.length === 0,
+    noLocalhostMetadata: pages.every((page) => ![
+      page.title,
+      page.metaDescription,
+      page.canonicalUrl,
+      page.openGraphImage,
+      page.openGraphTitle,
+      page.openGraphDescription,
+    ].join(" ").toLowerCase().includes("localhost")),
+    noLegacyPoolLabUrlsInSitemap: !crawlResult.sitemapUrls.some((url) => /pool\s*lab|thepoollab/i.test(url)),
+    sitemapUsesBaseOriginWhenProduction: new URL(baseUrl).hostname.includes("run.app") ||
+      crawlResult.sitemapUrls.every((url) => new URL(url).origin === new URL(baseUrl).origin),
+    mostMoneyPagesHaveCtas: moneyPageCtaCoverage >= 0.8,
+    mostKeyPagesHaveMetadata: keyMetadataCoverage >= 0.9,
+    requiredSchemaPresent: schemaFailures.length === 0,
+    noMajorSitemap404s: statusFailures.length === 0,
+  };
+  const blockingLaunchIssues = [
+    !productionChecks.robotsAccessible && "robots.txt is not accessible.",
+    !productionChecks.sitemapAccessible && "sitemap.xml is not accessible.",
+    !productionChecks.sitemapUsesBaseOriginWhenProduction && "Production sitemap URLs do not use the audited production origin.",
+    !productionChecks.noLegacyReferences && "Legacy Pool Lab or localhost references are present.",
+    !productionChecks.noLegacyPoolLabUrlsInSitemap && "Sitemap contains legacy Pool Lab URLs.",
+    !productionChecks.requiredSchemaPresent && "Required guide, review, or Best Of schema is missing.",
+    !productionChecks.noMajorSitemap404s && "One or more sitemap URLs return errors.",
+  ].filter(Boolean);
+  const highPriorityIssues = allIssues.filter((entry) => entry.severity === "high");
+  const mediumPriorityIssues = allIssues.filter((entry) => entry.severity === "medium");
+  const scores = siteScores(pages);
+  const productionReadinessStatus = blockingLaunchIssues.length > 0
+    ? "Do not launch yet"
+    : scores.productionReadinessScore >= 90 &&
+      productionChecks.mostMoneyPagesHaveCtas &&
+      productionChecks.mostKeyPagesHaveMetadata &&
+      highPriorityIssues.length === 0
+      ? "Ready"
+      : "Launch after minor fixes";
+
+  return {
+    auditTimestamp,
+    baseUrl,
+    totalPagesCrawled: pages.length,
+    sitemapUrlCount: crawlResult.sitemapUrls.length,
+    scores,
+    summaryScore: average(Object.values(scores)),
+    productionReadinessStatus,
+    productionChecks,
+    blockingLaunchIssues,
+    highPriorityIssues,
+    mediumPriorityIssues,
+    pageTypeCounts,
+    missingMetadataCounts,
+    missingSchemaCounts,
+    missingCtaCounts,
+    legacyReferenceFindings,
+    recommendedNextActions: recommendedNextActions(blockingLaunchIssues, highPriorityIssues, mediumPriorityIssues),
+  };
+}
+
+function recommendedNextActions(blockingLaunchIssues, highPriorityIssues, mediumPriorityIssues) {
+  const actions = [];
+  if (blockingLaunchIssues.length > 0) actions.push("Resolve blocking production-readiness issues before launch.");
+  if (highPriorityIssues.some((entry) => entry.category === "conversion")) actions.push("Prioritize CTA and merchant-link fixes on money pages.");
+  if (highPriorityIssues.some((entry) => entry.category === "seo")) actions.push("Fill missing title, meta description, canonical, and H1 fields.");
+  if (mediumPriorityIssues.some((entry) => entry.category === "internal-linking")) actions.push("Strengthen the Guides -> Comparisons -> Best Of -> Reviews funnel.");
+  if (mediumPriorityIssues.some((entry) => entry.category === "schema")) actions.push("Add missing FAQ, Product, Article, or ItemList schema where page content supports it.");
+  if (actions.length === 0) actions.push("Keep running this audit before deploys and after major content changes.");
+  return unique(actions);
+}
+
+function bucketOutputs(pages, summary) {
+  return {
+    "summary.json": summary,
+    "pages.json": pages,
+    "seo.json": pages.map((page) => pickPage(page, ["seoScore"], ["seo"])),
+    "conversion.json": pages.map((page) => pickPage(page, ["conversionScore", "ctaCount", "ctaTexts", "firstCtaDomPosition", "affiliateOrMerchantLinkCount"], ["conversion"])),
+    "schema.json": pages.map((page) => pickPage(page, ["schemaTypes", "faqSchemaPresent", "productSchemaPresent", "articleSchemaPresent", "itemListSchemaPresent"], ["schema"])),
+    "internal-links.json": pages.map((page) => pickPage(page, ["internalLinkingScore", "internalLinks", "externalLinks", "internalLinksToRelatedContentTypes"], ["internal-linking"])),
+    "production-readiness.json": {
+      status: summary.productionReadinessStatus,
+      checks: summary.productionChecks,
+      blockingLaunchIssues: summary.blockingLaunchIssues,
+      pages: pages.map((page) => pickPage(page, ["productionReadinessScore", "statusCode", "legacyFindings", "error"], ["production"])),
+    },
+  };
+}
+
+function pickPage(page, extraFields, issueCategories) {
+  const base = {
+    url: page.url,
+    path: page.path,
+    pageType: page.pageType,
+    statusCode: page.statusCode,
+    title: page.title,
+    metaDescription: page.metaDescription,
+    canonicalUrl: page.canonicalUrl,
+    h1s: page.h1s,
+    issues: page.issues.filter((entry) => issueCategories.includes(entry.category)),
+  };
+  extraFields.forEach((field) => {
+    base[field] = page[field];
+  });
+  return base;
+}
+
+function formatIssueList(issues, limit = 20) {
+  if (issues.length === 0) return "- None";
+  return issues.slice(0, limit).map((entry) => `- ${entry.url ? `\`${entry.url}\`: ` : ""}${entry.message || entry}`).join("\n");
+}
+
+function formatObjectCounts(counts) {
+  return Object.entries(counts).map(([key, value]) => `- ${key}: \`${value}\``).join("\n");
+}
+
+function markdownSummary(summary) {
+  return `# ThermaPeak Site Audit
+
+- Audit timestamp: \`${summary.auditTimestamp}\`
+- Base URL: \`${summary.baseUrl}\`
+- Total pages crawled: \`${summary.totalPagesCrawled}\`
+- Sitemap URLs: \`${summary.sitemapUrlCount}\`
+- Production readiness: **${summary.productionReadinessStatus}**
+- Summary score: \`${summary.summaryScore}\`
+
+## Site-Level Scores
+
+${formatObjectCounts(summary.scores)}
+
+## Blocking Launch Issues
+
+${formatIssueList(summary.blockingLaunchIssues)}
+
+## High-Priority Issues
+
+${formatIssueList(summary.highPriorityIssues)}
+
+## Medium-Priority Issues
+
+${formatIssueList(summary.mediumPriorityIssues)}
+
+## Page Type Counts
+
+${formatObjectCounts(summary.pageTypeCounts)}
+
+## Missing Metadata Counts
+
+${formatObjectCounts(summary.missingMetadataCounts)}
+
+## Missing Schema Counts
+
+${formatObjectCounts(summary.missingSchemaCounts)}
+
+## Missing CTA Counts
+
+${formatObjectCounts(summary.missingCtaCounts)}
+
+## Legacy Reference Findings
+
+${summary.legacyReferenceFindings.length === 0 ? "- None" : summary.legacyReferenceFindings.map((entry) => `- \`${entry.url}\`: ${entry.term} (${entry.count})`).join("\n")}
+
+## Recommended Next Actions
+
+${summary.recommendedNextActions.map((entry) => `- ${entry}`).join("\n")}
+`;
+}
+
+async function writeOutputs(baseDir, outputs, summaryMarkdown) {
+  await fs.rm(baseDir, { recursive: true, force: true });
+  await fs.mkdir(baseDir, { recursive: true });
+  await Promise.all(Object.entries(outputs).map(([filename, data]) => {
+    return fs.writeFile(path.join(baseDir, filename), `${JSON.stringify(data, null, 2)}\n`);
+  }));
+  await fs.writeFile(path.join(baseDir, "summary.md"), summaryMarkdown);
+}
+
+async function main() {
+  if (typeof fetch !== "function") {
+    throw new Error("This script requires Node.js 18+ with built-in fetch.");
+  }
+  const baseUrl = normalizeBase(process.argv[2] || config.baseUrl);
+  const { iso, slug } = timestampParts();
+  const crawlResult = await crawl(baseUrl);
+  const summary = summarize(baseUrl, crawlResult, iso);
+  const outputs = bucketOutputs(crawlResult.pages, summary);
+  const summaryMarkdown = markdownSummary(summary);
+  const latestDir = path.join(config.outputDir, "latest");
+  const historyDir = path.join(config.outputDir, "history", slug);
+  await writeOutputs(latestDir, outputs, summaryMarkdown);
+  await writeOutputs(historyDir, outputs, summaryMarkdown);
+  console.log(`Site audit complete: ${latestDir}/summary.md`);
+  console.log(`Pages crawled: ${summary.totalPagesCrawled}`);
+  console.log(`Production readiness: ${summary.productionReadinessStatus}`);
+  if (summary.blockingLaunchIssues.length > 0 || summary.highPriorityIssues.length > 0) {
+    console.log(`Audit completed with ${summary.blockingLaunchIssues.length} blocking issue(s) and ${summary.highPriorityIssues.length} high-priority issue(s).`);
+  }
+}
+
+main().catch((error) => {
+  console.error(`Site audit failed: ${error.message}`);
+  process.exit(1);
+});

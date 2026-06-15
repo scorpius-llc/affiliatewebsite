@@ -2,6 +2,7 @@
   "siteName": "ThermaPeak",
   "domain": "www.thermapeak.com",
   "apexDomain": "thermapeak.com",
+  "testDeploymentUrl": "https://thermapeak-test-925569592209.us-east1.run.app",
   "topicPlural": "Cold Plunge & Sauna Equipment",
   "topicSingular": "Cold Plunge & Sauna Equipment",
   "tagline": "Best Cold Plunge & Sauna Equipment Reviewed",
