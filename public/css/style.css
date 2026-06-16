@@ -159,6 +159,72 @@ p {
     flex: 1 1 180px;
 }
 
+.review-filter-panel {
+    background:
+        linear-gradient(135deg, rgba(0, 179, 255, 0.12), rgba(255, 90, 31, 0.08)),
+        rgba(26, 26, 26, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+    color: var(--text-light);
+}
+
+.review-filter-panel .form-label {
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.review-filter-panel .form-label span {
+    color: var(--accent-blue);
+}
+
+.review-filter-panel .form-select {
+    background-color: rgba(17, 17, 17, 0.92);
+    border: 1px solid rgba(0, 179, 255, 0.45);
+    color: var(--text-light);
+    min-height: 46px;
+}
+
+.review-filter-panel .form-select:focus {
+    background-color: rgba(17, 17, 17, 0.98);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 0.22rem rgba(0, 179, 255, 0.18);
+    color: var(--text-light);
+}
+
+.review-filter-panel .form-select option {
+    background-color: var(--bg-card);
+    color: var(--text-light);
+}
+
+.review-filter-panel .form-range {
+    accent-color: var(--accent-orange);
+}
+
+.review-filter-panel .form-range::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
+    border-radius: 999px;
+    height: 0.45rem;
+}
+
+.review-filter-panel .form-range::-webkit-slider-thumb {
+    background: var(--text-light);
+    border: 3px solid var(--accent-orange);
+    box-shadow: 0 0 0 4px rgba(255, 90, 31, 0.16);
+    margin-top: -0.38rem;
+}
+
+.review-filter-panel .form-range::-moz-range-track {
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
+    border-radius: 999px;
+    height: 0.45rem;
+}
+
+.review-filter-panel .form-range::-moz-range-thumb {
+    background: var(--text-light);
+    border: 3px solid var(--accent-orange);
+    box-shadow: 0 0 0 4px rgba(255, 90, 31, 0.16);
+}
+
 /* --- Trust Signals --- */
 .trust-strip {
     padding: 80px 0;

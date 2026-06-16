@@ -26,7 +26,7 @@ export default function Reviews() {
     <div className="container my-5">
       <h1 className="mb-4">Cold Plunge & Sauna Reviews</h1>
 
-      <div className="row mb-4 p-3 bg-light rounded">
+      <div className="review-filter-panel row mb-4 p-3 rounded">
         <div className="col-md-4">
           <label htmlFor="brandFilter" className="form-label">Brand</label>
           <select 

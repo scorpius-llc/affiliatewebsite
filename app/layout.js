@@ -46,6 +46,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="impact-site-verification" value="ad10f236-1238-4f2c-8f1c-31f06727db71" />
+      </head>
       <body className="d-flex flex-column min-vh-100">
         <Navbar />
         <main className="flex-grow-1">
