@@ -3,6 +3,9 @@
 const fs = require("fs/promises");
 const path = require("path");
 
+const productCategories = loadJsonSafe("../data/productCategories.json", []);
+const productsData = loadJsonSafe("../data/products.json", []);
+
 const config = {
   baseUrl: "https://thermapeak-test-925569592209.us-east1.run.app",
   outputDir: "audits",
@@ -51,16 +54,57 @@ const config = {
     "tag=",
     "utm_",
   ],
-  expectedContentTypes: ["home", "best-of", "comparison", "guide", "review", "about"],
+  expectedContentTypes: ["home", "products", "best-of", "comparison", "guide", "science", "review", "about"],
 };
 
 const ISSUE_WEIGHTS = { high: 24, medium: 12, low: 5 };
+
+function loadJsonSafe(relativePath, fallback) {
+  try {
+    return require(path.join(__dirname, relativePath));
+  } catch {
+    return fallback;
+  }
+}
+
+function normalizePrimaryCategory(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  const legacyMap = {
+    "cold-plunge": "cold-exposure",
+    "ice-bath": "cold-exposure",
+    "infrared-sauna": "sauna-heat-therapy",
+    "traditional-sauna": "sauna-heat-therapy",
+    "sauna-blanket": "sauna-heat-therapy",
+    "hybrid-sauna": "sauna-heat-therapy",
+  };
+  return productCategories.some((category) => category.slug === normalized) ? normalized : legacyMap[normalized] || "";
+}
+
+function expectedNonEmptyProductCategorySlugs() {
+  const counts = {};
+  productCategories.forEach((category) => {
+    counts[category.slug] = 0;
+  });
+  productsData.forEach((product) => {
+    const slug = normalizePrimaryCategory(product.primaryCategory) || normalizePrimaryCategory(product.category);
+    if (slug && Object.prototype.hasOwnProperty.call(counts, slug)) counts[slug] += 1;
+  });
+  return Object.entries(counts).filter(([, count]) => count > 0).map(([slug]) => slug);
+}
 
 function normalizeBase(value) {
   const url = new URL(value || config.baseUrl);
   url.hash = "";
   url.search = "";
   return url.toString().replace(/\/$/, "");
+}
+
+function isNonProductionAuditHost(baseUrl) {
+  const hostname = new URL(baseUrl).hostname;
+  return hostname.includes("run.app") ||
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "::1";
 }
 
 function timestampParts(date = new Date()) {
@@ -123,15 +167,25 @@ function inferPageType(pathname) {
   const cleanPath = pathname.replace(/\/$/, "") || "/";
   if (cleanPath === "/") return "home";
   if (cleanPath === "/about") return "about";
+  if (cleanPath === "/products" || cleanPath.startsWith("/products/")) return "products";
   if (cleanPath === "/best-of" || cleanPath.startsWith("/best-of/")) return "best-of";
   if (cleanPath === "/comparisons" || cleanPath.startsWith("/comparisons/")) return "comparison";
   if (cleanPath === "/guides" || cleanPath.startsWith("/guides/")) return "guide";
+  if (cleanPath === "/science" || cleanPath.startsWith("/science/")) return "science";
   if (cleanPath === "/reviews" || cleanPath.startsWith("/reviews/")) return "review";
   return "other";
 }
 
 function isProductReviewPage(page) {
   return page.pageType === "review" && page.path !== "/reviews";
+}
+
+function isProductsIndex(page) {
+  return page.pageType === "products" && page.path === "/products";
+}
+
+function isProductCategoryPage(page) {
+  return page.pageType === "products" && page.path !== "/products";
 }
 
 function isBestOfIndex(page) {
@@ -152,6 +206,24 @@ function isComparisonDetail(page) {
 
 function isGuideDetail(page) {
   return page.pageType === "guide" && page.path !== "/guides";
+}
+
+function sciencePathSegments(page) {
+  return page.path.split("/").filter(Boolean);
+}
+
+function isScienceIndex(page) {
+  return page.pageType === "science" && page.path === "/science";
+}
+
+function isScienceCategory(page) {
+  const segments = sciencePathSegments(page);
+  return page.pageType === "science" && segments.length === 2;
+}
+
+function isScienceArticle(page) {
+  const segments = sciencePathSegments(page);
+  return page.pageType === "science" && segments.length === 3;
 }
 
 function absoluteUrl(rawUrl, sourceUrl) {
@@ -230,9 +302,11 @@ function domPosition(html, needleTag) {
 function classifyRelatedLinks(links) {
   const result = {
     home: 0,
+    products: 0,
     "best-of": 0,
     comparison: 0,
     guide: 0,
+    science: 0,
     review: 0,
     about: 0,
     other: 0,
@@ -290,6 +364,17 @@ function parseHtmlPage(html, url, baseUrl) {
   const h3s = allMatches(html, /<h3\b[^>]*>([\s\S]*?)<\/h3>/gi);
   const fullText = stripTags(html);
   const lowerHtml = html.toLowerCase();
+  const productCategoryLinkSlugs = unique(anchors
+    .map((link) => {
+      try {
+        const pathname = new URL(link.href).pathname;
+        const match = pathname.match(/^\/products\/([^/]+)\/?$/);
+        return match ? match[1] : "";
+      } catch {
+        return "";
+      }
+    })
+    .filter(Boolean));
   const legacyFindings = config.knownLegacyTerms
     .filter((term) => html.toLowerCase().includes(term.toLowerCase()))
     .map((term) => ({ term, count: countPattern(html, new RegExp(escapeRegExp(term), "gi")) }));
@@ -327,9 +412,14 @@ function parseHtmlPage(html, url, baseUrl) {
     firstCtaDomPosition: ctaAnchors[0] ? domPosition(html, ctaAnchors[0].tag) : null,
     affiliateOrMerchantLinkCount: affiliateLinks.length,
     internalLinksToRelatedContentTypes: classifyRelatedLinks(internalLinks),
+    productCategoryLinkSlugs,
     legacyFindings,
-    hasTrustStrip: lowerHtml.includes("trust-strip") || hasText(html, ["why trust", "how we evaluate", "affiliate disclosure"]),
-    hasFeaturedCategoryCards: lowerHtml.includes("featured-category-card") || lowerHtml.includes("decision-card") || lowerHtml.includes("comparison-index-card"),
+    hasTrustStrip: lowerHtml.includes("trust-strip") || lowerHtml.includes("science-trust-statement") || hasText(html, ["why trust", "how we evaluate", "affiliate disclosure", "avoids overstating claims"]),
+    hasFeaturedCategoryCards: lowerHtml.includes("featured-category-card") || lowerHtml.includes("science-category-card") || lowerHtml.includes("product-category-card") || lowerHtml.includes("decision-card") || lowerHtml.includes("comparison-index-card"),
+    hasProductsDropdown: lowerHtml.includes("products home") && lowerHtml.includes("/products/"),
+    hasProductCategoryCards: lowerHtml.includes("product-category-card") || lowerHtml.includes("featured-category-card"),
+    hasProductCards: lowerHtml.includes("product-category-product-card") || lowerHtml.includes("featured-card"),
+    hasComingSoonPlaceholder: hasText(html, ["products in this category are coming soon"]),
     hasComparisonTable: lowerHtml.includes("<table") || hasText(html, ["comparison table", "compare features", "side-by-side"]),
     hasTopPickOrBestOverall: hasText(html, ["top pick", "best overall"]),
     hasFaqSection: hasText(html, ["frequently asked questions", "faq"]),
@@ -339,6 +429,9 @@ function parseHtmlPage(html, url, baseUrl) {
     hasScoreOrVerdict: hasText(html, ["score", "verdict", "rating", "bottom line"]),
     hasBottomCta: hasText(html, ["final verdict", "bottom line", "final step", "best overall recommendation"]),
     hasEducationalSignals: hasText(html, ["how to", "guide", "benefits", "risks", "maintenance", "setup", "choose"]),
+    hasKeyTakeaways: hasText(html, ["key takeaways"]),
+    hasStudiesReviewed: hasText(html, ["studies reviewed"]),
+    hasScienceDisclaimer: hasText(html, ["not medical advice", "informational purposes only", "consult a qualified health professional"]),
   };
 }
 
@@ -364,10 +457,35 @@ function addCommonIssues(page, issues) {
 
 function addTypeSpecificIssues(page, issues) {
   if (page.statusCode !== 200) return;
+  const expectedProductSlugs = expectedNonEmptyProductCategorySlugs();
+  const emptyProductSlugs = productCategories
+    .map((category) => category.slug)
+    .filter((slug) => !expectedProductSlugs.includes(slug));
+  const renderedEmptyProductSlugs = page.productCategoryLinkSlugs.filter((slug) => emptyProductSlugs.includes(slug));
+
   if (page.pageType === "home") {
     if (page.ctaCount < 2) issues.push(issue("high", "conversion", "Homepage has too few CTAs.", "Add clear paths into Best Of, Comparisons, or Reviews."));
     if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Homepage lacks clear trust or evaluation signals.", "Add visible trust, methodology, or editorial standards near the top."));
     if (!page.hasFeaturedCategoryCards) issues.push(issue("medium", "conversion", "Homepage lacks featured category cards.", "Surface key buyer paths with prominent cards."));
+    if (!page.hasProductsDropdown) issues.push(issue("medium", "internal-linking", "Products dropdown is not visible in navigation.", "Add a Products dropdown populated from active product categories."));
+    if (renderedEmptyProductSlugs.length > 0) issues.push(issue("high", "production", `Empty product categories are linked: ${renderedEmptyProductSlugs.join(", ")}.`, "Only render product categories with at least one product."));
+  }
+  if (isProductsIndex(page)) {
+    if (!page.hasProductCategoryCards) issues.push(issue("high", "conversion", "Products index does not show product category cards.", "Render active product categories from product data."));
+    if (page.productCategoryLinkSlugs.length < expectedProductSlugs.length) issues.push(issue("medium", "internal-linking", "Products index is missing one or more active product category links.", "Render every category with productCount greater than zero."));
+    if (renderedEmptyProductSlugs.length > 0) issues.push(issue("high", "production", `Products index links empty categories: ${renderedEmptyProductSlugs.join(", ")}.`, "Hide empty product categories from category grids."));
+  }
+  if (isProductCategoryPage(page)) {
+    if (!page.hasProductCards && !page.hasComingSoonPlaceholder) issues.push(issue("high", "conversion", "Product category page has no product cards.", "Render product cards for categories with products."));
+    if (
+      page.internalLinksToRelatedContentTypes.review < 1 &&
+      page.internalLinksToRelatedContentTypes["best-of"] < 1 &&
+      page.internalLinksToRelatedContentTypes.comparison < 1 &&
+      page.internalLinksToRelatedContentTypes.guide < 1 &&
+      page.internalLinksToRelatedContentTypes.science < 1
+    ) {
+      issues.push(issue("medium", "internal-linking", "Product category page has too few internal links.", "Link category pages to reviews, Best Of pages, comparisons, guides, or science articles."));
+    }
   }
   if (isBestOfIndex(page)) {
     if (page.ctaCount < 5) issues.push(issue("high", "conversion", "Best Of index has too few guide CTAs.", "Add prominent View Rankings CTAs to featured guide cards."));
@@ -413,6 +531,28 @@ function addTypeSpecificIssues(page, issues) {
     if (page.internalLinksToRelatedContentTypes.comparison < 1) issues.push(issue("medium", "internal-linking", "Guide page does not link to a Comparison page.", "Add a relevant comparison link when it supports the topic."));
     if (!page.articleSchemaPresent) issues.push(issue("high", "schema", "Guide page is missing Article schema.", "Add Article JSON-LD to guide pages."));
     if (page.hasFaqSection && !page.faqSchemaPresent) issues.push(issue("medium", "schema", "Guide page has FAQs but no FAQ schema.", "Add FAQPage JSON-LD for visible FAQs."));
+  }
+  if (isScienceIndex(page)) {
+    if (page.ctaCount < 5) issues.push(issue("medium", "conversion", "Science index has too few category CTAs.", "Link clearly to each science category."));
+    if (!page.hasFeaturedCategoryCards) issues.push(issue("medium", "trust", "Science index lacks visible category cards.", "Surface the research categories as structured cards."));
+    if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Science index lacks a research trust statement.", "Explain how ThermaPeak summarizes research and avoids overstating claims."));
+  }
+  if (isScienceCategory(page)) {
+    if (page.ctaCount < 1) issues.push(issue("medium", "internal-linking", "Science category page has no article CTAs.", "Link to science article pages from each category."));
+  }
+  if (isScienceArticle(page)) {
+    if (!page.articleSchemaPresent) issues.push(issue("high", "schema", "Science article is missing Article schema.", "Add Article JSON-LD to science article templates."));
+    if (!page.hasKeyTakeaways) issues.push(issue("medium", "trust", "Science article is missing a Key Takeaways section.", "Add a visible Key Takeaways box near the top."));
+    if (!page.hasStudiesReviewed) issues.push(issue("medium", "trust", "Science article is missing a Studies Reviewed section.", "Summarize reviewed studies with evidence-strength labels."));
+    if (!page.hasScienceDisclaimer) issues.push(issue("high", "trust", "Science article is missing the medical disclaimer.", "Add the standard informational-only medical disclaimer."));
+    if (
+      page.internalLinksToRelatedContentTypes.guide < 1 &&
+      page.internalLinksToRelatedContentTypes.comparison < 1 &&
+      page.internalLinksToRelatedContentTypes["best-of"] < 1
+    ) {
+      issues.push(issue("medium", "internal-linking", "Science article does not link to a relevant guide, comparison, or Best Of page.", "Add contextual next-step links into the funnel."));
+    }
+    if (page.hasFaqSection && !page.faqSchemaPresent) issues.push(issue("medium", "schema", "Science article has FAQs but no FAQ schema.", "Add FAQPage JSON-LD when visible FAQs exist."));
   }
 }
 
@@ -560,7 +700,7 @@ function summarize(baseUrl, crawlResult, auditTimestamp) {
   const missingSchemaCounts = {
     faq: pages.filter((page) => page.hasFaqSection && !page.faqSchemaPresent).length,
     product: pages.filter((page) => isProductReviewPage(page) && !page.productSchemaPresent).length,
-    article: pages.filter((page) => isGuideDetail(page) && !page.articleSchemaPresent).length,
+    article: pages.filter((page) => (isGuideDetail(page) || isScienceArticle(page)) && !page.articleSchemaPresent).length,
     itemList: pages.filter((page) => isBestOfDetail(page) && !page.itemListSchemaPresent).length,
   };
   const missingCtaCounts = {
@@ -572,7 +712,8 @@ function summarize(baseUrl, crawlResult, auditTimestamp) {
   const schemaFailures = pages.filter((page) =>
     (isProductReviewPage(page) && !page.productSchemaPresent) ||
     (isBestOfDetail(page) && !page.itemListSchemaPresent) ||
-    (isGuideDetail(page) && !page.articleSchemaPresent)
+    (isGuideDetail(page) && !page.articleSchemaPresent) ||
+    (isScienceArticle(page) && !page.articleSchemaPresent)
   );
   const keyMetadataCoverage = keyPages.length === 0 ? 0 : keyPages.filter((page) => page.title && page.metaDescription && page.canonicalUrl && page.h1s.length > 0).length / keyPages.length;
   const moneyPageCtaCoverage = moneyPages.length === 0 ? 0 : moneyPages.filter((page) => page.ctaCount > 0).length / moneyPages.length;
@@ -589,7 +730,7 @@ function summarize(baseUrl, crawlResult, auditTimestamp) {
       page.openGraphDescription,
     ].join(" ").toLowerCase().includes("localhost")),
     noLegacyPoolLabUrlsInSitemap: !crawlResult.sitemapUrls.some((url) => /pool\s*lab|thepoollab/i.test(url)),
-    sitemapUsesBaseOriginWhenProduction: new URL(baseUrl).hostname.includes("run.app") ||
+    sitemapUsesBaseOriginWhenProduction: isNonProductionAuditHost(baseUrl) ||
       crawlResult.sitemapUrls.every((url) => new URL(url).origin === new URL(baseUrl).origin),
     mostMoneyPagesHaveCtas: moneyPageCtaCoverage >= 0.8,
     mostKeyPagesHaveMetadata: keyMetadataCoverage >= 0.9,

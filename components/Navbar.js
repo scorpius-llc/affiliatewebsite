@@ -1,12 +1,30 @@
 import Link from 'next/link';
 import config from '../data/config.json';
+import { getActiveProductCategories, getAllProductCategories } from '../lib/categoryRegistry';
+import { getProductCategoryPath, getScienceCategoryPath } from '../lib/routes';
 
 export default function Navbar() {
+  const productCategories = getActiveProductCategories();
+  const scienceCategories = getAllProductCategories();
   const navItems = [
     { href: '/', label: 'Home' },
+    {
+      href: '/products',
+      label: 'Products',
+      dropdown: productCategories,
+      dropdownHomeLabel: 'Products Home',
+      getDropdownHref: (category) => getProductCategoryPath(category.slug),
+    },
     { href: '/best-of', label: 'Best Of' },
     { href: '/comparisons', label: 'Comparisons' },
     { href: '/guides', label: 'Guides' },
+    {
+      href: '/science',
+      label: 'The Science',
+      dropdown: scienceCategories,
+      dropdownHomeLabel: 'The Science Home',
+      getDropdownHref: (category) => getScienceCategoryPath(category.slug),
+    },
     { href: '/reviews', label: 'Reviews' },
     { href: '/about', label: 'About' },
   ];
@@ -31,8 +49,31 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {navItems.map((item) => (
-              <li key={item.href} className="nav-item">
-                <Link href={item.href} className="nav-link">{item.label}</Link>
+              <li key={item.href} className={`nav-item ${item.dropdown ? 'dropdown' : ''}`}>
+                <Link
+                  href={item.href}
+                  className={`nav-link ${item.dropdown ? 'dropdown-toggle' : ''}`}
+                  role={item.dropdown ? 'button' : undefined}
+                  data-bs-toggle={item.dropdown ? 'dropdown' : undefined}
+                  aria-expanded={item.dropdown ? 'false' : undefined}
+                >
+                  {item.label}
+                </Link>
+                {item.dropdown && (
+                  <ul className="dropdown-menu dropdown-menu-dark science-nav-dropdown">
+                    <li>
+                      <Link href={item.href} className="dropdown-item">{item.dropdownHomeLabel}</Link>
+                    </li>
+                    <li><hr className="dropdown-divider" /></li>
+                    {item.dropdown.map((category) => (
+                      <li key={category.slug}>
+                        <Link href={item.getDropdownHref(category)} className="dropdown-item">
+                          {category.navLabel || category.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

@@ -36,7 +36,7 @@
     "description": "A premium all-in-one cold plunge with an integrated cooling system designed for consistent low temperatures.",
     "long_description": "The Sun Home Cold Plunge Pro is positioned as a high-end, turn-key cold immersion system for people who want reliable water temperatures without constantly buying ice. The core value is consistency: set a target temperature, keep the water cold day after day, and pair it with filtration/sanitation so the tub is practical for frequent use.",
     "who_is_this_for": "<p>This is ideal for <strong>serious cold-plunge users</strong> who want an all-in-one system and plan to use it multiple times per week.</p><ul><li><strong>Home gym owners</strong> building a recovery corner</li><li>People who want <strong>minimal DIY</strong> and predictable temps</li><li>Users who value <strong>sanitation/filtration</strong> as part of the package</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the <strong>lowest-cost entry</strong> into cold plunging</li><li>You only plunge occasionally and don’t mind <strong>buying ice</strong></li><li>You lack space, power access, or prefer a <strong>portable inflatable</strong> tub</li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the <strong>lowest-cost entry</strong> into cold plunging</li><li>You only plunge occasionally and don\u2019t mind <strong>buying ice</strong></li><li>You lack space, power access, or prefer a <strong>portable inflatable</strong> tub</li></ul>",
     "detailed_analysis": "<p><strong>What matters most:</strong> premium cold plunges live or die by temperature stability, water hygiene, and overall convenience. This model targets the user who wants a repeatable routine, not a weekend experiment.</p><p><strong>Ownership experience:</strong> the win is that you avoid the \"bag-of-ice\" problem and can build a consistent protocol. The tradeoff is price and the reality that any integrated system requires basic maintenance (filters, water chemistry, cleaning).</p>",
     "features": "<ul><li><strong>Integrated cooling</strong> for consistent cold water sessions</li><li><strong>All-in-one design</strong> built for routine use</li><li><strong>Filtration/sanitation</strong> oriented toward longer water life</li><li><strong>Premium build</strong> intended for durability</li></ul>",
     "pros": [
@@ -49,7 +49,7 @@
       "Still requires basic ongoing maintenance",
       "Not the most portable option"
     ],
-    "verdict": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
+    "verdict": "If you\u2019re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
     "alternatives": [
       {
         "name": "Plunge All-In",
@@ -73,7 +73,7 @@
     "faqs": [
       {
         "question": "Is Sun Home Cold Plunge Pro worth it?",
-        "answer": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs."
+        "answer": "If you\u2019re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs."
       },
       {
         "question": "Who is Sun Home Cold Plunge Pro best for?",
@@ -91,7 +91,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://sunhomesaunas.com/products/sun-home-cold-plunge-tub"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "SunHome-Cold-Plunge-Portable-Horizontal",
@@ -182,7 +183,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://sunhomesaunas.com/products/portable-cold-plunge-tub"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Plunge-Standard",
@@ -220,7 +222,7 @@
     "description": "A popular dedicated cold plunge tub brand focused on at-home cold water therapy with a purpose-built system.",
     "long_description": "Plunge is one of the best-known consumer cold plunge brands. The Standard model is aimed at people who want a purpose-built tub rather than a DIY stock-tank setup, with a more refined ownership experience and better consistency than ice-only solutions.",
     "who_is_this_for": "<p>Ideal for <strong>regular plungers</strong> who want a dedicated system and a more premium user experience than DIY builds.</p><ul><li>Users prioritizing <strong>consistency</strong></li><li>People building a <strong>recovery routine</strong> around training</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You’re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
+    "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You\u2019re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
     "detailed_analysis": "<p>With brand-name plunges, the difference is typically consistency and convenience: easier setup, more polished design, and a system meant to be used frequently. Evaluate: cooling performance, sanitation approach, maintenance overhead, and footprint.</p>",
     "features": "<ul><li><strong>Purpose-built tub</strong> for cold immersion</li><li><strong>Designed for repeat use</strong></li><li><strong>Premium ownership experience</strong> compared with DIY tubs</li></ul>",
     "pros": [
@@ -273,7 +275,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://plunge.com/products/plunge"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Plunge-All-In",
@@ -312,7 +315,7 @@
     "description": "A smart cold plunge system positioned around plug-and-plunge convenience, app tracking, and upgraded filtration/sanitation.",
     "long_description": "The Plunge All-In targets the buyer who wants a modern, \"set the temperature and go\" recovery tool. Compared with basic cold tubs, the emphasis is on convenience features (plug-and-play setup, sanitation, and tracking) and an experience that feels more like an appliance than a DIY project.",
     "who_is_this_for": "<p>Best for <strong>high-frequency users</strong> who want convenience, tech features, and an appliance-like ownership experience.</p><ul><li>People who want <strong>repeatable temperature control</strong></li><li>Users who like <strong>app tracking</strong> and structured routines</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the cheapest cold plunge option</li><li>You don’t care about tech features and are fine with <strong>ice-only</strong></li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the cheapest cold plunge option</li><li>You don\u2019t care about tech features and are fine with <strong>ice-only</strong></li></ul>",
     "detailed_analysis": "<p>All-in systems are evaluated on: cooling/heating performance, sanitation approach, noise, energy use, warranty, and how annoying (or easy) maintenance is. The All-In leans hard into the convenience layer, which is exactly what many buyers want once they decide plunging is a long-term habit.</p>",
     "features": "<ul><li><strong>Plug-and-plunge setup</strong> (no plumbing in typical installs)</li><li><strong>App-enabled</strong> temperature setting and session tracking</li><li><strong>Ozone/filtration</strong> oriented toward cleaner water</li></ul>",
     "pros": [
@@ -324,7 +327,7 @@
       "Premium pricing",
       "Still requires upkeep (filters, cleaning)"
     ],
-    "verdict": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option.",
+    "verdict": "If you want cold plunging to feel like owning a premium appliance\u2014set temp, keep water cleaner, repeat\u2014this is a strong flagship-style option.",
     "alternatives": [
       {
         "name": "Renu Therapy Cold Stoic 2.0",
@@ -348,7 +351,7 @@
     "faqs": [
       {
         "question": "Is Plunge All-In (Heated + Cooled) worth it?",
-        "answer": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option."
+        "answer": "If you want cold plunging to feel like owning a premium appliance\u2014set temp, keep water cleaner, repeat\u2014this is a strong flagship-style option."
       },
       {
         "question": "Who is Plunge All-In (Heated + Cooled) best for?",
@@ -366,7 +369,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://plunge.com/products/plunge-all-in"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Renu-Cold-Stoic-Classic",
@@ -402,10 +406,10 @@
     },
     "asin": null,
     "description": "A premium cold plunge line known for strong aesthetics and a lifestyle-forward positioning.",
-    "long_description": "The Cold Stoic Classic is aimed at people who want a premium plunge that looks at home in a curated space (patio, gym corner, spa room). Renu’s appeal is often design + a complete system approach rather than a bare-bones tub.",
+    "long_description": "The Cold Stoic Classic is aimed at people who want a premium plunge that looks at home in a curated space (patio, gym corner, spa room). Renu\u2019s appeal is often design + a complete system approach rather than a bare-bones tub.",
     "who_is_this_for": "<p>Good fit for <strong>buyers who want a premium-looking tub</strong> and plan to plunge consistently.</p><ul><li>Design-conscious home owners</li><li>People who want a more \"finished\" product than DIY</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You want the lowest price</li><li>You don’t care about aesthetics and just want a functional container</li></ul>",
-    "detailed_analysis": "<p>With premium lifestyle plunges, judge: temperature capability, insulation, sanitation method, and practical maintenance. The “best” unit is the one you’ll actually use consistently.</p>",
+    "who_should_skip": "<p>Skip if:</p><ul><li>You want the lowest price</li><li>You don\u2019t care about aesthetics and just want a functional container</li></ul>",
+    "detailed_analysis": "<p>With premium lifestyle plunges, judge: temperature capability, insulation, sanitation method, and practical maintenance. The \u201cbest\u201d unit is the one you\u2019ll actually use consistently.</p>",
     "features": "<ul><li><strong>Premium aesthetic</strong> positioning</li><li><strong>System-style ownership</strong> rather than DIY</li></ul>",
     "pros": [
       "Premium presentation",
@@ -457,7 +461,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.renutherapy.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Renu-Cold-Stoic-2-0",
@@ -493,10 +498,10 @@
     },
     "asin": null,
     "description": "A premium cold plunge model emphasizing insulation, efficiency, and a refined look.",
-    "long_description": "The Cold Stoic 2.0 is positioned as an upgraded version of Renu’s flagship aesthetic-driven plunge: improved insulation and performance focus, with a complete at-home system vibe rather than a DIY tub. It’s built for people who want cold immersion to be a long-term habit and don’t want to constantly buy ice.",
+    "long_description": "The Cold Stoic 2.0 is positioned as an upgraded version of Renu\u2019s flagship aesthetic-driven plunge: improved insulation and performance focus, with a complete at-home system vibe rather than a DIY tub. It\u2019s built for people who want cold immersion to be a long-term habit and don\u2019t want to constantly buy ice.",
     "who_is_this_for": "<p>Best for <strong>serious plungers</strong> who care about performance <em>and</em> how the unit looks in their space.</p><ul><li>People plunging <strong>multiple times weekly</strong></li><li>Users who want a <strong>premium visual</strong> and complete system</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You’re experimenting and want a sub-$200 portable tub first</li><li>You want a multi-person plunge; many premium tubs are <strong>single-user optimized</strong></li></ul>",
-    "detailed_analysis": "<p>At this tier, insulation and temperature stability matter because they influence cost and convenience. The Stoic 2.0 is for someone who wants the routine to be easy: fill, set, maintain, repeat—without turning every plunge into an ice run.</p>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You\u2019re experimenting and want a sub-$200 portable tub first</li><li>You want a multi-person plunge; many premium tubs are <strong>single-user optimized</strong></li></ul>",
+    "detailed_analysis": "<p>At this tier, insulation and temperature stability matter because they influence cost and convenience. The Stoic 2.0 is for someone who wants the routine to be easy: fill, set, maintain, repeat\u2014without turning every plunge into an ice run.</p>",
     "features": "<ul><li><strong>Upgraded insulation</strong> aimed at better efficiency</li><li><strong>Premium build</strong> for a consistent routine</li><li><strong>Designed for long-term ownership</strong></li></ul>",
     "pros": [
       "Designed for consistent cold immersion",
@@ -550,7 +555,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.renutherapy.com/products/cold-stoic-2-0"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "EdgeTheoryLabs-Tub-Chiller-Setup",
@@ -641,7 +647,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://edgetheorylabs.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "IceBarrel-Pro",
@@ -678,17 +685,17 @@
     },
     "asin": null,
     "description": "A premium upright barrel-style cold plunge option often paired with a chiller for consistent temps.",
-    "long_description": "Ice Barrel’s appeal is the upright barrel form factor: space-efficient and easy to place in a garage or patio. When paired with a chiller, it becomes a much more consistent tool than ice-only use, making it better suited for frequent routines.",
+    "long_description": "Ice Barrel\u2019s appeal is the upright barrel form factor: space-efficient and easy to place in a garage or patio. When paired with a chiller, it becomes a much more consistent tool than ice-only use, making it better suited for frequent routines.",
     "who_is_this_for": "<p>Ideal for <strong>space-conscious plungers</strong> who like upright immersion and want to keep a consistent routine.</p><ul><li>Garage gym owners</li><li>Users who prefer a <strong>smaller footprint</strong> than long tubs</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down style tub</li><li>You strongly dislike upright immersion</li></ul>",
-    "detailed_analysis": "<p>Barrel-style plunges are convenient for footprint and typically easy entry/exit with a step. If you want consistency, plan for temperature control via a chiller (otherwise you’re back to buying ice and dealing with variability).</p>",
+    "detailed_analysis": "<p>Barrel-style plunges are convenient for footprint and typically easy entry/exit with a step. If you want consistency, plan for temperature control via a chiller (otherwise you\u2019re back to buying ice and dealing with variability).</p>",
     "features": "<ul><li><strong>Upright barrel form factor</strong></li><li><strong>Pairs well with a chiller</strong> for consistent temps</li><li><strong>Space-efficient footprint</strong></li></ul>",
     "pros": [
       "Space-efficient design",
       "Great routine fit when paired with a chiller"
     ],
     "cons": [
-      "Upright immersion isn’t for everyone",
+      "Upright immersion isn\u2019t for everyone",
       "Chiller pairing increases total cost"
     ],
     "verdict": "A strong footprint-friendly plunge option, especially if you plan to pair it with a chiller for consistency.",
@@ -733,7 +740,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://icebarrel.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "PenguinChillers-Tub-Setup",
@@ -824,7 +832,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://penguinchillers.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "IceBarrel-400",
@@ -864,7 +873,7 @@
     "long_description": "The Ice Barrel 400 is a barrel-style cold plunge designed to fit in tight spaces while still accommodating a wide range of body sizes. The upright design changes the immersion feel versus long tubs, but many users prefer it for footprint, simplicity, and routine consistency.",
     "who_is_this_for": "<p>Best for <strong>space-conscious users</strong> who want upright immersion and a simple routine.</p><ul><li>Garage/patio users with limited space</li><li>People who prefer quick setup and simple draining</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down tub experience</li><li>You want a built-in chiller at purchase (you may need an add-on)</li></ul>",
-    "detailed_analysis": "<p>Barrel-style immersion is different: less \"float and stretch\" and more upright plunge posture. The 400’s core value is footprint and usability—particularly if you’re consistent and want a dedicated tool rather than a collapsible tub.</p>",
+    "detailed_analysis": "<p>Barrel-style immersion is different: less \"float and stretch\" and more upright plunge posture. The 400\u2019s core value is footprint and usability\u2014particularly if you\u2019re consistent and want a dedicated tool rather than a collapsible tub.</p>",
     "features": "<ul><li><strong>Upright barrel design</strong> for small footprint</li><li><strong>Cold therapy focused</strong> for routine use</li><li><strong>Simple ownership</strong> vs complicated integrated systems</li></ul>",
     "pros": [
       "Space-efficient",
@@ -917,7 +926,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://icebarrel.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "IceBarrel-300",
@@ -954,10 +964,10 @@
     },
     "asin": null,
     "description": "A smaller upright ice barrel option for cold immersion with a footprint-friendly design.",
-    "long_description": "The Ice Barrel 300 is aimed at users who want the upright barrel format but may prefer a smaller overall size or entry price than larger barrel models. It’s built for repeatable cold immersion routines, especially when paired with a consistency plan (ice, climate, or a compatible chiller).",
+    "long_description": "The Ice Barrel 300 is aimed at users who want the upright barrel format but may prefer a smaller overall size or entry price than larger barrel models. It\u2019s built for repeatable cold immersion routines, especially when paired with a consistency plan (ice, climate, or a compatible chiller).",
     "who_is_this_for": "<p>Best for <strong>users who like upright immersion</strong> and want a dedicated tool without a large footprint.</p>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You need extra room for larger body sizes</li><li>You want a long, lay-down plunge tub</li></ul>",
-    "detailed_analysis": "<p>Like most upright barrels, the major decision is whether you prefer upright posture. If yes, the 300 is a straightforward dedicated plunge tool. If no, you’ll be happier with a long tub.</p>",
+    "detailed_analysis": "<p>Like most upright barrels, the major decision is whether you prefer upright posture. If yes, the 300 is a straightforward dedicated plunge tool. If no, you\u2019ll be happier with a long tub.</p>",
     "features": "<ul><li><strong>Upright barrel design</strong></li><li><strong>Footprint-friendly</strong></li><li><strong>Routine-oriented</strong> cold immersion</li></ul>",
     "pros": [
       "Small footprint",
@@ -1009,7 +1019,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://icebarrel.com/products/ice-barrel-300-bundle"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "TheColdPod-IceBath",
@@ -1046,7 +1057,7 @@
     },
     "asin": null,
     "description": "A popular portable ice bath tub line known for multiple size options and easy storage.",
-    "long_description": "The Cold Pod is a portable, budget-friendly way to start cold plunging. It’s typically chosen for convenience: easy setup, easy drain, easy storage, and a low barrier to entry. The tradeoff versus premium systems is less temperature consistency and more reliance on ice.",
+    "long_description": "The Cold Pod is a portable, budget-friendly way to start cold plunging. It\u2019s typically chosen for convenience: easy setup, easy drain, easy storage, and a low barrier to entry. The tradeoff versus premium systems is less temperature consistency and more reliance on ice.",
     "who_is_this_for": "<p>Best for <strong>beginners</strong> and budget-focused users who want to try plunging quickly.</p><ul><li>First-time cold plungers</li><li>Users who need <strong>portability</strong> and storage</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want automatic temperature control</li><li>You want a premium aesthetic piece</li></ul>",
     "detailed_analysis": "<p>Portable tubs are about habit formation. If you can build the habit first, you can always upgrade later. The biggest variable is how you keep water cold (ice cost/time) and how you keep it clean.</p>",
@@ -1102,7 +1113,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://thecoldpod.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "GGanen-Ice-Bath-Tub",
@@ -1138,7 +1150,7 @@
     },
     "asin": null,
     "description": "A portable ice bath tub option designed for simple cold water immersion at a budget-friendly price.",
-    "long_description": "G Ganen-style ice bath tubs are generally purchased as affordable, functional plunge containers. They’re aimed at users who want basic cold immersion without paying for integrated chillers or premium finishes.",
+    "long_description": "G Ganen-style ice bath tubs are generally purchased as affordable, functional plunge containers. They\u2019re aimed at users who want basic cold immersion without paying for integrated chillers or premium finishes.",
     "who_is_this_for": "<p>Best for <strong>budget-minded plungers</strong> who want basic function.</p>",
     "who_should_skip": "<p>Skip if you want integrated temperature control or premium aesthetics.</p>",
     "detailed_analysis": "<p>Evaluate portability, insulation, seams, included cover, drain quality, and stability. With budget tubs, durability and insulation are the usual weak points.</p>",
@@ -1193,7 +1205,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Polar-Recovery-Tub",
@@ -1229,7 +1242,7 @@
     },
     "asin": null,
     "description": "A mid-range cold tub option aimed at more durable, repeatable cold immersion than entry-level inflatables.",
-    "long_description": "Polar Recovery tubs typically aim to bridge the gap between basic portable pods and premium integrated systems. The target buyer wants a sturdier tub for consistent use, but doesn’t necessarily want to pay for an all-in-one chiller appliance.",
+    "long_description": "Polar Recovery tubs typically aim to bridge the gap between basic portable pods and premium integrated systems. The target buyer wants a sturdier tub for consistent use, but doesn\u2019t necessarily want to pay for an all-in-one chiller appliance.",
     "who_is_this_for": "<p>Best for <strong>intermediate plungers</strong> who want a sturdier tub than the cheapest pods.</p>",
     "who_should_skip": "<p>Skip if you want fully integrated heating/cooling and sanitation in one unit.</p>",
     "detailed_analysis": "<p>Mid-range tubs are judged on insulation, stability, drainage, and whether accessories (cover, insulation lid, step) make routine use easier.</p>",
@@ -1284,7 +1297,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://polarrecovery.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "TuffStuff-Stock-Tank-100gal",
@@ -1320,7 +1334,7 @@
     },
     "asin": null,
     "description": "A classic DIY cold plunge base: a rugged stock tank often paired with a chiller and filtration for a semi-pro setup.",
-    "long_description": "Stock tanks are a common DIY cold plunge foundation because they’re tough, widely available, and simple. The tank alone doesn’t solve temperature consistency or sanitation—those come from the accessories you add—but it can be a cost-effective starting point for a long-term plunge setup.",
+    "long_description": "Stock tanks are a common DIY cold plunge foundation because they\u2019re tough, widely available, and simple. The tank alone doesn\u2019t solve temperature consistency or sanitation\u2014those come from the accessories you add\u2014but it can be a cost-effective starting point for a long-term plunge setup.",
     "who_is_this_for": "<p>Best for <strong>DIY-minded plungers</strong> who want a rugged tub and are comfortable adding components over time.</p>",
     "who_should_skip": "<p>Skip if you want a polished, indoor-friendly aesthetic and zero-setup ownership.</p>",
     "detailed_analysis": "<p>The tank itself is only part of the system. The real work is insulation strategy, filtration, and temperature control. Done well, DIY stock-tank builds can perform extremely well for the money.</p>",
@@ -1335,7 +1349,7 @@
       "Aesthetic is utilitarian",
       "DIY setup required"
     ],
-    "verdict": "A great base if you’re willing to build a system. Not ideal if you want a polished turnkey product.",
+    "verdict": "A great base if you\u2019re willing to build a system. Not ideal if you want a polished turnkey product.",
     "alternatives": [
       {
         "name": "Penguin Chillers + Tub Setup",
@@ -1359,7 +1373,7 @@
     "faqs": [
       {
         "question": "Is Tuff Stuff Stock Tank (DIY Cold Plunge Build) worth it?",
-        "answer": "A great base if you’re willing to build a system. Not ideal if you want a polished turnkey product."
+        "answer": "A great base if you\u2019re willing to build a system. Not ideal if you want a polished turnkey product."
       },
       {
         "question": "Who is Tuff Stuff Stock Tank (DIY Cold Plunge Build) best for?",
@@ -1377,7 +1391,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Nurecover-Ice-Bath",
@@ -1413,7 +1428,7 @@
     },
     "asin": null,
     "description": "A portable ice bath pod designed for easy setup, storage, and beginner-friendly cold plunging.",
-    "long_description": "Nurecover-style pods are built for convenience: set it up quickly, fill, add ice, plunge, drain, repeat. They’re generally chosen as a first cold plunge because they lower friction and cost—ideal for testing whether you’ll stick to a routine.",
+    "long_description": "Nurecover-style pods are built for convenience: set it up quickly, fill, add ice, plunge, drain, repeat. They\u2019re generally chosen as a first cold plunge because they lower friction and cost\u2014ideal for testing whether you\u2019ll stick to a routine.",
     "who_is_this_for": "<p>Best for <strong>beginners</strong> and anyone who wants a low-cost, low-commitment entry.</p>",
     "who_should_skip": "<p>Skip if you want premium aesthetics or built-in temperature control.</p>",
     "detailed_analysis": "<p>These pods are habit builders. If you can build the habit first, you can always upgrade later. The biggest variable is how you keep water cold (ice cost/time) and how you keep it clean.</p>",
@@ -1469,7 +1484,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://nurecover.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Lumi-Recovery-Pod",
@@ -1560,7 +1576,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://recoverfit.com/collections/lumi-therapy-ice-baths"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "VEVOR-Ice-Bath-Tub",
@@ -1596,7 +1613,7 @@
     },
     "asin": null,
     "description": "A budget-friendly portable ice bath tub option commonly purchased for entry-level cold plunging.",
-    "long_description": "VEVOR ice bath tubs are typically bought as a low-cost path to cold immersion. They’re practical and widely available, but the experience is generally ice-dependent and less premium than rigid or integrated systems.",
+    "long_description": "VEVOR ice bath tubs are typically bought as a low-cost path to cold immersion. They\u2019re practical and widely available, but the experience is generally ice-dependent and less premium than rigid or integrated systems.",
     "who_is_this_for": "<p>Best for <strong>budget-first</strong> plungers who want to start right away.</p>",
     "who_should_skip": "<p>Skip if you want built-in cooling or a premium look.</p>",
     "detailed_analysis": "<p>For budget tubs, prioritize: stability, seams, drain quality, cover fit, and whether the insulation is meaningful. Expect to manage water hygiene actively.</p>",
@@ -1651,7 +1668,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.amazon.com/s?k=vevor+ice+bath+tub"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "CalmMax-Portable-Ice-Bath",
@@ -1742,7 +1760,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.amazon.com/s?k=calmmax+ice+bath"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "Hydragun-Supertub",
@@ -1778,7 +1797,7 @@
     },
     "asin": null,
     "description": "A portable cold tub product line from a recovery brand, aimed at at-home cold immersion routines.",
-    "long_description": "Hydragun is known in the recovery category, and Supertub-style products are designed to make cold immersion accessible without buying a full integrated plunge system. It’s positioned around convenience, routine building, and recovery-first branding.",
+    "long_description": "Hydragun is known in the recovery category, and Supertub-style products are designed to make cold immersion accessible without buying a full integrated plunge system. It\u2019s positioned around convenience, routine building, and recovery-first branding.",
     "who_is_this_for": "<p>Best for <strong>brand-trusting buyers</strong> who want a recovery-focused tub without jumping into premium appliance pricing.</p>",
     "who_should_skip": "<p>Skip if you want integrated heating/cooling or the absolute lowest-cost pod.</p>",
     "detailed_analysis": "<p>As with other portable tubs, evaluate insulation, stability, and drainage. Brand-led products may offer better support/accessories, but performance still depends on ice and hygiene.</p>",
@@ -1833,7 +1852,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://hydragun.com/"
-    }
+    },
+    "primaryCategory": "cold-exposure"
   },
   {
     "sku": "SunHome-Equinox-2P-Infrared",
@@ -1869,10 +1889,10 @@
     },
     "asin": null,
     "description": "A 2-person full-spectrum infrared sauna designed for at-home recovery, relaxation, and routine sessions.",
-    "long_description": "The Sun Home Equinox targets buyers who want a dedicated 2-person infrared sauna with a modern at-home wellness feel. The emphasis is on repeatable sessions—warm up, sweat, recover—without needing a spa membership.",
+    "long_description": "The Sun Home Equinox targets buyers who want a dedicated 2-person infrared sauna with a modern at-home wellness feel. The emphasis is on repeatable sessions\u2014warm up, sweat, recover\u2014without needing a spa membership.",
     "who_is_this_for": "<p>Best for <strong>couples</strong> or solo users who want extra space and plan to sauna multiple times per week.</p><ul><li>Recovery-focused training lifestyles</li><li>People seeking a consistent at-home routine</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You need a <strong>portable</strong> sauna solution</li><li>You want the cheapest entry point (consider a blanket or portable tent)</li></ul>",
-    "detailed_analysis": "<p>With 2-person infrared saunas, evaluate footprint, heat-up time, temperature ceiling, and overall build quality. The best units feel comfortable enough that you’ll use them consistently.</p>",
+    "detailed_analysis": "<p>With 2-person infrared saunas, evaluate footprint, heat-up time, temperature ceiling, and overall build quality. The best units feel comfortable enough that you\u2019ll use them consistently.</p>",
     "features": "<ul><li><strong>2-person cabin</strong> size</li><li><strong>Full-spectrum infrared</strong> positioning</li><li><strong>At-home routine</strong> oriented design</li></ul>",
     "pros": [
       "Strong at-home routine fit",
@@ -1886,7 +1906,7 @@
     "verdict": "A strong 2-person infrared sauna choice if you want a consistent at-home routine and enough room to actually enjoy longer sessions.",
     "alternatives": [
       {
-        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
         "sku": "Dynamic-Barcelona-1-2P"
       },
       {
@@ -1925,7 +1945,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "SunHome-Luminar-1P-Infrared",
@@ -1962,9 +1983,9 @@
     "asin": null,
     "description": "A 1-person infrared sauna format aimed at solo daily sessions in a smaller footprint.",
     "long_description": "A 1-person infrared sauna is the \"daily driver\" format: compact enough for many homes, but still a real cabin experience compared to blankets. The Luminar line is positioned as a premium wellness product for consistent at-home use.",
-    "who_is_this_for": "<p>Best for <strong>solo users</strong> who want consistent sauna sessions and a smaller footprint than 2–3 person cabins.</p>",
+    "who_is_this_for": "<p>Best for <strong>solo users</strong> who want consistent sauna sessions and a smaller footprint than 2\u20133 person cabins.</p>",
     "who_should_skip": "<p>Skip if you want extra room to stretch or plan to sauna with another person.</p>",
-    "detailed_analysis": "<p>With 1-person cabins, comfort is the real differentiator. If you feel cramped you’ll use it less. Also consider ceiling height, bench comfort, and how easy it is to assemble in your chosen space.</p>",
+    "detailed_analysis": "<p>With 1-person cabins, comfort is the real differentiator. If you feel cramped you\u2019ll use it less. Also consider ceiling height, bench comfort, and how easy it is to assemble in your chosen space.</p>",
     "features": "<ul><li><strong>Solo cabin footprint</strong></li><li><strong>Infrared heat</strong> for at-home sessions</li></ul>",
     "pros": [
       "More space-efficient than 2-person units",
@@ -2016,12 +2037,13 @@
       "walmart": "",
       "rei": "",
       "other": "https://sunhomesaunas.com/collections/all"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Dynamic-Barcelona-1-2P",
     "brand": "Dynamic Saunas",
-    "name": "Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna",
+    "name": "Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna",
     "product_type": "Infrared Sauna",
     "category": "infrared-sauna",
     "price_range": "mid-range",
@@ -2052,12 +2074,12 @@
       "value": 9
     },
     "asin": null,
-    "description": "A popular value-oriented 1–2 person infrared sauna model focused on practical at-home use.",
+    "description": "A popular value-oriented 1\u20132 person infrared sauna model focused on practical at-home use.",
     "long_description": "Dynamic Saunas models like the Barcelona are popular because they target a strong value band: a real cabin sauna experience at a more accessible price than many luxury brands. This makes it a common pick for first-time cabin sauna buyers.",
     "who_is_this_for": "<p>Best for <strong>buyers who want a real cabin sauna</strong> without jumping to luxury pricing.</p>",
     "who_should_skip": "<p>Skip if you want the most premium materials/finish or a larger multi-person layout.</p>",
     "detailed_analysis": "<p>In the value cabin tier, the key questions are: does it heat evenly, is assembly manageable, and does the interior feel comfortable enough for consistent use?</p>",
-    "features": "<ul><li><strong>1–2 person cabin</strong></li><li><strong>Low-EMF positioning</strong> (brand-dependent specs)</li><li><strong>Value pricing</strong> relative to premium lines</li></ul>",
+    "features": "<ul><li><strong>1\u20132 person cabin</strong></li><li><strong>Low-EMF positioning</strong> (brand-dependent specs)</li><li><strong>Value pricing</strong> relative to premium lines</li></ul>",
     "pros": [
       "Strong value for a cabin sauna",
       "Good entry point into at-home sauna routines"
@@ -2084,20 +2106,20 @@
     "officialWebsite": "https://dynamicsaunasdirect.com/collections/new-sauna",
     "amazonUrl": "",
     "image": "/images/ThermaPeakLogo.png",
-    "reviewSummary": "A popular value-oriented 1–2 person infrared sauna model focused on practical at-home use.",
+    "reviewSummary": "A popular value-oriented 1\u20132 person infrared sauna model focused on practical at-home use.",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "overallScore": 7.7,
     "faqs": [
       {
-        "question": "Is Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna worth it?",
+        "question": "Is Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna worth it?",
         "answer": "A sensible entry cabin sauna if you want the real experience at a more approachable price."
       },
       {
-        "question": "Who is Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna best for?",
+        "question": "Who is Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna best for?",
         "answer": "Beginners building a repeatable recovery routine"
       },
       {
-        "question": "Where can I check the current price for Dynamic Saunas Barcelona (1–2 Person) Low EMF Far Infrared Sauna?",
+        "question": "Where can I check the current price for Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna?",
         "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
       }
     ],
@@ -2108,7 +2130,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://dynamicsaunasdirect.com/collections/new-sauna"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Dynamic-Andora-2P",
@@ -2145,7 +2168,7 @@
     "description": "A widely sold 2-person infrared sauna model positioned around low-EMF heating panels and efficient home use.",
     "long_description": "The Dynamic Andora is a mainstream pick in the two-person infrared sauna category, commonly found through major retailers. It targets practical home sauna buyers: enough space for two, efficient infrared panels, and an accessible price compared with premium brands.",
     "who_is_this_for": "<p>Best for <strong>home sauna buyers</strong> who want a 2-person cabin at a value-oriented price.</p><ul><li>Couples or solo users who want room</li><li>People wanting a real cabin experience</li></ul>",
-    "who_should_skip": "<p>Skip if you want ultra-premium materials or a larger (3–4 person) sauna.</p>",
+    "who_should_skip": "<p>Skip if you want ultra-premium materials or a larger (3\u20134 person) sauna.</p>",
     "detailed_analysis": "<p>Two-person cabins are often the sweet spot: big enough to be comfortable, small enough to fit many homes. Evaluate assembly, heat-up time, and whether the seating height and backrests feel comfortable.</p>",
     "features": "<ul><li><strong>2-person interior</strong></li><li><strong>Infrared panel heating</strong></li><li><strong>Common retail availability</strong></li></ul>",
     "pros": [
@@ -2159,7 +2182,7 @@
     "verdict": "A practical, widely available 2-person infrared cabin with a strong value proposition for regular home use.",
     "alternatives": [
       {
-        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
         "sku": "Dynamic-Barcelona-1-2P"
       },
       {
@@ -2198,7 +2221,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.amazon.com/dp/B002063VYY"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "JNH-Joyous-2P",
@@ -2235,8 +2259,8 @@
     "description": "A 2-person infrared sauna designed for comfortable at-home sessions with a premium-leaning build.",
     "long_description": "JNH Lifestyles targets the buyer who wants a more premium feel than entry cabin saunas while still staying in the consumer-friendly at-home category. The Joyous 2-person layout is intended to be comfortable enough for frequent use and recovery routines.",
     "who_is_this_for": "<p>Best for <strong>buyers who want a nicer cabin sauna</strong> than the lowest-cost options, and who plan to use it regularly.</p>",
-    "who_should_skip": "<p>Skip if you want the cheapest possible cabin sauna or if you need a 3–4 person size.</p>",
-    "detailed_analysis": "<p>At the mid-to-premium cabin tier, comfort and materials matter more. If the bench, back support, and headroom feel good, you’ll actually build the habit.</p>",
+    "who_should_skip": "<p>Skip if you want the cheapest possible cabin sauna or if you need a 3\u20134 person size.</p>",
+    "detailed_analysis": "<p>At the mid-to-premium cabin tier, comfort and materials matter more. If the bench, back support, and headroom feel good, you\u2019ll actually build the habit.</p>",
     "features": "<ul><li><strong>2-person cabin</strong></li><li><strong>Infrared heating</strong> designed for home use</li></ul>",
     "pros": [
       "More premium feel than entry models",
@@ -2288,7 +2312,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://jnhlifestyles.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "SereneLife-Portable-Infrared",
@@ -2346,7 +2371,7 @@
         "sku": "HigherDOSE-Infrared-Sauna-Blanket"
       },
       {
-        "name": "Dynamic Saunas Barcelona (1–2 Person)",
+        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
         "sku": "Dynamic-Barcelona-1-2P"
       }
     ],
@@ -2381,7 +2406,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.amazon.com/s?k=serenelife+portable+sauna"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "HigherDOSE-Infrared-Sauna-Blanket",
@@ -2418,10 +2444,10 @@
     },
     "asin": "B09M8YQ4KB",
     "description": "A premium infrared sauna blanket designed for portable, at-home heat sessions without a cabin sauna.",
-    "long_description": "The HigherDOSE Infrared Sauna Blanket is a premium, portable alternative to cabin saunas. It’s designed for people who want sweating and heat-based relaxation in a product that stores in a closet and plugs into the wall—no construction, no dedicated floor space.",
+    "long_description": "The HigherDOSE Infrared Sauna Blanket is a premium, portable alternative to cabin saunas. It\u2019s designed for people who want sweating and heat-based relaxation in a product that stores in a closet and plugs into the wall\u2014no construction, no dedicated floor space.",
     "who_is_this_for": "<p>Best for <strong>space-limited</strong> users and anyone who wants a high-quality portable heat option.</p><ul><li>Apartment dwellers</li><li>People who travel or want easy storage</li><li>Users who want heat sessions without cabin assembly</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want the classic sauna cabin vibe</li><li>You dislike the feeling of a wrap/blanket during sessions</li></ul>",
-    "detailed_analysis": "<p>Sauna blankets can be excellent when used consistently. Evaluate max temperature, comfort, materials, cleaning routine, and how easy it is to actually use weekly. The best blanket is the one you’ll pull out and use.</p>",
+    "detailed_analysis": "<p>Sauna blankets can be excellent when used consistently. Evaluate max temperature, comfort, materials, cleaning routine, and how easy it is to actually use weekly. The best blanket is the one you\u2019ll pull out and use.</p>",
     "features": "<ul><li><strong>Portable infrared heat</strong> sessions</li><li><strong>Space-saving</strong> storage</li><li><strong>Good entry point</strong> into heat routines</li></ul>",
     "pros": [
       "No installation",
@@ -2474,7 +2500,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://higherdose.com/products/infrared-sauna-blanket"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "AlmostHeaven-Barrel-Morgan",
@@ -2511,9 +2538,9 @@
     },
     "asin": null,
     "description": "A well-known outdoor barrel sauna style offering a classic sauna experience with strong brand recognition.",
-    "long_description": "Almost Heaven’s barrel saunas are popular for backyard builds because they deliver the classic sauna aesthetic: rounded barrel shape, outdoor placement, and a more traditional heat experience than infrared. Buyers typically choose barrel saunas for the vibe and the ritual.",
+    "long_description": "Almost Heaven\u2019s barrel saunas are popular for backyard builds because they deliver the classic sauna aesthetic: rounded barrel shape, outdoor placement, and a more traditional heat experience than infrared. Buyers typically choose barrel saunas for the vibe and the ritual.",
     "who_is_this_for": "<p>Best for <strong>backyard sauna buyers</strong> who want the classic barrel look and a traditional sauna feel.</p>",
-    "who_should_skip": "<p>Skip if you can’t place it outdoors or you prefer infrared heat and indoor convenience.</p>",
+    "who_should_skip": "<p>Skip if you can\u2019t place it outdoors or you prefer infrared heat and indoor convenience.</p>",
     "detailed_analysis": "<p>Traditional outdoor saunas require planning: base/pad, delivery logistics, assembly time, and heater choice. The payoff is the authentic sauna experience and an outdoor wellness \"destination\".</p>",
     "features": "<ul><li><strong>Outdoor barrel design</strong></li><li><strong>Traditional sauna</strong> experience</li><li><strong>Strong brand reputation</strong></li></ul>",
     "pros": [
@@ -2567,7 +2594,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://almostheaven.com/collections/saunas"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "AlmostHeaven-Barrel-Salem",
@@ -2604,7 +2632,7 @@
     },
     "asin": null,
     "description": "A popular Almost Heaven outdoor barrel sauna model aimed at classic backyard sauna builds.",
-    "long_description": "The Salem is often referenced as an approachable barrel sauna option: classic shape, outdoor placement, and a traditional sauna experience. It’s chosen for the ritual and authentic feel rather than compact portability.",
+    "long_description": "The Salem is often referenced as an approachable barrel sauna option: classic shape, outdoor placement, and a traditional sauna experience. It\u2019s chosen for the ritual and authentic feel rather than compact portability.",
     "who_is_this_for": "<p>Best for <strong>buyers building an outdoor sauna spot</strong> and wanting a recognizable brand model.</p>",
     "who_should_skip": "<p>Skip if you need indoor-only placement or want an infrared cabin.</p>",
     "detailed_analysis": "<p>Plan for assembly and delivery, and confirm heater requirements (electrical/venting if applicable). Outdoor saunas reward planning.</p>",
@@ -2659,7 +2687,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://almostheaven.com/collections/saunas"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "AlmostHeaven-Bluestone-3P",
@@ -2698,7 +2727,7 @@
     "long_description": "The Bluestone 3-person category is for buyers who want more room than a compact 2-person cabin and prefer a traditional sauna feel and layout. The added space tends to make sessions more comfortable and consistent for households.",
     "who_is_this_for": "<p>Best for <strong>families</strong> or users who want extra space for longer sessions.</p>",
     "who_should_skip": "<p>Skip if you need ultra-compact footprint or want a portable solution.</p>",
-    "detailed_analysis": "<p>In 3-person cabins, the main value is comfort. If you can sit and breathe without feeling cramped, you’ll use it more often.</p>",
+    "detailed_analysis": "<p>In 3-person cabins, the main value is comfort. If you can sit and breathe without feeling cramped, you\u2019ll use it more often.</p>",
     "features": "<ul><li><strong>3-person capacity</strong></li><li><strong>Traditional sauna</strong> layout</li></ul>",
     "pros": [
       "More comfortable capacity",
@@ -2750,7 +2779,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://almostheaven.com/collections/saunas"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Dundalk-Barrel-Sauna",
@@ -2787,7 +2817,7 @@
     },
     "asin": null,
     "description": "A premium-leaning outdoor barrel sauna brand known for classic wood sauna builds.",
-    "long_description": "Dundalk LeisureCraft barrel saunas are chosen by buyers who want an outdoor wood sauna build with a strong traditional feel. Barrel shapes are popular for aesthetics and the outdoor “destination” experience.",
+    "long_description": "Dundalk LeisureCraft barrel saunas are chosen by buyers who want an outdoor wood sauna build with a strong traditional feel. Barrel shapes are popular for aesthetics and the outdoor \u201cdestination\u201d experience.",
     "who_is_this_for": "<p>Best for <strong>outdoor sauna buyers</strong> who want traditional wood construction and a classic look.</p>",
     "who_should_skip": "<p>Skip if you need indoor-only placement or want an infrared cabin experience.</p>",
     "detailed_analysis": "<p>Outdoor wood saunas require a plan: base, delivery, assembly, and heater selection. The payoff is the authentic ritual and backyard upgrade.</p>",
@@ -2842,7 +2872,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://www.dundalkleisurecraft.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "ALEKO-Barrel-Sauna",
@@ -2879,7 +2910,7 @@
     },
     "asin": null,
     "description": "A value-oriented outdoor barrel sauna option commonly sold online for backyard sauna builds.",
-    "long_description": "ALEKO barrel saunas tend to compete on price relative to premium wood sauna brands. They’re bought by people who want the classic barrel look and outdoor sauna experience while staying in a more accessible budget band.",
+    "long_description": "ALEKO barrel saunas tend to compete on price relative to premium wood sauna brands. They\u2019re bought by people who want the classic barrel look and outdoor sauna experience while staying in a more accessible budget band.",
     "who_is_this_for": "<p>Best for <strong>budget-conscious outdoor sauna buyers</strong> who still want a classic barrel aesthetic.</p>",
     "who_should_skip": "<p>Skip if you want premium wood/finish or white-glove delivery and support.</p>",
     "detailed_analysis": "<p>Value barrel saunas can be great, but verify included accessories, heater compatibility, and support. Assembly quality and instructions matter a lot.</p>",
@@ -2892,7 +2923,7 @@
       "May require more patience during assembly",
       "Support and fit/finish can vary"
     ],
-    "verdict": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details.",
+    "verdict": "A reasonable pick if you want the barrel sauna look at a lower entry price and you\u2019re comfortable managing assembly and details.",
     "alternatives": [
       {
         "name": "Almost Heaven Barrel Sauna (Salem)",
@@ -2916,7 +2947,7 @@
     "faqs": [
       {
         "question": "Is ALEKO Outdoor Barrel Sauna worth it?",
-        "answer": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details."
+        "answer": "A reasonable pick if you want the barrel sauna look at a lower entry price and you\u2019re comfortable managing assembly and details."
       },
       {
         "question": "Who is ALEKO Outdoor Barrel Sauna best for?",
@@ -2934,7 +2965,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://aleko.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "GoldenDesigns-Monaco-3P",
@@ -2969,10 +3001,10 @@
     },
     "asin": null,
     "description": "A premium-leaning 3-person infrared sauna model positioned around near-zero EMF marketing and higher-end cabin experience.",
-    "long_description": "Golden Designs’ Monaco 3-person category is designed for buyers who want a larger interior than typical 2-person cabins and a more premium feel. The 3-person size is often the comfort sweet spot for households: room for multiple users or extra space for solo sessions.",
+    "long_description": "Golden Designs\u2019 Monaco 3-person category is designed for buyers who want a larger interior than typical 2-person cabins and a more premium feel. The 3-person size is often the comfort sweet spot for households: room for multiple users or extra space for solo sessions.",
     "who_is_this_for": "<p>Best for <strong>households</strong> or users who want a roomier cabin and plan to use sauna regularly.</p>",
     "who_should_skip": "<p>Skip if you need a compact footprint or want a low-cost first sauna.</p>",
-    "detailed_analysis": "<p>With 3-person infrared cabins, comfort and consistency matter more than fancy add-ons. If it’s pleasant to sit in, you’ll use it more—and results come from consistency.</p>",
+    "detailed_analysis": "<p>With 3-person infrared cabins, comfort and consistency matter more than fancy add-ons. If it\u2019s pleasant to sit in, you\u2019ll use it more\u2014and results come from consistency.</p>",
     "features": "<ul><li><strong>3-person capacity</strong></li><li><strong>Infrared cabin</strong> format</li><li><strong>Premium positioning</strong></li></ul>",
     "pros": [
       "Roomier interior",
@@ -3025,7 +3057,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://goldendesigninc.com/collections/products"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "GoldenDesigns-Maxxus-2P",
@@ -3062,7 +3095,7 @@
     "description": "A 2-person infrared sauna line under Golden Designs/Maxxus positioned for home wellness routines.",
     "long_description": "Maxxus-branded cabins typically aim for a balance of comfort, materials, and price. The 2-person size is popular because it fits many homes while still being comfortable enough for consistent sessions.",
     "who_is_this_for": "<p>Best for <strong>buyers who want a comfortable 2-person cabin</strong> without going to luxury price extremes.</p>",
-    "who_should_skip": "<p>Skip if you need a 3–4 person size or want a portable solution.</p>",
+    "who_should_skip": "<p>Skip if you need a 3\u20134 person size or want a portable solution.</p>",
     "detailed_analysis": "<p>In 2-person cabins, the key is whether you can sit comfortably and actually use it frequently. Evaluate assembly, footprint, and day-to-day usability.</p>",
     "features": "<ul><li><strong>2-person cabin</strong></li><li><strong>Infrared heating</strong></li></ul>",
     "pros": [
@@ -3115,7 +3148,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://goldendesigninc.com/collections/products"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Dynamic-Venice-2P",
@@ -3153,7 +3187,7 @@
     "long_description": "Dynamic 2-person cabins like the Venice are typically chosen for value: a real cabin sauna experience, enough room for comfort, and broad online availability.",
     "who_is_this_for": "<p>Best for <strong>value-oriented buyers</strong> who want a 2-person cabin for regular sessions.</p>",
     "who_should_skip": "<p>Skip if you want luxury-grade materials or a larger household size.</p>",
-    "detailed_analysis": "<p>As a value cabin, focus on comfort and habit. If you use it consistently, the value is high. If it’s annoying to assemble or cramped, it becomes a garage ornament.</p>",
+    "detailed_analysis": "<p>As a value cabin, focus on comfort and habit. If you use it consistently, the value is high. If it\u2019s annoying to assemble or cramped, it becomes a garage ornament.</p>",
     "features": "<ul><li><strong>2-person infrared cabin</strong></li><li><strong>Value positioning</strong></li></ul>",
     "pros": [
       "Good entry 2-person cabin value",
@@ -3205,7 +3239,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://dynamicsaunasdirect.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "JNH-Ensi-4P",
@@ -3240,9 +3275,9 @@
     },
     "asin": null,
     "description": "A larger 4-person infrared sauna option for households or people who want extra room for longer sessions.",
-    "long_description": "A 4-person cabin is for buyers who want real space: easier breathing room, more comfortable sessions, and the ability to sauna with family or friends. It’s also popular for solo users who want to stretch out or prefer a less confined feel.",
+    "long_description": "A 4-person cabin is for buyers who want real space: easier breathing room, more comfortable sessions, and the ability to sauna with family or friends. It\u2019s also popular for solo users who want to stretch out or prefer a less confined feel.",
     "who_is_this_for": "<p>Best for <strong>households</strong> and users who want a roomy cabin experience.</p>",
-    "who_should_skip": "<p>Skip if you’re tight on space or want a low-cost first sauna.</p>",
+    "who_should_skip": "<p>Skip if you\u2019re tight on space or want a low-cost first sauna.</p>",
     "detailed_analysis": "<p>Bigger cabins increase comfort, but also increase cost, footprint, and delivery complexity. Ensure your intended location can handle the size and assembly.</p>",
     "features": "<ul><li><strong>4-person cabin size</strong></li><li><strong>Roomier sessions</strong> for comfort</li></ul>",
     "pros": [
@@ -3296,7 +3331,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://jnhlifestyles.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Sunlighten-mPulse-Series",
@@ -3331,10 +3367,10 @@
     },
     "asin": null,
     "description": "A premium infrared sauna series known for brand authority, premium pricing, and wellness-market positioning.",
-    "long_description": "Sunlighten’s mPulse series is often positioned as a premium category leader in the infrared sauna space, emphasizing refined build quality, wellness branding, and a more luxury ownership experience. It targets buyers who want a top-tier brand and are comfortable paying for it.",
+    "long_description": "Sunlighten\u2019s mPulse series is often positioned as a premium category leader in the infrared sauna space, emphasizing refined build quality, wellness branding, and a more luxury ownership experience. It targets buyers who want a top-tier brand and are comfortable paying for it.",
     "who_is_this_for": "<p>Best for <strong>premium buyers</strong> who want a high-authority sauna brand and plan long-term ownership.</p>",
-    "who_should_skip": "<p>Skip if you want value pricing or you’re unsure you’ll use a sauna consistently.</p>",
-    "detailed_analysis": "<p>Luxury sauna buyers should evaluate warranty, support, build quality, and comfort. At high price tiers, you’re paying for reliability, materials, and brand trust as much as heat output.</p>",
+    "who_should_skip": "<p>Skip if you want value pricing or you\u2019re unsure you\u2019ll use a sauna consistently.</p>",
+    "detailed_analysis": "<p>Luxury sauna buyers should evaluate warranty, support, build quality, and comfort. At high price tiers, you\u2019re paying for reliability, materials, and brand trust as much as heat output.</p>",
     "features": "<ul><li><strong>Premium brand</strong> authority</li><li><strong>Luxury positioning</strong></li><li><strong>Long-term ownership</strong> focus</li></ul>",
     "pros": [
       "Strong brand authority",
@@ -3344,7 +3380,7 @@
       "High price tier",
       "Overkill for casual users"
     ],
-    "verdict": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul.",
+    "verdict": "A premium pick if you want a top-tier brand and you\u2019re committed to consistent sauna use over the long haul.",
     "alternatives": [
       {
         "name": "Clearlight Sanctuary 2",
@@ -3368,7 +3404,7 @@
     "faqs": [
       {
         "question": "Is Sunlighten mPulse Series worth it?",
-        "answer": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul."
+        "answer": "A premium pick if you want a top-tier brand and you\u2019re committed to consistent sauna use over the long haul."
       },
       {
         "question": "Who is Sunlighten mPulse Series best for?",
@@ -3386,7 +3422,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://shop-us.sunlighten.com/collections/all"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "SunHome-Hybrid-Series",
@@ -3423,8 +3460,8 @@
     "description": "A hybrid sauna line aimed at users who want a more premium, feature-rich sauna experience.",
     "long_description": "Hybrid saunas appeal to buyers who want more flexibility than a single heating style. The value is versatility and an elevated ownership experience for people who sauna frequently and want options.",
     "who_is_this_for": "<p>Best for <strong>frequent sauna users</strong> who want flexibility and a premium experience.</p>",
-    "who_should_skip": "<p>Skip if you want the lowest cost entry point or don’t need versatility.</p>",
-    "detailed_analysis": "<p>Hybrid models should be evaluated on comfort and whether the versatility actually increases usage. If it encourages more consistent sessions, it’s worth paying for.</p>",
+    "who_should_skip": "<p>Skip if you want the lowest cost entry point or don\u2019t need versatility.</p>",
+    "detailed_analysis": "<p>Hybrid models should be evaluated on comfort and whether the versatility actually increases usage. If it encourages more consistent sessions, it\u2019s worth paying for.</p>",
     "features": "<ul><li><strong>Hybrid heating approach</strong> (varies by model)</li><li><strong>Premium positioning</strong></li></ul>",
     "pros": [
       "Versatile experience",
@@ -3476,7 +3513,8 @@
       "walmart": "",
       "rei": "",
       "other": "https://sunhomesaunas.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   },
   {
     "sku": "Clearlight-Sanctuary-2",
@@ -3511,10 +3549,10 @@
     },
     "asin": null,
     "description": "A luxury infrared sauna line positioned for premium materials, comfort, and long-term ownership.",
-    "long_description": "Clearlight’s Sanctuary series targets the luxury buyer: premium cabin feel, refined build, and a more high-end ownership experience. It’s designed for people who want a sauna as a long-term wellness appliance and are willing to pay for a premium brand tier.",
+    "long_description": "Clearlight\u2019s Sanctuary series targets the luxury buyer: premium cabin feel, refined build, and a more high-end ownership experience. It\u2019s designed for people who want a sauna as a long-term wellness appliance and are willing to pay for a premium brand tier.",
     "who_is_this_for": "<p>Best for <strong>luxury buyers</strong> who want a premium cabin experience and expect long-term ownership.</p>",
-    "who_should_skip": "<p>Skip if you’re budget-focused or unsure you’ll sauna consistently.</p>",
-    "detailed_analysis": "<p>At luxury tiers, focus on comfort, warranty, support, materials, and how the sauna integrates into your home. If it’s comfortable and reliable, you’ll use it more and benefit more.</p>",
+    "who_should_skip": "<p>Skip if you\u2019re budget-focused or unsure you\u2019ll sauna consistently.</p>",
+    "detailed_analysis": "<p>At luxury tiers, focus on comfort, warranty, support, materials, and how the sauna integrates into your home. If it\u2019s comfortable and reliable, you\u2019ll use it more and benefit more.</p>",
     "features": "<ul><li><strong>Luxury positioning</strong></li><li><strong>Premium cabin experience</strong></li></ul>",
     "pros": [
       "High-end ownership experience",
@@ -3566,6 +3604,7 @@
       "walmart": "",
       "rei": "",
       "other": "https://infraredsauna.com/"
-    }
+    },
+    "primaryCategory": "sauna-heat-therapy"
   }
 ]

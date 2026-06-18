@@ -1,9 +1,11 @@
 import bestLists from '../data/best-lists.json';
 import comparisons from '../data/comparisons.json';
 import guides from '../data/guides.json';
+import scienceArticles from '../data/scienceArticles.json';
 import products from '../data/products.json';
 import config from '../data/config.json';
-import { getReviewPath } from '../lib/routes';
+import { getProductCategoryPath, getReviewPath, getScienceArticlePath, getScienceCategoryPath } from '../lib/routes';
+import { getActiveProductCategories, getAllProductCategories } from '../lib/categoryRegistry';
 
 const URL = `https://${config.domain}`;
 
@@ -33,6 +35,14 @@ export default function sitemap() {
       url: `${URL}/comparisons`,
       lastModified: new Date(),
     },
+    {
+      url: `${URL}/products`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${URL}/science`,
+      lastModified: new Date(),
+    },
   ];
 
   const guideRoutes = guides.map((guide) => ({
@@ -55,5 +65,31 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...guideRoutes, ...bestOfRoutes, ...reviewRoutes, ...comparisonRoutes];
+  const productCategoryRoutes = getActiveProductCategories().map((category) => ({
+    url: `${URL}${getProductCategoryPath(category.slug)}`,
+    lastModified: new Date(),
+  }));
+
+  const scienceCategoryRoutes = getAllProductCategories().map((category) => ({
+    url: `${URL}${getScienceCategoryPath(category.slug)}`,
+    lastModified: new Date(),
+  }));
+
+  const scienceArticleRoutes = scienceArticles
+    .filter((article) => article.status === 'published')
+    .map((article) => ({
+      url: `${URL}${getScienceArticlePath(article.categorySlug, article.slug)}`,
+      lastModified: new Date(article.lastUpdated || Date.now()),
+    }));
+
+  return [
+    ...staticRoutes,
+    ...guideRoutes,
+    ...bestOfRoutes,
+    ...reviewRoutes,
+    ...comparisonRoutes,
+    ...productCategoryRoutes,
+    ...scienceCategoryRoutes,
+    ...scienceArticleRoutes,
+  ];
 }

@@ -3,7 +3,8 @@ import config from '../data/config.json';
 import products from '../data/products.json';
 import AffiliateButtons from '../components/AffiliateButtons';
 import ProductImage from '../components/ProductImage';
-import { getReviewPath } from '../lib/routes';
+import { getProductCategoryPath, getReviewPath } from '../lib/routes';
+import { getActiveProductCategories } from '../lib/categoryRegistry';
 
 const siteTitle = `${config.siteName} - ${config.tagline}`;
 const siteDescription = config.tagline;
@@ -78,6 +79,7 @@ const getShuffledItems = (array, count) => {
 export default function Home() {
   // Get 3 random products to feature
   const featuredProducts = getShuffledItems(products, 3);
+  const activeProductCategories = getActiveProductCategories();
 
   return (
     <>
@@ -123,33 +125,22 @@ export default function Home() {
           <div className="section-heading text-center">
             <p className="inline-cta-label">Start With the Right Buying Path</p>
             <h2>Featured Recovery Categories</h2>
-            <p>Choose the ranking guide that matches the product type you are actively comparing.</p>
+            <p>Choose the product category that matches the recovery setup you are actively comparing.</p>
           </div>
           <div className="featured-category-grid">
-            <article className="featured-category-card featured-category-card-primary">
-              <p className="comparison-card-label">Most Popular</p>
-              <h2>Best Cold Plunge Tubs</h2>
-              <p>Compare the strongest cold plunge systems by temperature control, maintenance, insulation, and long-term ownership fit.</p>
-              <Link href="/best-of/best-cold-plunge-tubs" className="btn btn-primary-cta">
-                View Rankings
-              </Link>
-            </article>
-            <article className="featured-category-card">
-              <p className="comparison-card-label">Chiller Systems</p>
-              <h2>Best Cold Plunge With Chiller</h2>
-              <p>Find lower-friction setups for consistent cold water without relying on bags of ice every session.</p>
-              <Link href="/best-of/best-cold-plunge-with-chiller" className="btn btn-primary-cta">
-                View Rankings
-              </Link>
-            </article>
-            <article className="featured-category-card">
-              <p className="comparison-card-label">Sauna Buyers</p>
-              <h2>Best Home Saunas</h2>
-              <p>Compare home sauna options by heat style, installation complexity, build quality, and repeat-use practicality.</p>
-              <Link href="/best-of/best-home-saunas" className="btn btn-primary-cta">
-                View Rankings
-              </Link>
-            </article>
+            {activeProductCategories.map((category, index) => (
+              <article
+                key={category.slug}
+                className={`featured-category-card ${index === 0 ? 'featured-category-card-primary' : ''}`}
+              >
+                <p className="comparison-card-label">{category.productCount} Products</p>
+                <h2>{category.heroTitle || category.name}</h2>
+                <p>{category.description}</p>
+                <Link href={getProductCategoryPath(category.slug)} className="btn btn-primary-cta">
+                  Explore Products
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
