@@ -159,6 +159,44 @@ p {
     flex: 1 1 180px;
 }
 
+.review-card-actions {
+    border-top: 1px solid rgba(31, 58, 67, 0.12);
+    margin-top: 0.35rem;
+    padding-top: 0.9rem;
+}
+
+.review-card-read-review {
+    align-items: center;
+    border-color: rgba(0, 104, 132, 0.42);
+    color: var(--primary-blue);
+    display: inline-flex;
+    flex: 1 1 160px;
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    letter-spacing: 0.01em;
+    min-height: 46px;
+    padding: 0.72rem 1rem;
+}
+
+.review-card-secondary-actions {
+    flex: 2 1 280px;
+}
+
+.review-card-secondary-actions.affiliate-button-group {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.review-card-secondary-actions.affiliate-button-group .btn {
+    font-size: 0.92rem;
+    font-weight: 750;
+    min-height: 46px;
+    padding: 0.68rem 0.85rem;
+    width: 100%;
+}
+
 .review-filter-panel {
     background:
         linear-gradient(135deg, rgba(0, 179, 255, 0.12), rgba(255, 90, 31, 0.08)),
@@ -255,8 +293,17 @@ p {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     overflow: hidden;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.featured-card .card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
 }
 
 .featured-card:hover {
@@ -1305,6 +1352,9 @@ footer a {
     .featured-product-actions,
     .review-card-actions {
         flex-direction: column;
+    }
+    .review-card-secondary-actions.affiliate-button-group {
+        grid-template-columns: 1fr;
     }
     .affiliate-button-group .btn {
         width: 100%;

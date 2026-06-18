@@ -4,8 +4,8 @@ import guides from '../data/guides.json';
 import scienceArticles from '../data/scienceArticles.json';
 import products from '../data/products.json';
 import config from '../data/config.json';
-import { getProductCategoryPath, getReviewPath, getScienceArticlePath, getScienceCategoryPath } from '../lib/routes';
-import { getActiveProductCategories, getAllProductCategories } from '../lib/categoryRegistry';
+import { getReviewCategoryPath, getReviewPath, getScienceArticlePath, getScienceCategoryPath } from '../lib/routes';
+import { getActiveReviewCategories, getAllProductCategories } from '../lib/categoryRegistry';
 
 const URL = `https://${config.domain}`;
 
@@ -36,10 +36,6 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: `${URL}/products`,
-      lastModified: new Date(),
-    },
-    {
       url: `${URL}/science`,
       lastModified: new Date(),
     },
@@ -65,8 +61,8 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  const productCategoryRoutes = getActiveProductCategories().map((category) => ({
-    url: `${URL}${getProductCategoryPath(category.slug)}`,
+  const reviewCategoryRoutes = getActiveReviewCategories().map((category) => ({
+    url: `${URL}${getReviewCategoryPath(category.slug)}`,
     lastModified: new Date(),
   }));
 
@@ -88,7 +84,7 @@ export default function sitemap() {
     ...bestOfRoutes,
     ...reviewRoutes,
     ...comparisonRoutes,
-    ...productCategoryRoutes,
+    ...reviewCategoryRoutes,
     ...scienceCategoryRoutes,
     ...scienceArticleRoutes,
   ];

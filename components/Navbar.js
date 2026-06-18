@@ -1,20 +1,13 @@
 import Link from 'next/link';
 import config from '../data/config.json';
-import { getActiveProductCategories, getAllProductCategories } from '../lib/categoryRegistry';
-import { getProductCategoryPath, getScienceCategoryPath } from '../lib/routes';
+import { getActiveReviewCategories, getAllProductCategories } from '../lib/categoryRegistry';
+import { getReviewCategoryPath, getScienceCategoryPath } from '../lib/routes';
 
 export default function Navbar() {
-  const productCategories = getActiveProductCategories();
+  const reviewCategories = getActiveReviewCategories();
   const scienceCategories = getAllProductCategories();
   const navItems = [
     { href: '/', label: 'Home' },
-    {
-      href: '/products',
-      label: 'Products',
-      dropdown: productCategories,
-      dropdownHomeLabel: 'Products Home',
-      getDropdownHref: (category) => getProductCategoryPath(category.slug),
-    },
     { href: '/best-of', label: 'Best Of' },
     { href: '/comparisons', label: 'Comparisons' },
     { href: '/guides', label: 'Guides' },
@@ -25,7 +18,13 @@ export default function Navbar() {
       dropdownHomeLabel: 'The Science Home',
       getDropdownHref: (category) => getScienceCategoryPath(category.slug),
     },
-    { href: '/reviews', label: 'Reviews' },
+    {
+      href: '/reviews',
+      label: 'Reviews',
+      dropdown: reviewCategories,
+      dropdownHomeLabel: 'All Reviews',
+      getDropdownHref: (category) => getReviewCategoryPath(category.slug),
+    },
     { href: '/about', label: 'About' },
   ];
 

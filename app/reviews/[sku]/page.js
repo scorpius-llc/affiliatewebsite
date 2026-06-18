@@ -6,8 +6,18 @@ import comparisons from '../../../data/comparisons.json';
 import guides from '../../../data/guides.json';
 import config from '../../../data/config.json';
 import AffiliateButtons from '../../../components/AffiliateButtons';
-import { getPrimaryAffiliateUrl } from '../../../lib/affiliateLinks';
-import { getReviewPath, getReviewSlug } from '../../../lib/routes';
+import ReviewCategoryProductGrid from '../../../components/ReviewCategoryProductGrid';
+import { getReviewCategoryPath, getReviewPath, getReviewSlug, getScienceArticlePath } from '../../../lib/routes';
+import {
+  getAllProductCategories,
+  getProductCategory,
+  getProductsByPrimaryCategory,
+  getRelatedBestListsForCategory,
+  getRelatedComparisonsForCategory,
+  getRelatedGuidesForCategory,
+  getRelatedScienceArticlesForCategory,
+} from '../../../lib/categoryRegistry';
+import { getPrimaryProductCta } from '../../../lib/vendorUtils';
 
 const OG_IMAGE_URL = `https://${config.domain}/images/ThermaPeakOG.png`;
 const FALLBACK_IMAGE = '/images/ThermaPeakLogo.png';
@@ -35,7 +45,11 @@ const getAverageScore = (score) => {
 
 const getDisplayScore = (product) => product.overallScore || getAverageScore(product.score);
 
-const getProductImage = (product) => product.image || product.imageUrl || product.image_url || FALLBACK_IMAGE;
+const getProductImage = (product) => {
+  const image = product.image || FALLBACK_IMAGE;
+  if (image.startsWith('http') || image.startsWith('/')) return image;
+  return `/${image}`;
+};
 
 const getBestFor = (product) => {
   if (product.bestFor) return product.bestFor;
@@ -100,7 +114,7 @@ const getReviewFaqs = (product) => [
 const buildProductSchema = (product) => {
   const canonicalUrl = `https://${config.domain}${getReviewPath(product.sku)}`;
   const score = getDisplayScore(product);
-  const merchantUrl = getPrimaryAffiliateUrl(product);
+  const merchantUrl = getPrimaryProductCta(product)?.url || '';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -174,8 +188,7 @@ function ReviewCtaCard({ product }) {
         <p className="review-best-for"><strong>Best for:</strong> {getBestFor(product)}</p>
         {score && <div className="review-score"><span>{score}</span><small>/10 overall score</small></div>}
         <p>{getReviewSummary(product)}</p>
-        <AffiliateButtons product={product} size="lg" className="review-cta-buttons" />
-        <small className="review-disclosure">We may earn a commission when you buy through qualifying links.</small>
+        <AffiliateButtons product={product} size="lg" className="review-cta-buttons" showDisclosure />
       </div>
     </section>
   );
@@ -219,13 +232,136 @@ function LinkListSection({ title, items, getHref, getLabel }) {
   );
 }
 
+function RelatedCategorySection({ title, items, getHref, getLabel }) {
+  if (!items.length) return null;
+
+  return (
+    <section className="review-category-related-section">
+      <h2>{title}</h2>
+      <div className="product-related-grid">
+        {items.slice(0, 6).map((item) => (
+          <Link key={getHref(item)} href={getHref(item)} className="product-related-card">
+            {getLabel(item)}
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ReviewCategoryPage({ category }) {
+  const categoryProducts = getProductsByPrimaryCategory(category.slug);
+  const relatedBestLists = getRelatedBestListsForCategory(category.slug);
+  const relatedComparisons = getRelatedComparisonsForCategory(category.slug);
+  const relatedGuides = getRelatedGuidesForCategory(category.slug);
+  const relatedScienceArticles = getRelatedScienceArticlesForCategory(category.slug);
+
+  return (
+    <div className="product-category-page review-category-page py-5">
+      <div className="science-shell">
+        <header className="product-category-hero">
+          <Link href="/reviews" className="science-back-link">Reviews</Link>
+          <p className="best-of-eyebrow">Review Category</p>
+          <h1>{category.heroTitle || `${category.name} Reviews`}</h1>
+          <p className="lead">{category.heroSubtitle || category.description}</p>
+          <div className="product-count-pill">{categoryProducts.length} reviews currently listed</div>
+        </header>
+
+        {categoryProducts.length === 0 ? (
+          <section className="product-empty-state">
+            <h2>Reviews in this category are coming soon.</h2>
+            <p>
+              ThermaPeak only shows review categories in navigation after reviewable products are available.
+              This route remains available for future category expansion.
+            </p>
+            <Link href="/reviews" className="btn btn-secondary-cta">View Active Review Categories</Link>
+          </section>
+        ) : (
+          <>
+            <section className="money-section">
+              <div className="section-heading">
+                <h2>{category.name} Reviews</h2>
+                <p>{category.description}</p>
+              </div>
+              <ReviewCategoryProductGrid products={categoryProducts} categoryName={category.name} />
+            </section>
+
+            <section className="product-category-related-content review-category-related-content">
+              <div className="section-heading">
+                <h2>Related Buying Paths</h2>
+                <p>Use these review hubs to move from individual products into rankings, comparisons, guides, and research context.</p>
+              </div>
+              <RelatedCategorySection
+                title="Best Of Guides"
+                items={relatedBestLists}
+                getHref={(item) => `/best-of/${item.id}`}
+                getLabel={(item) => item.title}
+              />
+              <RelatedCategorySection
+                title="Comparisons"
+                items={relatedComparisons}
+                getHref={(item) => `/comparisons/${item.slug}`}
+                getLabel={(item) => item.title}
+              />
+              <RelatedCategorySection
+                title="Guides"
+                items={relatedGuides}
+                getHref={(item) => item.link || `/guides/${item.id}`}
+                getLabel={(item) => item.title}
+              />
+              <RelatedCategorySection
+                title="Science Articles"
+                items={relatedScienceArticles}
+                getHref={(item) => getScienceArticlePath(item.categorySlug, item.slug)}
+                getLabel={(item) => item.title}
+              />
+            </section>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export async function generateStaticParams() {
-  return products.map((product) => ({
-    sku: getReviewSlug(product.sku),
-  }));
+  return [
+    ...products.map((product) => ({ sku: getReviewSlug(product.sku) })),
+    ...getAllProductCategories().map((category) => ({ sku: category.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }) {
+  const category = getProductCategory(params.sku);
+  if (category) {
+    const canonicalUrl = `https://${config.domain}${getReviewCategoryPath(category.slug)}`;
+
+    return {
+      title: `${category.name} Reviews | ${config.siteName}`,
+      description: category.heroSubtitle || category.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
+      openGraph: {
+        title: `${category.name} Reviews`,
+        description: category.heroSubtitle || category.description,
+        url: canonicalUrl,
+        images: [
+          {
+            url: OG_IMAGE_URL,
+            width: 1200,
+            height: 630,
+          },
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${category.name} Reviews`,
+        description: category.heroSubtitle || category.description,
+        images: [OG_IMAGE_URL],
+      },
+    };
+  }
+
   const product = products.find((p) => getReviewSlug(p.sku) === params.sku);
   if (!product) return {};
 
@@ -257,6 +393,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default function ReviewPage({ params }) {
+  const category = getProductCategory(params.sku);
+  if (category) {
+    return <ReviewCategoryPage category={category} />;
+  }
+
   const product = products.find((p) => getReviewSlug(p.sku) === params.sku);
 
   if (!product) {
@@ -423,8 +564,7 @@ export default function ReviewPage({ params }) {
               <h2 className="h5">{product.name}</h2>
               <p>{getBestFor(product)}</p>
               {score && <div className="review-score mb-3"><span>{score}</span><small>/10</small></div>}
-              <AffiliateButtons product={product} size="md" className="review-cta-buttons" />
-              <small className="review-disclosure">Affiliate disclosure: we may earn a commission on qualifying purchases.</small>
+              <AffiliateButtons product={product} size="md" className="review-cta-buttons" showDisclosure />
             </div>
           </aside>
         </div>

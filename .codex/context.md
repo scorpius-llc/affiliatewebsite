@@ -422,3 +422,107 @@ Deployed gcloud test validation run:
 - Initial SEO crawler run failed because local Python `urllib` could not verify the Cloud Run TLS chain (`SSL: CERTIFICATE_VERIFY_FAILED`), while `curl`, smoke test, and audit all confirmed `/robots.txt` and `/sitemap.xml` returned HTTP 200.
 - SEO crawler rerun with the existing `--insecure` diagnostic flag passed: 99 pages crawled, 99 sitemap URLs, 0 critical/high/medium/low issues. Report: `reports/seo-crawl/latest-test/summary.md`.
 - Site audit passed: 99 pages crawled, 99 sitemap URLs, production readiness `Ready`, summary score `100`, all site-level scores `100`, 0 blocking/high/medium issues, 0 missing metadata/schema counts, 0 legacy references. Report: `audits/latest/summary.md`.
+
+Homepage Top Rated Products visual fix:
+- User reported inconsistent card heights in the homepage Top Rated Products section.
+- Updated `app/page.js` so each product column/card uses explicit flex/equal-height classes.
+- Updated `public/css/style.css` so `.featured-card` is a full-height flex column and its `.card-body` expands consistently.
+- This keeps variable product descriptions and affiliate button stacks aligned without changing product data.
+- Validation: `npm run build` passed in Docker Node; 106 static pages generated.
+- No local site instance was started. Deployed test validation/audit should be rerun after user deploys this change to the gcloud test site.
+
+Navigation/category refactor from Products to Reviews:
+- User clarified ThermaPeak should not expose a separate Products menu because Reviews are the product-level destination.
+- Removed Products from public navigation and sitemap.
+- Removed obsolete `/products` route files from the app router.
+- Converted Reviews into the dynamic category dropdown using the shared category registry.
+- Reviews dropdown now shows only categories with reviewable products: `cold-exposure` and `sauna-heat-therapy` with current data.
+- Homepage category cards remain data-driven but now link to `/reviews/[categorySlug]` and use `Explore Reviews` CTA text.
+- Reused existing `/reviews/[sku]` dynamic route for category hubs by detecting shared category slugs first, then falling back to product review slugs.
+- Added generated review category hub pages for all shared taxonomy categories; active category hubs show review cards and related Best Of/comparison/guide/science links, empty category hubs show a coming-soon placeholder.
+- Sitemap now includes active review category hubs only: `/reviews/cold-exposure` and `/reviews/sauna-heat-therapy`; empty review categories are omitted from sitemap.
+- Updated `scripts/audit-site.js` to check Reviews dropdown/category hubs instead of Products dropdown/category pages.
+
+Validation:
+- No local site instance was started.
+- `npm run build` passed in Docker Node; 105 static pages generated.
+- `node --check scripts/audit-site.js` passed in Docker Node.
+- `bash -n scripts/seo-smoke-test.sh` passed.
+- `python3 -m py_compile scripts/seo_crawler.py` passed.
+- Built homepage and sitemap checks confirmed no `/products` links remain.
+- Built homepage shows Reviews dropdown/category links only for active categories: Cold Exposure and Sauna and Heat Therapy.
+- Built sitemap includes active review category hubs only.
+- Product data check passed: 39 products, 0 missing `primaryCategory`, 0 invalid `primaryCategory`.
+- Full deployed audit was not run in this turn because changes have not been deployed to the gcloud test site yet.
+
+Deployed gcloud test validation run without audit:
+- Target: `https://thermapeak-test-925569592209.us-east1.run.app`.
+- User requested tests only, not site audit.
+- SEO smoke test completed: 1,895 assertions passed, 2 failed, 210 requests. Report: `reports/seo-smoke/latest-test/report.md`.
+- SEO crawler completed with `--insecure` due the known local Python TLS certificate-store issue: 98 pages crawled, 98 sitemap URLs, 0 critical, 2 high, 0 medium, 0 low. Report: `reports/seo-crawl/latest-test/summary.md`.
+- Both failures are the same classification issue: `/reviews/cold-exposure` and `/reviews/sauna-heat-therapy` are review category hub pages, but the smoke/crawler review monetization checks still classify all `/reviews/*` pages as individual product review pages and expect Product schema.
+- No site audit was run in this turn.
+
+Updated tests for review category hubs:
+- User asked to change the tests that failed after Products navigation was refactored into Reviews category hubs.
+- Updated `scripts/seo-smoke-test.sh` so Review Monetization assertions exclude `/reviews/[categorySlug]` category hub pages by reading shared taxonomy slugs from `data/productCategories.json`.
+- Updated `scripts/seo_crawler.py` so product-review monetization checks exclude review category hub URLs using `data/productCategories.json`.
+- Syntax validation passed: `bash -n scripts/seo-smoke-test.sh` and `python3 -m py_compile scripts/seo_crawler.py`.
+- Reran deployed gcloud test scripts only, no audit: SEO crawler passed with 98 pages, 98 sitemap URLs, 0 critical/high/medium/low issues; SEO smoke passed with 1,893 assertions passed, 0 failed, 210 requests.
+
+Products affiliate link cleanup:
+- User requested reviewing every product, moving manufacturer affiliate destinations into `affiliateLinks`, and deleting the legacy `affiliateUrl` field.
+- Updated all 39 products in `data/products.json`.
+- Removed `affiliateUrl` from every product.
+- Verified every product still has a complete `affiliateLinks` object with keys: `amazon`, `manufacturer`, `bestBuy`, `walmart`, `rei`, `other`.
+- Non-Amazon manufacturer destinations remain in `affiliateLinks.manufacturer`; five Amazon-only legacy destinations remain under `affiliateLinks.amazon` to avoid rendering Amazon links as "View on Official Website".
+- Validation: no `affiliateUrl` fields remain in `data/products.json`; all 39 products have either a manufacturer or Amazon affiliate destination; `npm run build` passed in Docker Node with 105 static pages generated.
+
+Products Amazon URL cleanup:
+- User requested moving the two non-empty `amazonUrl` values into `affiliateLinks.amazon` and deleting `amazonUrl` entirely.
+- Reviewed all 39 products in `data/products.json`.
+- The two non-empty `amazonUrl` values were already present in their associated `affiliateLinks.amazon`, so no overwrite was needed.
+- Removed the `amazonUrl` field from every product.
+- Validation: no `amazonUrl` fields remain in `data/products.json`; both target products still have `affiliateLinks.amazon`; all products retain the complete affiliateLinks key set; `npm run build` passed in Docker Node with 105 static pages generated.
+
+Products official website affiliate cleanup:
+- User requested migrating `officialWebsite` into `affiliateLinks.manufacturer` for every product and executing the affiliate fallback cleanup recommendations.
+- Reviewed all 39 products in `data/products.json`.
+- Removed `officialWebsite` from every product.
+- All non-Amazon official/manufacturer destinations were already present in `affiliateLinks.manufacturer`.
+- Amazon-only officialWebsite values were already present in `affiliateLinks.amazon`; they were intentionally kept as Amazon destinations rather than being mislabeled as manufacturer links.
+- Removed legacy fallback logic from `lib/affiliateLinks.js` for `affiliateUrl`, `amazonUrl`, and `officialWebsite`.
+- `normalizeAffiliateLinks` now uses `affiliateLinks` as the canonical source, with only ASIN-backed Amazon URL generation retained because `asin` is still an explicit product data field.
+- Validation: no `officialWebsite`, `affiliateUrl`, or `amazonUrl` references remain in app/components/lib/scripts/data except no legacy references at all after cleanup; no legacy fields remain in `products.json`; every product has the complete `affiliateLinks` key set and at least one destination; `npm run build` passed in Docker Node with 105 static pages generated.
+
+Products ASIN cleanup:
+- User requested removing all `asin` elements from `data/products.json`.
+- Removed `asin` from all 39 products.
+- Removed ASIN-based Amazon fallback generation from `lib/affiliateLinks.js`; affiliate rendering now relies on explicit `affiliateLinks` destinations only.
+- Validation: no `asin` references remain in app/components/lib/scripts/data; every product still has at least one affiliate destination; `npm run build` passed in Docker Node with 105 static pages generated.
+
+Products image field cleanup:
+- User requested removing `image_url` from all products and removing code references, using `image` instead.
+- Removed `image_url` from all 39 products in `data/products.json`.
+- Updated homepage Top Rated Products, Best Of product cards/top pick, reviews index, and review detail/category helpers to use `product.image` only.
+- Removed the camelCase `imageUrl` fallback in the review helper for consistency with the canonical `image` schema.
+- Validation: no `image_url` or `imageUrl` references remain in app/components/lib/scripts/data; all products still have an `image`; `bash -n scripts/seo-smoke-test.sh` passed; `python3 -m py_compile scripts/seo_crawler.py` passed; `npm run build` passed in Docker Node with 105 static pages generated.
+
+Vendor affiliate management rule:
+- Outbound vendor or merchant buttons must only appear when the product maps to a vendor in `data/vendors.json`, that vendor has `affiliateStatus: "approved"`, `tracking.usesAffiliateLinks: true`, `displayRules.showOutboundButtons: true`, and there is a valid product or vendor affiliate URL.
+- Vendors that are pending, unknown, rejected, paused, or not_applied must keep users inside the ThermaPeak funnel using internal CTAs such as Read Review, See Rankings, or Compare Alternatives.
+- Do not hardcode affiliate approval or outbound display behavior in components; use the shared vendor utilities.
+
+Vendor management data layer implementation:
+- Created `data/vendors.json` as the source of truth for vendor affiliate status, tracking, creative/compliance notes, commission metadata, and display rules.
+- Added `vendorId` to all 39 products in `data/products.json`; all product vendor IDs map to an entry in `data/vendors.json`.
+- Added `lib/vendorUtils.js` for vendor lookup, affiliate approval checks, approved outbound CTA selection, disclosure text, and internal fallback CTAs.
+- Updated `components/AffiliateButtons.js` so product CTAs are vendor-gated and centralized. Outbound links render only for approved vendors with valid affiliate tracking and use `rel="sponsored nofollow noopener noreferrer"`; otherwise the component renders internal fallback CTAs.
+- Review Product schema now uses the approved primary product CTA when available and does not create outbound offer URLs for unapproved vendors.
+- Updated comparison rendering to avoid unmanaged external merchant buttons.
+- Updated smoke/crawler monetization checks so internal fallback CTAs are valid when no approved vendor relationship exists.
+- Updated `scripts/audit-site.js` to validate vendor readiness, flag outbound vendor links for unapproved vendors, check sponsored/nofollow rel on approved affiliate links, and generate `audits/latest/vendor-affiliate-status.md`.
+- Validation: JSON validation passed; 39 products, 30 vendors, 0 missing vendor IDs, 0 unmapped vendor IDs, 0 invalid vendor statuses, 0 legacy product affiliate/image fields.
+- Validation: `node --check lib/vendorUtils.js`, `node --check scripts/audit-site.js`, and `npm run build` passed in Docker Node; 105 static pages generated.
+- Local built HTML check found 0 known affiliate URL hits, confirming unapproved/pending vendor links are hidden in the local build output.
+- Deployed gcloud audit was run against `https://thermapeak-test-925569592209.us-east1.run.app`; it reported many high-priority unapproved outbound vendor link issues because the gcloud test site has not yet been redeployed with these local changes.

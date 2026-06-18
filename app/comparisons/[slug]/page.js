@@ -18,11 +18,7 @@ const renderComparisonButton = (href, label, variant = 'primary') => {
   const isExternal = href.startsWith('http');
 
   if (isExternal) {
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className={className}>
-        {label}
-      </a>
-    );
+    return null;
   }
 
   return (

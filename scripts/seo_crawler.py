@@ -25,6 +25,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_UA = "AffiliateSiteSEOSpider/1.0"
+PRODUCT_CATEGORY_SLUGS = {
+    category.get("slug")
+    for category in json.loads((ROOT / "data" / "productCategories.json").read_text())
+    if category.get("slug")
+} if (ROOT / "data" / "productCategories.json").exists() else set()
 
 
 class LinkParser(html.parser.HTMLParser):
@@ -189,16 +194,21 @@ def extract_sitemap_urls(body: bytes) -> list[str]:
 
 def is_review_url(url: str) -> bool:
     path = urllib.parse.urlparse(url).path.rstrip("/")
-    return path.startswith("/reviews/") and path != "/reviews"
+    if not path.startswith("/reviews/") or path == "/reviews":
+        return False
+    slug = path.rsplit("/", 1)[-1]
+    return slug not in PRODUCT_CATEGORY_SLUGS
 
 
 def review_monetization_checks(body: bytes) -> dict:
     html = body.decode("utf-8", errors="replace")
     cta_pattern = r"Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI"
+    fallback_pattern = r"See Rankings|Compare Alternatives|Read Review"
     return {
         "product_schema": bool(re.search(r'"@type"\s*:\s*"Product"', html, flags=re.I)),
         "primary_cta": bool(re.search(cta_pattern, html, flags=re.I)),
         "merchant_cta": bool(re.search(rf'<a\b[^>]+href=["\']https?://[^"\']+["\'][^>]*(?:sponsored|{cta_pattern})', html, flags=re.I)),
+        "fallback_cta": bool(re.search(fallback_pattern, html, flags=re.I)),
     }
 
 
@@ -362,10 +372,10 @@ def main() -> int:
                 review_checks = review_monetization_checks(result["body"])
                 if not review_checks["product_schema"]:
                     add_issue(issues, "High", "Review Monetization", url, "Review page is missing Product schema", "Add Product JSON-LD to the reusable review template.")
-                if not review_checks["primary_cta"]:
-                    add_issue(issues, "High", "Review Monetization", url, "Review page is missing a standard affiliate CTA", "Add an above-the-fold affiliate CTA from product affiliateLinks.")
-                if not review_checks["merchant_cta"]:
-                    add_issue(issues, "High", "Review Monetization", url, "Review page is missing an outbound merchant CTA", "Add affiliate, official website, or Amazon CTA links when URLs exist.")
+                if review_checks["primary_cta"] and not review_checks["merchant_cta"]:
+                    add_issue(issues, "High", "Review Monetization", url, "Review page shows merchant CTA text without an outbound affiliate CTA", "Only show merchant CTA text when approved vendor affiliate links render.")
+                if not review_checks["primary_cta"] and not review_checks["fallback_cta"]:
+                    add_issue(issues, "High", "Review Monetization", url, "Review page is missing affiliate or internal fallback CTAs", "Add approved affiliate CTAs or internal funnel fallback CTAs.")
 
         crawl_rows.append({
             "url": url,

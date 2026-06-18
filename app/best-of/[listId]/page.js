@@ -397,7 +397,7 @@ export default function BestOfPage({ params }) {
               <div className="top-pick-media">
                 <div className="top-pick-image-wrap">
                   <ProductImage
-                    src={topPick.image_url}
+                    src={topPick.image}
                     fallbackSrc={topPick.image_fallback || FALLBACK_IMAGE}
                     alt={topPick.name}
                     className="top-pick-image"
@@ -560,7 +560,7 @@ export default function BestOfPage({ params }) {
                   <div className="money-product-media">
                     <div className="money-product-image-wrap">
                       <ProductImage
-                        src={product.image_url}
+                        src={product.image}
                         fallbackSrc={product.image_fallback || FALLBACK_IMAGE}
                         alt={product.name}
                         className="money-product-image"

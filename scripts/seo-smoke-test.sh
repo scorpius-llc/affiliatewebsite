@@ -4,6 +4,7 @@ set -u
 set -o pipefail
 
 CONFIG_FILE="data/config.json"
+PRODUCT_CATEGORIES_FILE="data/productCategories.json"
 SITE_NAME="Affiliate Site"
 CONFIG_DOMAIN=""
 CONFIG_APEX_DOMAIN=""
@@ -31,6 +32,27 @@ config_value() {
   if [ -f "$CONFIG_FILE" ] && command -v python3 >/dev/null 2>&1; then
     python3 -c 'import json, sys; data=json.load(open(sys.argv[1])); print(data.get(sys.argv[2], ""))' "$CONFIG_FILE" "$key"
   fi
+}
+
+is_review_category_path() {
+  local path="$1"
+  if [ ! -f "$PRODUCT_CATEGORIES_FILE" ] || ! command -v python3 >/dev/null 2>&1; then
+    return 1
+  fi
+
+  python3 - "$PRODUCT_CATEGORIES_FILE" "$path" <<'PY'
+import json
+import sys
+
+categories_path, raw_path = sys.argv[1], sys.argv[2]
+slug = raw_path.strip("/").split("/")[-1]
+try:
+    categories = json.load(open(categories_path))
+except Exception:
+    sys.exit(1)
+
+sys.exit(0 if any(category.get("slug") == slug for category in categories) else 1)
+PY
 }
 
 normalize_base() {
@@ -406,6 +428,10 @@ assert_review_monetization() {
     /reviews/*) ;;
     *) return ;;
   esac
+  if is_review_category_path "$path"; then
+    record_result "PASS" "Review Monetization" "$url" "Review category hub excluded from product-review checks" "No action needed."
+    return
+  fi
 
   if grep -q '"@type":"Product"\|"@type": "Product"' "$LAST_BODY" 2>/dev/null; then
     record_result "PASS" "Review Monetization" "$url" "Product schema found" "No action needed."
@@ -415,14 +441,15 @@ assert_review_monetization() {
 
   if grep -Eqi 'Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI' "$LAST_BODY" 2>/dev/null; then
     record_result "PASS" "Review Monetization" "$url" "Standard affiliate CTA found" "No action needed."
+    if grep -Eqi '<a[^>]+href=["'\'']https?://[^"'\'']+["'\''][^>]*(sponsored|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI)' "$LAST_BODY" 2>/dev/null; then
+      record_result "PASS" "Review Monetization" "$url" "Outbound merchant CTA found" "No action needed."
+    else
+      record_result "FAIL" "Review Monetization" "$url" "Outbound merchant CTA not found" "Add an approved affiliate CTA link or hide merchant CTA text."
+    fi
+  elif grep -Eqi 'See Rankings|Compare Alternatives|Read Review' "$LAST_BODY" 2>/dev/null; then
+    record_result "PASS" "Review Monetization" "$url" "Internal fallback CTA found" "No action needed."
   else
-    record_result "FAIL" "Review Monetization" "$url" "Standard affiliate CTA not found" "Add a prominent affiliate CTA from product affiliateLinks."
-  fi
-
-  if grep -Eqi '<a[^>]+href=["'\'']https?://[^"'\'']+["'\''][^>]*(sponsored|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI)' "$LAST_BODY" 2>/dev/null; then
-    record_result "PASS" "Review Monetization" "$url" "Outbound merchant CTA found" "No action needed."
-  else
-    record_result "FAIL" "Review Monetization" "$url" "Outbound merchant CTA not found" "Add an affiliate, official website, or Amazon CTA link."
+    record_result "FAIL" "Review Monetization" "$url" "No affiliate or internal fallback CTA found" "Add approved affiliate CTAs or internal funnel fallback CTAs."
   fi
 }
 

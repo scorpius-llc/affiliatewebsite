@@ -3,8 +3,8 @@ import config from '../data/config.json';
 import products from '../data/products.json';
 import AffiliateButtons from '../components/AffiliateButtons';
 import ProductImage from '../components/ProductImage';
-import { getProductCategoryPath, getReviewPath } from '../lib/routes';
-import { getActiveProductCategories } from '../lib/categoryRegistry';
+import { getReviewCategoryPath, getReviewPath } from '../lib/routes';
+import { getActiveReviewCategories } from '../lib/categoryRegistry';
 
 const siteTitle = `${config.siteName} - ${config.tagline}`;
 const siteDescription = config.tagline;
@@ -79,7 +79,7 @@ const getShuffledItems = (array, count) => {
 export default function Home() {
   // Get 3 random products to feature
   const featuredProducts = getShuffledItems(products, 3);
-  const activeProductCategories = getActiveProductCategories();
+  const activeReviewCategories = getActiveReviewCategories();
 
   return (
     <>
@@ -128,7 +128,7 @@ export default function Home() {
             <p>Choose the product category that matches the recovery setup you are actively comparing.</p>
           </div>
           <div className="featured-category-grid">
-            {activeProductCategories.map((category, index) => (
+            {activeReviewCategories.map((category, index) => (
               <article
                 key={category.slug}
                 className={`featured-category-card ${index === 0 ? 'featured-category-card-primary' : ''}`}
@@ -136,8 +136,8 @@ export default function Home() {
                 <p className="comparison-card-label">{category.productCount} Products</p>
                 <h2>{category.heroTitle || category.name}</h2>
                 <p>{category.description}</p>
-                <Link href={getProductCategoryPath(category.slug)} className="btn btn-primary-cta">
-                  Explore Products
+                <Link href={getReviewCategoryPath(category.slug)} className="btn btn-primary-cta">
+                  Explore Reviews
                 </Link>
               </article>
             ))}
@@ -151,17 +151,17 @@ export default function Home() {
           <h2 className="text-center section-title">Top Rated Products</h2>
           <div className="row">
             {featuredProducts.map(product => (
-              <div key={product.sku} className="col-lg-4 mb-4">
-                <div className="featured-card">
+              <div key={product.sku} className="col-lg-4 mb-4 d-flex">
+                <div className="featured-card h-100 w-100 d-flex flex-column">
                   <div className="featured-card-img-container">
                     <ProductImage 
-                      src={product.image_url} 
+                      src={product.image} 
                       fallbackSrc={product.category === 'cold-plunge' ? product.image_fallback : ''}
                       alt={product.name}
                       className="featured-card-img"
                     />
                   </div>
-                  <div className="card-body d-flex flex-column">
+                  <div className="card-body d-flex flex-column flex-grow-1">
                     <h5 className="card-title">{product.name}</h5>
                     <p className="card-text text-muted flex-grow-1">{product.description}</p>
                     <ul className="list-unstyled text-muted small mt-auto">

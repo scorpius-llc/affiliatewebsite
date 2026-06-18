@@ -1,6 +1,10 @@
 "use client";
 
-import Image from 'next/image'; // Using next/image for optimization is a good practice, but we'll stick to img for now to match your code.
+const normalizeImageSrc = (src, fallbackSrc) => {
+  const image = src || fallbackSrc;
+  if (!image || image.startsWith('http') || image.startsWith('/')) return image;
+  return `/${image}`;
+};
 
 export default function ProductImage({ src, fallbackSrc, alt, className }) {
   const handleError = (e) => {
@@ -11,7 +15,7 @@ export default function ProductImage({ src, fallbackSrc, alt, className }) {
 
   return (
     <img
-      src={src || fallbackSrc}
+      src={normalizeImageSrc(src, fallbackSrc)}
       onError={handleError}
       className={className}
       alt={alt}
