@@ -1,0 +1,1444 @@
+[
+  {
+    "vendorId": "aleko",
+    "name": "ALEKO",
+    "website": "https://aleko.com/",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "almost-heaven",
+    "name": "Almost Heaven Saunas",
+    "website": "https://almostheaven.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "calmmax",
+    "name": "CalmMax",
+    "website": "https://www.amazon.com/s?k=calmmax+ice+bath",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "clearlight",
+    "name": "Clearlight",
+    "website": "https://infraredsauna.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "cold-life",
+    "name": "Cold Life",
+    "website": "https://thecoldlife.com",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "dundalk-leisurecraft",
+    "name": "Dundalk LeisureCraft",
+    "website": "https://www.dundalkleisurecraft.com/",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "dynamic-saunas",
+    "name": "Dynamic Saunas",
+    "website": "https://dynamicsaunasdirect.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "edge-theory-labs",
+    "name": "Edge Theory Labs",
+    "website": "https://edgetheorylabs.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "g-ganen",
+    "name": "G Ganen",
+    "website": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "golden-designs",
+    "name": "Golden Designs",
+    "website": "https://goldendesigninc.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "higherdose",
+    "name": "HigherDOSE",
+    "website": "https://higherdose.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "hydragun",
+    "name": "Hydragun",
+    "website": "https://hydragun.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "hyperice",
+    "name": "Hyperice",
+    "website": "https://hyperice.com",
+    "primaryCategory": "performance-longevity",
+    "categories": [
+      "performance-longevity"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "ice-barrel",
+    "name": "Ice Barrel",
+    "website": "https://icebarrel.com",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "jnh-lifestyles",
+    "name": "JNH Lifestyles",
+    "website": "https://jnhlifestyles.com/",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "lumi-recovery",
+    "name": "Lumi Recovery",
+    "website": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "normatec",
+    "name": "Normatec",
+    "website": "https://hyperice.com/pages/normatec",
+    "primaryCategory": "performance-longevity",
+    "categories": [
+      "performance-longevity"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "nurecover",
+    "name": "Nurecover",
+    "website": "https://nurecover.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "penguin-chillers",
+    "name": "Penguin Chillers",
+    "website": "https://penguinchillers.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "plunge",
+    "name": "Plunge",
+    "website": "https://plunge.com",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "polar-recovery",
+    "name": "Polar Recovery",
+    "website": "https://polarrecovery.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "redwood-outdoors",
+    "name": "Redwood Outdoors",
+    "website": "https://www.redwoodoutdoors.com",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy",
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "renu-therapy",
+    "name": "Renu Therapy",
+    "website": "https://www.renutherapy.com",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "serenelife",
+    "name": "SereneLife",
+    "website": "https://www.amazon.com/s?k=serenelife+portable+sauna",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "sun-home",
+    "name": "Sun Home",
+    "website": "https://sunhomesaunas.com",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure",
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "pending",
+    "affiliateNetwork": "Impact",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "5%",
+      "specialRates": [],
+      "cookieWindowDays": 30,
+      "attributionModel": "Last Click"
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "sunlighten",
+    "name": "Sunlighten",
+    "website": "https://shop-us.sunlighten.com/collections/all",
+    "primaryCategory": "sauna-heat-therapy",
+    "categories": [
+      "sauna-heat-therapy"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "the-cold-pod",
+    "name": "The Cold Pod",
+    "website": "https://thecoldpod.com/",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "therabody",
+    "name": "TheraBody",
+    "website": "https://www.therabody.com",
+    "primaryCategory": "performance-longevity",
+    "categories": [
+      "performance-longevity"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "tuff-stuff",
+    "name": "Tuff Stuff",
+    "website": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  },
+  {
+    "vendorId": "vevor",
+    "name": "VEVOR",
+    "website": "https://www.f.com/s?k=vevor+ice+bath+tub",
+    "primaryCategory": "cold-exposure",
+    "categories": [
+      "cold-exposure"
+    ],
+    "affiliateStatus": "unknown",
+    "affiliateNetwork": "",
+    "affiliateProgramUrl": "",
+    "affiliateApprovedDate": null,
+    "affiliateNotes": "",
+    "commission": {
+      "defaultRate": "",
+      "specialRates": [],
+      "cookieWindowDays": null,
+      "attributionModel": ""
+    },
+    "tracking": {
+      "usesAffiliateLinks": false,
+      "defaultAffiliateUrl": "",
+      "deepLinkingAllowed": null,
+      "productFeedAvailable": null
+    },
+    "creative": {
+      "approvedImageUse": null,
+      "approvedLogoUse": null,
+      "mediaKitUrl": "",
+      "notes": ""
+    },
+    "compliance": {
+      "ppcAllowed": null,
+      "trademarkBiddingAllowed": null,
+      "couponUseAllowed": null,
+      "reviewSitesAllowed": null,
+      "comparisonPagesAllowed": null,
+      "notes": ""
+    },
+    "displayRules": {
+      "showOutboundButtons": false,
+      "showOfficialWebsiteButton": false,
+      "showAffiliateDisclosure": false,
+      "preferredCtaLabel": "Check Current Price",
+      "fallbackCtaLabel": "Read Review"
+    },
+    "lastReviewed": null
+  }
+]

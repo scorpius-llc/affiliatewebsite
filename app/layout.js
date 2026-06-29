@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="impact-site-verification" value="ad10f236-1238-4f2c-8f1c-31f06727db71" />
+        <meta name="impact-site-verification" value="a1de0fbd-de68-4c68-9b88-1febcb0e0f85" />
       </head>
       <body className="d-flex flex-column min-vh-100">
         <Navbar />

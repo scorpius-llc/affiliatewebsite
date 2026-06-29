@@ -526,3 +526,73 @@ Vendor management data layer implementation:
 - Validation: `node --check lib/vendorUtils.js`, `node --check scripts/audit-site.js`, and `npm run build` passed in Docker Node; 105 static pages generated.
 - Local built HTML check found 0 known affiliate URL hits, confirming unapproved/pending vendor links are hidden in the local build output.
 - Deployed gcloud audit was run against `https://thermapeak-test-925569592209.us-east1.run.app`; it reported many high-priority unapproved outbound vendor link issues because the gcloud test site has not yet been redeployed with these local changes.
+
+Docker dependency reduction:
+- Local Node 20 is installed through nvm and `npm run build` now works without Docker.
+- Routine local validation should use local Node/npm first, not Docker.
+- JetBrains Cloud Run deploy configurations for both test and production should use `buildEnvironment: Google Cloud Build` so container builds run remotely in Google Cloud instead of Docker Desktop.
+- `scripts/deploy-thermapeak-test.sh` now uses `gcloud builds submit --tag ...` followed by `gcloud run deploy --image ...`; it should not require local Docker for the test deploy path.
+- Keep Docker only for explicit local container debugging or fallback scenarios.
+
+### 2026-06-26
+Architecture tracking rule added: after any architecture-level website change, update `.codex/context.md` with a concise note covering the durable design decision, affected files/data structures, and validation status. Treat this as separate from routine copy, styling, or small bug-fix notes unless those changes alter reusable architecture.
+
+Created a new top-level `The Science` research-library architecture for ThermaPeak:
+- Added `data/studies.json` as the single source of truth for scholarly studies referenced across the site.
+- Added `data/science-page.json` for the Science landing page content/configuration.
+- Added `data/science-articles.json` for Science article definitions that reference studies by ID instead of duplicating study summaries.
+- Added `lib/scienceLibrary.js` to centralize Science categories, article lookup, study lookup, evidence badges, FAQ mapping, related content, and product-category-to-science mappings.
+- Refactored `/science`, `/science/[categorySlug]`, and `/science/[categorySlug]/[articleSlug]` to use the new research-library data model.
+- Updated the top navigation Science dropdown to use the Science taxonomy rather than product review categories.
+- Updated sitemap generation to include all Science categories and published Science articles from the new data source.
+- Added `components/EvidenceReferencePanel.js` so product-facing pages can reference studies from `studies.json` without duplicating research content.
+- Added the evidence panel to review detail pages as the first product-facing use of the centralized study layer.
+- Added Science research-library styling for category cards, study cards, evidence badges, study snapshots, references, and methodology/trust sections.
+
+Science taxonomy now includes:
+- Cold Water Immersion
+- Saunas
+- Contrast Therapy
+- Red Light Therapy
+- Sleep & Recovery
+- Athletic Performance
+- Longevity
+- Mental Health
+- Inflammation
+- Cardiovascular Health
+- Metabolism
+- Immune Function
+
+Validation:
+- Data validation confirmed 12 Science articles, 12 categories, 10 studies, and no broken article-to-study/category references.
+- `npm run build` passed and generated `/science`, all 12 Science category pages, and all 12 Science article pages.
+- Static output confirmed Science URLs are present in sitemap and representative article pages include Article, Breadcrumb, FAQ, and ScholarlyArticle/citation structured data.
+
+Architecture maintenance rule: when an architecture change affects public routes, navigation, page templates, metadata, schema, content types, audit expectations, or conversion paths, update the relevant validation tooling in the same change set. At minimum, review and update as needed:
+- `scripts/audit-site.js`
+- `scripts/seo-smoke-test.sh`
+- `scripts/seo_crawler.py`
+
+Do not treat architecture work as complete until the audit and test scripts either reflect the new architecture or are explicitly confirmed as already covering it.
+
+Follow-up validation tooling update for the Science research-library architecture:
+- Updated `scripts/audit-site.js` to check Science landing methodology/recent studies, Science article Breadcrumb schema, citation/reference exposure, Study Snapshot, evidence strength, limitations, consumer interpretation, references, and medical disclaimer.
+- Updated `scripts/seo-smoke-test.sh` to seed `/science` and assert Science landing/category/article architecture requirements during smoke tests.
+- Updated `scripts/seo_crawler.py` to recognize Science index/category/article URLs and emit Science Architecture issues for missing landing sections, category cards, Article/Breadcrumb schema, central study citations, required article sections, disclaimer, and internal funnel links.
+- Validation passed: `bash -n scripts/seo-smoke-test.sh`, `python3 -m py_compile scripts/seo_crawler.py`, `node --check scripts/audit-site.js`, and `npm run build`.
+
+Science article template update:
+- Added optional `sections` support to `data/science-articles.json` article objects without removing existing shallow fields.
+- Science article pages now render trusted JSON-provided section HTML in order, with H2 headings and generated anchor IDs.
+- Added an automatic table of contents when a Science article has four or more custom sections.
+- Added styling for long-form Science sections and table of contents.
+- Updated `scripts/audit-site.js` to recognize rendered long-form Science sections and flag missing TOC when four or more custom sections are present.
+- Validation passed: `node --check scripts/audit-site.js`, `python3 -m py_compile scripts/seo_crawler.py`, `bash -n scripts/seo-smoke-test.sh`, and `npm run build`.
+
+Affiliate CTA rendering update:
+- `lib/vendorUtils.js` now treats populated retailer destinations in `affiliateLinks.amazon`, `affiliateLinks.bestBuy`, `affiliateLinks.walmart`, and `affiliateLinks.rei` as active monetization destinations that may render buy-style CTAs.
+- Manufacturer/official-site links remain governed by vendor approval rules in `data/vendors.json`; pending or unknown manufacturer vendors should not show outbound official-site buttons.
+- Shared CTA output now uses buy-style labels such as `Buy Here on Amazon`, `Buy Here at Walmart`, `Buy Here at Best Buy`, and `Buy Here at REI` while preserving `rel="sponsored nofollow noopener noreferrer"` on outbound affiliate links.
+- Because `components/AffiliateButtons.js` is shared, the behavior applies to full review pages, review listing quick-look cards, review category cards, homepage featured products, Best Of cards, and comparison cards.
+- Updated `scripts/audit-site.js`, `scripts/seo-smoke-test.sh`, and `scripts/seo_crawler.py` so validation recognizes the new buy-style affiliate CTA labels.
+- Validation passed: `node --check scripts/audit-site.js`, `python3 -m py_compile scripts/seo_crawler.py`, `bash -n scripts/seo-smoke-test.sh`, and `npm run build`.

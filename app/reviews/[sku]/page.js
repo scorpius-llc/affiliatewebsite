@@ -6,6 +6,7 @@ import comparisons from '../../../data/comparisons.json';
 import guides from '../../../data/guides.json';
 import config from '../../../data/config.json';
 import AffiliateButtons from '../../../components/AffiliateButtons';
+import EvidenceReferencePanel from '../../../components/EvidenceReferencePanel';
 import ReviewCategoryProductGrid from '../../../components/ReviewCategoryProductGrid';
 import { getReviewCategoryPath, getReviewPath, getReviewSlug, getScienceArticlePath } from '../../../lib/routes';
 import {
@@ -16,6 +17,7 @@ import {
   getRelatedComparisonsForCategory,
   getRelatedGuidesForCategory,
   getRelatedScienceArticlesForCategory,
+  getProductPrimaryCategory,
 } from '../../../lib/categoryRegistry';
 import { getPrimaryProductCta } from '../../../lib/vendorUtils';
 
@@ -413,6 +415,7 @@ export default function ReviewPage({ params }) {
   const relatedComparisons = getRelatedComparisons(product);
   const relatedGuides = getRelatedGuides(product);
   const faqs = product.faqs || getReviewFaqs(product);
+  const primaryCategory = getProductPrimaryCategory(product);
 
   return (
     <div className="review-page">
@@ -482,6 +485,8 @@ export default function ReviewPage({ params }) {
               <h2>Performance</h2>
               <div dangerouslySetInnerHTML={{ __html: product.detailed_analysis || '<p>Performance notes are being expanded as product data is updated.</p>' }} />
             </section>
+
+            <EvidenceReferencePanel categorySlug={primaryCategory} title={`Research Context for ${product.name}`} />
 
             <section className="mt-5">
               <h2>Ownership Experience</h2>

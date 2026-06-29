@@ -35,6 +35,9 @@ const config = {
   ],
   merchantCtaKeywords: [
     "check current price",
+    "buy here",
+    "buy on",
+    "buy at",
     "check price on amazon",
     "view on official website",
     "view at best buy",
@@ -509,6 +512,8 @@ function parseHtmlPage(html, url, baseUrl) {
     faqSchemaPresent: schemaTypes.includes("FAQPage"),
     productSchemaPresent: schemaTypes.includes("Product"),
     articleSchemaPresent: schemaTypes.includes("Article") || schemaTypes.includes("BlogPosting"),
+    breadcrumbSchemaPresent: schemaTypes.includes("BreadcrumbList"),
+    scholarlyArticleSchemaPresent: schemaTypes.includes("ScholarlyArticle"),
     itemListSchemaPresent: schemaTypes.includes("ItemList"),
     ctaCount: ctaAnchors.length,
     ctaTexts: unique(ctaAnchors.map((link) => link.text)).slice(0, 20),
@@ -534,7 +539,16 @@ function parseHtmlPage(html, url, baseUrl) {
     hasBottomCta: hasText(html, ["final verdict", "bottom line", "final step", "best overall recommendation"]),
     hasEducationalSignals: hasText(html, ["how to", "guide", "benefits", "risks", "maintenance", "setup", "choose"]),
     hasKeyTakeaways: hasText(html, ["key takeaways"]),
+    hasStudySnapshot: hasText(html, ["study snapshot"]),
     hasStudiesReviewed: hasText(html, ["studies reviewed"]),
+    hasEvidenceStrength: hasText(html, ["strength of the evidence"]),
+    hasStudyLimitations: hasText(html, ["study limitations"]),
+    hasConsumerMeaning: hasText(html, ["what this means for consumers"]),
+    hasReferencesSection: hasText(html, ["references", "pubmed/source", "doi:"]),
+    scienceLongFormSectionCount: countPattern(html, /science-longform-section/gi),
+    hasScienceToc: lowerHtml.includes("science-toc") || hasText(html, ["table of contents"]),
+    hasRecentStudies: hasText(html, ["recently added studies"]),
+    hasScienceMethodology: hasText(html, ["how we evaluate scientific evidence"]),
     hasScienceDisclaimer: hasText(html, ["not medical advice", "informational purposes only", "consult a qualified health professional"]),
   };
 }
@@ -650,14 +664,24 @@ function addTypeSpecificIssues(page, issues) {
     if (page.ctaCount < 5) issues.push(issue("medium", "conversion", "Science index has too few category CTAs.", "Link clearly to each science category."));
     if (!page.hasFeaturedCategoryCards) issues.push(issue("medium", "trust", "Science index lacks visible category cards.", "Surface the research categories as structured cards."));
     if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Science index lacks a research trust statement.", "Explain how ThermaPeak summarizes research and avoids overstating claims."));
+    if (!page.hasRecentStudies) issues.push(issue("medium", "trust", "Science index lacks a Recently Added Studies section.", "Surface recent study records from the central study library."));
+    if (!page.hasScienceMethodology) issues.push(issue("medium", "trust", "Science index lacks evidence methodology language.", "Explain how ThermaPeak evaluates scientific evidence."));
   }
   if (isScienceCategory(page)) {
     if (page.ctaCount < 1) issues.push(issue("medium", "internal-linking", "Science category page has no article CTAs.", "Link to science article pages from each category."));
   }
   if (isScienceArticle(page)) {
     if (!page.articleSchemaPresent) issues.push(issue("high", "schema", "Science article is missing Article schema.", "Add Article JSON-LD to science article templates."));
+    if (!page.breadcrumbSchemaPresent) issues.push(issue("medium", "schema", "Science article is missing Breadcrumb schema.", "Add BreadcrumbList JSON-LD to science article templates."));
+    if (!page.scholarlyArticleSchemaPresent && !page.hasReferencesSection) issues.push(issue("medium", "schema", "Science article does not expose citation data.", "Include study citation data from data/studies.json in Article schema and visible references."));
     if (!page.hasKeyTakeaways) issues.push(issue("medium", "trust", "Science article is missing a Key Takeaways section.", "Add a visible Key Takeaways box near the top."));
+    if (!page.hasStudySnapshot) issues.push(issue("medium", "trust", "Science article is missing a Study Snapshot section.", "Show journal, publication year, study type, evidence level, participants, population, DOI, and PubMed where available."));
     if (!page.hasStudiesReviewed) issues.push(issue("medium", "trust", "Science article is missing a Studies Reviewed section.", "Summarize reviewed studies with evidence-strength labels."));
+    if (!page.hasEvidenceStrength) issues.push(issue("medium", "trust", "Science article is missing a Strength of the Evidence section.", "Explain the level and limits of the supporting evidence."));
+    if (!page.hasStudyLimitations) issues.push(issue("medium", "trust", "Science article is missing Study Limitations.", "List limitations from the referenced study records."));
+    if (!page.hasConsumerMeaning) issues.push(issue("medium", "trust", "Science article is missing consumer interpretation.", "Explain what the evidence means for buyers without overstating claims."));
+    if (!page.hasReferencesSection) issues.push(issue("medium", "trust", "Science article is missing References.", "Render visible references from the central studies library."));
+    if (page.scienceLongFormSectionCount >= 4 && !page.hasScienceToc) issues.push(issue("medium", "internal-linking", "Science article has long-form sections but no table of contents.", "Render a simple anchored table of contents when a Science article has four or more custom sections."));
     if (!page.hasScienceDisclaimer) issues.push(issue("high", "trust", "Science article is missing the medical disclaimer.", "Add the standard informational-only medical disclaimer."));
     if (
       page.internalLinksToRelatedContentTypes.guide < 1 &&
@@ -762,6 +786,8 @@ async function crawl(baseUrl) {
         faqSchemaPresent: false,
         productSchemaPresent: false,
         articleSchemaPresent: false,
+        breadcrumbSchemaPresent: false,
+        scholarlyArticleSchemaPresent: false,
         itemListSchemaPresent: false,
         ctaCount: 0,
         ctaTexts: [],
@@ -920,7 +946,7 @@ function bucketOutputs(pages, summary) {
     "pages.json": pages,
     "seo.json": pages.map((page) => pickPage(page, ["seoScore"], ["seo"])),
     "conversion.json": pages.map((page) => pickPage(page, ["conversionScore", "ctaCount", "ctaTexts", "firstCtaDomPosition", "affiliateOrMerchantLinkCount"], ["conversion"])),
-    "schema.json": pages.map((page) => pickPage(page, ["schemaTypes", "faqSchemaPresent", "productSchemaPresent", "articleSchemaPresent", "itemListSchemaPresent"], ["schema"])),
+    "schema.json": pages.map((page) => pickPage(page, ["schemaTypes", "faqSchemaPresent", "productSchemaPresent", "articleSchemaPresent", "breadcrumbSchemaPresent", "scholarlyArticleSchemaPresent", "itemListSchemaPresent"], ["schema"])),
     "internal-links.json": pages.map((page) => pickPage(page, ["internalLinkingScore", "internalLinks", "externalLinks", "internalLinksToRelatedContentTypes"], ["internal-linking"])),
     "production-readiness.json": {
       status: summary.productionReadinessStatus,

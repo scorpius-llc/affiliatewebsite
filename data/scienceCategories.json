@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "cold-exposure",
+    "featuredArticles": ["cold-plunge-benefits-research", "does-cold-exposure-increase-dopamine", "brown-fat-activation-cold-exposure"]
+  },
+  {
+    "slug": "sauna-heat-therapy",
+    "featuredArticles": ["sauna-benefits-research", "sauna-cardiovascular-health", "heat-exposure-longevity"]
+  },
+  {
+    "slug": "red-light-therapy",
+    "featuredArticles": ["red-light-therapy-explained", "red-light-therapy-recovery"]
+  },
+  {
+    "slug": "sleep-recovery",
+    "featuredArticles": ["sleep-quality-and-recovery", "hrv-explained"]
+  },
+  {
+    "slug": "performance-longevity",
+    "featuredArticles": ["hormesis-explained", "contrast-therapy-sauna-cold-plunge"]
+  }
+]

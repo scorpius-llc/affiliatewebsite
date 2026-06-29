@@ -25,6 +25,7 @@ SEED_PATHS=(
   "/reviews"
   "/best-of"
   "/comparisons"
+  "/science"
 )
 
 config_value() {
@@ -439,9 +440,9 @@ assert_review_monetization() {
     record_result "FAIL" "Review Monetization" "$url" "Product schema not found" "Add Product JSON-LD to review pages."
   fi
 
-  if grep -Eqi 'Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI' "$LAST_BODY" 2>/dev/null; then
+  if grep -Eqi 'Buy Here|Buy Here on Amazon|Buy Here at Best Buy|Buy Here at Walmart|Buy Here at REI|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI' "$LAST_BODY" 2>/dev/null; then
     record_result "PASS" "Review Monetization" "$url" "Standard affiliate CTA found" "No action needed."
-    if grep -Eqi '<a[^>]+href=["'\'']https?://[^"'\'']+["'\''][^>]*(sponsored|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI)' "$LAST_BODY" 2>/dev/null; then
+    if grep -Eqi '<a[^>]+href=["'\'']https?://[^"'\'']+["'\''][^>]*(sponsored|Buy Here|Buy Here on Amazon|Buy Here at Best Buy|Buy Here at Walmart|Buy Here at REI|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI)' "$LAST_BODY" 2>/dev/null; then
       record_result "PASS" "Review Monetization" "$url" "Outbound merchant CTA found" "No action needed."
     else
       record_result "FAIL" "Review Monetization" "$url" "Outbound merchant CTA not found" "Add an approved affiliate CTA link or hide merchant CTA text."
@@ -451,6 +452,67 @@ assert_review_monetization() {
   else
     record_result "FAIL" "Review Monetization" "$url" "No affiliate or internal fallback CTA found" "Add approved affiliate CTAs or internal funnel fallback CTAs."
   fi
+}
+
+assert_science_architecture() {
+  local url="$1"
+  local path
+  path="$(url_path "$url")"
+  case "$path" in
+    /science|/science/*) ;;
+    *) return ;;
+  esac
+
+  if [ "$path" = "/science" ]; then
+    if grep -Eqi 'Browse by Category|Featured Research|Recently Added Studies|How We Evaluate Scientific Evidence|Why Trust Our Research' "$LAST_BODY" 2>/dev/null; then
+      record_result "PASS" "Science Architecture" "$url" "Science research-library landing sections found" "No action needed."
+    else
+      record_result "FAIL" "Science Architecture" "$url" "Science landing page is missing research-library sections" "Render Featured Research, Browse by Category, Recently Added Studies, trust, and methodology sections."
+    fi
+    if grep -Eqi '/science/cold-water-immersion|/science/saunas|/science/contrast-therapy' "$LAST_BODY" 2>/dev/null; then
+      record_result "PASS" "Science Architecture" "$url" "Science category links found" "No action needed."
+    else
+      record_result "FAIL" "Science Architecture" "$url" "Science category links not found" "Populate Science navigation and category cards from the Science taxonomy."
+    fi
+    return
+  fi
+
+  case "$path" in
+    /science/*/*)
+      if grep -q '"@type":"Article"\|"@type": "Article"' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Article schema found" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science article is missing Article schema" "Generate Article JSON-LD from the Science article template."
+      fi
+      if grep -q '"@type":"BreadcrumbList"\|"@type": "BreadcrumbList"' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Breadcrumb schema found" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science article is missing Breadcrumb schema" "Generate BreadcrumbList JSON-LD for Science articles."
+      fi
+      if grep -Eqi 'Key Takeaways|Study Snapshot|Studies Reviewed|Strength of the Evidence|Study Limitations|What This Means for Consumers|References|not medical advice' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Science article research sections found" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science article is missing required research-library sections" "Render key takeaways, study snapshot, studies reviewed, evidence strength, limitations, consumer meaning, references, and disclaimer."
+      fi
+      if grep -q 'ScholarlyArticle\|doi:\|PubMed/source' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Central study references found" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science article does not expose central study references" "Render references from data/studies.json and include citation data in JSON-LD."
+      fi
+      if grep -Eqi '/guides/|/comparisons/|/best-of/|/reviews/' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Science article links into the commercial funnel" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science article lacks internal funnel links" "Link relevant Science articles to guides, comparisons, Best Of lists, or reviews."
+      fi
+      ;;
+    /science/*)
+      if grep -Eqi 'Research Library|Read Analysis|studies referenced' "$LAST_BODY" 2>/dev/null; then
+        record_result "PASS" "Science Architecture" "$url" "Science category page lists research articles" "No action needed."
+      else
+        record_result "FAIL" "Science Architecture" "$url" "Science category page lacks article cards" "Render Science article cards for categories that have published research."
+      fi
+      ;;
+  esac
 }
 
 audit_page_url() {
@@ -472,6 +534,7 @@ audit_page_url() {
   if [ "$LAST_STATUS" = "200" ]; then
     assert_canonical "Canonical Issues" "$url" "$expected_canonical"
     assert_review_monetization "$url"
+    assert_science_architecture "$url"
   fi
 
   local browser_status browser_effective browser_redirects

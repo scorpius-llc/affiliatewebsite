@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import config from '../data/config.json';
-import { getActiveReviewCategories, getAllProductCategories } from '../lib/categoryRegistry';
+import { getActiveReviewCategories } from '../lib/categoryRegistry';
+import { getScienceCategories } from '../lib/scienceLibrary';
 import { getReviewCategoryPath, getScienceCategoryPath } from '../lib/routes';
 
 export default function Navbar() {
   const reviewCategories = getActiveReviewCategories();
-  const scienceCategories = getAllProductCategories();
+  const scienceCategories = getScienceCategories();
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/best-of', label: 'Best Of' },

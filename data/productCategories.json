@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "cold-exposure",
+    "name": "Cold Exposure",
+    "navLabel": "Cold Exposure",
+    "description": "Cold plunge tubs, ice baths, chillers, and cold recovery equipment.",
+    "scienceDescription": "Research-informed explanations of cold plunges, ice baths, cold water immersion, and physiological adaptation.",
+    "heroTitle": "Cold Exposure Equipment",
+    "heroSubtitle": "Research-backed cold recovery products and buying guides."
+  },
+  {
+    "slug": "sauna-heat-therapy",
+    "name": "Sauna and Heat Therapy",
+    "navLabel": "Sauna and Heat Therapy",
+    "description": "Infrared saunas, traditional saunas, sauna blankets, and home heat therapy equipment.",
+    "scienceDescription": "Plain-English research summaries on sauna use, heat exposure, cardiovascular stress, and recovery adaptation.",
+    "heroTitle": "Sauna and Heat Therapy Equipment",
+    "heroSubtitle": "Home sauna products, heat therapy guides, and research-backed buying paths."
+  },
+  {
+    "slug": "red-light-therapy",
+    "name": "Red Light Therapy",
+    "navLabel": "Red Light Therapy",
+    "description": "Red light panels, near-infrared therapy devices, and recovery-focused light therapy equipment.",
+    "scienceDescription": "Evidence-focused explainers on red and near-infrared light therapy for recovery, soreness, and tissue response.",
+    "heroTitle": "Red Light Therapy Equipment",
+    "heroSubtitle": "Research-informed red light therapy product coverage as this category expands."
+  },
+  {
+    "slug": "sleep-recovery",
+    "name": "Sleep and Recovery",
+    "navLabel": "Sleep and Recovery",
+    "description": "Sleep optimization, recovery tracking, HRV, readiness, and overnight recovery tools.",
+    "scienceDescription": "Research-informed guidance on sleep quality, recovery signals, autonomic balance, HRV, and readiness.",
+    "heroTitle": "Sleep and Recovery Tools",
+    "heroSubtitle": "Products and explainers for better recovery, readiness, and sleep quality."
+  },
+  {
+    "slug": "performance-longevity",
+    "name": "Performance and Longevity",
+    "navLabel": "Performance and Longevity",
+    "description": "Performance recovery, longevity routines, hormesis tools, and recovery protocol equipment.",
+    "scienceDescription": "Explainers on hormesis, training adaptation, recovery trade-offs, and longevity-oriented performance routines.",
+    "heroTitle": "Performance and Longevity Equipment",
+    "heroSubtitle": "Tools and research context for long-term performance and recovery routines."
+  }
+]

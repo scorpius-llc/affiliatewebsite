@@ -1,0 +1,387 @@
+[
+  {
+    "id": "bleakley-2012-cwi-recovery",
+    "title": "Cold-water immersion (cryotherapy) for preventing and treating muscle soreness after exercise",
+    "authors": "Bleakley C, McDonough S, Gardner E, Baxter GD, Hopkins JT, Davison GW",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "publication_year": 2012,
+    "doi": "10.1002/14651858.CD008262.pub2",
+    "pubmed_id": "22513918",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22513918/",
+    "study_type": "Systematic review",
+    "evidence_level": "Systematic Review",
+    "participant_count": 366,
+    "population": "Physically active adults after exercise",
+    "topic_tags": ["cold-plunge", "recovery", "athletic-performance", "inflammation"],
+    "product_categories": ["cold-exposure"],
+    "summary": "A systematic review of cold-water immersion trials for post-exercise soreness and recovery outcomes.",
+    "key_findings": [
+      "Cold-water immersion may reduce perceived muscle soreness after exercise compared with passive recovery.",
+      "The evidence base included small studies with variable protocols, temperatures, and immersion durations.",
+      "Performance and long-term adaptation outcomes were less certain than short-term soreness outcomes."
+    ],
+    "limitations": [
+      "Small trial sizes and heterogeneous protocols limit certainty.",
+      "Outcomes were often subjective and short term.",
+      "Findings should not be generalized to all training goals."
+    ],
+    "consumer_takeaway": "Cold plunges may help some users feel less sore after hard sessions, but they should be used strategically rather than treated as a guaranteed recovery upgrade.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "roberts-2015-cwi-strength-adaptation",
+    "title": "Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training",
+    "authors": "Roberts LA, Raastad T, Markworth JF, et al.",
+    "journal": "The Journal of Physiology",
+    "publication_year": 2015,
+    "doi": "10.1113/JP270570",
+    "pubmed_id": "26174323",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26174323/",
+    "study_type": "Randomized controlled trial",
+    "evidence_level": "Randomized Controlled Trial",
+    "participant_count": 21,
+    "population": "Men completing resistance training",
+    "topic_tags": ["cold-plunge", "hypertrophy", "athletic-performance", "recovery"],
+    "product_categories": ["cold-exposure"],
+    "summary": "A controlled training study examining whether repeated post-lifting cold-water immersion affects strength-training adaptation.",
+    "key_findings": [
+      "Cold-water immersion after lifting was associated with smaller gains in muscle mass and strength compared with active recovery in this protocol.",
+      "The study supports caution when using cold exposure immediately after hypertrophy-focused training.",
+      "Findings do not mean cold exposure is always harmful; timing and goals matter."
+    ],
+    "limitations": [
+      "Small sample size and specific participant population.",
+      "Findings are most relevant to post-resistance-training cold immersion.",
+      "Different timing or endurance contexts may produce different trade-offs."
+    ],
+    "consumer_takeaway": "If muscle growth is the priority, avoid making cold plunges the default immediately after lifting unless the recovery trade-off is intentional.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "yoneshiro-2013-brown-fat-cold",
+    "title": "Recruited brown adipose tissue as an antiobesity agent in humans",
+    "authors": "Yoneshiro T, Aita S, Matsushita M, et al.",
+    "journal": "Journal of Clinical Investigation",
+    "publication_year": 2013,
+    "doi": "10.1172/JCI67803",
+    "pubmed_id": "23619361",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23619361/",
+    "study_type": "Human mechanistic study",
+    "evidence_level": "Mechanistic Study",
+    "participant_count": 51,
+    "population": "Healthy adult volunteers",
+    "topic_tags": ["cold-plunge", "brown-fat", "metabolism"],
+    "product_categories": ["cold-exposure"],
+    "summary": "A human study examining repeated cold exposure, brown adipose tissue recruitment, and energy expenditure markers.",
+    "key_findings": [
+      "Repeated cold exposure was associated with brown adipose tissue recruitment in some participants.",
+      "Cold-induced thermogenesis may increase energy expenditure, but individual response varies.",
+      "The findings are mechanistic and should not be translated into guaranteed fat-loss claims."
+    ],
+    "limitations": [
+      "Short intervention duration.",
+      "Mechanistic outcomes are not the same as long-term body-composition outcomes.",
+      "Individual variability in brown fat activity is substantial."
+    ],
+    "consumer_takeaway": "Cold exposure can affect thermogenic biology, but buying a cold plunge primarily for fat loss overstates the practical evidence.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "laukkanen-2015-sauna-mortality",
+    "title": "Association between sauna bathing and fatal cardiovascular and all-cause mortality events",
+    "authors": "Laukkanen T, Khan H, Zaccardi F, Laukkanen JA",
+    "journal": "JAMA Internal Medicine",
+    "publication_year": 2015,
+    "doi": "10.1001/jamainternmed.2014.8187",
+    "pubmed_id": "25705824",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25705824/",
+    "study_type": "Prospective cohort study",
+    "evidence_level": "Cohort Study",
+    "participant_count": 2315,
+    "population": "Middle-aged Finnish men",
+    "topic_tags": ["sauna", "cardiovascular", "longevity"],
+    "product_categories": ["sauna-heat-therapy"],
+    "summary": "A long-term cohort study associating sauna frequency with cardiovascular and all-cause mortality outcomes.",
+    "key_findings": [
+      "More frequent sauna bathing was associated with lower risk of several fatal cardiovascular outcomes in this cohort.",
+      "Longer sauna duration was also associated with lower risk in some analyses.",
+      "The study is observational and cannot prove sauna use caused the outcomes."
+    ],
+    "limitations": [
+      "Observational design leaves residual confounding possible.",
+      "Population was Finnish men, limiting generalizability.",
+      "Sauna habits may correlate with broader lifestyle patterns."
+    ],
+    "consumer_takeaway": "Sauna use has promising long-term association data, but it should be framed as a supportive recovery habit rather than a proven longevity treatment.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "laukkanen-2018-sauna-review",
+    "title": "Cardiovascular and other health benefits of sauna bathing: a review of the evidence",
+    "authors": "Laukkanen JA, Laukkanen T, Kunutsor SK",
+    "journal": "Mayo Clinic Proceedings",
+    "publication_year": 2018,
+    "doi": "10.1016/j.mayocp.2018.04.008",
+    "pubmed_id": "30077204",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30077204/",
+    "study_type": "Narrative review",
+    "evidence_level": "Systematic Review",
+    "participant_count": null,
+    "population": "Adults in sauna and passive heat research",
+    "topic_tags": ["sauna", "cardiovascular", "longevity", "inflammation"],
+    "product_categories": ["sauna-heat-therapy"],
+    "summary": "A review summarizing cardiovascular, vascular, and broader health evidence related to sauna bathing.",
+    "key_findings": [
+      "Sauna bathing produces heat stress that increases heart rate and circulation demand.",
+      "Evidence suggests possible cardiovascular and vascular benefits, especially in observational data.",
+      "The review emphasizes safety considerations and the need for appropriate individual context."
+    ],
+    "limitations": [
+      "Many health outcome data are observational.",
+      "Finnish sauna protocols may not match all home sauna formats.",
+      "Device type, temperature, and session duration vary."
+    ],
+    "consumer_takeaway": "Saunas may be a credible recovery and wellness tool, but protocol, heat tolerance, hydration, and medical context matter.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "bieuzen-2013-contrast-water-therapy",
+    "title": "Contrast water therapy and exercise induced muscle damage: a systematic review and meta-analysis",
+    "authors": "Bieuzen F, Bleakley CM, Costello JT",
+    "journal": "PLOS ONE",
+    "publication_year": 2013,
+    "doi": "10.1371/journal.pone.0062356",
+    "pubmed_id": "23637957",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23637957/",
+    "study_type": "Systematic review and meta-analysis",
+    "evidence_level": "Meta-analysis",
+    "participant_count": 377,
+    "population": "Adults after exercise-induced muscle damage protocols",
+    "topic_tags": ["contrast-therapy", "cold-plunge", "sauna", "recovery", "athletic-performance"],
+    "product_categories": ["cold-exposure", "sauna-heat-therapy"],
+    "summary": "A meta-analysis evaluating alternating hot and cold water exposure for recovery after exercise-induced muscle damage.",
+    "key_findings": [
+      "Contrast water therapy showed some recovery benefits versus passive recovery in selected outcomes.",
+      "Effects varied by protocol and comparison condition.",
+      "Evidence supports cautious use as a recovery tool, not a universal performance solution."
+    ],
+    "limitations": [
+      "Protocols differed across studies.",
+      "Many included trials were small.",
+      "Practical sauna-plus-plunge routines may not exactly match water-bath protocols."
+    ],
+    "consumer_takeaway": "Contrast routines may help some users manage soreness and recovery perception, but the exact hot/cold protocol matters.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "vanin-2018-photobiomodulation-performance",
+    "title": "Photobiomodulation therapy for the improvement of muscular performance and reduction of muscular fatigue associated with exercise in healthy people",
+    "authors": "Vanin AA, Verhagen E, Barboza SD, Costa LOP, Leal-Junior ECP",
+    "journal": "Lasers in Medical Science",
+    "publication_year": 2018,
+    "doi": "10.1007/s10103-017-2388-9",
+    "pubmed_id": "29143941",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29143941/",
+    "study_type": "Systematic review and meta-analysis",
+    "evidence_level": "Meta-analysis",
+    "participant_count": null,
+    "population": "Healthy people in exercise and photobiomodulation studies",
+    "topic_tags": ["red-light", "recovery", "athletic-performance", "inflammation"],
+    "product_categories": ["red-light-therapy"],
+    "summary": "A review and meta-analysis assessing photobiomodulation effects on exercise performance and fatigue outcomes.",
+    "key_findings": [
+      "Some studies suggest photobiomodulation may improve muscular performance or reduce fatigue markers.",
+      "Protocol variables such as wavelength, dose, timing, and device output strongly influence outcomes.",
+      "Consumer claims should be specific to protocols, not broad red-light promises."
+    ],
+    "limitations": [
+      "Study protocols and devices vary widely.",
+      "Dose-response relationships are difficult for consumers to interpret.",
+      "Many commercial devices do not match research protocols."
+    ],
+    "consumer_takeaway": "Red light therapy may have recovery potential, but device specs and dosing matter more than generic wellness claims.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "halson-2014-sleep-athletes",
+    "title": "Sleep in elite athletes and nutritional interventions to enhance sleep",
+    "authors": "Halson SL",
+    "journal": "Sports Medicine",
+    "publication_year": 2014,
+    "doi": "10.1007/s40279-014-0147-0",
+    "pubmed_id": "24633660",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24633660/",
+    "study_type": "Review",
+    "evidence_level": "Systematic Review",
+    "participant_count": null,
+    "population": "Athletes and physically active adults",
+    "topic_tags": ["sleep", "recovery", "athletic-performance", "mental-health"],
+    "product_categories": ["sleep-recovery"],
+    "summary": "A review of sleep needs, sleep disruption, and recovery considerations in athletic populations.",
+    "key_findings": [
+      "Sleep is a foundational recovery variable for athletes.",
+      "Travel, training schedule, stress, and environment can impair sleep quality.",
+      "Recovery technology should not distract from basic sleep hygiene and schedule consistency."
+    ],
+    "limitations": [
+      "Review focuses heavily on athlete contexts.",
+      "Nutritional interventions and sleep tools vary in evidence quality.",
+      "Sleep needs differ by individual."
+    ],
+    "consumer_takeaway": "Recovery products work best when sleep fundamentals are already protected; poor sleep can undermine any recovery routine.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "shaffer-2017-hrv-overview",
+    "title": "An overview of heart rate variability metrics and norms",
+    "authors": "Shaffer F, Ginsberg JP",
+    "journal": "Frontiers in Public Health",
+    "publication_year": 2017,
+    "doi": "10.3389/fpubh.2017.00258",
+    "pubmed_id": "29034226",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29034226/",
+    "study_type": "Review",
+    "evidence_level": "Systematic Review",
+    "participant_count": null,
+    "population": "Adults in heart rate variability research",
+    "topic_tags": ["sleep", "recovery", "mental-health", "athletic-performance"],
+    "product_categories": ["sleep-recovery"],
+    "summary": "A methodological overview of HRV metrics, interpretation, and common norms.",
+    "key_findings": [
+      "HRV can reflect autonomic nervous system regulation, but interpretation depends on metric, context, and measurement quality.",
+      "Single readings are less useful than trends under consistent measurement conditions.",
+      "Consumer wearables should be used as directional tools, not diagnostic devices."
+    ],
+    "limitations": [
+      "HRV norms vary by age, fitness, health status, and measurement method.",
+      "Consumer devices may not match research-grade measurement reliability.",
+      "HRV does not identify one specific cause of stress or fatigue."
+    ],
+    "consumer_takeaway": "HRV can help structure recovery decisions, but trends and context matter more than a single readiness score.",
+    "last_reviewed": "2026-06-26"
+  },
+  {
+    "id": "shevchuk-2008-cold-depression-hypothesis",
+    "title": "Adapted cold shower as a potential treatment for depression",
+    "authors": "Shevchuk NA",
+    "journal": "Medical Hypotheses",
+    "publication_year": 2008,
+    "doi": "10.1016/j.mehy.2007.04.052",
+    "pubmed_id": "17993252",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17993252/",
+    "study_type": "Hypothesis paper",
+    "evidence_level": "Mechanistic Study",
+    "participant_count": null,
+    "population": "Mechanistic mental health hypothesis",
+    "topic_tags": ["cold-plunge", "mental-health", "immune-system"],
+    "product_categories": ["cold-exposure"],
+    "summary": "A mechanistic hypothesis paper proposing possible mood-related effects of adapted cold showers.",
+    "key_findings": [
+      "The paper proposes plausible mechanisms but is not clinical proof.",
+      "Cold exposure may influence arousal and stress pathways.",
+      "Mental health claims require controlled clinical research."
+    ],
+    "limitations": [
+      "Hypothesis paper, not a randomized clinical trial.",
+      "Does not establish efficacy for depression treatment.",
+      "Should not be used to market cold exposure as mental health therapy."
+    ],
+    "consumer_takeaway": "Cold exposure may feel mood-lifting for some users, but it is not a substitute for professional mental health care.",
+    "last_reviewed": "2026-06-26"
+  },
+    {
+      "id": "machado-2016-cwi-dose-response",
+      "title": "Can Water Temperature and Immersion Time Influence the Effect of Cold Water Immersion on Muscle Soreness? A Systematic Review and Meta-Analysis",
+      "authors": "Machado AF, Ferreira PH, Micheletti JK, et al.",
+      "journal": "Sports Medicine",
+      "publication_year": 2016,
+      "doi": "10.1007/s40279-015-0431-7",
+      "pubmed_id": "26581833",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26581833/",
+      "study_type": "Systematic review and meta-analysis",
+      "evidence_level": "Meta-analysis",
+      "participant_count": null,
+      "population": "Physically active adults after exercise",
+      "topic_tags": ["cold-plunge", "recovery", "athletic-performance", "inflammation"],
+      "product_categories": ["cold-exposure"],
+      "summary": "A systematic review and meta-analysis evaluating whether water temperature and immersion duration influence the effect of cold-water immersion on post-exercise muscle soreness.",
+      "key_findings": [
+        "Cold-water immersion was slightly better than passive recovery for managing post-exercise muscle soreness.",
+        "The review found a dose-response pattern, with the best soreness outcomes associated with water temperatures between 11 and 15°C.",
+        "The best immersion duration range was approximately 11 to 15 minutes."
+      ],
+      "limitations": [
+        "The authors noted low quality in parts of the included evidence base.",
+        "Effect sizes were relatively small.",
+        "Protocols varied across studies, so the findings should be applied as a practical range rather than a rigid rule."
+      ],
+      "consumer_takeaway": "For buyers, this study supports the value of cold plunges that make it easy to hold a consistent water temperature and repeat sessions in the 10-to-15-minute range.",
+      "last_reviewed": "2026-06-29"
+    },
+    {
+      "id": "xiao-2023-cwi-fatigue-recovery",
+      "title": "Effects of Cold Water Immersion After Exercise on Fatigue Recovery and Exercise Performance: Meta-Analysis",
+      "authors": "Xiao F, Kabachkova AV, Jiao L, et al.",
+      "journal": "Frontiers in Physiology",
+      "publication_year": 2023,
+      "doi": "10.3389/fphys.2023.1006512",
+      "pubmed_id": "36744038",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36744038/",
+      "study_type": "Meta-analysis",
+      "evidence_level": "Meta-analysis",
+      "participant_count": null,
+      "population": "Adults after exercise and high-intensity exercise protocols",
+      "topic_tags": ["cold-plunge", "recovery", "athletic-performance", "fatigue", "inflammation"],
+      "product_categories": ["cold-exposure"],
+      "summary": "A meta-analysis examining cold-water immersion after exercise for fatigue recovery, muscle soreness, and exercise performance outcomes.",
+      "key_findings": [
+        "Cold-water immersion after exercise was associated with reduced muscle soreness.",
+        "The review concluded that post-exercise cold-water immersion can accelerate fatigue recovery.",
+        "The findings support immediate post-exercise cold-water immersion as a practical recovery tool for athletes and active users."
+      ],
+      "limitations": [
+        "Included studies varied in immersion sites, temperatures, and exercise protocols.",
+        "Recovery outcomes were not identical across all included studies.",
+        "The findings are strongest for soreness and fatigue recovery, not for every possible performance measure."
+      ],
+      "consumer_takeaway": "This study supports cold plunges as a practical recovery tool after demanding workouts, especially when the buyer wants a repeatable way to reduce soreness and feel ready for the next session.",
+      "last_reviewed": "2026-06-29"
+    },
+  {
+    "id": "zhu-2026-cwi-muscle-damage",
+    "title": "Effects of Cold-Water Immersion at Different Body Regions on Post-Exercise Muscle Damage Recovery: A Systematic Review and Meta-Analysis",
+    "authors": "Zhu Y, Yang L, Liu T, Yao F, Wang Q, Yi Z",
+    "journal": "Frontiers in Sports and Active Living",
+    "publication_year": 2026,
+    "doi": "10.3389/fspor.2026.1738075",
+    "pubmed_id": "41716304",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41716304/",
+    "study_type": "Systematic review and meta-analysis",
+    "evidence_level": "Meta-analysis",
+    "participant_count": null,
+    "population": "Adults in randomized controlled trials after exercise-induced muscle damage",
+    "topic_tags": [
+      "cold-plunge",
+      "recovery",
+      "athletic-performance",
+      "inflammation",
+      "muscle-damage"
+    ],
+    "product_categories": [
+      "cold-exposure"
+    ],
+    "summary": "A systematic review and meta-analysis of randomized controlled trials evaluating cold-water immersion at different body regions for post-exercise muscle damage recovery.",
+    "key_findings": [
+      "Cold-water immersion significantly reduced post-exercise creatine kinase levels compared with control conditions.",
+      "Cold-water immersion significantly alleviated delayed-onset muscle soreness compared with control conditions.",
+      "The analysis did not find significant benefits for countermovement jump or maximal voluntary isometric contraction recovery."
+    ],
+    "limitations": [
+      "Benefits were clearer for soreness and creatine kinase than for strength or jump-performance recovery.",
+      "Body-region protocols varied across trials.",
+      "Findings should be applied to recovery and soreness management rather than broad performance claims."
+    ],
+    "consumer_takeaway": "This study supports cold-water immersion as a soreness and muscle-damage recovery tool, reinforcing the value of cold plunges that make regular, controlled immersion easier.",
+    "last_reviewed": "2026-06-29"
+  }
+]

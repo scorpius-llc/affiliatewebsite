@@ -1804,3 +1804,216 @@ footer a {
     align-items: stretch;
   }
 }
+
+/* --- Science Research Library Enhancements --- */
+.science-intro-panel,
+.science-method-card,
+.science-newsletter-placeholder,
+.science-empty-state,
+.science-snapshot-card,
+.evidence-reference-panel {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+    color: var(--text-light);
+    padding: 1.5rem;
+}
+
+.science-intro-panel {
+    margin: 2rem 0 0;
+    text-align: center;
+}
+
+.science-intro-panel p,
+.science-method-card p,
+.science-newsletter-placeholder p,
+.science-empty-state p,
+.science-snapshot-card dd,
+.evidence-reference-panel p,
+.evidence-reference-card p,
+.science-references-section li {
+    color: var(--text-body);
+}
+
+.science-method-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 3rem;
+}
+
+.science-method-card ul,
+.science-study-card ul,
+.science-content-section ul {
+    color: var(--text-body);
+    margin-bottom: 0;
+}
+
+.science-newsletter-placeholder {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.science-empty-state {
+    margin-top: 1rem;
+}
+
+.science-breadcrumbs {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+}
+
+.science-breadcrumbs a {
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.science-snapshot-card {
+    margin-top: 3rem;
+}
+
+.science-snapshot-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    margin: 1.25rem 0 0;
+}
+
+.science-snapshot-grid div {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 0.9rem;
+}
+
+.science-snapshot-grid dt {
+    color: var(--accent-blue);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.science-snapshot-grid dd {
+    margin: 0;
+}
+
+.science-evidence-stack,
+.evidence-reference-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.science-evidence-stack {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.science-references-section {
+    margin-top: 3rem;
+}
+
+.science-references-section ol {
+    color: var(--text-body);
+    padding-left: 1.25rem;
+}
+
+.science-toc {
+    background: linear-gradient(145deg, rgba(0, 179, 255, 0.1), rgba(255, 255, 255, 0.035));
+    border: 1px solid rgba(0, 179, 255, 0.22);
+    border-radius: 18px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
+    margin-top: 3rem;
+    padding: 1.35rem;
+}
+
+.science-toc h2 {
+    color: var(--text-light);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.science-toc ol {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.science-toc li {
+    color: var(--text-muted);
+}
+
+.science-toc a {
+    color: var(--text-light);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.science-toc a:hover {
+    color: var(--accent-blue);
+}
+
+.science-longform-sections {
+    display: grid;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.science-longform-section {
+    scroll-margin-top: 120px;
+}
+
+.science-section-body {
+    max-width: 76ch;
+}
+
+.science-section-body p,
+.science-section-body li {
+    color: var(--text-body);
+    font-size: 1.06rem;
+    line-height: 1.85;
+}
+
+.science-section-body p,
+.science-section-body ul,
+.science-section-body ol {
+    margin-bottom: 1.15rem;
+}
+
+.science-section-body a {
+    color: var(--accent-blue);
+    font-weight: 800;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+}
+
+.science-section-body strong {
+    color: var(--text-light);
+}
+
+.evidence-reference-panel {
+    border-color: rgba(0, 179, 255, 0.24);
+}
+
+.evidence-reference-card {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1rem;
+}
+
+.evidence-reference-card h3 {
+    color: var(--text-light);
+    font-size: 1.02rem;
+    margin-top: 0.75rem;
+}
+
+.evidence-article-links {
+    margin-top: 1.25rem;
+}

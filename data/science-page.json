@@ -1,0 +1,89 @@
+{
+  "title": "The Science Behind Recovery",
+  "subtitle": "Research-backed explanations of cold exposure, sauna use, contrast therapy, red light therapy, sleep, performance, and recovery routines.",
+  "intro": "ThermaPeak uses peer-reviewed research to explain how recovery methods like cold-water immersion, sauna bathing, contrast therapy, and red light therapy support real-world wellness and performance routines.",
+  "featured_articles": [
+    "cold-plunge-muscle-soreness-recovery",
+    "cold-plunge-benefits-research",
+    "sauna-benefits-research",
+    "contrast-therapy-sauna-cold-plunge",
+    "red-light-therapy-explained",
+    "sleep-quality-and-recovery",
+    "hrv-explained"
+  ],
+  "featured_categories": [
+    {
+      "slug": "cold-water-immersion",
+      "name": "Cold Water Immersion",
+      "description": "Research on cold plunges, ice baths, muscle soreness, fatigue recovery, brown fat, and training routines."
+    },
+    {
+      "slug": "saunas",
+      "name": "Saunas",
+      "description": "Research on passive heat exposure, cardiovascular strain, recovery, relaxation, and long-term health associations."
+    },
+    {
+      "slug": "contrast-therapy",
+      "name": "Contrast Therapy",
+      "description": "Evidence on alternating heat and cold for soreness, perceived recovery, circulation, and routine design."
+    },
+    {
+      "slug": "red-light-therapy",
+      "name": "Red Light Therapy",
+      "description": "Photobiomodulation research for recovery, fatigue, inflammation, skin health, and protocol-dependent outcomes."
+    },
+    {
+      "slug": "sleep-recovery",
+      "name": "Sleep & Recovery",
+      "description": "Research on sleep, HRV, recovery readiness, and the foundation beneath recovery technology."
+    },
+    {
+      "slug": "athletic-performance",
+      "name": "Athletic Performance",
+      "description": "Evidence on training adaptation, fatigue, soreness, recovery timing, and performance routines."
+    },
+    {
+      "slug": "longevity",
+      "name": "Longevity",
+      "description": "Research on long-term health associations, heat exposure, recovery habits, and lifestyle context."
+    },
+    {
+      "slug": "mental-health",
+      "name": "Mental Health",
+      "description": "Research-informed coverage of stress, mood, arousal, resilience, and mental-health-adjacent recovery claims."
+    },
+    {
+      "slug": "inflammation",
+      "name": "Inflammation",
+      "description": "Research on soreness, inflammatory markers, tissue stress, muscle damage, and recovery interpretation."
+    },
+    {
+      "slug": "cardiovascular-health",
+      "name": "Cardiovascular Health",
+      "description": "Evidence on vascular function, heart-rate response, blood pressure, passive heat exposure, and safety context."
+    },
+    {
+      "slug": "metabolism",
+      "name": "Metabolism",
+      "description": "Research on thermogenesis, brown fat, energy expenditure, cold exposure, and realistic body-composition context."
+    },
+    {
+      "slug": "immune-function",
+      "name": "Immune Function",
+      "description": "Emerging evidence around stress exposure, immune signaling, inflammation, and recovery routines."
+    }
+  ],
+  "why_this_matters": "Recovery products are most useful when they help people apply studied protocols consistently. ThermaPeak connects scientific findings to practical product features such as temperature control, insulation, heating performance, comfort, sanitation, and ease of ownership.",
+  "methodology": [
+    "We prioritize peer-reviewed human research, systematic reviews, meta-analyses, randomized trials, and large cohort studies when available.",
+    "We summarize what the research found in plain language and connect those findings to practical product features and recovery routines.",
+    "We link directly to the underlying papers whenever possible so readers can review the original research.",
+    "We distinguish between product categories that enable studied protocols and specific products that have been directly tested.",
+    "We avoid disease-treatment claims and focus on consumer-relevant outcomes such as soreness, perceived recovery, sleep, relaxation, heat exposure, and routine consistency."
+  ],
+  "faq_ids": [
+    "science-medical-advice",
+    "strongest-evidence",
+    "how-studies-used"
+  ]
+}

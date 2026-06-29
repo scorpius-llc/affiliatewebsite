@@ -1,11 +1,11 @@
 import bestLists from '../data/best-lists.json';
 import comparisons from '../data/comparisons.json';
 import guides from '../data/guides.json';
-import scienceArticles from '../data/scienceArticles.json';
 import products from '../data/products.json';
 import config from '../data/config.json';
 import { getReviewCategoryPath, getReviewPath, getScienceArticlePath, getScienceCategoryPath } from '../lib/routes';
-import { getActiveReviewCategories, getAllProductCategories } from '../lib/categoryRegistry';
+import { getActiveReviewCategories } from '../lib/categoryRegistry';
+import { getPublishedScienceArticles, getScienceCategories } from '../lib/scienceLibrary';
 
 const URL = `https://${config.domain}`;
 
@@ -66,13 +66,12 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  const scienceCategoryRoutes = getAllProductCategories().map((category) => ({
+  const scienceCategoryRoutes = getScienceCategories().map((category) => ({
     url: `${URL}${getScienceCategoryPath(category.slug)}`,
     lastModified: new Date(),
   }));
 
-  const scienceArticleRoutes = scienceArticles
-    .filter((article) => article.status === 'published')
+  const scienceArticleRoutes = getPublishedScienceArticles()
     .map((article) => ({
       url: `${URL}${getScienceArticlePath(article.categorySlug, article.slug)}`,
       lastModified: new Date(article.lastUpdated || Date.now()),

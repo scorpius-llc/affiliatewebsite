@@ -361,7 +361,7 @@
     "approx_price": 8999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://www.renutherapy.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -537,7 +537,7 @@
     "approx_price": 6500,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://edgetheorylabs.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -624,7 +624,7 @@
     "approx_price": 2499,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://icebarrel.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -712,7 +712,7 @@
     "approx_price": 5500,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://penguinchillers.com/",
+      "manufacturer": "https://penguinchillers.com/products/cold-therapy-chiller",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -799,7 +799,7 @@
     "approx_price": 1999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://icebarrel.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -888,7 +888,7 @@
     "approx_price": 1799,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://icebarrel.com/products/ice-barrel-300-bundle",
+      "manufacturer": "https://icebarrel.com/products/ice-barrel-300",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -976,7 +976,7 @@
     "approx_price": 129,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://thecoldpod.com/",
+      "manufacturer": "https://us.thecoldpod.com/products/the-cold-pod-usa",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1064,7 +1064,7 @@
     "product_type": "Cold Plunge",
     "approx_price": 99,
     "affiliateLinks": {
-      "amazon": "https://www.amazon.com/s?k=g+ganen+ice+bath+tub",
+      "amazon": "",
       "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
@@ -1152,7 +1152,7 @@
     "approx_price": 799,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://polarrecovery.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1239,7 +1239,7 @@
     "approx_price": 269,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://www.tractorsupply.com/tsc/search/tuff%20stuff%20stock%20tank",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1328,7 +1328,7 @@
     "approx_price": 129,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://nurecover.com/",
+      "manufacturer": "https://nurecover.com/products/plunge",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1416,7 +1416,7 @@
     "approx_price": 169,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://recoverfit.com/collections/lumi-therapy-ice-baths",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1500,12 +1500,12 @@
     "vendorId": "vevor",
     "image": "/images/ThermaPeakLogo.png",
     "product_type": "Cold Plunge",
-    "approx_price": 79,
+    "approx_price": 54,
     "affiliateLinks": {
-      "amazon": "https://www.amazon.com/s?k=vevor+ice+bath+tub",
+      "amazon": "https://www.amazon.com/dp/B0DC6QW3PD?tag=scorpiusllc-20",
       "manufacturer": "",
       "bestBuy": "",
-      "walmart": "",
+      "walmart": "https://www.walmart.com/ip/VEVOR-Ice-Bath-Tub-Cold-Water-Therapy-Plunge-Tub-Athletes-Portable-Outdoor-Ice-Barrel-Plunge-Pool-Recovery-90-Gal-Inflatable-Folding-Bathtub-Cover-Ho/17209554752",
       "rei": ""
     },
     "brand": "VEVOR",
@@ -1589,7 +1589,7 @@
     "product_type": "Cold Plunge",
     "approx_price": 89,
     "affiliateLinks": {
-      "amazon": "https://www.amazon.com/s?k=calmmax+ice+bath",
+      "amazon": "",
       "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
@@ -1677,7 +1677,7 @@
     "approx_price": 399,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://hydragun.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1764,7 +1764,7 @@
     "approx_price": 6099,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://sunhomesaunas.com/products/sun-home-equinox%E2%84%A2-2-person-full-spectrum-infrared-sauna",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1852,7 +1852,7 @@
     "approx_price": 6599,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://sunhomesaunas.com/collections/all",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -1939,7 +1939,7 @@
     "approx_price": 1999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://dynamicsaunasdirect.com/collections/new-sauna",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2113,7 +2113,7 @@
     "approx_price": 3499,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://jnhlifestyles.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2198,10 +2198,10 @@
     "product_type": "Infrared Sauna",
     "approx_price": 279,
     "affiliateLinks": {
-      "amazon": "https://www.amazon.com/s?k=serenelife+portable+sauna",
+      "amazon": "https://www.amazon.com/dp/B079QXK2TQ?tag=scorpiusllc-20",
       "manufacturer": "",
       "bestBuy": "",
-      "walmart": "",
+      "walmart": "https://www.walmart.com/ip/SereneLife-Portable-Infrared-Home-Spa-1-Person-Steam-Sauna-with-Foot-Heating-Pad/920013992",
       "rei": ""
     },
     "brand": "SereneLife",
@@ -2377,7 +2377,7 @@
     "approx_price": 5715,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2466,7 +2466,7 @@
     "approx_price": 4770,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2554,7 +2554,7 @@
     "approx_price": 4999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://almostheaven.com/collections/saunas",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2641,7 +2641,7 @@
     "approx_price": 6999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://www.dundalkleisurecraft.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2729,7 +2729,7 @@
     "approx_price": 4299,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://aleko.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2817,7 +2817,7 @@
     "approx_price": 8999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://goldendesigninc.com/collections/products",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2904,7 +2904,7 @@
     "approx_price": 4999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://goldendesigninc.com/collections/products",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -2990,7 +2990,7 @@
     "approx_price": 2799,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://dynamicsaunasdirect.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -3076,7 +3076,7 @@
     "approx_price": 5999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://jnhlifestyles.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -3163,7 +3163,7 @@
     "approx_price": 9999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://shop-us.sunlighten.com/collections/all",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -3249,7 +3249,7 @@
     "approx_price": 10599,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://sunhomesaunas.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""
@@ -3335,7 +3335,7 @@
     "approx_price": 8999,
     "affiliateLinks": {
       "amazon": "",
-      "manufacturer": "https://infraredsauna.com/",
+      "manufacturer": "",
       "bestBuy": "",
       "walmart": "",
       "rei": ""

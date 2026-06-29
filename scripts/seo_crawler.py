@@ -30,6 +30,11 @@ PRODUCT_CATEGORY_SLUGS = {
     for category in json.loads((ROOT / "data" / "productCategories.json").read_text())
     if category.get("slug")
 } if (ROOT / "data" / "productCategories.json").exists() else set()
+SCIENCE_CATEGORY_SLUGS = {
+    category.get("slug")
+    for category in json.loads((ROOT / "data" / "science-page.json").read_text()).get("featured_categories", [])
+    if category.get("slug")
+} if (ROOT / "data" / "science-page.json").exists() else set()
 
 
 class LinkParser(html.parser.HTMLParser):
@@ -200,15 +205,74 @@ def is_review_url(url: str) -> bool:
     return slug not in PRODUCT_CATEGORY_SLUGS
 
 
+def is_science_url(url: str) -> bool:
+    path = urllib.parse.urlparse(url).path.rstrip("/")
+    return path == "/science" or path.startswith("/science/")
+
+
+def is_science_index_url(url: str) -> bool:
+    return urllib.parse.urlparse(url).path.rstrip("/") == "/science"
+
+
+def is_science_category_url(url: str) -> bool:
+    path = urllib.parse.urlparse(url).path.rstrip("/")
+    if not path.startswith("/science/"):
+        return False
+    parts = [part for part in path.split("/") if part]
+    return len(parts) == 2 and parts[-1] in SCIENCE_CATEGORY_SLUGS
+
+
+def is_science_article_url(url: str) -> bool:
+    path = urllib.parse.urlparse(url).path.rstrip("/")
+    parts = [part for part in path.split("/") if part]
+    return len(parts) == 3 and parts[0] == "science"
+
+
 def review_monetization_checks(body: bytes) -> dict:
     html = body.decode("utf-8", errors="replace")
-    cta_pattern = r"Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI"
+    cta_pattern = r"Buy Here|Buy Here on Amazon|Buy Here at Best Buy|Buy Here at Walmart|Buy Here at REI|Check Current Price|Check Price on Amazon|View on Official Website|View at Best Buy|View at Walmart|View at REI"
     fallback_pattern = r"See Rankings|Compare Alternatives|Read Review"
     return {
         "product_schema": bool(re.search(r'"@type"\s*:\s*"Product"', html, flags=re.I)),
         "primary_cta": bool(re.search(cta_pattern, html, flags=re.I)),
         "merchant_cta": bool(re.search(rf'<a\b[^>]+href=["\']https?://[^"\']+["\'][^>]*(?:sponsored|{cta_pattern})', html, flags=re.I)),
         "fallback_cta": bool(re.search(fallback_pattern, html, flags=re.I)),
+    }
+
+
+def science_architecture_checks(body: bytes, url: str) -> dict:
+    html = body.decode("utf-8", errors="replace")
+    text = re.sub(r"<[^>]+>", " ", html)
+    text = re.sub(r"\s+", " ", text).lower()
+    return {
+        "landing_sections": all(phrase in text for phrase in [
+            "featured research",
+            "browse by category",
+            "recently added studies",
+            "why trust our research",
+            "how we evaluate scientific evidence",
+        ]),
+        "category_links": all(path in html for path in [
+            "/science/cold-water-immersion",
+            "/science/saunas",
+            "/science/contrast-therapy",
+        ]),
+        "category_cards": "read analysis" in text or "research library" in text,
+        "article_schema": bool(re.search(r'"@type"\s*:\s*"Article"', html, flags=re.I)),
+        "breadcrumb_schema": bool(re.search(r'"@type"\s*:\s*"BreadcrumbList"', html, flags=re.I)),
+        "faq_schema": bool(re.search(r'"@type"\s*:\s*"FAQPage"', html, flags=re.I)),
+        "citation_schema": bool(re.search(r'"@type"\s*:\s*"ScholarlyArticle"', html, flags=re.I)) or "doi:" in text or "pubmed/source" in text,
+        "key_sections": all(phrase in text for phrase in [
+            "key takeaways",
+            "study snapshot",
+            "studies reviewed",
+            "strength of the evidence",
+            "study limitations",
+            "what this means for consumers",
+            "references",
+        ]),
+        "disclaimer": "not medical advice" in text and "informational purposes only" in text,
+        "funnel_links": any(path in html for path in ["/guides/", "/comparisons/", "/best-of/", "/reviews/"]),
     }
 
 
@@ -376,6 +440,29 @@ def main() -> int:
                     add_issue(issues, "High", "Review Monetization", url, "Review page shows merchant CTA text without an outbound affiliate CTA", "Only show merchant CTA text when approved vendor affiliate links render.")
                 if not review_checks["primary_cta"] and not review_checks["fallback_cta"]:
                     add_issue(issues, "High", "Review Monetization", url, "Review page is missing affiliate or internal fallback CTAs", "Add approved affiliate CTAs or internal funnel fallback CTAs.")
+            if is_science_url(url):
+                science_checks = science_architecture_checks(result["body"], url)
+                if is_science_index_url(url):
+                    if not science_checks["landing_sections"]:
+                        add_issue(issues, "High", "Science Architecture", url, "Science landing page is missing research-library sections", "Render Featured Research, Browse by Category, Recently Added Studies, trust, and methodology sections.")
+                    if not science_checks["category_links"]:
+                        add_issue(issues, "High", "Science Architecture", url, "Science landing page is missing core category links", "Populate Science category cards and navigation from the Science taxonomy.")
+                elif is_science_category_url(url):
+                    if not science_checks["category_cards"]:
+                        add_issue(issues, "Medium", "Science Architecture", url, "Science category page lacks article cards", "Render Science article cards for categories with published research.")
+                elif is_science_article_url(url):
+                    if not science_checks["article_schema"]:
+                        add_issue(issues, "High", "Science Architecture", url, "Science article is missing Article schema", "Generate Article JSON-LD from the Science article template.")
+                    if not science_checks["breadcrumb_schema"]:
+                        add_issue(issues, "Medium", "Science Architecture", url, "Science article is missing Breadcrumb schema", "Generate BreadcrumbList JSON-LD for Science articles.")
+                    if not science_checks["citation_schema"]:
+                        add_issue(issues, "Medium", "Science Architecture", url, "Science article does not expose central study citations", "Render references from data/studies.json and include citation data in JSON-LD.")
+                    if not science_checks["key_sections"]:
+                        add_issue(issues, "Medium", "Science Architecture", url, "Science article is missing required research-library sections", "Render key takeaways, study snapshot, studies reviewed, evidence strength, limitations, consumer meaning, and references.")
+                    if not science_checks["disclaimer"]:
+                        add_issue(issues, "High", "Science Architecture", url, "Science article is missing the medical disclaimer", "Add the standard informational-only medical disclaimer.")
+                    if not science_checks["funnel_links"]:
+                        add_issue(issues, "Medium", "Science Architecture", url, "Science article lacks internal funnel links", "Link relevant Science articles to guides, comparisons, Best Of lists, or reviews.")
 
         crawl_rows.append({
             "url": url,
@@ -435,7 +522,7 @@ def main() -> int:
         for url in orphan_candidates[:50]:
             add_issue(issues, "Low", "Internal Links", url, "Sitemap URL was not reached by the crawl", "Review internal linking from crawlable pages.")
 
-    redirect_test_paths = ["/", "/about", "/guides", "/reviews", "/best-of", "/comparisons"]
+    redirect_test_paths = ["/", "/about", "/guides", "/reviews", "/best-of", "/comparisons", "/science"]
     if args.apex_url and base_url == canonical_base:
         apex_base = normalize_base(args.apex_url)
         for path in redirect_test_paths:
