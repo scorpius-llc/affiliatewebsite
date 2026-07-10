@@ -60,10 +60,10 @@
       "Not the most portable option"
     ],
     "who_is_this_for": "<p>This is ideal for <strong>serious cold-plunge users</strong> who want an all-in-one system and plan to use it multiple times per week.</p><ul><li><strong>Home gym owners</strong> building a recovery corner</li><li>People who want <strong>minimal DIY</strong> and predictable temps</li><li>Users who value <strong>sanitation/filtration</strong> as part of the package</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the <strong>lowest-cost entry</strong> into cold plunging</li><li>You only plunge occasionally and don\u2019t mind <strong>buying ice</strong></li><li>You lack space, power access, or prefer a <strong>portable inflatable</strong> tub</li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the <strong>lowest-cost entry</strong> into cold plunging</li><li>You only plunge occasionally and don’t mind <strong>buying ice</strong></li><li>You lack space, power access, or prefer a <strong>portable inflatable</strong> tub</li></ul>",
     "detailed_analysis": "<p><strong>What matters most:</strong> premium cold plunges live or die by temperature stability, water hygiene, and overall convenience. This model targets the user who wants a repeatable routine, not a weekend experiment.</p><p><strong>Ownership experience:</strong> the win is that you avoid the \"bag-of-ice\" problem and can build a consistent protocol. The tradeoff is price and the reality that any integrated system requires basic maintenance (filters, water chemistry, cleaning).</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "If you\u2019re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
+    "verdict": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs.",
     "alternatives": [
       {
         "name": "Plunge All-In",
@@ -77,7 +77,7 @@
     "faqs": [
       {
         "question": "Is Sun Home Cold Plunge Pro worth it?",
-        "answer": "If you\u2019re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs."
+        "answer": "If you’re committed to cold plunging and want a premium, predictable setup, the Cold Plunge Pro fits the brief: convenience, consistency, and a more \"set-and-repeat\" routine than ice-only tubs."
       },
       {
         "question": "Who is Sun Home Cold Plunge Pro best for?",
@@ -93,7 +93,7 @@
     "name": "Sun Home Cold Plunge Portable (Horizontal)",
     "sku": "SunHome-Cold-Plunge-Portable-Horizontal",
     "vendorId": "sun-home",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/sun-home/SunHome-Cold-Plunge-Portable-Horizontal.jpg",
     "product_type": "Cold Plunge",
     "approx_price": 4099,
     "affiliateLinks": {
@@ -180,7 +180,7 @@
     "name": "Plunge (Standard)",
     "sku": "Plunge-Standard",
     "vendorId": "plunge",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/cold-plunge-placeholder.webp",
     "product_type": "Cold Plunge",
     "approx_price": 4990,
     "affiliateLinks": {
@@ -234,7 +234,7 @@
       "Maintenance still required"
     ],
     "who_is_this_for": "<p>Ideal for <strong>regular plungers</strong> who want a dedicated system and a more premium user experience than DIY builds.</p><ul><li>Users prioritizing <strong>consistency</strong></li><li>People building a <strong>recovery routine</strong> around training</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You\u2019re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
+    "who_should_skip": "<p>Skip if:</p><ul><li>You only plunge occasionally</li><li>You’re on a tight budget and prefer a <strong>portable tub + ice</strong></li></ul>",
     "detailed_analysis": "<p>With brand-name plunges, the difference is typically consistency and convenience: easier setup, more polished design, and a system meant to be used frequently. Evaluate: cooling performance, sanitation approach, maintenance overhead, and footprint.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A mainstream, purpose-built choice for frequent cold plungers who want less DIY and more repeatability.",
@@ -267,7 +267,7 @@
     "name": "Plunge All-In (Heated + Cooled)",
     "sku": "Plunge-All-In",
     "vendorId": "plunge",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/cold-plunge-placeholder.webp",
     "product_type": "Cold Plunge",
     "approx_price": 8990,
     "affiliateLinks": {
@@ -323,10 +323,10 @@
       "Still requires upkeep (filters, cleaning)"
     ],
     "who_is_this_for": "<p>Best for <strong>high-frequency users</strong> who want convenience, tech features, and an appliance-like ownership experience.</p><ul><li>People who want <strong>repeatable temperature control</strong></li><li>Users who like <strong>app tracking</strong> and structured routines</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the cheapest cold plunge option</li><li>You don\u2019t care about tech features and are fine with <strong>ice-only</strong></li></ul>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You want the cheapest cold plunge option</li><li>You don’t care about tech features and are fine with <strong>ice-only</strong></li></ul>",
     "detailed_analysis": "<p>All-in systems are evaluated on: cooling/heating performance, sanitation approach, noise, energy use, warranty, and how annoying (or easy) maintenance is. The All-In leans hard into the convenience layer, which is exactly what many buyers want once they decide plunging is a long-term habit.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "If you want cold plunging to feel like owning a premium appliance\u2014set temp, keep water cleaner, repeat\u2014this is a strong flagship-style option.",
+    "verdict": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option.",
     "alternatives": [
       {
         "name": "Renu Therapy Cold Stoic 2.0",
@@ -340,7 +340,7 @@
     "faqs": [
       {
         "question": "Is Plunge All-In (Heated + Cooled) worth it?",
-        "answer": "If you want cold plunging to feel like owning a premium appliance\u2014set temp, keep water cleaner, repeat\u2014this is a strong flagship-style option."
+        "answer": "If you want cold plunging to feel like owning a premium appliance—set temp, keep water cleaner, repeat—this is a strong flagship-style option."
       },
       {
         "question": "Who is Plunge All-In (Heated + Cooled) best for?",
@@ -353,97 +353,10 @@
     ]
   },
   {
-    "name": "Renu Therapy Cold Stoic (Classic)",
-    "sku": "Renu-Cold-Stoic-Classic",
-    "vendorId": "renu-therapy",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 8999,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Renu Therapy",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "luxury",
-    "bestFor": "Outdoor recovery spaces and frequent use",
-    "reviewSummary": "A premium cold plunge line known for strong aesthetics and a lifestyle-forward positioning.",
-    "description": "A premium cold plunge line known for strong aesthetics and a lifestyle-forward positioning.",
-    "long_description": "The Cold Stoic Classic is aimed at people who want a premium plunge that looks at home in a curated space (patio, gym corner, spa room). Renu\u2019s appeal is often design + a complete system approach rather than a bare-bones tub.",
-    "overallScore": 8.2,
-    "score": {
-      "temperature_control": 9,
-      "insulation": 9,
-      "durability": 9,
-      "ease_of_use": 8,
-      "maintenance": 7,
-      "value": 7
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": false,
-      "outdoor_ready": true,
-      "beginner_friendly": false,
-      "portable": false,
-      "diy_friendly": false
-    },
-    "cooling_type": "integrated-chiller",
-    "heating_type": null,
-    "footprint": "large",
-    "tags": [
-      "luxury",
-      "chiller",
-      "premium",
-      "recovery"
-    ],
-    "features": "<ul><li><strong>Premium aesthetic</strong> positioning</li><li><strong>System-style ownership</strong> rather than DIY</li></ul>",
-    "pros": [
-      "Premium presentation",
-      "Designed as a complete consumer product"
-    ],
-    "cons": [
-      "Higher cost than portable tubs",
-      "Maintenance is still part of ownership"
-    ],
-    "who_is_this_for": "<p>Good fit for <strong>buyers who want a premium-looking tub</strong> and plan to plunge consistently.</p><ul><li>Design-conscious home owners</li><li>People who want a more \"finished\" product than DIY</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You want the lowest price</li><li>You don\u2019t care about aesthetics and just want a functional container</li></ul>",
-    "detailed_analysis": "<p>With premium lifestyle plunges, judge: temperature capability, insulation, sanitation method, and practical maintenance. The \u201cbest\u201d unit is the one you\u2019ll actually use consistently.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A premium option for people who want a cold plunge that looks intentional and supports a consistent routine.",
-    "alternatives": [
-      {
-        "name": "Renu Therapy Cold Stoic 2.0",
-        "sku": "Renu-Cold-Stoic-2-0"
-      },
-      {
-        "name": "Plunge All-In",
-        "sku": "Plunge-All-In"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Renu Therapy Cold Stoic (Classic) worth it?",
-        "answer": "A premium option for people who want a cold plunge that looks intentional and supports a consistent routine."
-      },
-      {
-        "question": "Who is Renu Therapy Cold Stoic (Classic) best for?",
-        "answer": "Outdoor recovery spaces and frequent use"
-      },
-      {
-        "question": "Where can I check the current price for Renu Therapy Cold Stoic (Classic)?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "Renu Therapy Cold Stoic 2.0",
     "sku": "Renu-Cold-Stoic-2-0",
     "vendorId": "renu-therapy",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/renu-therapy/Renu-Cold-Stoic-2-0.jpg",
     "product_type": "Cold Plunge",
     "approx_price": 9699,
     "affiliateLinks": {
@@ -460,7 +373,7 @@
     "bestFor": "Outdoor recovery spaces and frequent use",
     "reviewSummary": "A premium cold plunge model emphasizing insulation, efficiency, and a refined look.",
     "description": "A premium cold plunge model emphasizing insulation, efficiency, and a refined look.",
-    "long_description": "The Cold Stoic 2.0 is positioned as an upgraded version of Renu\u2019s flagship aesthetic-driven plunge: improved insulation and performance focus, with a complete at-home system vibe rather than a DIY tub. It\u2019s built for people who want cold immersion to be a long-term habit and don\u2019t want to constantly buy ice.",
+    "long_description": "The Cold Stoic 2.0 is positioned as an upgraded version of Renu’s flagship aesthetic-driven plunge: improved insulation and performance focus, with a complete at-home system vibe rather than a DIY tub. It’s built for people who want cold immersion to be a long-term habit and don’t want to constantly buy ice.",
     "overallScore": 8.3,
     "score": {
       "temperature_control": 9,
@@ -499,8 +412,8 @@
       "Not the best choice for casual users"
     ],
     "who_is_this_for": "<p>Best for <strong>serious plungers</strong> who care about performance <em>and</em> how the unit looks in their space.</p><ul><li>People plunging <strong>multiple times weekly</strong></li><li>Users who want a <strong>premium visual</strong> and complete system</li></ul>",
-    "who_should_skip": "<p>Skip this if:</p><ul><li>You\u2019re experimenting and want a sub-$200 portable tub first</li><li>You want a multi-person plunge; many premium tubs are <strong>single-user optimized</strong></li></ul>",
-    "detailed_analysis": "<p>At this tier, insulation and temperature stability matter because they influence cost and convenience. The Stoic 2.0 is for someone who wants the routine to be easy: fill, set, maintain, repeat\u2014without turning every plunge into an ice run.</p>",
+    "who_should_skip": "<p>Skip this if:</p><ul><li>You’re experimenting and want a sub-$200 portable tub first</li><li>You want a multi-person plunge; many premium tubs are <strong>single-user optimized</strong></li></ul>",
+    "detailed_analysis": "<p>At this tier, insulation and temperature stability matter because they influence cost and convenience. The Stoic 2.0 is for someone who wants the routine to be easy: fill, set, maintain, repeat—without turning every plunge into an ice run.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A premium, aesthetic-forward cold plunge built for consistency. Worth it if cold plunging is already a habit and you want a refined, repeatable setup.",
     "alternatives": [
@@ -529,97 +442,10 @@
     ]
   },
   {
-    "name": "Edge Theory Labs Tub + Chiller Setup",
-    "sku": "EdgeTheoryLabs-Tub-Chiller-Setup",
-    "vendorId": "edge-theory-labs",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 6500,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Edge Theory Labs",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "premium",
-    "bestFor": "Outdoor recovery spaces and frequent use",
-    "reviewSummary": "A performance-oriented cold plunge setup pairing a tub with an external chiller solution.",
-    "description": "A performance-oriented cold plunge setup pairing a tub with an external chiller solution.",
-    "long_description": "Edge Theory Labs-style setups generally appeal to users who want temperature control and a more engineered approach. A tub + chiller pairing is often more modular than integrated all-in-ones, which can be attractive if you want replaceable components.",
-    "overallScore": 7.5,
-    "score": {
-      "temperature_control": 8,
-      "insulation": 7,
-      "durability": 8,
-      "ease_of_use": 7,
-      "maintenance": 7,
-      "value": 8
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": false,
-      "outdoor_ready": true,
-      "beginner_friendly": false,
-      "portable": false,
-      "diy_friendly": true
-    },
-    "cooling_type": "external-chiller-compatible",
-    "heating_type": null,
-    "footprint": "large",
-    "tags": [
-      "premium",
-      "chiller",
-      "modular",
-      "diy"
-    ],
-    "features": "<ul><li><strong>Modular tub + chiller</strong> design</li><li><strong>Replaceable components</strong> for long-term ownership</li></ul>",
-    "pros": [
-      "Modular and serviceable ownership model",
-      "Can be upgraded over time"
-    ],
-    "cons": [
-      "More setup complexity than all-in-one plunges",
-      "Quality varies widely by exact configuration"
-    ],
-    "who_is_this_for": "<p>Best for <strong>performance-minded users</strong> who want a modular tub + chiller approach.</p><ul><li>People comfortable with <strong>basic setup</strong> and component-based ownership</li><li>Users who may want to <strong>upgrade or replace</strong> chillers later</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You want a single-box, appliance-like experience</li><li>You want the simplest possible setup</li></ul>",
-    "detailed_analysis": "<p>Modular cold plunge builds can be excellent when engineered well: replaceability and tuning. Evaluate connection hardware, filtration approach, insulation, and real-world noise/energy use.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "Best for buyers who like modular systems and want the flexibility to service or upgrade components over time.",
-    "alternatives": [
-      {
-        "name": "Penguin Chillers + Tub Setup",
-        "sku": "PenguinChillers-Tub-Setup"
-      },
-      {
-        "name": "Plunge (Standard)",
-        "sku": "Plunge-Standard"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Edge Theory Labs Tub + Chiller Setup worth it?",
-        "answer": "Best for buyers who like modular systems and want the flexibility to service or upgrade components over time."
-      },
-      {
-        "question": "Who is Edge Theory Labs Tub + Chiller Setup best for?",
-        "answer": "Outdoor recovery spaces and frequent use"
-      },
-      {
-        "question": "Where can I check the current price for Edge Theory Labs Tub + Chiller Setup?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "Ice Barrel Pro (with optional chiller pairing)",
     "sku": "IceBarrel-Pro",
     "vendorId": "ice-barrel",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/ice-barrel/IceBarrel-Pro.jpg",
     "product_type": "Cold Plunge",
     "approx_price": 2499,
     "affiliateLinks": {
@@ -636,7 +462,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A premium upright barrel-style cold plunge option often paired with a chiller for consistent temps.",
     "description": "A premium upright barrel-style cold plunge option often paired with a chiller for consistent temps.",
-    "long_description": "Ice Barrel\u2019s appeal is the upright barrel form factor: space-efficient and easy to place in a garage or patio. When paired with a chiller, it becomes a much more consistent tool than ice-only use, making it better suited for frequent routines.",
+    "long_description": "Ice Barrel’s appeal is the upright barrel form factor: space-efficient and easy to place in a garage or patio. When paired with a chiller, it becomes a much more consistent tool than ice-only use, making it better suited for frequent routines.",
     "overallScore": 7.2,
     "score": {
       "temperature_control": 7,
@@ -670,12 +496,12 @@
       "Great routine fit when paired with a chiller"
     ],
     "cons": [
-      "Upright immersion isn\u2019t for everyone",
+      "Upright immersion isn’t for everyone",
       "Chiller pairing increases total cost"
     ],
     "who_is_this_for": "<p>Ideal for <strong>space-conscious plungers</strong> who like upright immersion and want to keep a consistent routine.</p><ul><li>Garage gym owners</li><li>Users who prefer a <strong>smaller footprint</strong> than long tubs</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down style tub</li><li>You strongly dislike upright immersion</li></ul>",
-    "detailed_analysis": "<p>Barrel-style plunges are convenient for footprint and typically easy entry/exit with a step. If you want consistency, plan for temperature control via a chiller (otherwise you\u2019re back to buying ice and dealing with variability).</p>",
+    "detailed_analysis": "<p>Barrel-style plunges are convenient for footprint and typically easy entry/exit with a step. If you want consistency, plan for temperature control via a chiller (otherwise you’re back to buying ice and dealing with variability).</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A strong footprint-friendly plunge option, especially if you plan to pair it with a chiller for consistency.",
     "alternatives": [
@@ -704,97 +530,10 @@
     ]
   },
   {
-    "name": "Penguin Chillers + Tub Setups",
-    "sku": "PenguinChillers-Tub-Setup",
-    "vendorId": "penguin-chillers",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 5500,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "https://penguinchillers.com/products/cold-therapy-chiller",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Penguin Chillers",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "premium",
-    "bestFor": "Outdoor recovery spaces and frequent use",
-    "reviewSummary": "A modular approach pairing a tub with a dedicated chiller brand often used in DIY-to-pro cold plunge builds.",
-    "description": "A modular approach pairing a tub with a dedicated chiller brand often used in DIY-to-pro cold plunge builds.",
-    "long_description": "Penguin Chillers is commonly referenced in cold plunge circles as a dedicated chiller option. Pairing a quality chiller with a well-insulated tub can create a high-performance setup without buying a fully integrated plunge appliance.",
-    "overallScore": 7.8,
-    "score": {
-      "temperature_control": 9,
-      "insulation": 7,
-      "durability": 8,
-      "ease_of_use": 7,
-      "maintenance": 8,
-      "value": 8
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": false,
-      "outdoor_ready": true,
-      "beginner_friendly": false,
-      "portable": false,
-      "diy_friendly": true
-    },
-    "cooling_type": "external-chiller-compatible",
-    "heating_type": null,
-    "footprint": "large",
-    "tags": [
-      "premium",
-      "chiller",
-      "modular",
-      "diy"
-    ],
-    "features": "<ul><li><strong>Dedicated chiller</strong> paired with tub of choice</li><li><strong>Modular ownership</strong> and serviceability</li></ul>",
-    "pros": [
-      "High flexibility and modularity",
-      "Can scale performance with the right tub"
-    ],
-    "cons": [
-      "Requires more setup and planning",
-      "Total cost can climb quickly"
-    ],
-    "who_is_this_for": "<p>Best for <strong>DIY-leaning buyers</strong> who want strong temperature control and modular components.</p><ul><li>People comfortable selecting a tub + plumbing/hoses</li><li>Users who want <strong>serviceable</strong> components</li></ul>",
-    "who_should_skip": "<p>Skip if:</p><ul><li>You want a single integrated product with minimal setup</li></ul>",
-    "detailed_analysis": "<p>Chiller-based builds can be excellent, but success depends on insulation, flow rate, filtration, and how cleanly everything connects. The upside is modularity; the downside is more decisions and setup.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A strong path if you want chiller-grade temperature control but prefer modular components over an all-in-one plunge appliance.",
-    "alternatives": [
-      {
-        "name": "Edge Theory Labs Tub + Chiller Setup",
-        "sku": "EdgeTheoryLabs-Tub-Chiller-Setup"
-      },
-      {
-        "name": "Plunge All-In",
-        "sku": "Plunge-All-In"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Penguin Chillers + Tub Setups worth it?",
-        "answer": "A strong path if you want chiller-grade temperature control but prefer modular components over an all-in-one plunge appliance."
-      },
-      {
-        "question": "Who is Penguin Chillers + Tub Setups best for?",
-        "answer": "Outdoor recovery spaces and frequent use"
-      },
-      {
-        "question": "Where can I check the current price for Penguin Chillers + Tub Setups?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "Ice Barrel 400",
     "sku": "IceBarrel-400",
     "vendorId": "ice-barrel",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/ice-barrel/IceBarrel-400.jpg",
     "product_type": "Cold Plunge",
     "approx_price": 1999,
     "affiliateLinks": {
@@ -851,7 +590,7 @@
     ],
     "who_is_this_for": "<p>Best for <strong>space-conscious users</strong> who want upright immersion and a simple routine.</p><ul><li>Garage/patio users with limited space</li><li>People who prefer quick setup and simple draining</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want a lay-down tub experience</li><li>You want a built-in chiller at purchase (you may need an add-on)</li></ul>",
-    "detailed_analysis": "<p>Barrel-style immersion is different: less \"float and stretch\" and more upright plunge posture. The 400\u2019s core value is footprint and usability\u2014particularly if you\u2019re consistent and want a dedicated tool rather than a collapsible tub.</p>",
+    "detailed_analysis": "<p>Barrel-style immersion is different: less \"float and stretch\" and more upright plunge posture. The 400’s core value is footprint and usability—particularly if you’re consistent and want a dedicated tool rather than a collapsible tub.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A strong upright plunge choice if you want footprint efficiency and a dedicated cold therapy tool.",
     "alternatives": [
@@ -883,7 +622,7 @@
     "name": "Ice Barrel 300",
     "sku": "IceBarrel-300",
     "vendorId": "ice-barrel",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/ice-barrel/IceBarrel-300.jpg",
     "product_type": "Cold Plunge",
     "approx_price": 1799,
     "affiliateLinks": {
@@ -900,7 +639,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A smaller upright ice barrel option for cold immersion with a footprint-friendly design.",
     "description": "A smaller upright ice barrel option for cold immersion with a footprint-friendly design.",
-    "long_description": "The Ice Barrel 300 is aimed at users who want the upright barrel format but may prefer a smaller overall size or entry price than larger barrel models. It\u2019s built for repeatable cold immersion routines, especially when paired with a consistency plan (ice, climate, or a compatible chiller).",
+    "long_description": "The Ice Barrel 300 is aimed at users who want the upright barrel format but may prefer a smaller overall size or entry price than larger barrel models. It’s built for repeatable cold immersion routines, especially when paired with a consistency plan (ice, climate, or a compatible chiller).",
     "overallScore": 6.5,
     "score": {
       "temperature_control": 3,
@@ -939,7 +678,7 @@
     ],
     "who_is_this_for": "<p>Best for <strong>users who like upright immersion</strong> and want a dedicated tool without a large footprint.</p>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You need extra room for larger body sizes</li><li>You want a long, lay-down plunge tub</li></ul>",
-    "detailed_analysis": "<p>Like most upright barrels, the major decision is whether you prefer upright posture. If yes, the 300 is a straightforward dedicated plunge tool. If no, you\u2019ll be happier with a long tub.</p>",
+    "detailed_analysis": "<p>Like most upright barrels, the major decision is whether you prefer upright posture. If yes, the 300 is a straightforward dedicated plunge tool. If no, you’ll be happier with a long tub.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A solid choice for upright-plunge fans who want a dedicated barrel format with a smaller footprint.",
     "alternatives": [
@@ -971,11 +710,11 @@
     "name": "The Cold Pod (Ice Bath, multiple sizes)",
     "sku": "TheColdPod-IceBath",
     "vendorId": "the-cold-pod",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/the-cold-pod/TheColdPod-IceBath.png",
     "product_type": "Cold Plunge",
     "approx_price": 129,
     "affiliateLinks": {
-      "amazon": "",
+      "amazon": "https://www.amazon.com/dp/B0CPKYNJ9Q?tag=scorpiusllc-20",
       "manufacturer": "https://us.thecoldpod.com/products/the-cold-pod-usa",
       "bestBuy": "",
       "walmart": "",
@@ -988,7 +727,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A popular portable ice bath tub line known for multiple size options and easy storage.",
     "description": "A popular portable ice bath tub line known for multiple size options and easy storage.",
-    "long_description": "The Cold Pod is a portable, budget-friendly way to start cold plunging. It\u2019s typically chosen for convenience: easy setup, easy drain, easy storage, and a low barrier to entry. The tradeoff versus premium systems is less temperature consistency and more reliance on ice.",
+    "long_description": "The Cold Pod is a portable, budget-friendly way to start cold plunging. It’s typically chosen for convenience: easy setup, easy drain, easy storage, and a low barrier to entry. The tradeoff versus premium systems is less temperature consistency and more reliance on ice.",
     "overallScore": 5.5,
     "score": {
       "temperature_control": 2,
@@ -1033,8 +772,8 @@
     "verdict": "One of the easiest ways to start cold plunging. Great for beginners; upgrade later if the habit sticks.",
     "alternatives": [
       {
-        "name": "Nurecover Ice Bath",
-        "sku": "Nurecover-Ice-Bath"
+        "name": "Arcwilderness Foil Cold Plunge Tub 130 Gal XL",
+        "sku": "Arcwilderness-Foil-Cold-Plunge-130Gal"
       },
       {
         "name": "VEVOR Ice Bath Tub",
@@ -1057,448 +796,10 @@
     ]
   },
   {
-    "name": "G Ganen Ice Bath Tub",
-    "sku": "GGanen-Ice-Bath-Tub",
-    "vendorId": "g-ganen",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 99,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "G Ganen",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "budget",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A portable ice bath tub option designed for simple cold water immersion at a budget-friendly price.",
-    "description": "A portable ice bath tub option designed for simple cold water immersion at a budget-friendly price.",
-    "long_description": "G Ganen-style ice bath tubs are generally purchased as affordable, functional plunge containers. They\u2019re aimed at users who want basic cold immersion without paying for integrated chillers or premium finishes.",
-    "overallScore": 5.3,
-    "score": {
-      "temperature_control": 2,
-      "insulation": 3,
-      "durability": 4,
-      "ease_of_use": 9,
-      "maintenance": 4,
-      "value": 10
-    },
-    "suitability": {
-      "tall_user_friendly": false,
-      "small_space_friendly": true,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "small",
-    "tags": [
-      "budget",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Budget-friendly</strong> plunge container</li><li><strong>Portable</strong> and easy to drain</li></ul>",
-    "pros": [
-      "Affordable entry point",
-      "Simple to use"
-    ],
-    "cons": [
-      "Likely ice-dependent",
-      "Durability varies by batch and use"
-    ],
-    "who_is_this_for": "<p>Best for <strong>budget-minded plungers</strong> who want basic function.</p>",
-    "who_should_skip": "<p>Skip if you want integrated temperature control or premium aesthetics.</p>",
-    "detailed_analysis": "<p>Evaluate portability, insulation, seams, included cover, drain quality, and stability. With budget tubs, durability and insulation are the usual weak points.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A functional, low-cost option if you want cold plunging without committing to premium systems.",
-    "alternatives": [
-      {
-        "name": "The Cold Pod",
-        "sku": "TheColdPod-IceBath"
-      },
-      {
-        "name": "CalmMax Portable Ice Bath",
-        "sku": "CalmMax-Portable-Ice-Bath"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is G Ganen Ice Bath Tub worth it?",
-        "answer": "A functional, low-cost option if you want cold plunging without committing to premium systems."
-      },
-      {
-        "question": "Who is G Ganen Ice Bath Tub best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for G Ganen Ice Bath Tub?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
-    "name": "Polar Recovery Tub",
-    "sku": "Polar-Recovery-Tub",
-    "vendorId": "polar-recovery",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 799,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Polar Recovery",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "mid-range",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A mid-range cold tub option aimed at more durable, repeatable cold immersion than entry-level inflatables.",
-    "description": "A mid-range cold tub option aimed at more durable, repeatable cold immersion than entry-level inflatables.",
-    "long_description": "Polar Recovery tubs typically aim to bridge the gap between basic portable pods and premium integrated systems. The target buyer wants a sturdier tub for consistent use, but doesn\u2019t necessarily want to pay for an all-in-one chiller appliance.",
-    "overallScore": 6.2,
-    "score": {
-      "temperature_control": 4,
-      "insulation": 6,
-      "durability": 7,
-      "ease_of_use": 8,
-      "maintenance": 5,
-      "value": 7
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": true,
-      "outdoor_ready": true,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "medium",
-    "tags": [
-      "mid-range",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Mid-range durability</strong> positioning</li><li><strong>Routine-focused</strong> design</li></ul>",
-    "pros": [
-      "More durable than many budget inflatables",
-      "Better routine fit for frequent use"
-    ],
-    "cons": [
-      "May still be ice-dependent",
-      "Not as turnkey as integrated systems"
-    ],
-    "who_is_this_for": "<p>Best for <strong>intermediate plungers</strong> who want a sturdier tub than the cheapest pods.</p>",
-    "who_should_skip": "<p>Skip if you want fully integrated heating/cooling and sanitation in one unit.</p>",
-    "detailed_analysis": "<p>Mid-range tubs are judged on insulation, stability, drainage, and whether accessories (cover, insulation lid, step) make routine use easier.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A sensible upgrade tier if you plunge often and want sturdier ownership than the cheapest pods.",
-    "alternatives": [
-      {
-        "name": "Ice Barrel 300",
-        "sku": "IceBarrel-300"
-      },
-      {
-        "name": "The Cold Pod",
-        "sku": "TheColdPod-IceBath"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Polar Recovery Tub worth it?",
-        "answer": "A sensible upgrade tier if you plunge often and want sturdier ownership than the cheapest pods."
-      },
-      {
-        "question": "Who is Polar Recovery Tub best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Polar Recovery Tub?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
-    "name": "Tuff Stuff Stock Tank (DIY Cold Plunge Build)",
-    "sku": "TuffStuff-Stock-Tank-100gal",
-    "vendorId": "tuff-stuff",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 269,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Tuff Stuff",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "budget",
-    "bestFor": "Outdoor recovery spaces and frequent use",
-    "reviewSummary": "A classic DIY cold plunge base: a rugged stock tank often paired with a chiller and filtration for a semi-pro setup.",
-    "description": "A classic DIY cold plunge base: a rugged stock tank often paired with a chiller and filtration for a semi-pro setup.",
-    "long_description": "Stock tanks are a common DIY cold plunge foundation because they\u2019re tough, widely available, and simple. The tank alone doesn\u2019t solve temperature consistency or sanitation\u2014those come from the accessories you add\u2014but it can be a cost-effective starting point for a long-term plunge setup.",
-    "overallScore": 5.5,
-    "score": {
-      "temperature_control": 2,
-      "insulation": 2,
-      "durability": 10,
-      "ease_of_use": 5,
-      "maintenance": 5,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": false,
-      "outdoor_ready": true,
-      "beginner_friendly": false,
-      "portable": false,
-      "diy_friendly": true
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "large",
-    "tags": [
-      "budget",
-      "diy",
-      "ice-based",
-      "outdoor"
-    ],
-    "features": "<ul><li><strong>Rugged base tub</strong> for DIY plunge builds</li><li><strong>Highly modular</strong> (pair with chiller, filter, ozone)</li></ul>",
-    "pros": [
-      "Excellent durability",
-      "Strong DIY value",
-      "Modular upgrade path"
-    ],
-    "cons": [
-      "No built-in cooling or sanitation",
-      "Aesthetic is utilitarian",
-      "DIY setup required"
-    ],
-    "who_is_this_for": "<p>Best for <strong>DIY-minded plungers</strong> who want a rugged tub and are comfortable adding components over time.</p>",
-    "who_should_skip": "<p>Skip if you want a polished, indoor-friendly aesthetic and zero-setup ownership.</p>",
-    "detailed_analysis": "<p>The tank itself is only part of the system. The real work is insulation strategy, filtration, and temperature control. Done well, DIY stock-tank builds can perform extremely well for the money.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A great base if you\u2019re willing to build a system. Not ideal if you want a polished turnkey product.",
-    "alternatives": [
-      {
-        "name": "Penguin Chillers + Tub Setup",
-        "sku": "PenguinChillers-Tub-Setup"
-      },
-      {
-        "name": "Plunge (Standard)",
-        "sku": "Plunge-Standard"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Tuff Stuff Stock Tank (DIY Cold Plunge Build) worth it?",
-        "answer": "A great base if you\u2019re willing to build a system. Not ideal if you want a polished turnkey product."
-      },
-      {
-        "question": "Who is Tuff Stuff Stock Tank (DIY Cold Plunge Build) best for?",
-        "answer": "Outdoor recovery spaces and frequent use"
-      },
-      {
-        "question": "Where can I check the current price for Tuff Stuff Stock Tank (DIY Cold Plunge Build)?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
-    "name": "Nurecover Ice Bath",
-    "sku": "Nurecover-Ice-Bath",
-    "vendorId": "nurecover",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 129,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "https://nurecover.com/products/plunge",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Nurecover",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "budget",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A portable ice bath pod designed for easy setup, storage, and beginner-friendly cold plunging.",
-    "description": "A portable ice bath pod designed for easy setup, storage, and beginner-friendly cold plunging.",
-    "long_description": "Nurecover-style pods are built for convenience: set it up quickly, fill, add ice, plunge, drain, repeat. They\u2019re generally chosen as a first cold plunge because they lower friction and cost\u2014ideal for testing whether you\u2019ll stick to a routine.",
-    "overallScore": 5.5,
-    "score": {
-      "temperature_control": 2,
-      "insulation": 4,
-      "durability": 5,
-      "ease_of_use": 9,
-      "maintenance": 4,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": false,
-      "small_space_friendly": true,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "small",
-    "tags": [
-      "budget",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Portable</strong> and easy to store</li><li><strong>Fast setup</strong> for beginners</li></ul>",
-    "pros": [
-      "Low-cost entry point",
-      "Easy setup and storage",
-      "Good for building the habit"
-    ],
-    "cons": [
-      "Ice-dependent",
-      "Less durable than rigid tubs"
-    ],
-    "who_is_this_for": "<p>Best for <strong>beginners</strong> and anyone who wants a low-cost, low-commitment entry.</p>",
-    "who_should_skip": "<p>Skip if you want premium aesthetics or built-in temperature control.</p>",
-    "detailed_analysis": "<p>These pods are habit builders. If you can build the habit first, you can always upgrade later. The biggest variable is how you keep water cold (ice cost/time) and how you keep it clean.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A solid starter plunge if you want to try cold immersion without committing to premium systems.",
-    "alternatives": [
-      {
-        "name": "The Cold Pod",
-        "sku": "TheColdPod-IceBath"
-      },
-      {
-        "name": "VEVOR Ice Bath Tub",
-        "sku": "VEVOR-Ice-Bath-Tub"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Nurecover Ice Bath worth it?",
-        "answer": "A solid starter plunge if you want to try cold immersion without committing to premium systems."
-      },
-      {
-        "question": "Who is Nurecover Ice Bath best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Nurecover Ice Bath?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
-    "name": "Lumi Recovery Pod",
-    "sku": "Lumi-Recovery-Pod",
-    "vendorId": "lumi-recovery",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 169,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Lumi Recovery",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "budget",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A portable cold plunge pod designed for recovery routines, travel, and easy storage.",
-    "description": "A portable cold plunge pod designed for recovery routines, travel, and easy storage.",
-    "long_description": "Lumi Recovery-style pods target convenience and portability. The focus is a quick, repeatable cold immersion session without permanent installation.",
-    "overallScore": 5.5,
-    "score": {
-      "temperature_control": 2,
-      "insulation": 4,
-      "durability": 5,
-      "ease_of_use": 9,
-      "maintenance": 4,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": false,
-      "small_space_friendly": true,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "small",
-    "tags": [
-      "budget",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Portable</strong> plunge format</li><li><strong>Storage-friendly</strong> design</li></ul>",
-    "pros": [
-      "Portable and simple",
-      "Good starter option"
-    ],
-    "cons": [
-      "Ice-dependent for temperature",
-      "Durability depends on materials"
-    ],
-    "who_is_this_for": "<p>Best for <strong>portable-first</strong> buyers who want a practical cold plunge solution with easy storage.</p>",
-    "who_should_skip": "<p>Skip if you want an integrated chiller appliance or premium furniture-grade aesthetics.</p>",
-    "detailed_analysis": "<p>Portable pods vary widely in insulation and durability. Your experience depends on how often you plunge, how you keep water cold, and whether you keep the tub clean.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A convenient pod for people who want cold plunging to be easy and portable.",
-    "alternatives": [
-      {
-        "name": "Nurecover Ice Bath",
-        "sku": "Nurecover-Ice-Bath"
-      },
-      {
-        "name": "The Cold Pod",
-        "sku": "TheColdPod-IceBath"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Lumi Recovery Pod worth it?",
-        "answer": "A convenient pod for people who want cold plunging to be easy and portable."
-      },
-      {
-        "question": "Who is Lumi Recovery Pod best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Lumi Recovery Pod?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "VEVOR Ice Bath Tub",
     "sku": "VEVOR-Ice-Bath-Tub",
     "vendorId": "vevor",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/cold-plunge-placeholder.webp",
     "product_type": "Cold Plunge",
     "approx_price": 54,
     "affiliateLinks": {
@@ -1515,7 +816,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A budget-friendly portable ice bath tub option commonly purchased for entry-level cold plunging.",
     "description": "A budget-friendly portable ice bath tub option commonly purchased for entry-level cold plunging.",
-    "long_description": "VEVOR ice bath tubs are typically bought as a low-cost path to cold immersion. They\u2019re practical and widely available, but the experience is generally ice-dependent and less premium than rigid or integrated systems.",
+    "long_description": "VEVOR ice bath tubs are typically bought as a low-cost path to cold immersion. They’re practical and widely available, but the experience is generally ice-dependent and less premium than rigid or integrated systems.",
     "overallScore": 5.3,
     "score": {
       "temperature_control": 2,
@@ -1562,8 +863,8 @@
         "sku": "TheColdPod-IceBath"
       },
       {
-        "name": "CalmMax Portable Ice Bath",
-        "sku": "CalmMax-Portable-Ice-Bath"
+        "name": "VEVOR Ice Bath Tub XL 105 Gal",
+        "sku": "VEVOR-Ice-Bath-Tub-XL"
       }
     ],
     "faqs": [
@@ -1582,184 +883,10 @@
     ]
   },
   {
-    "name": "CalmMax Portable Ice Bath",
-    "sku": "CalmMax-Portable-Ice-Bath",
-    "vendorId": "calmmax",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 89,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "CalmMax",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "budget",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A portable ice bath tub aimed at quick setup and convenient recovery sessions.",
-    "description": "A portable ice bath tub aimed at quick setup and convenient recovery sessions.",
-    "long_description": "CalmMax portable tubs focus on convenience and portability. Like most entry-level tubs, they rely on ice for cooling and require a simple cleaning routine to keep water usable between sessions.",
-    "overallScore": 5.5,
-    "score": {
-      "temperature_control": 2,
-      "insulation": 4,
-      "durability": 5,
-      "ease_of_use": 9,
-      "maintenance": 4,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": false,
-      "small_space_friendly": true,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "small",
-    "tags": [
-      "budget",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Portable</strong> format</li><li><strong>Fast setup</strong></li></ul>",
-    "pros": [
-      "Portable and easy to store",
-      "Low barrier to entry"
-    ],
-    "cons": [
-      "Ice-dependent",
-      "Build quality varies"
-    ],
-    "who_is_this_for": "<p>Best for <strong>casual to intermediate</strong> users who want portability and easy storage.</p>",
-    "who_should_skip": "<p>Skip if you want automatic temperature control or premium aesthetics.</p>",
-    "detailed_analysis": "<p>At this tier, the biggest variables are insulation, stability, and how quickly the water warms. Plan to use a cover and establish a basic cleaning routine.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A practical portable plunge tub if you value convenience and a low cost of entry.",
-    "alternatives": [
-      {
-        "name": "VEVOR Ice Bath Tub",
-        "sku": "VEVOR-Ice-Bath-Tub"
-      },
-      {
-        "name": "Nurecover Ice Bath",
-        "sku": "Nurecover-Ice-Bath"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is CalmMax Portable Ice Bath worth it?",
-        "answer": "A practical portable plunge tub if you value convenience and a low cost of entry."
-      },
-      {
-        "question": "Who is CalmMax Portable Ice Bath best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for CalmMax Portable Ice Bath?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
-    "name": "Hydragun Supertub (Entry Model)",
-    "sku": "Hydragun-Supertub",
-    "vendorId": "hydragun",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Cold Plunge",
-    "approx_price": 399,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Hydragun",
-    "primaryCategory": "cold-exposure",
-    "category": "cold-plunge",
-    "price_range": "mid-range",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A portable cold tub product line from a recovery brand, aimed at at-home cold immersion routines.",
-    "description": "A portable cold tub product line from a recovery brand, aimed at at-home cold immersion routines.",
-    "long_description": "Hydragun is known in the recovery category, and Supertub-style products are designed to make cold immersion accessible without buying a full integrated plunge system. It\u2019s positioned around convenience, routine building, and recovery-first branding.",
-    "overallScore": 6.2,
-    "score": {
-      "temperature_control": 4,
-      "insulation": 6,
-      "durability": 7,
-      "ease_of_use": 8,
-      "maintenance": 5,
-      "value": 7
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": true,
-      "outdoor_ready": true,
-      "beginner_friendly": true,
-      "portable": true,
-      "diy_friendly": false
-    },
-    "cooling_type": "ice",
-    "heating_type": null,
-    "footprint": "medium",
-    "tags": [
-      "mid-range",
-      "ice-based",
-      "portable",
-      "beginner-friendly"
-    ],
-    "features": "<ul><li><strong>Recovery-brand positioning</strong></li><li><strong>Portable plunge</strong> format</li></ul>",
-    "pros": [
-      "Recovery-focused brand positioning",
-      "Portable and routine-friendly"
-    ],
-    "cons": [
-      "Ice-dependent unless paired with external cooling",
-      "Not as turnkey as premium all-in-one plunges"
-    ],
-    "who_is_this_for": "<p>Best for <strong>brand-trusting buyers</strong> who want a recovery-focused tub without jumping into premium appliance pricing.</p>",
-    "who_should_skip": "<p>Skip if you want integrated heating/cooling or the absolute lowest-cost pod.</p>",
-    "detailed_analysis": "<p>As with other portable tubs, evaluate insulation, stability, and drainage. Brand-led products may offer better support/accessories, but performance still depends on ice and hygiene.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A good mid-entry option if you want a known recovery brand and a portable plunge approach.",
-    "alternatives": [
-      {
-        "name": "The Cold Pod",
-        "sku": "TheColdPod-IceBath"
-      },
-      {
-        "name": "Polar Recovery Tub",
-        "sku": "Polar-Recovery-Tub"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Hydragun Supertub (Entry Model) worth it?",
-        "answer": "A good mid-entry option if you want a known recovery brand and a portable plunge approach."
-      },
-      {
-        "question": "Who is Hydragun Supertub (Entry Model) best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Hydragun Supertub (Entry Model)?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "Sun Home Equinox 2-Person Full-Spectrum Infrared Sauna",
     "sku": "SunHome-Equinox-2P-Infrared",
     "vendorId": "sun-home",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/sun-home/SunHome-Equinox-2P-Infrared.jpg",
     "product_type": "Infrared Sauna",
     "approx_price": 6099,
     "affiliateLinks": {
@@ -1776,7 +903,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A 2-person full-spectrum infrared sauna designed for at-home recovery, relaxation, and routine sessions.",
     "description": "A 2-person full-spectrum infrared sauna designed for at-home recovery, relaxation, and routine sessions.",
-    "long_description": "The Sun Home Equinox targets buyers who want a dedicated 2-person infrared sauna with a modern at-home wellness feel. The emphasis is on repeatable sessions\u2014warm up, sweat, recover\u2014without needing a spa membership.",
+    "long_description": "The Sun Home Equinox targets buyers who want a dedicated 2-person infrared sauna with a modern at-home wellness feel. The emphasis is on repeatable sessions—warm up, sweat, recover—without needing a spa membership.",
     "overallScore": 8.3,
     "score": {
       "heat_performance": 9,
@@ -1815,13 +942,13 @@
     ],
     "who_is_this_for": "<p>Best for <strong>couples</strong> or solo users who want extra space and plan to sauna multiple times per week.</p><ul><li>Recovery-focused training lifestyles</li><li>People seeking a consistent at-home routine</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You need a <strong>portable</strong> sauna solution</li><li>You want the cheapest entry point (consider a blanket or portable tent)</li></ul>",
-    "detailed_analysis": "<p>With 2-person infrared saunas, evaluate footprint, heat-up time, temperature ceiling, and overall build quality. The best units feel comfortable enough that you\u2019ll use them consistently.</p>",
+    "detailed_analysis": "<p>With 2-person infrared saunas, evaluate footprint, heat-up time, temperature ceiling, and overall build quality. The best units feel comfortable enough that you’ll use them consistently.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A strong 2-person infrared sauna choice if you want a consistent at-home routine and enough room to actually enjoy longer sessions.",
     "alternatives": [
       {
-        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
-        "sku": "Dynamic-Barcelona-1-2P"
+        "name": "Dynamic Saunas Andora 2 Person",
+        "sku": "Dynamic-Andora-2P"
       },
       {
         "name": "Golden Designs Monaco 3-Person",
@@ -1847,7 +974,7 @@
     "name": "Sun Home Luminar 1-Person Infrared Sauna",
     "sku": "SunHome-Luminar-1P-Infrared",
     "vendorId": "sun-home",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/sun-home/SunHome-Luminar-1P-Infrared.jpg",
     "product_type": "Infrared Sauna",
     "approx_price": 6599,
     "affiliateLinks": {
@@ -1900,9 +1027,9 @@
       "Can feel tight for tall/broad users",
       "Not portable"
     ],
-    "who_is_this_for": "<p>Best for <strong>solo users</strong> who want consistent sauna sessions and a smaller footprint than 2\u20133 person cabins.</p>",
+    "who_is_this_for": "<p>Best for <strong>solo users</strong> who want consistent sauna sessions and a smaller footprint than 2–3 person cabins.</p>",
     "who_should_skip": "<p>Skip if you want extra room to stretch or plan to sauna with another person.</p>",
-    "detailed_analysis": "<p>With 1-person cabins, comfort is the real differentiator. If you feel cramped you\u2019ll use it less. Also consider ceiling height, bench comfort, and how easy it is to assemble in your chosen space.</p>",
+    "detailed_analysis": "<p>With 1-person cabins, comfort is the real differentiator. If you feel cramped you’ll use it less. Also consider ceiling height, bench comfort, and how easy it is to assemble in your chosen space.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A good fit if you want a real cabin sauna experience but need a solo footprint.",
     "alternatives": [
@@ -1931,98 +1058,10 @@
     ]
   },
   {
-    "name": "Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna",
-    "sku": "Dynamic-Barcelona-1-2P",
-    "vendorId": "dynamic-saunas",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Infrared Sauna",
-    "approx_price": 1999,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Dynamic Saunas",
-    "primaryCategory": "sauna-heat-therapy",
-    "category": "infrared-sauna",
-    "price_range": "mid-range",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A popular value-oriented 1\u20132 person infrared sauna model focused on practical at-home use.",
-    "description": "A popular value-oriented 1\u20132 person infrared sauna model focused on practical at-home use.",
-    "long_description": "Dynamic Saunas models like the Barcelona are popular because they target a strong value band: a real cabin sauna experience at a more accessible price than many luxury brands. This makes it a common pick for first-time cabin sauna buyers.",
-    "overallScore": 7.7,
-    "score": {
-      "heat_performance": 7,
-      "build_quality": 7,
-      "comfort": 7,
-      "ease_of_use": 8,
-      "installation": 8,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": false,
-      "small_space_friendly": true,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": false,
-      "diy_friendly": false
-    },
-    "cooling_type": null,
-    "heating_type": "infrared",
-    "footprint": "small",
-    "tags": [
-      "mid-range",
-      "infrared",
-      "1-person",
-      "2-person",
-      "small-space"
-    ],
-    "features": "<ul><li><strong>1\u20132 person cabin</strong></li><li><strong>Low-EMF positioning</strong> (brand-dependent specs)</li><li><strong>Value pricing</strong> relative to premium lines</li></ul>",
-    "pros": [
-      "Strong value for a cabin sauna",
-      "Good entry point into at-home sauna routines"
-    ],
-    "cons": [
-      "Less premium fit/finish than luxury models",
-      "May have fewer high-end features"
-    ],
-    "who_is_this_for": "<p>Best for <strong>buyers who want a real cabin sauna</strong> without jumping to luxury pricing.</p>",
-    "who_should_skip": "<p>Skip if you want the most premium materials/finish or a larger multi-person layout.</p>",
-    "detailed_analysis": "<p>In the value cabin tier, the key questions are: does it heat evenly, is assembly manageable, and does the interior feel comfortable enough for consistent use?</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A sensible entry cabin sauna if you want the real experience at a more approachable price.",
-    "alternatives": [
-      {
-        "name": "Dynamic Saunas Andora 2 Person",
-        "sku": "Dynamic-Andora-2P"
-      },
-      {
-        "name": "SereneLife Portable Infrared Sauna",
-        "sku": "SereneLife-Portable-Infrared"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna worth it?",
-        "answer": "A sensible entry cabin sauna if you want the real experience at a more approachable price."
-      },
-      {
-        "question": "Who is Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Dynamic Saunas Barcelona (1\u20132 Person) Low EMF Far Infrared Sauna?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "Dynamic Saunas Andora 2 Person Infrared Sauna",
     "sku": "Dynamic-Andora-2P",
     "vendorId": "dynamic-saunas",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Infrared Sauna",
     "approx_price": 2499,
     "affiliateLinks": {
@@ -2075,14 +1114,14 @@
       "Not portable"
     ],
     "who_is_this_for": "<p>Best for <strong>home sauna buyers</strong> who want a 2-person cabin at a value-oriented price.</p><ul><li>Couples or solo users who want room</li><li>People wanting a real cabin experience</li></ul>",
-    "who_should_skip": "<p>Skip if you want ultra-premium materials or a larger (3\u20134 person) sauna.</p>",
+    "who_should_skip": "<p>Skip if you want ultra-premium materials or a larger (3–4 person) sauna.</p>",
     "detailed_analysis": "<p>Two-person cabins are often the sweet spot: big enough to be comfortable, small enough to fit many homes. Evaluate assembly, heat-up time, and whether the seating height and backrests feel comfortable.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A practical, widely available 2-person infrared cabin with a strong value proposition for regular home use.",
     "alternatives": [
       {
-        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
-        "sku": "Dynamic-Barcelona-1-2P"
+        "name": "Golden Designs Maxxus 2-Person",
+        "sku": "GoldenDesigns-Maxxus-2P"
       },
       {
         "name": "Sun Home Equinox 2-Person",
@@ -2108,7 +1147,7 @@
     "name": "JNH Lifestyles Joyous 2 Person Infrared Sauna",
     "sku": "JNH-Joyous-2P",
     "vendorId": "jnh-lifestyles",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/jnh-lifestyles/JNH-Joyous-2P.jpg",
     "product_type": "Infrared Sauna",
     "approx_price": 3499,
     "affiliateLinks": {
@@ -2161,8 +1200,8 @@
       "Not portable"
     ],
     "who_is_this_for": "<p>Best for <strong>buyers who want a nicer cabin sauna</strong> than the lowest-cost options, and who plan to use it regularly.</p>",
-    "who_should_skip": "<p>Skip if you want the cheapest possible cabin sauna or if you need a 3\u20134 person size.</p>",
-    "detailed_analysis": "<p>At the mid-to-premium cabin tier, comfort and materials matter more. If the bench, back support, and headroom feel good, you\u2019ll actually build the habit.</p>",
+    "who_should_skip": "<p>Skip if you want the cheapest possible cabin sauna or if you need a 3–4 person size.</p>",
+    "detailed_analysis": "<p>At the mid-to-premium cabin tier, comfort and materials matter more. If the bench, back support, and headroom feel good, you’ll actually build the habit.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A solid upgrade pick if you want a nicer at-home 2-person cabin sauna and plan to use it consistently.",
     "alternatives": [
@@ -2194,7 +1233,7 @@
     "name": "SereneLife Portable Infrared Sauna",
     "sku": "SereneLife-Portable-Infrared",
     "vendorId": "serenelife",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Infrared Sauna",
     "approx_price": 279,
     "affiliateLinks": {
@@ -2260,8 +1299,8 @@
         "sku": "HigherDOSE-Infrared-Sauna-Blanket"
       },
       {
-        "name": "Dynamic Saunas Barcelona (1\u20132 Person)",
-        "sku": "Dynamic-Barcelona-1-2P"
+        "name": "Clearlight Curve Sauna Dome",
+        "sku": "Clearlight-Curve-Sauna-Dome"
       }
     ],
     "faqs": [
@@ -2283,7 +1322,7 @@
     "name": "HigherDOSE Infrared Sauna Blanket",
     "sku": "HigherDOSE-Infrared-Sauna-Blanket",
     "vendorId": "higherdose",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/higherdose/HigherDOSE-Infrared-Sauna-Blanket.jpg",
     "product_type": "Infrared Sauna Blanket",
     "approx_price": 699,
     "affiliateLinks": {
@@ -2300,7 +1339,7 @@
     "bestFor": "Beginners building a repeatable recovery routine",
     "reviewSummary": "A premium infrared sauna blanket designed for portable, at-home heat sessions without a cabin sauna.",
     "description": "A premium infrared sauna blanket designed for portable, at-home heat sessions without a cabin sauna.",
-    "long_description": "The HigherDOSE Infrared Sauna Blanket is a premium, portable alternative to cabin saunas. It\u2019s designed for people who want sweating and heat-based relaxation in a product that stores in a closet and plugs into the wall\u2014no construction, no dedicated floor space.",
+    "long_description": "The HigherDOSE Infrared Sauna Blanket is a premium, portable alternative to cabin saunas. It’s designed for people who want sweating and heat-based relaxation in a product that stores in a closet and plugs into the wall—no construction, no dedicated floor space.",
     "overallScore": 8.2,
     "score": {
       "heat_performance": 7,
@@ -2340,7 +1379,7 @@
     ],
     "who_is_this_for": "<p>Best for <strong>space-limited</strong> users and anyone who wants a high-quality portable heat option.</p><ul><li>Apartment dwellers</li><li>People who travel or want easy storage</li><li>Users who want heat sessions without cabin assembly</li></ul>",
     "who_should_skip": "<p>Skip if:</p><ul><li>You want the classic sauna cabin vibe</li><li>You dislike the feeling of a wrap/blanket during sessions</li></ul>",
-    "detailed_analysis": "<p>Sauna blankets can be excellent when used consistently. Evaluate max temperature, comfort, materials, cleaning routine, and how easy it is to actually use weekly. The best blanket is the one you\u2019ll pull out and use.</p>",
+    "detailed_analysis": "<p>Sauna blankets can be excellent when used consistently. Evaluate max temperature, comfort, materials, cleaning routine, and how easy it is to actually use weekly. The best blanket is the one you’ll pull out and use.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "One of the best ways to get consistent heat sessions at home if space or budget makes a cabin sauna impractical.",
     "alternatives": [
@@ -2372,7 +1411,7 @@
     "name": "Almost Heaven Barrel Sauna (Morgan)",
     "sku": "AlmostHeaven-Barrel-Morgan",
     "vendorId": "almost-heaven",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Traditional Barrel Sauna",
     "approx_price": 5715,
     "affiliateLinks": {
@@ -2389,7 +1428,7 @@
     "bestFor": "Outdoor recovery spaces and frequent use",
     "reviewSummary": "A well-known outdoor barrel sauna style offering a classic sauna experience with strong brand recognition.",
     "description": "A well-known outdoor barrel sauna style offering a classic sauna experience with strong brand recognition.",
-    "long_description": "Almost Heaven\u2019s barrel saunas are popular for backyard builds because they deliver the classic sauna aesthetic: rounded barrel shape, outdoor placement, and a more traditional heat experience than infrared. Buyers typically choose barrel saunas for the vibe and the ritual.",
+    "long_description": "Almost Heaven’s barrel saunas are popular for backyard builds because they deliver the classic sauna aesthetic: rounded barrel shape, outdoor placement, and a more traditional heat experience than infrared. Buyers typically choose barrel saunas for the vibe and the ritual.",
     "overallScore": 7.7,
     "score": {
       "heat_performance": 9,
@@ -2428,7 +1467,7 @@
       "Higher total cost and logistics"
     ],
     "who_is_this_for": "<p>Best for <strong>backyard sauna buyers</strong> who want the classic barrel look and a traditional sauna feel.</p>",
-    "who_should_skip": "<p>Skip if you can\u2019t place it outdoors or you prefer infrared heat and indoor convenience.</p>",
+    "who_should_skip": "<p>Skip if you can’t place it outdoors or you prefer infrared heat and indoor convenience.</p>",
     "detailed_analysis": "<p>Traditional outdoor saunas require planning: base/pad, delivery logistics, assembly time, and heater choice. The payoff is the authentic sauna experience and an outdoor wellness \"destination\".</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "If you want the classic backyard sauna experience, Almost Heaven barrel models are a mainstream, recognizable choice.",
@@ -2461,7 +1500,7 @@
     "name": "Almost Heaven Barrel Sauna (Salem)",
     "sku": "AlmostHeaven-Barrel-Salem",
     "vendorId": "almost-heaven",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Traditional Barrel Sauna",
     "approx_price": 4770,
     "affiliateLinks": {
@@ -2478,7 +1517,7 @@
     "bestFor": "Outdoor recovery spaces and frequent use",
     "reviewSummary": "A popular Almost Heaven outdoor barrel sauna model aimed at classic backyard sauna builds.",
     "description": "A popular Almost Heaven outdoor barrel sauna model aimed at classic backyard sauna builds.",
-    "long_description": "The Salem is often referenced as an approachable barrel sauna option: classic shape, outdoor placement, and a traditional sauna experience. It\u2019s chosen for the ritual and authentic feel rather than compact portability.",
+    "long_description": "The Salem is often referenced as an approachable barrel sauna option: classic shape, outdoor placement, and a traditional sauna experience. It’s chosen for the ritual and authentic feel rather than compact portability.",
     "overallScore": 7.3,
     "score": {
       "heat_performance": 9,
@@ -2549,7 +1588,7 @@
     "name": "Almost Heaven Bluestone 3-Person",
     "sku": "AlmostHeaven-Bluestone-3P",
     "vendorId": "almost-heaven",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Traditional Cabin Sauna",
     "approx_price": 4999,
     "affiliateLinks": {
@@ -2604,7 +1643,7 @@
     ],
     "who_is_this_for": "<p>Best for <strong>families</strong> or users who want extra space for longer sessions.</p>",
     "who_should_skip": "<p>Skip if you need ultra-compact footprint or want a portable solution.</p>",
-    "detailed_analysis": "<p>In 3-person cabins, the main value is comfort. If you can sit and breathe without feeling cramped, you\u2019ll use it more often.</p>",
+    "detailed_analysis": "<p>In 3-person cabins, the main value is comfort. If you can sit and breathe without feeling cramped, you’ll use it more often.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A solid size for households that want a traditional sauna experience without going huge.",
     "alternatives": [
@@ -2613,8 +1652,8 @@
         "sku": "GoldenDesigns-Monaco-3P"
       },
       {
-        "name": "Dynamic Saunas Venice 2-Person",
-        "sku": "Dynamic-Venice-2P"
+        "name": "Almost Heaven Barrel Sauna (Salem)",
+        "sku": "AlmostHeaven-Barrel-Salem"
       }
     ],
     "faqs": [
@@ -2636,7 +1675,7 @@
     "name": "Dundalk Leisure Barrel Sauna",
     "sku": "Dundalk-Barrel-Sauna",
     "vendorId": "dundalk-leisurecraft",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Traditional Barrel Sauna",
     "approx_price": 6999,
     "affiliateLinks": {
@@ -2653,7 +1692,7 @@
     "bestFor": "Outdoor recovery spaces and frequent use",
     "reviewSummary": "A premium-leaning outdoor barrel sauna brand known for classic wood sauna builds.",
     "description": "A premium-leaning outdoor barrel sauna brand known for classic wood sauna builds.",
-    "long_description": "Dundalk LeisureCraft barrel saunas are chosen by buyers who want an outdoor wood sauna build with a strong traditional feel. Barrel shapes are popular for aesthetics and the outdoor \u201cdestination\u201d experience.",
+    "long_description": "Dundalk LeisureCraft barrel saunas are chosen by buyers who want an outdoor wood sauna build with a strong traditional feel. Barrel shapes are popular for aesthetics and the outdoor “destination” experience.",
     "overallScore": 7.7,
     "score": {
       "heat_performance": 9,
@@ -2724,7 +1763,7 @@
     "name": "ALEKO Outdoor Barrel Sauna",
     "sku": "ALEKO-Barrel-Sauna",
     "vendorId": "aleko",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Traditional Barrel Sauna",
     "approx_price": 4299,
     "affiliateLinks": {
@@ -2741,7 +1780,7 @@
     "bestFor": "Outdoor recovery spaces and frequent use",
     "reviewSummary": "A value-oriented outdoor barrel sauna option commonly sold online for backyard sauna builds.",
     "description": "A value-oriented outdoor barrel sauna option commonly sold online for backyard sauna builds.",
-    "long_description": "ALEKO barrel saunas tend to compete on price relative to premium wood sauna brands. They\u2019re bought by people who want the classic barrel look and outdoor sauna experience while staying in a more accessible budget band.",
+    "long_description": "ALEKO barrel saunas tend to compete on price relative to premium wood sauna brands. They’re bought by people who want the classic barrel look and outdoor sauna experience while staying in a more accessible budget band.",
     "overallScore": 7,
     "score": {
       "heat_performance": 8,
@@ -2782,7 +1821,7 @@
     "who_should_skip": "<p>Skip if you want premium wood/finish or white-glove delivery and support.</p>",
     "detailed_analysis": "<p>Value barrel saunas can be great, but verify included accessories, heater compatibility, and support. Assembly quality and instructions matter a lot.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A reasonable pick if you want the barrel sauna look at a lower entry price and you\u2019re comfortable managing assembly and details.",
+    "verdict": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details.",
     "alternatives": [
       {
         "name": "Almost Heaven Barrel Sauna (Salem)",
@@ -2796,7 +1835,7 @@
     "faqs": [
       {
         "question": "Is ALEKO Outdoor Barrel Sauna worth it?",
-        "answer": "A reasonable pick if you want the barrel sauna look at a lower entry price and you\u2019re comfortable managing assembly and details."
+        "answer": "A reasonable pick if you want the barrel sauna look at a lower entry price and you’re comfortable managing assembly and details."
       },
       {
         "question": "Who is ALEKO Outdoor Barrel Sauna best for?",
@@ -2812,7 +1851,7 @@
     "name": "Golden Designs Monaco 3-Person Sauna",
     "sku": "GoldenDesigns-Monaco-3P",
     "vendorId": "golden-designs",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Infrared Sauna",
     "approx_price": 8999,
     "affiliateLinks": {
@@ -2829,7 +1868,7 @@
     "bestFor": "Home recovery buyers comparing long-term ownership value",
     "reviewSummary": "A premium-leaning 3-person infrared sauna model positioned around near-zero EMF marketing and higher-end cabin experience.",
     "description": "A premium-leaning 3-person infrared sauna model positioned around near-zero EMF marketing and higher-end cabin experience.",
-    "long_description": "Golden Designs\u2019 Monaco 3-person category is designed for buyers who want a larger interior than typical 2-person cabins and a more premium feel. The 3-person size is often the comfort sweet spot for households: room for multiple users or extra space for solo sessions.",
+    "long_description": "Golden Designs’ Monaco 3-person category is designed for buyers who want a larger interior than typical 2-person cabins and a more premium feel. The 3-person size is often the comfort sweet spot for households: room for multiple users or extra space for solo sessions.",
     "overallScore": 8.3,
     "score": {
       "heat_performance": 9,
@@ -2867,7 +1906,7 @@
     ],
     "who_is_this_for": "<p>Best for <strong>households</strong> or users who want a roomier cabin and plan to use sauna regularly.</p>",
     "who_should_skip": "<p>Skip if you need a compact footprint or want a low-cost first sauna.</p>",
-    "detailed_analysis": "<p>With 3-person infrared cabins, comfort and consistency matter more than fancy add-ons. If it\u2019s pleasant to sit in, you\u2019ll use it more\u2014and results come from consistency.</p>",
+    "detailed_analysis": "<p>With 3-person infrared cabins, comfort and consistency matter more than fancy add-ons. If it’s pleasant to sit in, you’ll use it more—and results come from consistency.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A great choice if you want a roomy infrared cabin that supports consistent use for a household or serious routine.",
     "alternatives": [
@@ -2899,7 +1938,7 @@
     "name": "Golden Designs Maxxus 2-Person Sauna",
     "sku": "GoldenDesigns-Maxxus-2P",
     "vendorId": "golden-designs",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Infrared Sauna",
     "approx_price": 4999,
     "affiliateLinks": {
@@ -2952,7 +1991,7 @@
       "Assembly/delivery required"
     ],
     "who_is_this_for": "<p>Best for <strong>buyers who want a comfortable 2-person cabin</strong> without going to luxury price extremes.</p>",
-    "who_should_skip": "<p>Skip if you need a 3\u20134 person size or want a portable solution.</p>",
+    "who_should_skip": "<p>Skip if you need a 3–4 person size or want a portable solution.</p>",
     "detailed_analysis": "<p>In 2-person cabins, the key is whether you can sit comfortably and actually use it frequently. Evaluate assembly, footprint, and day-to-day usability.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A solid 2-person cabin option if you want a stable, repeatable home sauna routine.",
@@ -2982,96 +2021,10 @@
     ]
   },
   {
-    "name": "Dynamic Saunas Venice 2-Person",
-    "sku": "Dynamic-Venice-2P",
-    "vendorId": "dynamic-saunas",
-    "image": "/images/ThermaPeakLogo.png",
-    "product_type": "Infrared Sauna",
-    "approx_price": 2799,
-    "affiliateLinks": {
-      "amazon": "",
-      "manufacturer": "",
-      "bestBuy": "",
-      "walmart": "",
-      "rei": ""
-    },
-    "brand": "Dynamic Saunas",
-    "primaryCategory": "sauna-heat-therapy",
-    "category": "infrared-sauna",
-    "price_range": "mid-range",
-    "bestFor": "Beginners building a repeatable recovery routine",
-    "reviewSummary": "A 2-person infrared cabin option aimed at value-conscious home sauna buyers.",
-    "description": "A 2-person infrared cabin option aimed at value-conscious home sauna buyers.",
-    "long_description": "Dynamic 2-person cabins like the Venice are typically chosen for value: a real cabin sauna experience, enough room for comfort, and broad online availability.",
-    "overallScore": 7.8,
-    "score": {
-      "heat_performance": 7,
-      "build_quality": 7,
-      "comfort": 8,
-      "ease_of_use": 8,
-      "installation": 8,
-      "value": 9
-    },
-    "suitability": {
-      "tall_user_friendly": true,
-      "small_space_friendly": false,
-      "outdoor_ready": false,
-      "beginner_friendly": true,
-      "portable": false,
-      "diy_friendly": false
-    },
-    "cooling_type": null,
-    "heating_type": "infrared",
-    "footprint": "medium",
-    "tags": [
-      "mid-range",
-      "infrared",
-      "2-person"
-    ],
-    "features": "<ul><li><strong>2-person infrared cabin</strong></li><li><strong>Value positioning</strong></li></ul>",
-    "pros": [
-      "Good entry 2-person cabin value",
-      "Comfortable size for regular use"
-    ],
-    "cons": [
-      "Less premium than luxury brands",
-      "Not portable"
-    ],
-    "who_is_this_for": "<p>Best for <strong>value-oriented buyers</strong> who want a 2-person cabin for regular sessions.</p>",
-    "who_should_skip": "<p>Skip if you want luxury-grade materials or a larger household size.</p>",
-    "detailed_analysis": "<p>As a value cabin, focus on comfort and habit. If you use it consistently, the value is high. If it\u2019s annoying to assemble or cramped, it becomes a garage ornament.</p>",
-    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A sensible 2-person cabin sauna if you want value and a real at-home sauna habit.",
-    "alternatives": [
-      {
-        "name": "Dynamic Saunas Andora 2 Person",
-        "sku": "Dynamic-Andora-2P"
-      },
-      {
-        "name": "JNH Lifestyles Joyous 2 Person",
-        "sku": "JNH-Joyous-2P"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Dynamic Saunas Venice 2-Person worth it?",
-        "answer": "A sensible 2-person cabin sauna if you want value and a real at-home sauna habit."
-      },
-      {
-        "question": "Who is Dynamic Saunas Venice 2-Person best for?",
-        "answer": "Beginners building a repeatable recovery routine"
-      },
-      {
-        "question": "Where can I check the current price for Dynamic Saunas Venice 2-Person?",
-        "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
-      }
-    ]
-  },
-  {
     "name": "JNH Lifestyles Ensi 4-Person",
     "sku": "JNH-Ensi-4P",
     "vendorId": "jnh-lifestyles",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/jnh-lifestyles/JNH-Ensi-4P.jpg",
     "product_type": "Infrared Sauna",
     "approx_price": 5999,
     "affiliateLinks": {
@@ -3088,7 +2041,7 @@
     "bestFor": "Home recovery buyers comparing long-term ownership value",
     "reviewSummary": "A larger 4-person infrared sauna option for households or people who want extra room for longer sessions.",
     "description": "A larger 4-person infrared sauna option for households or people who want extra room for longer sessions.",
-    "long_description": "A 4-person cabin is for buyers who want real space: easier breathing room, more comfortable sessions, and the ability to sauna with family or friends. It\u2019s also popular for solo users who want to stretch out or prefer a less confined feel.",
+    "long_description": "A 4-person cabin is for buyers who want real space: easier breathing room, more comfortable sessions, and the ability to sauna with family or friends. It’s also popular for solo users who want to stretch out or prefer a less confined feel.",
     "overallScore": 8.2,
     "score": {
       "heat_performance": 8,
@@ -3125,7 +2078,7 @@
       "Higher cost and delivery logistics"
     ],
     "who_is_this_for": "<p>Best for <strong>households</strong> and users who want a roomy cabin experience.</p>",
-    "who_should_skip": "<p>Skip if you\u2019re tight on space or want a low-cost first sauna.</p>",
+    "who_should_skip": "<p>Skip if you’re tight on space or want a low-cost first sauna.</p>",
     "detailed_analysis": "<p>Bigger cabins increase comfort, but also increase cost, footprint, and delivery complexity. Ensure your intended location can handle the size and assembly.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A strong option if you have space and want a household-friendly, comfortable cabin for frequent sessions.",
@@ -3158,7 +2111,7 @@
     "name": "Sunlighten mPulse Series",
     "sku": "Sunlighten-mPulse-Series",
     "vendorId": "sunlighten",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/placeholders/sauna-placeholder.webp",
     "product_type": "Infrared Sauna",
     "approx_price": 9999,
     "affiliateLinks": {
@@ -3175,7 +2128,7 @@
     "bestFor": "Home recovery buyers comparing long-term ownership value",
     "reviewSummary": "A premium infrared sauna series known for brand authority, premium pricing, and wellness-market positioning.",
     "description": "A premium infrared sauna series known for brand authority, premium pricing, and wellness-market positioning.",
-    "long_description": "Sunlighten\u2019s mPulse series is often positioned as a premium category leader in the infrared sauna space, emphasizing refined build quality, wellness branding, and a more luxury ownership experience. It targets buyers who want a top-tier brand and are comfortable paying for it.",
+    "long_description": "Sunlighten’s mPulse series is often positioned as a premium category leader in the infrared sauna space, emphasizing refined build quality, wellness branding, and a more luxury ownership experience. It targets buyers who want a top-tier brand and are comfortable paying for it.",
     "overallScore": 8.7,
     "score": {
       "heat_performance": 10,
@@ -3211,10 +2164,10 @@
       "Overkill for casual users"
     ],
     "who_is_this_for": "<p>Best for <strong>premium buyers</strong> who want a high-authority sauna brand and plan long-term ownership.</p>",
-    "who_should_skip": "<p>Skip if you want value pricing or you\u2019re unsure you\u2019ll use a sauna consistently.</p>",
-    "detailed_analysis": "<p>Luxury sauna buyers should evaluate warranty, support, build quality, and comfort. At high price tiers, you\u2019re paying for reliability, materials, and brand trust as much as heat output.</p>",
+    "who_should_skip": "<p>Skip if you want value pricing or you’re unsure you’ll use a sauna consistently.</p>",
+    "detailed_analysis": "<p>Luxury sauna buyers should evaluate warranty, support, build quality, and comfort. At high price tiers, you’re paying for reliability, materials, and brand trust as much as heat output.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
-    "verdict": "A premium pick if you want a top-tier brand and you\u2019re committed to consistent sauna use over the long haul.",
+    "verdict": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul.",
     "alternatives": [
       {
         "name": "Clearlight Sanctuary 2",
@@ -3228,7 +2181,7 @@
     "faqs": [
       {
         "question": "Is Sunlighten mPulse Series worth it?",
-        "answer": "A premium pick if you want a top-tier brand and you\u2019re committed to consistent sauna use over the long haul."
+        "answer": "A premium pick if you want a top-tier brand and you’re committed to consistent sauna use over the long haul."
       },
       {
         "question": "Who is Sunlighten mPulse Series best for?",
@@ -3244,7 +2197,7 @@
     "name": "Sun Home Hybrid Series",
     "sku": "SunHome-Hybrid-Series",
     "vendorId": "sun-home",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/sun-home/SunHome-Hybrid-Series.jpg",
     "product_type": "Hybrid Sauna",
     "approx_price": 10599,
     "affiliateLinks": {
@@ -3297,8 +2250,8 @@
       "More complexity than basics"
     ],
     "who_is_this_for": "<p>Best for <strong>frequent sauna users</strong> who want flexibility and a premium experience.</p>",
-    "who_should_skip": "<p>Skip if you want the lowest cost entry point or don\u2019t need versatility.</p>",
-    "detailed_analysis": "<p>Hybrid models should be evaluated on comfort and whether the versatility actually increases usage. If it encourages more consistent sessions, it\u2019s worth paying for.</p>",
+    "who_should_skip": "<p>Skip if you want the lowest cost entry point or don’t need versatility.</p>",
+    "detailed_analysis": "<p>Hybrid models should be evaluated on comfort and whether the versatility actually increases usage. If it encourages more consistent sessions, it’s worth paying for.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A premium versatility pick if you sauna often and want a feature-rich cabin for long-term use.",
     "alternatives": [
@@ -3330,7 +2283,7 @@
     "name": "Clearlight Sanctuary 2",
     "sku": "Clearlight-Sanctuary-2",
     "vendorId": "clearlight",
-    "image": "/images/ThermaPeakLogo.png",
+    "image": "/images/products/clearlight/Clearlight-Sanctuary-2.jpg",
     "product_type": "Infrared Sauna",
     "approx_price": 8999,
     "affiliateLinks": {
@@ -3347,7 +2300,7 @@
     "bestFor": "Home recovery buyers comparing long-term ownership value",
     "reviewSummary": "A luxury infrared sauna line positioned for premium materials, comfort, and long-term ownership.",
     "description": "A luxury infrared sauna line positioned for premium materials, comfort, and long-term ownership.",
-    "long_description": "Clearlight\u2019s Sanctuary series targets the luxury buyer: premium cabin feel, refined build, and a more high-end ownership experience. It\u2019s designed for people who want a sauna as a long-term wellness appliance and are willing to pay for a premium brand tier.",
+    "long_description": "Clearlight’s Sanctuary series targets the luxury buyer: premium cabin feel, refined build, and a more high-end ownership experience. It’s designed for people who want a sauna as a long-term wellness appliance and are willing to pay for a premium brand tier.",
     "overallScore": 8.7,
     "score": {
       "heat_performance": 10,
@@ -3383,8 +2336,8 @@
       "Overkill for casual use"
     ],
     "who_is_this_for": "<p>Best for <strong>luxury buyers</strong> who want a premium cabin experience and expect long-term ownership.</p>",
-    "who_should_skip": "<p>Skip if you\u2019re budget-focused or unsure you\u2019ll sauna consistently.</p>",
-    "detailed_analysis": "<p>At luxury tiers, focus on comfort, warranty, support, materials, and how the sauna integrates into your home. If it\u2019s comfortable and reliable, you\u2019ll use it more and benefit more.</p>",
+    "who_should_skip": "<p>Skip if you’re budget-focused or unsure you’ll sauna consistently.</p>",
+    "detailed_analysis": "<p>At luxury tiers, focus on comfort, warranty, support, materials, and how the sauna integrates into your home. If it’s comfortable and reliable, you’ll use it more and benefit more.</p>",
     "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
     "verdict": "A luxury choice for buyers who want a premium sauna experience and plan to use it consistently for years.",
     "alternatives": [
@@ -3409,6 +2362,1321 @@
       {
         "question": "Where can I check the current price for Clearlight Sanctuary 2?",
         "answer": "Use the current-price or official-website buttons on this review page to verify the latest availability and merchant terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hooga HG300 Red Light Therapy Panel",
+    "sku": "Hooga-HG300-Red-Light-Panel",
+    "vendorId": "hooga",
+    "image": "/images/placeholders/red-light-placeholder.webp",
+    "product_type": "Red Light Therapy Panel",
+    "approx_price": 149,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B07T81R1DX?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hooga",
+    "primaryCategory": "red-light-therapy",
+    "category": "red-light-therapy",
+    "price_range": "budget",
+    "bestFor": "Entry-level red light users who want a real tabletop panel",
+    "reviewSummary": "A compact 660nm red and 850nm near-infrared light therapy panel with 60 LEDs for face, body, and localized recovery routines.",
+    "description": "A compact red and near-infrared light therapy panel for at-home recovery and wellness routines.",
+    "long_description": "The Hooga HG300 is a practical entry point into red light therapy because it gives users a real panel format without jumping to full-body panel pricing. It is best used for targeted sessions on the face, joints, shoulders, knees, or smaller muscle groups rather than full-body coverage.",
+    "overallScore": 7.6,
+    "score": {
+      "light_output": 7,
+      "coverage": 5,
+      "build_quality": 7,
+      "ease_of_use": 9,
+      "portability": 9,
+      "value": 9
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": "red-light",
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "red-light",
+      "near-infrared",
+      "portable",
+      "budget",
+      "small-space",
+      "beginner-friendly"
+    ],
+    "features": "<ul><li><strong>660nm red and 850nm near-infrared wavelengths</strong> for common red light protocols</li><li><strong>Compact tabletop panel</strong> for targeted sessions</li><li><strong>Built-in timer and stand</strong> for simple daily use</li></ul>",
+    "pros": [
+      "Affordable entry into real panel-style red light therapy",
+      "Compact and easy to place in a home office, bedroom, or gym",
+      "Good for targeted treatment zones"
+    ],
+    "cons": [
+      "Too small for efficient full-body sessions",
+      "Requires consistency to be useful",
+      "Less refined than premium full-body panels"
+    ],
+    "who_is_this_for": "<p>Best for <strong>beginners and budget-conscious users</strong> who want to try red light therapy with a real panel instead of a tiny handheld device.</p>",
+    "who_should_skip": "<p>Skip this if you want full-body coverage, large treatment zones, or premium app-connected features.</p>",
+    "detailed_analysis": "<p>The HG300 is strongest as a targeted-use device. It is not a luxury panel, but it gives buyers a simple way to test whether red light sessions fit into their routine before investing in a larger setup.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A strong Amazon-friendly starter panel for targeted red light therapy sessions at a reasonable price.",
+    "alternatives": [
+      {
+        "name": "Hooga HG200 Red Light Therapy Panel",
+        "sku": "Hooga-HG200-Red-Light-Panel"
+      },
+      {
+        "name": "LifePro Red Light Therapy Panel",
+        "sku": "LifePro-Red-Light-Therapy-Panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hooga HG300 Red Light Therapy Panel worth it?",
+        "answer": "A strong Amazon-friendly starter panel for targeted red light therapy sessions at a reasonable price."
+      },
+      {
+        "question": "Who is Hooga HG300 Red Light Therapy Panel best for?",
+        "answer": "Entry-level red light users who want a real tabletop panel"
+      },
+      {
+        "question": "Where can I check the current price for Hooga HG300 Red Light Therapy Panel?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hooga HG200 Red Light Therapy Panel",
+    "sku": "Hooga-HG200-Red-Light-Panel",
+    "vendorId": "hooga",
+    "image": "/images/placeholders/red-light-placeholder.webp",
+    "product_type": "Red Light Therapy Panel",
+    "approx_price": 119,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B092BCWQMK?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hooga",
+    "primaryCategory": "red-light-therapy",
+    "category": "red-light-therapy",
+    "price_range": "budget",
+    "bestFor": "Budget buyers who want the smallest practical red light panel",
+    "reviewSummary": "A smaller Hooga red and near-infrared panel with 40 LEDs designed for targeted, space-saving sessions.",
+    "description": "A compact red light therapy panel with red and near-infrared wavelengths for simple at-home use.",
+    "long_description": "The Hooga HG200 is one of the most approachable ways to add red light therapy to a recovery setup. It is not designed for full-body coverage, but it works well for beginners who want a small, affordable panel for localized treatment areas.",
+    "overallScore": 7.2,
+    "score": {
+      "light_output": 6,
+      "coverage": 4,
+      "build_quality": 7,
+      "ease_of_use": 9,
+      "portability": 10,
+      "value": 9
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": "red-light",
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "red-light",
+      "near-infrared",
+      "portable",
+      "budget",
+      "beginner-friendly"
+    ],
+    "features": "<ul><li><strong>Red and near-infrared light</strong> for basic protocols</li><li><strong>Very compact footprint</strong></li><li><strong>Easy tabletop placement</strong></li></ul>",
+    "pros": [
+      "Very affordable",
+      "Small enough for almost any room",
+      "Simple setup"
+    ],
+    "cons": [
+      "Limited coverage area",
+      "Not ideal for larger muscle groups",
+      "Less power than bigger panels"
+    ],
+    "who_is_this_for": "<p>Best for <strong>first-time red light buyers</strong> who want a low-cost device for targeted sessions.</p>",
+    "who_should_skip": "<p>Skip this if you want full back, leg, or whole-body coverage.</p>",
+    "detailed_analysis": "<p>This is a starter device. Its value comes from convenience and price, not maximum coverage. It works best when the buyer has realistic expectations and uses it for smaller treatment zones.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A compact, low-cost way to test red light therapy before moving to a larger panel.",
+    "alternatives": [
+      {
+        "name": "Hooga HG300 Red Light Therapy Panel",
+        "sku": "Hooga-HG300-Red-Light-Panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hooga HG200 Red Light Therapy Panel worth it?",
+        "answer": "A compact, low-cost way to test red light therapy before moving to a larger panel."
+      },
+      {
+        "question": "Who is Hooga HG200 Red Light Therapy Panel best for?",
+        "answer": "Budget buyers who want the smallest practical red light panel"
+      },
+      {
+        "question": "Where can I check the current price for Hooga HG200 Red Light Therapy Panel?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "LifePro Red Light Therapy Panel",
+    "sku": "LifePro-Red-Light-Therapy-Panel",
+    "vendorId": "lifepro",
+    "image": "/images/placeholders/red-light-placeholder.webp",
+    "product_type": "Red Light Therapy Panel",
+    "approx_price": 159,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0CB4R7PRV?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "LifePro",
+    "primaryCategory": "red-light-therapy",
+    "category": "red-light-therapy",
+    "price_range": "budget",
+    "bestFor": "Amazon shoppers who want a simple red/NIR panel for joints and muscles",
+    "reviewSummary": "A red and near-infrared light therapy panel positioned for muscle, joint, and skin wellness routines.",
+    "description": "A consumer red light therapy panel designed for localized recovery, joint comfort, and skin-focused use cases.",
+    "long_description": "LifePro's red light panel is useful for buyers who want an affordable, Amazon-available red/NIR option with a simple setup. It is most appropriate for targeted routines rather than full-body protocols.",
+    "overallScore": 7.3,
+    "score": {
+      "light_output": 7,
+      "coverage": 5,
+      "build_quality": 7,
+      "ease_of_use": 9,
+      "portability": 8,
+      "value": 9
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": "red-light",
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "red-light",
+      "near-infrared",
+      "portable",
+      "budget",
+      "recovery"
+    ],
+    "features": "<ul><li><strong>Red and near-infrared modes</strong></li><li><strong>Targeted panel format</strong></li><li><strong>Simple home recovery setup</strong></li></ul>",
+    "pros": [
+      "Good value for targeted sessions",
+      "Simple to use",
+      "Amazon-friendly monetization option"
+    ],
+    "cons": [
+      "Not a premium full-body panel",
+      "Protocol consistency matters",
+      "Coverage is limited"
+    ],
+    "who_is_this_for": "<p>Best for <strong>buyers who want an affordable red light panel</strong> for localized joints, muscles, or skin routines.</p>",
+    "who_should_skip": "<p>Skip this if you want a large modular panel or professional clinic-style setup.</p>",
+    "detailed_analysis": "<p>The LifePro panel is a practical Amazon product for entry-level red light content. It gives ThermaPeak a monetizable red light product without forcing the site into expensive non-Amazon brands immediately.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A practical Amazon-available red light panel for entry-level recovery and wellness content.",
+    "alternatives": [
+      {
+        "name": "Hooga HG300 Red Light Therapy Panel",
+        "sku": "Hooga-HG300-Red-Light-Panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LifePro Red Light Therapy Panel worth it?",
+        "answer": "A practical Amazon-available red light panel for entry-level recovery and wellness content."
+      },
+      {
+        "question": "Who is LifePro Red Light Therapy Panel best for?",
+        "answer": "Amazon shoppers who want a simple red/NIR panel for joints and muscles"
+      },
+      {
+        "question": "Where can I check the current price for LifePro Red Light Therapy Panel?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Fringe Red Light Therapy Wrap",
+    "sku": "Fringe-Red-Light-Therapy-Wrap",
+    "vendorId": "fringe",
+    "image": "/images/placeholders/red-light-placeholder.webp",
+    "product_type": "Red Light Therapy Wrap",
+    "approx_price": 249,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0CN2M9ZR5?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Fringe",
+    "primaryCategory": "red-light-therapy",
+    "category": "red-light-therapy",
+    "price_range": "mid-range",
+    "bestFor": "Targeted joint and soft-tissue recovery without a standing panel",
+    "reviewSummary": "A wireless red and near-infrared therapy wrap designed for targeted recovery around joints and muscles.",
+    "description": "A wearable red light therapy wrap that combines red and near-infrared wavelengths for localized use on knees, shoulders, hips, back, and other treatment zones.",
+    "long_description": "The Fringe wrap is a different style of red light product than a panel. Instead of standing in front of a light, users can wrap the device around a target area. That makes it useful for buyers focused on knees, elbows, shoulders, lower back, or travel-friendly recovery.",
+    "overallScore": 7.8,
+    "score": {
+      "light_output": 7,
+      "coverage": 6,
+      "build_quality": 8,
+      "ease_of_use": 8,
+      "portability": 10,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": "red-light",
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "red-light",
+      "near-infrared",
+      "wrap",
+      "portable",
+      "joint-recovery"
+    ],
+    "features": "<ul><li><strong>Wearable wrap design</strong> for targeted areas</li><li><strong>660nm red and 850nm near-infrared wavelengths</strong></li><li><strong>Wireless format</strong> for flexible use</li></ul>",
+    "pros": [
+      "Very portable",
+      "Good for knees, elbows, shoulders, and back",
+      "Easier to target joints than a tabletop panel"
+    ],
+    "cons": [
+      "Not designed for full-body exposure",
+      "More expensive than small panels",
+      "Fit varies by body area"
+    ],
+    "who_is_this_for": "<p>Best for <strong>active users with specific sore spots</strong> who prefer a wearable red light device over standing in front of a panel.</p>",
+    "who_should_skip": "<p>Skip this if you want broad panel coverage or a lower-cost starter device.</p>",
+    "detailed_analysis": "<p>Wearable red light devices are especially useful for people who know exactly where they want to apply light. This makes the Fringe wrap easier to explain in content than generic red light claims.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A useful Amazon recovery product for targeted red light therapy around joints and soft tissue.",
+    "alternatives": [
+      {
+        "name": "Hooga HG300 Red Light Therapy Panel",
+        "sku": "Hooga-HG300-Red-Light-Panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Fringe Red Light Therapy Wrap worth it?",
+        "answer": "A useful Amazon recovery product for targeted red light therapy around joints and soft tissue."
+      },
+      {
+        "question": "Who is Fringe Red Light Therapy Wrap best for?",
+        "answer": "Targeted joint and soft-tissue recovery without a standing panel"
+      },
+      {
+        "question": "Where can I check the current price for Fringe Red Light Therapy Wrap?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Clearlight Curve Sauna Dome with Amethyst Mat",
+    "sku": "Clearlight-Curve-Sauna-Dome",
+    "vendorId": "clearlight",
+    "image": "/images/placeholders/sauna-placeholder.webp",
+    "product_type": "Portable Infrared Sauna Dome",
+    "approx_price": 2399,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0DNRP5BZV?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Clearlight",
+    "primaryCategory": "sauna-heat-therapy",
+    "category": "infrared-sauna",
+    "price_range": "premium",
+    "bestFor": "Small-space buyers who want a premium portable infrared sauna",
+    "reviewSummary": "A portable infrared sauna dome with a mat that brings a premium heat-therapy experience into small spaces.",
+    "description": "A space-saving infrared sauna dome designed for users who want a premium heat session without building a full cabin sauna.",
+    "long_description": "The Clearlight Curve fills an important gap between sauna blankets and full cabin saunas. It is still premium-priced, but it gives buyers a more immersive heat experience while staying portable and apartment-friendly.",
+    "overallScore": 8.2,
+    "score": {
+      "heat_performance": 9,
+      "build_quality": 9,
+      "comfort": 8,
+      "ease_of_use": 8,
+      "installation": 10,
+      "value": 7
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": "infrared",
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "infrared",
+      "sauna-dome",
+      "portable",
+      "premium",
+      "small-space"
+    ],
+    "features": "<ul><li><strong>Portable infrared dome</strong> format</li><li><strong>Space-saving setup</strong> compared with cabin saunas</li><li><strong>Premium brand positioning</strong></li></ul>",
+    "pros": [
+      "More immersive than many sauna blankets",
+      "No full cabin installation",
+      "Strong premium small-space option"
+    ],
+    "cons": [
+      "Expensive for a portable sauna format",
+      "Not the same experience as sitting in a cabin sauna",
+      "Requires storage space"
+    ],
+    "who_is_this_for": "<p>Best for <strong>buyers who want premium infrared heat</strong> but do not have room for a full sauna cabin.</p>",
+    "who_should_skip": "<p>Skip this if you want the lowest-cost heat therapy product or a traditional seated sauna experience.</p>",
+    "detailed_analysis": "<p>A sauna dome is a useful format for ThermaPeak because it bridges commercial intent between sauna blankets and full sauna cabins. It is premium, but still more accessible than a built-in sauna.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A premium Amazon-available infrared sauna dome for small-space heat therapy buyers.",
+    "alternatives": [
+      {
+        "name": "HigherDOSE Infrared Sauna Blanket",
+        "sku": "HigherDOSE-Infrared-Sauna-Blanket"
+      },
+      {
+        "name": "SereneLife Portable Infrared Sauna",
+        "sku": "SereneLife-Portable-Infrared"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Clearlight Curve Sauna Dome with Amethyst Mat worth it?",
+        "answer": "A premium Amazon-available infrared sauna dome for small-space heat therapy buyers."
+      },
+      {
+        "question": "Who is Clearlight Curve Sauna Dome with Amethyst Mat best for?",
+        "answer": "Small-space buyers who want a premium portable infrared sauna"
+      },
+      {
+        "question": "Where can I check the current price for Clearlight Curve Sauna Dome with Amethyst Mat?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Arcwilderness Foil Cold Plunge Tub 130 Gal XL",
+    "sku": "Arcwilderness-Foil-Cold-Plunge-130Gal",
+    "vendorId": "arcwilderness",
+    "image": "/images/placeholders/cold-plunge-placeholder.webp",
+    "product_type": "Cold Plunge",
+    "approx_price": 149,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0DFCF3842?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Arcwilderness",
+    "primaryCategory": "cold-exposure",
+    "category": "cold-plunge",
+    "price_range": "budget",
+    "bestFor": "Tall users who want a larger Amazon cold plunge tub",
+    "reviewSummary": "A large 130-gallon portable ice bath tub with heat-reflective insulation for budget cold-plunge setups.",
+    "description": "A larger Amazon-available cold plunge tub aimed at athletes who want more room than the smallest inflatable pods.",
+    "long_description": "This Arcwilderness model adds an important Amazon-friendly product for tall-user and larger-capacity cold plunge lists. It still relies on ice, but the larger size and insulated material make it more compelling than ultra-cheap entry pods for some buyers.",
+    "overallScore": 6.2,
+    "score": {
+      "temperature_control": 2,
+      "insulation": 6,
+      "durability": 6,
+      "ease_of_use": 8,
+      "maintenance": 5,
+      "value": 9
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": false,
+      "outdoor_ready": true,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": "ice",
+    "heating_type": null,
+    "footprint": "medium",
+    "tags": [
+      "amazon",
+      "cold-plunge",
+      "ice-based",
+      "budget",
+      "tall-user-friendly",
+      "outdoor",
+      "portable"
+    ],
+    "features": "<ul><li><strong>130-gallon XL capacity</strong></li><li><strong>Heat-reflective insulated material</strong></li><li><strong>Portable ice bath format</strong></li></ul>",
+    "pros": [
+      "Larger than many budget plunge tubs",
+      "Useful for tall-user lists",
+      "Amazon monetization option"
+    ],
+    "cons": [
+      "Still ice-dependent",
+      "Not a premium rigid tub",
+      "Durability will not match high-end systems"
+    ],
+    "who_is_this_for": "<p>Best for <strong>taller users and budget buyers</strong> who want a larger portable plunge without moving into premium pricing.</p>",
+    "who_should_skip": "<p>Skip this if you want built-in chilling, a rigid tub, or luxury materials.</p>",
+    "detailed_analysis": "<p>This is a practical replacement for some obscure non-monetizable budget cold plunge products. It gives the site an Amazon-friendly option for tall users and outdoor use cases.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A useful Amazon cold plunge option for buyers who want more capacity without premium pricing.",
+    "alternatives": [
+      {
+        "name": "VEVOR Ice Bath Tub XL",
+        "sku": "VEVOR-Ice-Bath-Tub-XL"
+      },
+      {
+        "name": "The Cold Pod",
+        "sku": "TheColdPod-IceBath"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Arcwilderness Foil Cold Plunge Tub 130 Gal XL worth it?",
+        "answer": "A useful Amazon cold plunge option for buyers who want more capacity without premium pricing."
+      },
+      {
+        "question": "Who is Arcwilderness Foil Cold Plunge Tub 130 Gal XL best for?",
+        "answer": "Tall users who want a larger Amazon cold plunge tub"
+      },
+      {
+        "question": "Where can I check the current price for Arcwilderness Foil Cold Plunge Tub 130 Gal XL?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "VEVOR Ice Bath Tub XL 105 Gal",
+    "sku": "VEVOR-Ice-Bath-Tub-XL",
+    "vendorId": "vevor",
+    "image": "/images/placeholders/cold-plunge-placeholder.webp",
+    "product_type": "Cold Plunge",
+    "approx_price": 70,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0DCJMVGLT?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "VEVOR",
+    "primaryCategory": "cold-exposure",
+    "category": "cold-plunge",
+    "price_range": "budget",
+    "bestFor": "Budget buyers who want a larger VEVOR plunge tub on Amazon",
+    "reviewSummary": "A larger VEVOR portable ice bath tub with a 105-gallon capacity for entry-level cold plunging.",
+    "description": "A budget-friendly XL portable cold plunge tub from VEVOR designed for upright ice-bath sessions at home.",
+    "long_description": "The VEVOR XL model keeps the same budget-friendly appeal as the smaller VEVOR tub but adds more usable capacity. It is a good Amazon option for beginner and tall-user list coverage.",
+    "overallScore": 5.8,
+    "score": {
+      "temperature_control": 2,
+      "insulation": 4,
+      "durability": 5,
+      "ease_of_use": 9,
+      "maintenance": 4,
+      "value": 10
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": "ice",
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "cold-plunge",
+      "budget",
+      "ice-based",
+      "portable",
+      "beginner-friendly"
+    ],
+    "features": "<ul><li><strong>105-gallon capacity</strong></li><li><strong>Portable upright ice bath format</strong></li><li><strong>Budget-friendly Amazon availability</strong></li></ul>",
+    "pros": [
+      "Very affordable",
+      "Bigger than the smallest pods",
+      "Easy to add to budget best-of lists"
+    ],
+    "cons": [
+      "Ice-dependent",
+      "Basic materials",
+      "Not a long-term premium setup"
+    ],
+    "who_is_this_for": "<p>Best for <strong>beginners</strong> who want a larger budget ice bath without spending much.</p>",
+    "who_should_skip": "<p>Skip this if you want a permanent outdoor installation or built-in chiller.</p>",
+    "detailed_analysis": "<p>VEVOR gives ThermaPeak an easy Amazon monetization path in cold plunge content. This XL model is useful for budget, beginner, and tall-user angles.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A strong budget Amazon add-on for cold plunge coverage, especially for users who want a larger upright tub.",
+    "alternatives": [
+      {
+        "name": "VEVOR Ice Bath Tub",
+        "sku": "VEVOR-Ice-Bath-Tub"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is VEVOR Ice Bath Tub XL 105 Gal worth it?",
+        "answer": "A strong budget Amazon add-on for cold plunge coverage, especially for users who want a larger upright tub."
+      },
+      {
+        "question": "Who is VEVOR Ice Bath Tub XL 105 Gal best for?",
+        "answer": "Budget buyers who want a larger VEVOR plunge tub on Amazon"
+      },
+      {
+        "question": "Where can I check the current price for VEVOR Ice Bath Tub XL 105 Gal?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hyperice Normatec 3 Legs",
+    "sku": "Hyperice-Normatec-3-Legs",
+    "vendorId": "hyperice",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Compression Boots",
+    "approx_price": 799,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0B72QBWHC?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hyperice",
+    "primaryCategory": "performance-longevity",
+    "category": "compression-boots",
+    "price_range": "premium",
+    "bestFor": "Athletes who want premium leg compression recovery at home",
+    "reviewSummary": "A premium dynamic air compression system for leg recovery, warm-up, and post-training routines.",
+    "description": "The Hyperice Normatec 3 Legs system is a premium compression recovery product aimed at athletes, runners, lifters, and frequent exercisers who want a more advanced recovery routine at home.",
+    "long_description": "The Hyperice Normatec 3 Legs system is a premium compression recovery product aimed at athletes, runners, lifters, and frequent exercisers who want a more advanced recovery routine at home.",
+    "overallScore": 8.7,
+    "score": {
+      "recovery_effectiveness": 9,
+      "build_quality": 9,
+      "ease_of_use": 9,
+      "portability": 6,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": false,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "medium",
+    "tags": [
+      "amazon",
+      "compression",
+      "premium",
+      "recovery",
+      "athletes",
+      "legs"
+    ],
+    "features": "<ul><li><strong>Dynamic air compression</strong> for leg recovery</li><li><strong>Multiple intensity levels</strong></li><li><strong>App-enabled recovery routines</strong></li></ul>",
+    "pros": [
+      "Strong premium brand recognition",
+      "Great for runners and athletes",
+      "High conversion potential in recovery-tech content"
+    ],
+    "cons": [
+      "Expensive",
+      "Less portable than calf-only systems",
+      "Focused mostly on legs"
+    ],
+    "who_is_this_for": "<p>Best for <strong>athletes and serious fitness users</strong> who want a premium leg recovery system.</p>",
+    "who_should_skip": "<p>Skip this if you want a cheaper recovery tool or need a highly portable travel option.</p>",
+    "detailed_analysis": "<p>Normatec is one of the strongest products to add for monetizable recovery-tech content. It fits naturally into recovery, soreness, endurance, and home-gym buying guides.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A premium Amazon recovery product that gives ThermaPeak better monetization coverage beyond cold plunges and saunas.",
+    "alternatives": [
+      {
+        "name": "Hyperice Normatec Go Calf",
+        "sku": "Hyperice-Normatec-Go-Calf"
+      },
+      {
+        "name": "Hyperice Hypervolt 2 Pro",
+        "sku": "Hyperice-Hypervolt-2-Pro"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hyperice Normatec 3 Legs worth it?",
+        "answer": "A premium Amazon recovery product that gives ThermaPeak better monetization coverage beyond cold plunges and saunas."
+      },
+      {
+        "question": "Who is Hyperice Normatec 3 Legs best for?",
+        "answer": "Athletes who want premium leg compression recovery at home"
+      },
+      {
+        "question": "Where can I check the current price for Hyperice Normatec 3 Legs?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hyperice Normatec Go Calf",
+    "sku": "Hyperice-Normatec-Go-Calf",
+    "vendorId": "hyperice",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Portable Compression Sleeves",
+    "approx_price": 429,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0BBP8S9C4?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hyperice",
+    "primaryCategory": "performance-longevity",
+    "category": "compression-boots",
+    "price_range": "mid-range",
+    "bestFor": "Runners and travelers who want portable calf compression",
+    "reviewSummary": "A compact wearable calf compression system with app control and multiple compression levels.",
+    "description": "Normatec Go is a more portable compression option than full-leg boots. It is aimed at calf recovery, travel, runners, and users who want compression without a full recovery station.",
+    "long_description": "Normatec Go is a more portable compression option than full-leg boots. It is aimed at calf recovery, travel, runners, and users who want compression without a full recovery station.",
+    "overallScore": 8.1,
+    "score": {
+      "recovery_effectiveness": 8,
+      "build_quality": 9,
+      "ease_of_use": 9,
+      "portability": 10,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "compression",
+      "portable",
+      "recovery",
+      "runners",
+      "calves"
+    ],
+    "features": "<ul><li><strong>Wireless calf compression</strong></li><li><strong>Seven compression levels</strong></li><li><strong>Bluetooth app controls</strong></li></ul>",
+    "pros": [
+      "Very portable",
+      "Good for runners",
+      "Lower cost than full leg boots"
+    ],
+    "cons": [
+      "Only targets calves",
+      "Not as immersive as full-leg systems",
+      "Still a premium accessory"
+    ],
+    "who_is_this_for": "<p>Best for <strong>runners, travelers, and calf-focused recovery</strong> users.</p>",
+    "who_should_skip": "<p>Skip this if you want full-leg compression or quad/hamstring coverage.</p>",
+    "detailed_analysis": "<p>Normatec Go adds a practical portable recovery product to the site. It is easier to fit into gift guides, runner recovery guides, and travel recovery content than full compression boots.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A strong portable compression option for Amazon-based recovery product coverage.",
+    "alternatives": [
+      {
+        "name": "Hyperice Normatec 3 Legs",
+        "sku": "Hyperice-Normatec-3-Legs"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hyperice Normatec Go Calf worth it?",
+        "answer": "A strong portable compression option for Amazon-based recovery product coverage."
+      },
+      {
+        "question": "Who is Hyperice Normatec Go Calf best for?",
+        "answer": "Runners and travelers who want portable calf compression"
+      },
+      {
+        "question": "Where can I check the current price for Hyperice Normatec Go Calf?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hyperice Hypervolt 2 Pro",
+    "sku": "Hyperice-Hypervolt-2-Pro",
+    "vendorId": "hyperice",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Massage Gun",
+    "approx_price": 349,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B09JB64T9Z?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hyperice",
+    "primaryCategory": "performance-longevity",
+    "category": "massage-gun",
+    "price_range": "mid-range",
+    "bestFor": "Serious home recovery users who want a powerful massage gun",
+    "reviewSummary": "Hyperice's strongest percussion device for deep muscle relief, warm-up, and post-workout recovery routines.",
+    "description": "The Hypervolt 2 Pro is a premium massage gun for users who want more power and control than entry-level percussion devices. It fits well in home gym, mobility, and recovery-tech content.",
+    "long_description": "The Hypervolt 2 Pro is a premium massage gun for users who want more power and control than entry-level percussion devices. It fits well in home gym, mobility, and recovery-tech content.",
+    "overallScore": 8.3,
+    "score": {
+      "recovery_effectiveness": 9,
+      "build_quality": 9,
+      "ease_of_use": 8,
+      "portability": 8,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "massage-gun",
+      "percussion",
+      "portable",
+      "recovery",
+      "premium"
+    ],
+    "features": "<ul><li><strong>High-power percussion</strong></li><li><strong>Multiple speed settings</strong></li><li><strong>Interchangeable heads</strong></li></ul>",
+    "pros": [
+      "Powerful for larger muscles",
+      "Strong brand recognition",
+      "Easy Amazon monetization product"
+    ],
+    "cons": [
+      "More expensive than entry massage guns",
+      "Can be overkill for casual users",
+      "Still requires correct use"
+    ],
+    "who_is_this_for": "<p>Best for <strong>active users who want a powerful massage gun</strong> for warm-up, soreness, and mobility routines.</p>",
+    "who_should_skip": "<p>Skip this if you want the cheapest massage gun or a very gentle device.</p>",
+    "detailed_analysis": "<p>Massage guns are a natural extension for ThermaPeak because they connect to soreness and recovery content while being much easier to monetize through Amazon than premium cold plunges.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A high-value Amazon recovery product for soreness, mobility, and home-gym content.",
+    "alternatives": [
+      {
+        "name": "Hyperice Hypervolt 2",
+        "sku": "Hyperice-Hypervolt-2"
+      },
+      {
+        "name": "Therabody Theragun Relief",
+        "sku": "Therabody-Theragun-Relief"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hyperice Hypervolt 2 Pro worth it?",
+        "answer": "A high-value Amazon recovery product for soreness, mobility, and home-gym content."
+      },
+      {
+        "question": "Who is Hyperice Hypervolt 2 Pro best for?",
+        "answer": "Serious home recovery users who want a powerful massage gun"
+      },
+      {
+        "question": "Where can I check the current price for Hyperice Hypervolt 2 Pro?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Hyperice Hypervolt 2",
+    "sku": "Hyperice-Hypervolt-2",
+    "vendorId": "hyperice",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Massage Gun",
+    "approx_price": 229,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B09JB5CZDB?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Hyperice",
+    "primaryCategory": "performance-longevity",
+    "category": "massage-gun",
+    "price_range": "mid-range",
+    "bestFor": "Most people who want a quality massage gun without going pro-grade",
+    "reviewSummary": "A mainstream Hyperice percussion massage gun with three speeds and interchangeable heads for sore muscles and stiffness.",
+    "description": "The Hypervolt 2 is a strong mid-tier recovery product that offers brand credibility and practical daily usability without the higher price of the Pro version.",
+    "long_description": "The Hypervolt 2 is a strong mid-tier recovery product that offers brand credibility and practical daily usability without the higher price of the Pro version.",
+    "overallScore": 8,
+    "score": {
+      "recovery_effectiveness": 8,
+      "build_quality": 9,
+      "ease_of_use": 9,
+      "portability": 9,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "massage-gun",
+      "percussion",
+      "portable",
+      "recovery",
+      "mid-range"
+    ],
+    "features": "<ul><li><strong>Three speed settings</strong></li><li><strong>Five interchangeable heads</strong></li><li><strong>Quiet Glide technology</strong></li></ul>",
+    "pros": [
+      "Good balance of power and simplicity",
+      "Trusted brand",
+      "Useful for broad recovery guides"
+    ],
+    "cons": [
+      "Less powerful than the Pro model",
+      "Still pricier than generic massage guns"
+    ],
+    "who_is_this_for": "<p>Best for <strong>most home recovery users</strong> who want a reliable massage gun from a known brand.</p>",
+    "who_should_skip": "<p>Skip this if you want the most powerful Hyperice option or the lowest possible price.</p>",
+    "detailed_analysis": "<p>The Hypervolt 2 is more broadly approachable than the Pro model. It works well in best massage gun, home recovery kit, and workout soreness content.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A balanced Amazon recovery product for users who want quality without pro-grade pricing.",
+    "alternatives": [
+      {
+        "name": "Hyperice Hypervolt 2 Pro",
+        "sku": "Hyperice-Hypervolt-2-Pro"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Hyperice Hypervolt 2 worth it?",
+        "answer": "A balanced Amazon recovery product for users who want quality without pro-grade pricing."
+      },
+      {
+        "question": "Who is Hyperice Hypervolt 2 best for?",
+        "answer": "Most people who want a quality massage gun without going pro-grade"
+      },
+      {
+        "question": "Where can I check the current price for Hyperice Hypervolt 2?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Therabody Theragun Relief",
+    "sku": "Therabody-Theragun-Relief",
+    "vendorId": "therabody",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Massage Gun",
+    "approx_price": 149,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0CNS894RH?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Therabody",
+    "primaryCategory": "performance-longevity",
+    "category": "massage-gun",
+    "price_range": "budget",
+    "bestFor": "Beginners who want a gentle massage gun from a premium brand",
+    "reviewSummary": "A lightweight, simple Theragun model designed for daily relief and beginner-friendly percussion therapy.",
+    "description": "Theragun Relief is a lower-friction way to bring Therabody into the product catalog. It is less aggressive than pro-grade massage guns and better suited to casual users, beginners, and daily soreness routines.",
+    "long_description": "Theragun Relief is a lower-friction way to bring Therabody into the product catalog. It is less aggressive than pro-grade massage guns and better suited to casual users, beginners, and daily soreness routines.",
+    "overallScore": 7.8,
+    "score": {
+      "recovery_effectiveness": 7,
+      "build_quality": 8,
+      "ease_of_use": 10,
+      "portability": 10,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "massage-gun",
+      "percussion",
+      "portable",
+      "beginner-friendly",
+      "budget"
+    ],
+    "features": "<ul><li><strong>Three speeds</strong></li><li><strong>Simple one-button control</strong></li><li><strong>Lightweight beginner-friendly design</strong></li></ul>",
+    "pros": [
+      "Beginner-friendly",
+      "Strong brand recognition",
+      "Lower price than many premium massage guns"
+    ],
+    "cons": [
+      "Less powerful than Pro models",
+      "Not ideal for deep aggressive tissue work"
+    ],
+    "who_is_this_for": "<p>Best for <strong>beginners and casual users</strong> who want an easy massage gun from a recognizable brand.</p>",
+    "who_should_skip": "<p>Skip this if you want maximum percussion power or pro-level customization.</p>",
+    "detailed_analysis": "<p>This is a good monetizable entry point for Therabody content without forcing readers into expensive devices immediately.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A strong beginner-friendly massage gun that fits well into Amazon recovery product content.",
+    "alternatives": [
+      {
+        "name": "Hyperice Hypervolt 2",
+        "sku": "Hyperice-Hypervolt-2"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Therabody Theragun Relief worth it?",
+        "answer": "A strong beginner-friendly massage gun that fits well into Amazon recovery product content."
+      },
+      {
+        "question": "Who is Therabody Theragun Relief best for?",
+        "answer": "Beginners who want a gentle massage gun from a premium brand"
+      },
+      {
+        "question": "Where can I check the current price for Therabody Theragun Relief?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "LifePro Surger Vibrating Foam Roller",
+    "sku": "LifePro-Surger-Vibrating-Foam-Roller",
+    "vendorId": "lifepro",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Vibrating Foam Roller",
+    "approx_price": 99,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B07BNRKXZ6?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "LifePro",
+    "primaryCategory": "performance-longevity",
+    "category": "vibration-therapy",
+    "price_range": "budget",
+    "bestFor": "Budget recovery buyers who want vibration plus foam rolling",
+    "reviewSummary": "A compact vibrating foam roller with four speeds for trigger points, fascia work, and mobility routines.",
+    "description": "The LifePro Surger is a simple recovery accessory that combines traditional foam rolling with vibration. It is a good add-on product for soreness, mobility, and home-gym recovery content.",
+    "long_description": "The LifePro Surger is a simple recovery accessory that combines traditional foam rolling with vibration. It is a good add-on product for soreness, mobility, and home-gym recovery content.",
+    "overallScore": 7.4,
+    "score": {
+      "recovery_effectiveness": 7,
+      "build_quality": 7,
+      "ease_of_use": 9,
+      "portability": 9,
+      "value": 9
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "foam-roller",
+      "vibration",
+      "portable",
+      "budget",
+      "mobility"
+    ],
+    "features": "<ul><li><strong>Four vibration speeds</strong></li><li><strong>Compact electric foam roller</strong></li><li><strong>Useful for legs, back, lats, and trigger points</strong></li></ul>",
+    "pros": [
+      "Affordable recovery accessory",
+      "Easy to add to home-gym content",
+      "Portable and simple"
+    ],
+    "cons": [
+      "Not as targeted as a massage gun",
+      "Can be intense on sensitive areas",
+      "Battery/device longevity varies by use"
+    ],
+    "who_is_this_for": "<p>Best for <strong>home-gym users</strong> who want a low-cost recovery accessory for mobility and soft tissue work.</p>",
+    "who_should_skip": "<p>Skip this if you dislike foam rolling or need a more targeted massage gun.</p>",
+    "detailed_analysis": "<p>Vibrating foam rollers are good affiliate additions because they are affordable, Amazon-friendly, and relevant to recovery content without competing with premium cold plunge pages.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A low-cost Amazon recovery tool that expands ThermaPeak beyond cold plunge and sauna products.",
+    "alternatives": [
+      {
+        "name": "Hyperice Hypervolt 2",
+        "sku": "Hyperice-Hypervolt-2"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LifePro Surger Vibrating Foam Roller worth it?",
+        "answer": "A low-cost Amazon recovery tool that expands ThermaPeak beyond cold plunge and sauna products."
+      },
+      {
+        "question": "Who is LifePro Surger Vibrating Foam Roller best for?",
+        "answer": "Budget recovery buyers who want vibration plus foam rolling"
+      },
+      {
+        "question": "Where can I check the current price for LifePro Surger Vibrating Foam Roller?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "LifePro Rumblex Plus 4D Vibration Plate",
+    "sku": "LifePro-Rumblex-Plus-4D",
+    "vendorId": "lifepro",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Vibration Plate",
+    "approx_price": 399,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B0GY23H6VR?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "LifePro",
+    "primaryCategory": "performance-longevity",
+    "category": "vibration-therapy",
+    "price_range": "mid-range",
+    "bestFor": "Home wellness buyers interested in vibration training and circulation routines",
+    "reviewSummary": "A multi-directional vibration plate designed for home exercise, circulation support, and recovery-style routines.",
+    "description": "The LifePro Rumblex Plus 4D is a larger home wellness device that can support warm-up, mobility, balance, and low-impact movement routines. It is best positioned as a recovery-adjacent home wellness product rather than a direct replacement for exercise.",
+    "long_description": "The LifePro Rumblex Plus 4D is a larger home wellness device that can support warm-up, mobility, balance, and low-impact movement routines. It is best positioned as a recovery-adjacent home wellness product rather than a direct replacement for exercise.",
+    "overallScore": 7.7,
+    "score": {
+      "recovery_effectiveness": 7,
+      "build_quality": 8,
+      "ease_of_use": 8,
+      "portability": 5,
+      "value": 8
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": false,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": false,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "medium",
+    "tags": [
+      "amazon",
+      "vibration-plate",
+      "home-wellness",
+      "recovery",
+      "mid-range"
+    ],
+    "features": "<ul><li><strong>4D vibration modes</strong></li><li><strong>Home exercise and recovery routines</strong></li><li><strong>Multi-directional movement</strong></li></ul>",
+    "pros": [
+      "Useful for home wellness content",
+      "Broader appeal than niche recovery tools",
+      "Amazon monetization option"
+    ],
+    "cons": [
+      "Takes more floor space",
+      "Claims should be framed carefully",
+      "Not a replacement for strength training"
+    ],
+    "who_is_this_for": "<p>Best for <strong>home wellness buyers</strong> who want a vibration platform for low-impact movement and recovery-adjacent routines.</p>",
+    "who_should_skip": "<p>Skip this if you have very limited space or want a highly portable recovery device.</p>",
+    "detailed_analysis": "<p>This product broadens ThermaPeak into home recovery and wellness equipment while remaining practical for Amazon monetization.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A useful Amazon product for expanding ThermaPeak into vibration therapy and home wellness content.",
+    "alternatives": [
+      {
+        "name": "LifePro Surger Vibrating Foam Roller",
+        "sku": "LifePro-Surger-Vibrating-Foam-Roller"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is LifePro Rumblex Plus 4D Vibration Plate worth it?",
+        "answer": "A useful Amazon product for expanding ThermaPeak into vibration therapy and home wellness content."
+      },
+      {
+        "question": "Who is LifePro Rumblex Plus 4D Vibration Plate best for?",
+        "answer": "Home wellness buyers interested in vibration training and circulation routines"
+      },
+      {
+        "question": "Where can I check the current price for LifePro Rumblex Plus 4D Vibration Plate?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
+      }
+    ]
+  },
+  {
+    "name": "Power Plate Personal Vibration Plate",
+    "sku": "PowerPlate-Personal-Vibration-Plate",
+    "vendorId": "power-plate",
+    "image": "/images/placeholders/recovery-placeholder.webp",
+    "product_type": "Vibration Plate",
+    "approx_price": 1795,
+    "affiliateLinks": {
+      "amazon": "https://www.amazon.com/dp/B01MQKZEFF?tag=scorpiusllc-20",
+      "manufacturer": "",
+      "bestBuy": "",
+      "walmart": "",
+      "rei": ""
+    },
+    "brand": "Power Plate",
+    "primaryCategory": "performance-longevity",
+    "category": "vibration-therapy",
+    "price_range": "premium",
+    "bestFor": "Premium buyers who want a compact vibration platform from a known brand",
+    "reviewSummary": "A compact premium vibration platform designed for movement, circulation, balance, and home wellness routines.",
+    "description": "Power Plate is one of the more recognizable names in vibration platforms. The Personal model gives buyers a compact premium option for home recovery-adjacent routines and low-impact movement.",
+    "long_description": "Power Plate is one of the more recognizable names in vibration platforms. The Personal model gives buyers a compact premium option for home recovery-adjacent routines and low-impact movement.",
+    "overallScore": 8,
+    "score": {
+      "recovery_effectiveness": 7,
+      "build_quality": 9,
+      "ease_of_use": 8,
+      "portability": 7,
+      "value": 7
+    },
+    "suitability": {
+      "tall_user_friendly": true,
+      "small_space_friendly": true,
+      "outdoor_ready": false,
+      "beginner_friendly": true,
+      "portable": true,
+      "diy_friendly": false
+    },
+    "cooling_type": null,
+    "heating_type": null,
+    "footprint": "small",
+    "tags": [
+      "amazon",
+      "vibration-plate",
+      "premium",
+      "home-wellness",
+      "small-space"
+    ],
+    "features": "<ul><li><strong>Compact premium vibration platform</strong></li><li><strong>Recognized vibration-therapy brand</strong></li><li><strong>Home-friendly footprint</strong></li></ul>",
+    "pros": [
+      "Premium brand credibility",
+      "Compact for a vibration platform",
+      "Good fit for wellness-equipment content"
+    ],
+    "cons": [
+      "Expensive compared with budget plates",
+      "Not strictly a recovery-only product",
+      "Claims should remain conservative"
+    ],
+    "who_is_this_for": "<p>Best for <strong>premium buyers</strong> who want a compact vibration platform from a known brand.</p>",
+    "who_should_skip": "<p>Skip this if you want a low-cost vibration plate or a smaller handheld recovery tool.</p>",
+    "detailed_analysis": "<p>Power Plate adds a premium anchor to vibration therapy coverage. It is useful when comparing budget plates with higher-end platforms.</p>",
+    "ownershipExperience": "Ownership comes down to setup friction, cleaning or maintenance, space planning, and whether the product is convenient enough to use consistently.",
+    "verdict": "A premium Amazon vibration platform that fits broader home recovery and wellness coverage.",
+    "alternatives": [
+      {
+        "name": "LifePro Rumblex Plus 4D Vibration Plate",
+        "sku": "LifePro-Rumblex-Plus-4D"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Power Plate Personal Vibration Plate worth it?",
+        "answer": "A premium Amazon vibration platform that fits broader home recovery and wellness coverage."
+      },
+      {
+        "question": "Who is Power Plate Personal Vibration Plate best for?",
+        "answer": "Premium buyers who want a compact vibration platform from a known brand"
+      },
+      {
+        "question": "Where can I check the current price for Power Plate Personal Vibration Plate?",
+        "answer": "Use the Amazon current-price button on this review page to verify the latest availability, price, merchant, and shipping terms before buying."
       }
     ]
   }

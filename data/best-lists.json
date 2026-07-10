@@ -48,9 +48,9 @@
         "reason": "<p>The Ice Barrel 400 remains one of the most popular ice-based plunges because of its strong insulation and vertical design, which helps retain cold water longer.</p>"
       },
       {
-        "sku": "Polar-Recovery-Tub",
-        "badge": "Best Mid-Range Pick",
-        "reason": "<p>A practical middle-ground between inflatable entry-level tubs and premium integrated systems.</p>"
+        "sku": "Arcwilderness-Foil-Cold-Plunge-130Gal",
+        "badge": "Best Budget Large Tub",
+        "reason": "<p>A low-cost large-format plunge for buyers who want more room than a compact pod without stepping into premium chiller pricing.</p>"
       }
     ],
     "faqs": [
@@ -99,7 +99,7 @@
     "featured_skus": [
       "Plunge-All-In",
       "SunHome-Cold-Plunge-Pro",
-      "EdgeTheoryLabs-Tub-Chiller-Setup"
+      "Renu-Cold-Stoic-2-0"
     ],
     "comparison_table_title": "Cold Plunge Chiller System Comparison",
     "comparison_table_intro": "These chiller-powered cold plunge systems vary widely in cooling strength, footprint, and maintenance demands. This comparison table is designed to help you narrow the field quickly and identify which setup best matches your budget and ownership style.",
@@ -125,14 +125,14 @@
         "reason": "<p>Strong cooling capacity and premium construction make this system ideal for serious recovery routines.</p>"
       },
       {
-        "sku": "EdgeTheoryLabs-Tub-Chiller-Setup",
-        "badge": "Best Modular Setup",
-        "reason": "<p>A flexible system pairing a plunge tub with a dedicated chiller for users who want upgrade flexibility.</p>"
+        "sku": "Renu-Cold-Stoic-2-0",
+        "badge": "Best Luxury Integrated Alternative",
+        "reason": "<p>A premium integrated cold plunge with strong insulation and temperature control for buyers comparing high-end systems.</p>"
       },
       {
-        "sku": "PenguinChillers-Tub-Setup",
-        "badge": "Best DIY Chiller System",
-        "reason": "<p>A popular option for DIY cold plunge setups that want powerful chilling without buying a fully integrated tub.</p>"
+        "sku": "Plunge-Standard",
+        "badge": "Best Standard Chiller Tub",
+        "reason": "<p>A chiller-powered plunge for buyers who want strong temperature control without stepping up to a heated-and-cooled flagship model.</p>"
       }
     ],
     "faqs": [
@@ -185,7 +185,7 @@
     "featured_skus": [
       "TheColdPod-IceBath",
       "VEVOR-Ice-Bath-Tub",
-      "Nurecover-Ice-Bath"
+      "VEVOR-Ice-Bath-Tub-XL"
     ],
     "comparison_table_title": "Best Cold Plunge Tubs Under $200",
     "comparison_table_intro": "These are the best low-cost cold plunge tubs for buyers who want to compare price, portability, and overall value before buying.",
@@ -210,24 +210,14 @@
         "reason": "<p>One of the lowest-cost ways to start cold plunging while still getting a dedicated tub format.</p>"
       },
       {
-        "sku": "Nurecover-Ice-Bath",
-        "badge": "Best for Beginners",
-        "reason": "<p>A simple under-$200 option that works well for buyers who want an easy starting point without overcomplicating the decision.</p>"
+        "sku": "VEVOR-Ice-Bath-Tub-XL",
+        "badge": "Best XL Budget Tub",
+        "reason": "<p>A very low-cost larger-capacity tub for buyers who want more room while staying in the entry-level price range.</p>"
       },
       {
-        "sku": "CalmMax-Portable-Ice-Bath",
-        "badge": "Best Portable Pick",
-        "reason": "<p>A compact and lightweight option for buyers who care most about portability and storage convenience.</p>"
-      },
-      {
-        "sku": "GGanen-Ice-Bath-Tub",
-        "badge": "Best Budget Alternative",
-        "reason": "<p>A low-cost alternative for buyers comparing several similar ice bath tubs in the entry-level category.</p>"
-      },
-      {
-        "sku": "Lumi-Recovery-Pod",
-        "badge": "Best Upgrade Under $200",
-        "reason": "<p>A slightly more premium-feeling budget pick for buyers who still want to stay below the $200 mark.</p>"
+        "sku": "Arcwilderness-Foil-Cold-Plunge-130Gal",
+        "badge": "Best Large Budget Pick",
+        "reason": "<p>A budget-friendly large tub for buyers who want more usable space than the smallest portable pods.</p>"
       }
     ],
     "faqs": [
@@ -273,7 +263,7 @@
     "featured_skus": [
       "TheColdPod-IceBath",
       "VEVOR-Ice-Bath-Tub",
-      "GGanen-Ice-Bath-Tub"
+      "VEVOR-Ice-Bath-Tub-XL"
     ],
     "comparison_table_title": "Budget Cold Plunge Comparison",
     "comparison_table_intro": "Budget cold plunges focus on simplicity and portability. This comparison highlights which entry-level tubs deliver the best balance of price, durability, and usability.",
@@ -301,14 +291,14 @@
         "reason": "<p>Provides solid durability and good capacity at a very accessible price point.</p>"
       },
       {
-        "sku": "GGanen-Ice-Bath-Tub",
-        "badge": "Best Budget Alternative",
-        "reason": "<p>A simple cold plunge tub that balances affordability with basic durability.</p>"
+        "sku": "VEVOR-Ice-Bath-Tub-XL",
+        "badge": "Best XL Budget Tub",
+        "reason": "<p>A low-cost larger-capacity option for buyers who want more room while keeping the purchase inexpensive.</p>"
       },
       {
-        "sku": "CalmMax-Portable-Ice-Bath",
-        "badge": "Best Portable Budget Pick",
-        "reason": "<p>Lightweight and easy to store, making it ideal for beginners testing cold therapy.</p>"
+        "sku": "Arcwilderness-Foil-Cold-Plunge-130Gal",
+        "badge": "Best Large Budget Pick",
+        "reason": "<p>A larger budget plunge tub for buyers who want a roomier ice-based setup without premium-system pricing.</p>"
       }
     ],
     "buying_advice": "<p>Budget plunges work best if you're comfortable adding ice manually. They’re an excellent way to build the habit before investing in a chiller system.</p>",
@@ -428,9 +418,9 @@
     "primary_category": "cold-plunge",
     "sort_by": "editorial",
     "featured_skus": [
-      "Nurecover-Ice-Bath",
-      "Lumi-Recovery-Pod",
-      "Hydragun-Supertub"
+      "TheColdPod-IceBath",
+      "VEVOR-Ice-Bath-Tub-XL",
+      "IceBarrel-300"
     ],
     "comparison_table_title": "Best Cold Plunge Tubs for Small Spaces",
     "comparison_table_intro": "These are the top compact cold plunge tubs for buyers who need a smaller footprint, easier storage, and a setup that fits limited space.",
@@ -445,19 +435,19 @@
     "ranking_methodology": "<p>For small-space buyers, we weigh footprint, portability, setup friction, and maintenance practicality more heavily than luxury features. The best options are the ones that fit real-world apartments, garages, and compact patios without creating too much day-to-day hassle.</p>",
     "products": [
       {
-        "sku": "Nurecover-Ice-Bath",
-        "badge": "Best Compact Tub",
-        "reason": "<p>One of the most popular compact cold plunges thanks to its simple design and small footprint.</p>"
+        "sku": "TheColdPod-IceBath",
+        "badge": "Best Compact Starter Tub",
+        "reason": "<p>A simple portable pod that fits small spaces and keeps setup friction low for first-time cold plungers.</p>"
       },
       {
-        "sku": "Lumi-Recovery-Pod",
-        "badge": "Best Portable Pick",
-        "reason": "<p>A lightweight plunge that can be stored easily when not in use.</p>"
+        "sku": "VEVOR-Ice-Bath-Tub-XL",
+        "badge": "Best Budget Compact Tub",
+        "reason": "<p>A very affordable portable tub that keeps the footprint manageable while offering more usable room than many compact pods.</p>"
       },
       {
-        "sku": "Hydragun-Supertub",
-        "badge": "Best Small Premium Tub",
-        "reason": "<p>A compact plunge designed for small recovery spaces.</p>"
+        "sku": "IceBarrel-300",
+        "badge": "Best Durable Small Footprint",
+        "reason": "<p>A more durable upright option for buyers who want a smaller footprint but are ready to spend beyond entry-level pods.</p>"
       }
     ],
     "faqs": [
@@ -581,7 +571,7 @@
     "sort_by": "editorial",
     "featured_skus": [
       "TheColdPod-IceBath",
-      "Nurecover-Ice-Bath",
+      "VEVOR-Ice-Bath-Tub-XL",
       "IceBarrel-300"
     ],
     "comparison_table_title": "Best Cold Plunge Tubs for Beginners",
@@ -602,9 +592,9 @@
         "reason": "<p>One of the simplest ways to begin cold plunging without a large upfront investment.</p>"
       },
       {
-        "sku": "Nurecover-Ice-Bath",
-        "badge": "Best Beginner Alternative",
-        "reason": "<p>A straightforward plunge with easy setup and maintenance.</p>"
+        "sku": "VEVOR-Ice-Bath-Tub-XL",
+        "badge": "Best Beginner Budget Alternative",
+        "reason": "<p>A low-cost larger tub for beginners who want an inexpensive way to test cold exposure with a little more room.</p>"
       },
       {
         "sku": "IceBarrel-300",
@@ -657,7 +647,7 @@
     "featured_skus": [
       "SunHome-Equinox-2P-Infrared",
       "AlmostHeaven-Bluestone-3P",
-      "Dynamic-Barcelona-1-2P"
+      "Dynamic-Andora-2P"
     ],
     "comparison_table_title": "Home Sauna Comparison",
     "comparison_table_intro": "Compare leading home sauna choices by price, heat format, footprint, and buyer fit.",
@@ -675,7 +665,7 @@
         "reason": "<p>A classic sauna option for buyers prioritizing a hotter traditional heat experience.</p>"
       },
       {
-        "sku": "Dynamic-Barcelona-1-2P",
+        "sku": "Dynamic-Andora-2P",
         "badge": "Best Value Infrared",
         "reason": "<p>A more approachable infrared cabin for routine home use.</p>"
       }
@@ -709,7 +699,7 @@
     "featured_skus": [
       "SunHome-Equinox-2P-Infrared",
       "Clearlight-Sanctuary-2",
-      "Dynamic-Barcelona-1-2P"
+      "Dynamic-Andora-2P"
     ],
     "comparison_table_title": "Infrared Sauna Comparison",
     "comparison_table_intro": "Compare leading infrared sauna cabins for home recovery routines.",
@@ -727,7 +717,7 @@
         "reason": "<p>A premium infrared option for buyers comparing higher-end cabins.</p>"
       },
       {
-        "sku": "Dynamic-Barcelona-1-2P",
+        "sku": "Dynamic-Andora-2P",
         "badge": "Best Value Pick",
         "reason": "<p>A compact infrared option for buyers balancing space and budget.</p>"
       }

@@ -382,6 +382,11 @@ function hasText(html, patterns) {
   return patterns.some((pattern) => text.includes(pattern));
 }
 
+function hasAllText(html, patterns) {
+  const text = stripTags(html).toLowerCase();
+  return patterns.every((pattern) => text.includes(pattern));
+}
+
 function domPosition(html, needleTag) {
   const index = html.indexOf(needleTag);
   if (index < 0 || html.length === 0) return null;
@@ -484,6 +489,7 @@ function parseHtmlPage(html, url, baseUrl) {
   const legacyFindings = config.knownLegacyTerms
     .filter((term) => html.toLowerCase().includes(term.toLowerCase()))
     .map((term) => ({ term, count: countPattern(html, new RegExp(escapeRegExp(term), "gi")) }));
+  const expectedReviewSlugs = expectedNonEmptyReviewCategorySlugs();
 
   return {
     url,
@@ -525,6 +531,11 @@ function parseHtmlPage(html, url, baseUrl) {
     legacyFindings,
     hasTrustStrip: lowerHtml.includes("trust-strip") || lowerHtml.includes("science-trust-statement") || hasText(html, ["why trust", "how we evaluate", "affiliate disclosure", "avoids overstating claims"]),
     hasFeaturedCategoryCards: lowerHtml.includes("featured-category-card") || lowerHtml.includes("science-category-card") || lowerHtml.includes("product-category-card") || lowerHtml.includes("decision-card") || lowerHtml.includes("comparison-index-card"),
+    hasHomepageResearchPositioning: hasText(html, ["science-backed recovery equipment reviews"]) && hasText(html, ["research-informed criteria", "research-informed reviews"]),
+    hasHomepageCommercialIntent: hasAllText(html, ["cold plunge tubs", "home saunas", "recovery equipment", "red light therapy", "reviews", "comparisons", "buying guides"]),
+    hasBestOfCta: internalLinks.some((link) => new URL(link).pathname.replace(/\/$/, "") === "/best-of"),
+    hasScienceCta: internalLinks.some((link) => new URL(link).pathname.replace(/\/$/, "") === "/science"),
+    hasDynamicHomeReviewCategorySection: lowerHtml.includes("data-home-active-review-categories") && expectedReviewSlugs.every((slug) => reviewCategoryLinkSlugs.includes(slug)),
     hasReviewsDropdown: lowerHtml.includes("all reviews") && productCategories.some((category) => lowerHtml.includes(`/reviews/${category.slug}`)),
     hasReviewCategoryCards: lowerHtml.includes("review-category-card") || lowerHtml.includes("product-category-card") || lowerHtml.includes("featured-category-card"),
     hasReviewCards: lowerHtml.includes("review-category-card") || lowerHtml.includes("product-category-product-card") || lowerHtml.includes("featured-card"),
@@ -592,8 +603,12 @@ function addTypeSpecificIssues(page, issues) {
 
   if (page.pageType === "home") {
     if (page.ctaCount < 2) issues.push(issue("high", "conversion", "Homepage has too few CTAs.", "Add clear paths into Best Of, Comparisons, or Reviews."));
+    if (!page.hasHomepageResearchPositioning) issues.push(issue("high", "trust", "Homepage does not communicate research-informed recovery equipment positioning.", "Lead with science-backed recovery equipment review language and explain the research-informed criteria."));
+    if (!page.hasHomepageCommercialIntent) issues.push(issue("medium", "seo", "Homepage is missing key commercial recovery-equipment intent terms.", "Include cold plunge tubs, home saunas, red light therapy, recovery equipment, reviews, comparisons, and buying guides naturally."));
+    if (!page.hasBestOfCta) issues.push(issue("high", "conversion", "Homepage is missing a CTA to /best-of.", "Keep Browse Top Picks or another primary CTA pointed at /best-of."));
+    if (!page.hasScienceCta) issues.push(issue("medium", "trust", "Homepage is missing a CTA to /science.", "Add a concise Science pathway without displacing commercial buyer paths."));
     if (!page.hasTrustStrip) issues.push(issue("medium", "trust", "Homepage lacks clear trust or evaluation signals.", "Add visible trust, methodology, or editorial standards near the top."));
-    if (!page.hasFeaturedCategoryCards) issues.push(issue("medium", "conversion", "Homepage lacks featured category cards.", "Surface key buyer paths with prominent cards."));
+    if (!page.hasFeaturedCategoryCards || !page.hasDynamicHomeReviewCategorySection) issues.push(issue("medium", "conversion", "Homepage lacks a dynamic active review category section.", "Render active review categories from the shared taxonomy and hide categories without products."));
     if (!page.hasReviewsDropdown) issues.push(issue("medium", "internal-linking", "Reviews dropdown is not visible in navigation.", "Add a Reviews dropdown populated from active review categories."));
     if (renderedEmptyReviewSlugs.length > 0) issues.push(issue("high", "production", `Empty review categories are linked: ${renderedEmptyReviewSlugs.join(", ")}.`, "Only render review categories with at least one reviewable product."));
   }

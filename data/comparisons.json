@@ -20,9 +20,8 @@
       "title": "Stock Tank (DIY)",
       "summary": "Best for buyers who want a sturdier DIY cold plunge build and do not mind a more hands-on setup."
     },
-    "optionBProductUrl": "/reviews/tuffstuff-stock-tank-100gal",
-    "optionBProductLabel": "View Stock Tank Option",
-    "optionBReviewUrl": "/reviews/tuffstuff-stock-tank-100gal",
+    "optionBProductUrl": "/guides/how-to-set-up-a-diy-cold-plunge",
+    "optionBProductLabel": "Read DIY Setup Guide",
     "optionBBullets": [
       "More DIY-friendly",
       "Sturdier utility-style feel",
@@ -695,9 +694,8 @@
       "title": "Penguin Chiller Setup",
       "summary": "Best for buyers who want a modular cold plunge build with strong temperature control and more flexibility around components, upgrades, and serviceability."
     },
-    "optionAProductUrl": "/reviews/penguinchillers-tub-setup",
-    "optionAProductLabel": "View Penguin Setup",
-    "optionAReviewUrl": "/reviews/penguinchillers-tub-setup",
+    "optionAProductUrl": "/guides/cold-plunge-chiller-guide",
+    "optionAProductLabel": "Read Chiller Setup Guide",
     "optionABullets": [
       "More modular and serviceable",
       "Better for DIY-leaning buyers",

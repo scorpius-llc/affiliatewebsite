@@ -3,7 +3,7 @@ import config from '../../data/config.json';
 import { getScienceArticlePath, getScienceCategoryPath } from '../../lib/routes';
 import {
   getEvidenceBadge,
-  getPublishedScienceArticles,
+  getFeaturedScienceArticles,
   getRecentStudies,
   getScienceCategories,
   getScienceFaqs,
@@ -14,11 +14,7 @@ const URL = `https://${config.domain}`;
 const OG_IMAGE_URL = `${URL}/images/ThermaPeakOG.png`;
 const sciencePage = getSciencePage();
 const categories = getScienceCategories();
-const publishedArticles = getPublishedScienceArticles();
-const featuredArticles = (sciencePage.featured_articles || [])
-  .map((slug) => publishedArticles.find((article) => article.slug === slug || article.id === slug))
-  .filter(Boolean)
-  .slice(0, 6);
+const featuredArticles = getFeaturedScienceArticles(6);
 const recentStudies = getRecentStudies(5);
 const faqs = getScienceFaqs(sciencePage.faq_ids || []);
 

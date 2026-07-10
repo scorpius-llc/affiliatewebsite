@@ -4,10 +4,10 @@ import products from '../data/products.json';
 import AffiliateButtons from '../components/AffiliateButtons';
 import ProductImage from '../components/ProductImage';
 import { getReviewCategoryPath, getReviewPath } from '../lib/routes';
-import { getActiveReviewCategories } from '../lib/categoryRegistry';
+import { getActiveReviewCategories, getRelatedComparisonsForCategory } from '../lib/categoryRegistry';
 
 const siteTitle = `${config.siteName} - ${config.tagline}`;
-const siteDescription = config.tagline;
+const siteDescription = config.metaDescription || config.tagline;
 const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 export const metadata = {
@@ -70,15 +70,25 @@ const ShieldIcon = () => (
   </svg>
 );
 
-// Function to shuffle an array and get the first n items
-const getShuffledItems = (array, count) => {
-  const shuffled = [...array].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+const productScore = (product) => {
+  if (typeof product.overallScore === 'number') return product.overallScore;
+  if (typeof product.overallScore === 'string') return Number(product.overallScore) || 0;
+  if (typeof product.score === 'number') return product.score;
+  if (product.score && typeof product.score === 'object') {
+    const values = Object.values(product.score).map(Number).filter(Number.isFinite);
+    return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
+  }
+  return 0;
+};
+
+const getTopRatedProducts = (array, count) => {
+  return [...array]
+    .sort((a, b) => productScore(b) - productScore(a))
+    .slice(0, count);
 };
 
 export default function Home() {
-  // Get 3 random products to feature
-  const featuredProducts = getShuffledItems(products, 3);
+  const featuredProducts = getTopRatedProducts(products, 3);
   const activeReviewCategories = getActiveReviewCategories();
 
   return (
@@ -90,7 +100,7 @@ export default function Home() {
           <p className="hero-subtitle">{replacePlaceholders(config.heroSubtitle)}</p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center cta-buttons">
             <Link href="/best-of" className="btn btn-primary-cta btn-lg">Browse Top Picks</Link>
-            <Link href="/reviews" className="btn btn-secondary-cta btn-lg">View All Reviews</Link>
+            <Link href="/science" className="btn btn-secondary-cta btn-lg">Explore The Science</Link>
           </div>
         </div>
       </header>
@@ -101,7 +111,7 @@ export default function Home() {
           <div className="row">
             <div className="col-md-3 trust-item">
               <CheckmarkIcon />
-              <span>Independent Reviews</span>
+              <span>Research-Informed Reviews</span>
             </div>
             <div className="col-md-3 trust-item">
               <CalendarIcon />
@@ -123,24 +133,53 @@ export default function Home() {
       <section className="featured-section pt-0">
         <div className="container">
           <div className="section-heading text-center">
-            <p className="inline-cta-label">Start With the Right Buying Path</p>
-            <h2>Featured Recovery Categories</h2>
-            <p>Choose the product category that matches the recovery setup you are actively comparing.</p>
+            <p className="inline-cta-label">Start With the Right Recovery Path</p>
+            <h2>Recovery Equipment Categories</h2>
+            <p>Explore research-backed reviews, comparisons, and buying guides across cold exposure, sauna therapy, red light therapy, and performance recovery.</p>
           </div>
-          <div className="featured-category-grid">
-            {activeReviewCategories.map((category, index) => (
-              <article
-                key={category.slug}
-                className={`featured-category-card ${index === 0 ? 'featured-category-card-primary' : ''}`}
-              >
-                <p className="comparison-card-label">{category.productCount} Products</p>
-                <h2>{category.heroTitle || category.name}</h2>
-                <p>{category.description}</p>
-                <Link href={getReviewCategoryPath(category.slug)} className="btn btn-primary-cta">
-                  Explore Reviews
-                </Link>
-              </article>
-            ))}
+          <div className="featured-category-grid" data-home-active-review-categories="true">
+            {activeReviewCategories.map((category, index) => {
+              const relatedComparison = getRelatedComparisonsForCategory(category.slug)[0];
+
+              return (
+                <article
+                  key={category.slug}
+                  className={`featured-category-card ${index === 0 ? 'featured-category-card-primary' : ''}`}
+                >
+                  <p className="comparison-card-label">{category.productCount} Products</p>
+                  <h2>{category.heroTitle || category.name}</h2>
+                  <p>{category.description}</p>
+                  <div className="category-card-actions">
+                    <Link href={getReviewCategoryPath(category.slug)} className="btn btn-primary-cta">
+                      Explore Reviews
+                    </Link>
+                    {relatedComparison && (
+                      <Link href={`/comparisons/${relatedComparison.slug}`} className="btn btn-secondary-cta">
+                        Compare Options
+                      </Link>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* --- Science Pathway --- */}
+      <section className="science-pathway-section">
+        <div className="container">
+          <div className="science-pathway-content">
+            <p className="inline-cta-label">Research Behind the Rankings</p>
+            <h2>Why the Science Matters</h2>
+            <p>
+              Cold exposure, heat therapy, red light therapy, and recovery tools all make strong claims.
+              ThermaPeak reviews the research behind those claims, then connects the evidence to practical buying decisions.
+            </p>
+            <div className="d-grid gap-2 d-sm-flex science-pathway-actions">
+              <Link href="/science" className="btn btn-secondary-cta">Explore The Science</Link>
+              <Link href="/guides" className="btn btn-outline-primary">Read Recovery Guides</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -148,7 +187,10 @@ export default function Home() {
       {/* --- Featured Products --- */}
       <section className="featured-section">
         <div className="container">
-          <h2 className="text-center section-title">Top Rated Products</h2>
+          <div className="section-heading text-center">
+            <h2>Top Rated Recovery Equipment</h2>
+            <p>Featured products selected from ThermaPeak&apos;s research-informed review database.</p>
+          </div>
           <div className="row">
             {featuredProducts.map(product => (
               <div key={product.sku} className="col-lg-4 mb-4 d-flex">
@@ -163,7 +205,9 @@ export default function Home() {
                   </div>
                   <div className="card-body d-flex flex-column flex-grow-1">
                     <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text text-muted flex-grow-1">{product.description}</p>
+                    <p className="card-text text-muted flex-grow-1">
+                      {product.bestFor ? `Best for ${product.bestFor}.` : product.description}
+                    </p>
                     <ul className="list-unstyled text-muted small mt-auto">
                       <li><strong>Price Range:</strong> ${product.approx_price}</li>
                       <li><strong>Key Feature:</strong> High Performance</li>

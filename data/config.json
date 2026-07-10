@@ -5,12 +5,13 @@
   "testDeploymentUrl": "https://thermapeak-test-925569592209.us-east1.run.app",
   "topicPlural": "Cold Plunge & Sauna Equipment",
   "topicSingular": "Cold Plunge & Sauna Equipment",
-  "tagline": "Best Cold Plunge & Sauna Equipment Reviewed",
+  "tagline": "Science-Backed Recovery Equipment Reviews",
+  "metaDescription": "Research-informed reviews, rankings, and comparisons of cold plunge tubs, home saunas, red light therapy, and recovery equipment.",
   "author": "Tom",
   "contactEmail": "thomas@scorpius-llc.com",
   "amazonAffiliateTag": "scorpiusllc-20",
   "logoPath": "/images/ThermaPeakLogo.png",
-  "heroTitle": "Best Cold Plunge Tubs & Home Saunas of 2026",
-  "heroSubtitle": "We compare, rank, and review the top recovery equipment so you can invest confidently in your performance.",
+  "heroTitle": "Science-Backed Recovery Equipment Reviews",
+  "heroSubtitle": "ThermaPeak compares cold plunge tubs, home saunas, red light therapy, and recovery tools using research-informed criteria, product data, and buyer-focused analysis.",
   "aboutSnippet": "We are passionate about finding the best products to make your life easier. Our reviews are unbiased and thorough."
 }

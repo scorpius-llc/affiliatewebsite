@@ -12,6 +12,7 @@
     "seo:smoke:test": "bash scripts/seo-smoke-test.sh --test-deployment --output-dir reports/seo-smoke/latest-test",
     "seo:crawl": "python3 scripts/seo_crawler.py --output-dir reports/seo-crawl/latest-production",
     "seo:crawl:test": "python3 scripts/seo_crawler.py --test-deployment --output-dir reports/seo-crawl/latest-test",
+    "enrich-images": "node scripts/enrich-product-images.js",
     "site:audit": "node scripts/audit-site.js"
   },
   "dependencies": {

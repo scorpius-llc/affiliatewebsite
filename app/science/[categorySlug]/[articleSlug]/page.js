@@ -4,7 +4,6 @@ import config from '../../../../data/config.json';
 import { getScienceArticlePath, getScienceCategoryPath } from '../../../../lib/routes';
 import {
   getArticleStudies,
-  getEvidenceBadge,
   getPublishedScienceArticles,
   getRelatedBestListsForScienceArticle,
   getRelatedComparisonsForScienceArticle,
@@ -148,46 +147,21 @@ const buildFaqSchema = (faqs) => ({
   })),
 });
 
-function StudySnapshot({ studies }) {
-  if (!studies.length) return null;
-  const primaryStudy = studies[0];
-  const badge = getEvidenceBadge(primaryStudy.evidence_level);
-
-  return (
-    <section className="science-snapshot-card">
-      <div className="science-study-heading">
-        <h2>Study Snapshot</h2>
-        <span className={`science-evidence-label ${badge.className}`}>{badge.stars} {badge.label}</span>
-      </div>
-      <dl className="science-snapshot-grid">
-        <div><dt>Journal</dt><dd>{primaryStudy.journal}</dd></div>
-        <div><dt>Publication Year</dt><dd>{primaryStudy.publication_year}</dd></div>
-        <div><dt>Study Type</dt><dd>{primaryStudy.study_type}</dd></div>
-        <div><dt>Evidence Level</dt><dd>{primaryStudy.evidence_level}</dd></div>
-        <div><dt>Participants</dt><dd>{primaryStudy.participant_count || 'Not reported'}</dd></div>
-        <div><dt>Population</dt><dd>{primaryStudy.population}</dd></div>
-        {primaryStudy.doi && <div><dt>DOI</dt><dd>{primaryStudy.doi}</dd></div>}
-        {primaryStudy.pubmed_id && <div><dt>PubMed</dt><dd><a href={`https://pubmed.ncbi.nlm.nih.gov/${primaryStudy.pubmed_id}/`} target="_blank" rel="noopener noreferrer">{primaryStudy.pubmed_id}</a></dd></div>}
-      </dl>
-    </section>
-  );
-}
-
-function RelatedLinkGrid({ title, items, getHref, getLabel }) {
+function RelatedResourceInset({ title, items, getHref, getLabel, cardLabel }) {
   if (!items.length) return null;
 
   return (
-    <section className="science-related-section">
+    <aside className="science-related-commerce-inset" aria-label={title}>
       <h2>{title}</h2>
-      <div className="science-related-grid">
+      <div className="science-related-commerce-list">
         {items.map((item) => (
-          <Link key={getHref(item)} href={getHref(item)} className="science-related-card">
-            <span>ThermaPeak</span>
+          <Link key={getHref(item)} href={getHref(item)} className="science-related-commerce-card">
+            <span>{cardLabel}</span>
             <strong>{getLabel(item)}</strong>
           </Link>
         ))}
       </div>
-    </section>
+    </aside>
   );
 }
 
@@ -209,14 +183,22 @@ function ScienceTableOfContents({ sections }) {
   );
 }
 
-function ScienceLongFormSections({ sections }) {
+function ScienceLongFormSections({ sections, insets = [] }) {
   if (!sections.length) return null;
+
+  const insetsByIndex = insets.reduce((acc, inset) => {
+    const sectionIndex = Math.max(0, Math.min(inset.sectionIndex, sections.length - 1));
+    acc[sectionIndex] = acc[sectionIndex] || [];
+    acc[sectionIndex].push(inset.node);
+    return acc;
+  }, {});
 
   return (
     <section className="science-longform-sections" aria-label="Article sections">
-      {sections.map((section) => (
+      {sections.map((section, index) => (
         <section key={section.anchorId} id={section.anchorId} className="science-content-section science-longform-section">
           <h2>{section.heading}</h2>
+          {(insetsByIndex[index] || [])}
           <div
             className="science-section-body rich-copy"
             dangerouslySetInnerHTML={{ __html: section.body }}
@@ -240,6 +222,101 @@ export default function ScienceArticlePage({ params }) {
   const relatedComparisons = getRelatedComparisonsForScienceArticle(article);
   const relatedScienceArticles = getRelatedScienceArticles(article);
   const sections = getArticleSections(article);
+  const lastSectionIndex = Math.max(0, sections.length - 1);
+  const bestListInsetIndex = Math.min(lastSectionIndex, Math.max(1, Math.floor(sections.length * 0.35)));
+  const comparisonInsetIndex = Math.min(lastSectionIndex, Math.max(bestListInsetIndex + 2, Math.floor(sections.length * 0.7)));
+  const longFormRelatedInsets = sections.length > 0
+    ? [
+        {
+          sectionIndex: 0,
+          node: (
+            <RelatedResourceInset
+              key="related-buying-guides-inset"
+              title="Related Buying Guides"
+              items={relatedGuides}
+              getHref={(item) => item.href}
+              getLabel={(item) => item.title}
+              cardLabel="Guide"
+            />
+          ),
+        },
+        ...(sections.length > 1
+          ? [{
+              sectionIndex: bestListInsetIndex,
+              node: (
+                <RelatedResourceInset
+                  key="related-best-lists-inset"
+                  title="Related Best Of Lists"
+                  items={relatedBestLists}
+                  getHref={(item) => item.href}
+                  getLabel={(item) => item.title}
+                  cardLabel="Best Of"
+                />
+              ),
+            }]
+          : []),
+        ...(sections.length > 2
+          ? [{
+              sectionIndex: comparisonInsetIndex,
+              node: (
+                <RelatedResourceInset
+                  key="related-comparisons-inset"
+                  title="Related Comparisons"
+                  items={relatedComparisons}
+                  getHref={(item) => `/comparisons/${item.slug}`}
+                  getLabel={(item) => item.title}
+                  cardLabel="Comparison"
+                />
+              ),
+            }]
+          : []),
+      ]
+    : [];
+
+  const fallbackRelatedInsets = [
+    ...(sections.length === 0
+      ? [{
+          node: (
+            <RelatedResourceInset
+              key="related-buying-guides-fallback"
+              title="Related Buying Guides"
+              items={relatedGuides}
+              getHref={(item) => item.href}
+              getLabel={(item) => item.title}
+              cardLabel="Guide"
+            />
+          ),
+        }]
+      : []),
+    ...(sections.length < 2
+      ? [{
+          node: (
+            <RelatedResourceInset
+              key="related-best-lists-fallback"
+              title="Related Best Of Lists"
+              items={relatedBestLists}
+              getHref={(item) => item.href}
+              getLabel={(item) => item.title}
+              cardLabel="Best Of"
+            />
+          ),
+        }]
+      : []),
+    ...(sections.length < 3
+      ? [{
+          node: (
+            <RelatedResourceInset
+              key="related-comparisons-fallback"
+              title="Related Comparisons"
+              items={relatedComparisons}
+              getHref={(item) => `/comparisons/${item.slug}`}
+              getLabel={(item) => item.title}
+              cardLabel="Comparison"
+            />
+          ),
+        }]
+      : []),
+  ];
 
   return (
     <div className="science-page science-article-page py-5">
@@ -281,54 +358,19 @@ export default function ScienceArticlePage({ params }) {
 
           <section className="science-content-section">
             <h2>Introduction</h2>
+            <RelatedResourceInset
+              title="Related Products"
+              items={relatedProducts}
+              getHref={(item) => item.href}
+              getLabel={(item) => item.name}
+              cardLabel="Review"
+            />
             <p>{article.intro}</p>
           </section>
-
-          <StudySnapshot studies={studies} />
 
           <section className="science-content-section">
             <h2>Research Summary</h2>
             <p>{article.research_summary}</p>
-          </section>
-
-          <section className="science-studies-section">
-            <h2>Studies Reviewed: What the Researchers Found</h2>
-            <div className="science-study-list">
-              {studies.map((study) => {
-                const badge = getEvidenceBadge(study.evidence_level);
-                return (
-                  <article key={study.id} className="science-study-card">
-                    <div className="science-study-heading">
-                      <h3>{study.title}</h3>
-                      <span className={`science-evidence-label ${badge.className}`}>{badge.stars} {badge.label}</span>
-                    </div>
-                    <p className="science-study-source">{study.authors} · {study.journal} · {study.publication_year}</p>
-                    <p>{study.summary}</p>
-                    <ul>
-                      {(study.key_findings || []).map((finding) => <li key={finding}>{finding}</li>)}
-                    </ul>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
-
-          <section className="science-content-section">
-            <h2>Strength of the Evidence</h2>
-            <p>Evidence strength depends on study design, sample size, population fit, and whether outcomes are direct human outcomes or early mechanistic signals.</p>
-            <div className="science-evidence-stack">
-              {studies.map((study) => {
-                const badge = getEvidenceBadge(study.evidence_level);
-                return <span key={study.id} className={`science-evidence-label ${badge.className}`}>{badge.stars} {badge.label}</span>;
-              })}
-            </div>
-          </section>
-
-          <section className="science-content-section">
-            <h2>Study Limitations</h2>
-            <ul>
-              {studies.flatMap((study) => study.limitations || []).slice(0, 8).map((limitation) => <li key={limitation}>{limitation}</li>)}
-            </ul>
           </section>
 
           <section className="science-content-section">
@@ -337,13 +379,9 @@ export default function ScienceArticlePage({ params }) {
           </section>
 
           <ScienceTableOfContents sections={sections} />
-          <ScienceLongFormSections sections={sections} />
+          <ScienceLongFormSections sections={sections} insets={longFormRelatedInsets} />
 
-          <RelatedLinkGrid title="Related Products" items={relatedProducts} getHref={(item) => item.href} getLabel={(item) => item.name} />
-          <RelatedLinkGrid title="Related Product Reviews" items={relatedProducts} getHref={(item) => item.href} getLabel={(item) => `${item.name} Review`} />
-          <RelatedLinkGrid title="Related Buying Guides" items={relatedGuides} getHref={(item) => item.href} getLabel={(item) => item.title} />
-          <RelatedLinkGrid title="Related Best Of Lists" items={relatedBestLists} getHref={(item) => item.href} getLabel={(item) => item.title} />
-          <RelatedLinkGrid title="Related Comparisons" items={relatedComparisons} getHref={(item) => `/comparisons/${item.slug}`} getLabel={(item) => item.title} />
+          {fallbackRelatedInsets.map((inset) => inset.node)}
 
           {relatedScienceArticles.length > 0 && (
             <section className="science-related-section">
@@ -359,19 +397,6 @@ export default function ScienceArticlePage({ params }) {
             </section>
           )}
 
-          <section className="science-references-section">
-            <h2>References</h2>
-            <ol>
-              {studies.map((study) => (
-                <li key={study.id}>
-                  {study.authors}. {study.title}. <em>{study.journal}</em>. {study.publication_year}.
-                  {study.doi && <> DOI: {study.doi}.</>}
-                  {study.url && <> <a href={study.url} target="_blank" rel="noopener noreferrer">PubMed/source</a></>}
-                </li>
-              ))}
-            </ol>
-          </section>
-
           {faqs.length > 0 && (
             <section className="science-faq-section">
               <h2>Frequently Asked Questions</h2>
@@ -383,6 +408,21 @@ export default function ScienceArticlePage({ params }) {
                   </article>
                 ))}
               </div>
+            </section>
+          )}
+
+          {studies.length > 0 && (
+            <section className="science-references-section">
+              <h2>References</h2>
+              <ol>
+                {studies.map((study) => (
+                  <li key={study.id}>
+                    {study.authors}. {study.title}. <em>{study.journal}</em>. {study.publication_year}.
+                    {study.doi && <> DOI: {study.doi}.</>}
+                    {study.url && <> <a href={study.url} target="_blank" rel="noopener noreferrer">PubMed/source</a></>}
+                  </li>
+                ))}
+              </ol>
             </section>
           )}
         </article>

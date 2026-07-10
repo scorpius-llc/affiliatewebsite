@@ -383,5 +383,77 @@
     ],
     "consumer_takeaway": "This study supports cold-water immersion as a soreness and muscle-damage recovery tool, reinforcing the value of cold plunges that make regular, controlled immersion easier.",
     "last_reviewed": "2026-06-29"
+  },
+  {
+    "id": "sramek-2000-cold-water-immersion-physiology",
+    "title": "Human physiological responses to immersion into water of different temperatures",
+    "authors": "Sramek P, Simeckova M, Jansky L, Savlikova J, Vybiral S",
+    "journal": "European Journal of Applied Physiology",
+    "publication_year": 2000,
+    "doi": "10.1007/s004210050065",
+    "pubmed_id": "10751106",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/10751106/",
+    "study_type": "Human immersion study",
+    "evidence_level": "Mechanistic Study",
+    "participant_count": null,
+    "population": "Healthy adults exposed to water immersion at different temperatures",
+    "topic_tags": [
+      "cold-plunge",
+      "cold-exposure",
+      "metabolism",
+      "alertness"
+    ],
+    "product_categories": [
+      "cold-exposure"
+    ],
+    "summary": "A human immersion study evaluating physiological responses to water at different temperatures, including metabolic and catecholamine responses during cold-water immersion.",
+    "key_findings": [
+      "Cold-water immersion increased metabolic rate during the acute exposure protocol.",
+      "Cold-water immersion was associated with increases in noradrenaline and dopamine concentrations.",
+      "The findings support cold exposure as an acute sympathetic and thermogenic stimulus."
+    ],
+    "limitations": [
+      "This was an acute physiology study, not a consumer product trial.",
+      "The findings do not prove long-term mood, performance, or body-composition outcomes.",
+      "Protocol-specific responses should not be generalized to every cold plunge routine."
+    ],
+    "consumer_takeaway": "This study supports the idea that cold-water immersion can feel alerting and physiologically stimulating, but consumer claims should stay focused on acute response rather than medical or weight-loss promises.",
+    "last_reviewed": "2026-07-02"
+  },
+  {
+    "id": "yankouskaya-2023-cold-water-affect",
+    "title": "Short-Term Head-Out Whole-Body Cold-Water Immersion Facilitates Positive Affect and Increases Interaction between Large-Scale Brain Networks",
+    "authors": "Yankouskaya A, Williamson R, Stacey C, Totman JJ, Massey H",
+    "journal": "Biology",
+    "publication_year": 2023,
+    "doi": "10.3390/biology12020211",
+    "pubmed_id": "36829490",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36829490/",
+    "study_type": "Human experimental study",
+    "evidence_level": "Mechanistic Study",
+    "participant_count": null,
+    "population": "Adults completing short-term whole-body cold-water immersion",
+    "topic_tags": [
+      "cold-plunge",
+      "mental-health",
+      "alertness",
+      "recovery"
+    ],
+    "product_categories": [
+      "cold-exposure"
+    ],
+    "summary": "A study of short-term cold-water immersion reporting changes in affect and brain network interaction after a brief cold-water exposure.",
+    "key_findings": [
+      "Participants reported increases in positive affect after short-term cold-water immersion.",
+      "Negative affect measures were reduced after the immersion protocol.",
+      "The study reported changes in interaction between large-scale brain networks after exposure."
+    ],
+    "limitations": [
+      "The study examined short-term responses, not long-term mental health outcomes.",
+      "Affect findings should not be framed as clinical treatment evidence.",
+      "Protocol, setting, and participant characteristics may not match typical home cold plunge use."
+    ],
+    "consumer_takeaway": "This study supports cold plunges as a potentially energizing routine for some users, while keeping mental-health claims conservative and non-clinical.",
+    "last_reviewed": "2026-07-02"
   }
 ]

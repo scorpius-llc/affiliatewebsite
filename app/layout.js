@@ -13,7 +13,7 @@ const replacePlaceholders = (text) => {
 };
 
 const siteTitle = `${config.siteName} - ${replacePlaceholders(config.tagline)}`;
-const siteDescription = replacePlaceholders(config.tagline);
+const siteDescription = replacePlaceholders(config.metaDescription || config.tagline);
 const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
 
 export const metadata = {

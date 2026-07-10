@@ -596,3 +596,15 @@ Affiliate CTA rendering update:
 - Because `components/AffiliateButtons.js` is shared, the behavior applies to full review pages, review listing quick-look cards, review category cards, homepage featured products, Best Of cards, and comparison cards.
 - Updated `scripts/audit-site.js`, `scripts/seo-smoke-test.sh`, and `scripts/seo_crawler.py` so validation recognizes the new buy-style affiliate CTA labels.
 - Validation passed: `node --check scripts/audit-site.js`, `python3 -m py_compile scripts/seo_crawler.py`, `bash -n scripts/seo-smoke-test.sh`, and `npm run build`.
+
+Manufacturer-only product image enrichment tool:
+- Added `scripts/enrich-product-images.js` and npm script `enrich-images`.
+- Dry-run is the default and prints a console-only summary without modifying `data/products.json`, downloading images, or writing discovery files.
+- Apply mode is explicit: `npm run enrich-images -- --apply`.
+- The tool reads `data/products.json` and `data/vendors.json`; it does not create `data/image-candidates.json` or `vendor-domains.json`.
+- Vendor-owned source validation uses `vendors[].website`, optional `vendor.creative.mediaKitUrl`, and product-level source fields when present. Retailer/marketplace/search/parked-domain sources are blocked.
+- The tool stores approved downloaded images under `public/images/products/{vendorId}/{sku}.{ext}` and updates only the existing `product.image` field when replacing missing/broken/placeholder images.
+- Added local placeholder assets under `public/images/placeholders/` for cold plunge, sauna, red light, and recovery fallback paths.
+- Candidate filtering is intentionally conservative: images must come from approved manufacturer pages and match product/model-specific terms; ambiguous logos, icons, headshots, banners, parked-domain images, and retailer images are rejected.
+- Validation passed: `node --check scripts/enrich-product-images.js` and default `npm run enrich-images` dry run. Dry run scanned 39 products, skipped 1 valid image, discovered 15 manufacturer candidates, assigned 23 would-be placeholders, blocked 5 invalid vendor sources, and did not update JSON.
+- Follow-up simplification: removed `image_url`, `image_source_url`, `image_source_type`, `image_rights_status`, `image_last_checked`, and `image_status` from `data/products.json`. The site now relies on `image` only for product image rendering.
