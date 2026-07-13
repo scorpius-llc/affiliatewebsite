@@ -17,11 +17,11 @@ export const metadata = {
   alternates: {
     canonical: `https://${config.domain}/guides`,
   },
-  title: `Guides & Resources - ${config.siteName}`,
-  description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+  title: `Recovery Equipment Guides & Resources - ${config.siteName}`,
+  description: `Buying and setup guides for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
   openGraph: {
-    title: `Guides & Resources - ${config.siteName}`,
-    description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+    title: `Recovery Equipment Guides & Resources - ${config.siteName}`,
+    description: `Buying and setup guides for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
     url: `https://${config.domain}/guides`,
     images: [
       {
@@ -33,8 +33,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Guides & Resources - ${config.siteName}`,
-    description: replacePlaceholders(`Your complete resource for {topicSingular} guides. Learn how to buy, clean, and maintain your product.`),
+    title: `Recovery Equipment Guides & Resources - ${config.siteName}`,
+    description: `Buying and setup guides for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
     images: [ogImageUrl],
   },
 };

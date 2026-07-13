@@ -518,7 +518,7 @@
       {
         "sku": "Renu-Cold-Stoic-2-0",
         "badge": "Best Luxury Outdoor Tub",
-        "reason": "<p>Exceptional insulation and craftsmanship designed for permanent backyard wellness setups.</p>"
+        "reason": "<p>Exceptional insulation and craftsmanship designed for permanent backyard recovery setups.</p>"
       },
       {
         "sku": "IceBarrel-Pro",
@@ -633,8 +633,8 @@
   {
     "id": "best-home-saunas",
     "title": "Best Home Saunas (2026)",
-    "description": "Our top home sauna picks balance heat experience, installation practicality, comfort, materials, and long-term value.",
-    "intro": "<p>The best home sauna is the one whose heat style, capacity, electrical needs, and placement fit your actual routine. This shortlist covers practical infrared cabins and classic traditional sauna options.</p>",
+    "description": "Our top home sauna picks balance heat experience, installation practicality, comfort, materials, and long-term value across infrared, hybrid, and traditional formats.",
+    "intro": "<p>The best home sauna is the one whose heat style, capacity, electrical needs, and placement fit your actual routine. This shortlist now reflects the broader sauna catalog, including premium infrared cabins, hybrid heat systems, and classic traditional sauna options.</p>",
     "criteria": [
       "Heat performance",
       "Home installation requirements",
@@ -645,9 +645,10 @@
     "schema_type": "ItemList",
     "primary_category": "sauna",
     "featured_skus": [
-      "SunHome-Equinox-2P-Infrared",
+      "SunHome-Hybrid-Series",
+      "Sunlighten-mPulse-Series",
       "AlmostHeaven-Bluestone-3P",
-      "Dynamic-Andora-2P"
+      "SunHome-Equinox-2P-Infrared"
     ],
     "comparison_table_title": "Home Sauna Comparison",
     "comparison_table_intro": "Compare leading home sauna choices by price, heat format, footprint, and buyer fit.",
@@ -655,8 +656,18 @@
     "ranking_methodology": "<p>We prioritize usable heat experience, installation practicality, comfort, materials, maintenance, and value for a repeatable home sauna routine.</p>",
     "products": [
       {
-        "sku": "SunHome-Equinox-2P-Infrared",
+        "sku": "SunHome-Hybrid-Series",
         "badge": "Best Overall",
+        "reason": "<p>A premium hybrid sauna line for buyers who want a feature-rich heat experience and strong long-term home ownership fit.</p>"
+      },
+      {
+        "sku": "Sunlighten-mPulse-Series",
+        "badge": "Best Premium Infrared",
+        "reason": "<p>A high-end infrared sauna series with strong brand authority, premium build positioning, and a research-informed recovery buyer fit.</p>"
+      },
+      {
+        "sku": "SunHome-Equinox-2P-Infrared",
+        "badge": "Best Two-Person Infrared",
         "reason": "<p>A comfortable full-spectrum infrared cabin with a practical two-person home footprint.</p>"
       },
       {
@@ -697,9 +708,10 @@
     "schema_type": "ItemList",
     "primary_category": "sauna",
     "featured_skus": [
-      "SunHome-Equinox-2P-Infrared",
+      "Sunlighten-mPulse-Series",
       "Clearlight-Sanctuary-2",
-      "Dynamic-Andora-2P"
+      "SunHome-Equinox-2P-Infrared",
+      "GoldenDesigns-Monaco-3P"
     ],
     "comparison_table_title": "Infrared Sauna Comparison",
     "comparison_table_intro": "Compare leading infrared sauna cabins for home recovery routines.",
@@ -707,14 +719,24 @@
     "ranking_methodology": "<p>We assess radiant heat experience, materials, comfort, home installation demands, controls, and long-term ownership value.</p>",
     "products": [
       {
-        "sku": "SunHome-Equinox-2P-Infrared",
+        "sku": "Sunlighten-mPulse-Series",
         "badge": "Best Overall Infrared Sauna",
-        "reason": "<p>A strong full-spectrum choice with space for two and a polished home ownership experience.</p>"
+        "reason": "<p>A premium infrared sauna series for buyers who want strong brand authority, advanced cabin positioning, and a polished long-term ownership experience.</p>"
       },
       {
         "sku": "Clearlight-Sanctuary-2",
-        "badge": "Best Premium Alternative",
-        "reason": "<p>A premium infrared option for buyers comparing higher-end cabins.</p>"
+        "badge": "Best Luxury Alternative",
+        "reason": "<p>A premium infrared option for buyers comparing higher-end cabins, comfort, and long-term build quality.</p>"
+      },
+      {
+        "sku": "SunHome-Equinox-2P-Infrared",
+        "badge": "Best Two-Person Infrared",
+        "reason": "<p>A strong full-spectrum choice with space for two and a polished home ownership experience.</p>"
+      },
+      {
+        "sku": "GoldenDesigns-Monaco-3P",
+        "badge": "Best Three-Person Infrared",
+        "reason": "<p>A premium-leaning infrared cabin for buyers who want more capacity and a higher-end home sauna feel.</p>"
       },
       {
         "sku": "Dynamic-Andora-2P",
@@ -785,5 +807,155 @@
       }
     ],
     "buying_advice": "<p>Start with our <a href=\"/guides/how-to-choose-a-home-sauna\">home sauna guide</a> and <a href=\"/comparisons/sauna-vs-steam-room\">sauna vs steam room comparison</a> before selecting an outdoor product review.</p>"
+  },
+  {
+    "id": "best-red-light-therapy-devices",
+    "title": "Best Red Light Therapy Devices for Recovery (2026)",
+    "description": "The best red light therapy devices for recovery balance wavelength transparency, usable coverage, ease of setup, portability, and practical buyer value.",
+    "intro": "<p>Red light therapy products should be evaluated as recovery equipment, not as vague light gadgets. The most useful devices make it practical to apply red and near-infrared light consistently to the treatment area you care about.</p><p>This shortlist focuses on compact panels and wearable devices that match the current ThermaPeak product database. Buyers should compare coverage area, setup friction, wavelength clarity, and whether the product fits a realistic routine.</p>",
+    "criteria": [
+      "Red and near-infrared wavelength transparency",
+      "Usable coverage area",
+      "Ease of setup and repeat use",
+      "Build quality and portability",
+      "Value for the intended recovery use case"
+    ],
+    "schema_type": "ItemList",
+    "primary_category": "red-light-therapy",
+    "featured_skus": [
+      "Fringe-Red-Light-Therapy-Wrap",
+      "Hooga-HG300-Red-Light-Panel",
+      "LifePro-Red-Light-Therapy-Panel"
+    ],
+    "comparison_table_title": "Red Light Therapy Device Comparison",
+    "comparison_table_intro": "Compare red light therapy products by format, price, coverage, portability, and buyer fit before choosing a review.",
+    "ranking_methodology_title": "How We Rank Red Light Therapy Devices",
+    "ranking_methodology": "<p>We prioritize devices that make research-aligned red light therapy easier to perform consistently. The highest-ranked products have clear red/NIR positioning, practical coverage, low setup friction, and a realistic use case for recovery-focused buyers.</p>",
+    "products": [
+      {
+        "sku": "Fringe-Red-Light-Therapy-Wrap",
+        "badge": "Best Targeted Wrap",
+        "reason": "<p>A portable red and near-infrared wrap that makes targeted joint and soft-tissue sessions easier than positioning a fixed panel.</p>"
+      },
+      {
+        "sku": "Hooga-HG300-Red-Light-Panel",
+        "badge": "Best Entry Panel",
+        "reason": "<p>A compact tabletop panel that gives buyers a practical entry into real red/NIR panel-style therapy without premium full-body pricing.</p>"
+      },
+      {
+        "sku": "LifePro-Red-Light-Therapy-Panel",
+        "badge": "Best Amazon-Friendly Panel",
+        "reason": "<p>A simple red/NIR panel positioned for localized recovery, joint comfort, and buyers who want an accessible retail path.</p>"
+      },
+      {
+        "sku": "Hooga-HG200-Red-Light-Panel",
+        "badge": "Best Budget Mini Panel",
+        "reason": "<p>A small, affordable panel for buyers who want the lowest-friction way to test targeted red light therapy.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What should you look for in a red light therapy device?",
+        "answer": "Start with wavelength transparency, usable coverage area, setup practicality, and whether the device fits the body area you plan to treat. Consistency matters more than buying the largest device immediately."
+      },
+      {
+        "question": "Is a red light panel or wrap better for recovery?",
+        "answer": "Panels are usually better for general targeted exposure, while wraps are easier for joints and curved body areas. The better choice depends on whether you need flexible placement or a more traditional stationary setup."
+      },
+      {
+        "question": "Are small red light therapy panels worth it?",
+        "answer": "Small panels can be worth it for localized routines, beginners, and buyers with limited space. They are not ideal for efficient full-body sessions, but they can be practical for targeted use."
+      },
+      {
+        "question": "Can red light therapy replace cold plunges or saunas?",
+        "answer": "No. Red light therapy is a different recovery tool with a different stimulus. It can complement cold exposure, heat therapy, compression, and massage tools, but it should not be treated as a direct replacement."
+      }
+    ],
+    "buying_advice": "<h3>How to Choose a Red Light Therapy Device</h3><p>Start by deciding whether you want a <strong>panel</strong> or a <strong>wearable wrap</strong>. Panels work well for simple targeted exposure, while wraps are easier for knees, elbows, shoulders, and other areas where placement matters.</p><p>Then compare wavelength clarity, coverage area, mounting or positioning needs, timer controls, and how likely you are to use the device consistently. For research context, read <a href=\"/science/inflammation/red-light-therapy-recovery\">Red Light Therapy for Recovery</a>, then compare <a href=\"/comparisons/red-light-panel-vs-wrap\">red light panels vs wraps</a>.</p>"
+  },
+  {
+    "id": "best-recovery-tools",
+    "title": "Best Recovery Tools for Athletes and Home Use (2026)",
+    "description": "The best recovery tools include compression boots, massage guns, vibration platforms, and mobility devices selected for practical recovery use cases, ease of ownership, and value.",
+    "intro": "<p>Recovery tools should solve a specific problem. Compression boots, massage guns, vibrating foam rollers, and vibration plates all support different routines, so the best option depends on whether you need leg recovery, soft-tissue work, mobility, warm-up support, or a compact home routine.</p><p>This guide ranks the strongest recovery equipment in the current ThermaPeak catalog while keeping claims practical and buyer-focused.</p>",
+    "criteria": [
+      "Clear recovery use case",
+      "Build quality and controls",
+      "Ease of repeat use",
+      "Portability and storage",
+      "Value for the expected routine"
+    ],
+    "schema_type": "ItemList",
+    "primary_category": "performance-longevity",
+    "featured_skus": [
+      "Hyperice-Normatec-3-Legs",
+      "Hyperice-Hypervolt-2-Pro",
+      "Hyperice-Normatec-Go-Calf"
+    ],
+    "comparison_table_title": "Recovery Tool Comparison",
+    "comparison_table_intro": "Compare compression, percussion, and vibration recovery tools by use case, portability, price, and buyer fit.",
+    "ranking_methodology_title": "How We Rank Recovery Tools",
+    "ranking_methodology": "<p>We rank recovery tools by how clearly they solve a repeatable recovery problem. The strongest picks combine a credible use case, good build quality, low setup friction, and a realistic path to frequent use.</p>",
+    "products": [
+      {
+        "sku": "Hyperice-Normatec-3-Legs",
+        "badge": "Best Overall Recovery Tool",
+        "reason": "<p>A premium dynamic compression system for athletes, runners, and frequent exercisers who want a dedicated leg recovery routine.</p>"
+      },
+      {
+        "sku": "Hyperice-Hypervolt-2-Pro",
+        "badge": "Best Massage Gun",
+        "reason": "<p>A powerful percussion device for serious home recovery users who want more control than entry-level massage guns.</p>"
+      },
+      {
+        "sku": "Hyperice-Normatec-Go-Calf",
+        "badge": "Best Portable Compression",
+        "reason": "<p>A compact calf compression option for runners, travelers, and buyers who want compression without full-leg boots.</p>"
+      },
+      {
+        "sku": "Hyperice-Hypervolt-2",
+        "badge": "Best Massage Gun for Most People",
+        "reason": "<p>A practical mid-tier massage gun with strong brand credibility and easier daily usability than pro-grade devices.</p>"
+      },
+      {
+        "sku": "Therabody-Theragun-Relief",
+        "badge": "Best Beginner Massage Gun",
+        "reason": "<p>A gentle, lower-friction percussion tool for casual users and beginners who want a simple soreness routine.</p>"
+      },
+      {
+        "sku": "LifePro-Surger-Vibrating-Foam-Roller",
+        "badge": "Best Budget Mobility Tool",
+        "reason": "<p>An affordable vibrating foam roller for buyers who want mobility work and vibration in one compact recovery accessory.</p>"
+      },
+      {
+        "sku": "PowerPlate-Personal-Vibration-Plate",
+        "badge": "Best Premium Vibration Platform",
+        "reason": "<p>A compact premium vibration platform for buyers who want a more serious low-impact movement and recovery-adjacent routine.</p>"
+      },
+      {
+        "sku": "LifePro-Rumblex-Plus-4D",
+        "badge": "Best Value Vibration Plate",
+        "reason": "<p>A larger vibration platform for buyers who want warm-up, mobility, balance, and low-impact movement support at a more accessible price.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What recovery tool is best for most athletes?",
+        "answer": "The best recovery tool depends on the problem. Compression boots are strongest for leg-focused recovery routines, while massage guns are more flexible for targeted muscle work."
+      },
+      {
+        "question": "Are compression boots better than a massage gun?",
+        "answer": "Compression boots are better for passive leg recovery and fluid-movement routines. Massage guns are better for targeted soft-tissue work, warm-ups, and localized soreness."
+      },
+      {
+        "question": "Are vibration plates recovery tools?",
+        "answer": "Vibration plates can support warm-up, movement, balance, and recovery-adjacent routines, but buyers should treat broad claims conservatively and focus on whether the device fits their actual routine."
+      },
+      {
+        "question": "Should beginners buy expensive recovery tools?",
+        "answer": "Beginners should start with the tool that solves the clearest problem. Premium systems make sense when the use case is obvious and the buyer expects frequent use."
+      }
+    ],
+    "buying_advice": "<h3>How to Choose Recovery Tools</h3><p>Start with the recovery problem, not the product category. Choose <strong>compression boots</strong> for passive leg-focused routines, a <strong>massage gun</strong> for targeted muscle work, and <strong>vibration tools</strong> when mobility, warm-up, or low-impact movement is the priority.</p><p>Then compare setup friction, storage, controls, and whether the tool supports a routine you will repeat. Use our <a href=\"/guides/recovery-tools-buying-guide\">recovery tools buying guide</a> and <a href=\"/comparisons/compression-boots-vs-massage-gun\">compression boots vs massage gun comparison</a> before choosing a review.</p>"
   }
 ]

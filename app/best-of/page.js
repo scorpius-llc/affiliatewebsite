@@ -18,6 +18,8 @@ const featuredListIds = [
   'best-cold-plunge-with-chiller',
   'best-home-saunas',
   'best-infrared-saunas',
+  'best-red-light-therapy-devices',
+  'best-recovery-tools',
   'best-outdoor-saunas',
 ];
 
@@ -26,11 +28,11 @@ export const metadata = {
   alternates: {
     canonical: `https://${config.domain}/best-of`,
   },
-  title: `Best Cold Plunges, Saunas & Recovery Gear (2026) | ${config.siteName}`,
-  description: `Explore our curated lists of the best cold plunges, home saunas, sauna blankets, and recovery gear for different budgets, spaces, and goals.`,
+  title: `Best Cold Plunges, Saunas & Recovery Equipment (2026) | ${config.siteName}`,
+  description: `Explore research-informed rankings of cold plunge tubs, home saunas, red light therapy devices, and recovery tools for different budgets, spaces, and goals.`,
   openGraph: {
-    title: `Best Cold Plunges, Saunas & Recovery Gear (2026) | ${config.siteName}`,
-    description: `Explore our curated lists of the best cold plunges, home saunas, sauna blankets, and recovery gear for different budgets, spaces, and goals.`,
+    title: `Best Cold Plunges, Saunas & Recovery Equipment (2026) | ${config.siteName}`,
+    description: `Explore research-informed rankings of cold plunge tubs, home saunas, red light therapy devices, and recovery tools for different budgets, spaces, and goals.`,
     url: `https://${config.domain}/best-of`,
     siteName: config.siteName,
     images: [
@@ -45,8 +47,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Best Cold Plunges, Saunas & Recovery Gear (2026) | ${config.siteName}`,
-    description: `Explore our curated lists of the best cold plunges, home saunas, sauna blankets, and recovery gear for different budgets, spaces, and goals.`,
+    title: `Best Cold Plunges, Saunas & Recovery Equipment (2026) | ${config.siteName}`,
+    description: `Explore research-informed rankings of cold plunge tubs, home saunas, red light therapy devices, and recovery tools for different budgets, spaces, and goals.`,
     images: [ogImageUrl],
   },
 };
@@ -70,6 +72,9 @@ export default function BestOf() {
             </Link>
             <Link href="/best-of/best-home-saunas" className="btn btn-secondary-cta">
               Start With Saunas
+            </Link>
+            <Link href="/best-of/best-red-light-therapy-devices" className="btn btn-secondary-cta">
+              Compare Red Light Devices
             </Link>
           </div>
         </header>
@@ -97,7 +102,7 @@ export default function BestOf() {
         <section className="money-section">
           <div className="section-heading text-center">
             <h2>All ThermaPeak Rankings</h2>
-            <p>Browse focused lists by budget, format, space, and ownership style.</p>
+            <p>Browse focused lists by budget, format, space, ownership style, and recovery use case.</p>
           </div>
           <div className="row g-4">
             {remainingLists.map((list) => (

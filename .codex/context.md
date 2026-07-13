@@ -608,3 +608,25 @@ Manufacturer-only product image enrichment tool:
 - Candidate filtering is intentionally conservative: images must come from approved manufacturer pages and match product/model-specific terms; ambiguous logos, icons, headshots, banners, parked-domain images, and retailer images are rejected.
 - Validation passed: `node --check scripts/enrich-product-images.js` and default `npm run enrich-images` dry run. Dry run scanned 39 products, skipped 1 valid image, discovered 15 manufacturer candidates, assigned 23 would-be placeholders, blocked 5 invalid vendor sources, and did not update JSON.
 - Follow-up simplification: removed `image_url`, `image_source_url`, `image_source_type`, `image_rights_status`, `image_last_checked`, and `image_status` from `data/products.json`. The site now relies on `image` only for product image rendering.
+
+### 2026-07-10
+Commercial content freshness audit after product and Science data expansion:
+- Audited Best Of, Comparisons, Guides, Science related-content references, and vendor fallback CTA paths against the current `data/products.json`, `data/science-articles.json`, and `data/studies.json`.
+- Found stale commercial coverage: active red light therapy and performance recovery products had no matching Best Of buyer guides; two Science articles referenced missing `best-red-light-therapy-devices`; the reusable Best Of template only distinguished cold plunge vs sauna; comparison detail pages described all non-cold comparisons as sauna decisions; vendor fallback CTAs sent red light/performance products to Science paths, including invalid `/science/performance-longevity`.
+- Added Best Of pages in `data/best-lists.json`: `best-red-light-therapy-devices` and `best-recovery-tools`.
+- Refreshed sauna Best Of shortlists so `best-home-saunas` and `best-infrared-saunas` include newer high-score products such as Sun Home Hybrid, Sunlighten mPulse, Clearlight Sanctuary, and Golden Designs Monaco.
+- Added comparison pages in `data/comparisons.json`: `red-light-panel-vs-wrap` and `compression-boots-vs-massage-gun`.
+- Added guide pages in `data/guides.json`: `red-light-therapy-buying-guide` and `recovery-tools-buying-guide`.
+- Generalized `app/best-of/[listId]/page.js` with category profiles for cold plunge, sauna, red light therapy, and recovery tools so labels, scoring criteria, system-format display, buying advice, and contextual top-pick copy stay category-appropriate.
+- Generalized `app/comparisons/[slug]/page.js` related Best Of rendering so new red light and recovery comparisons do not inherit sauna-specific copy.
+- Updated Best Of, Comparison, and Guide index metadata/copy to reflect cold plunge tubs, home saunas, red light therapy, and recovery tools without changing the main site architecture or navigation structure.
+- Updated `lib/vendorUtils.js` so internal fallback CTAs for red light and performance products route to commercial rankings/comparisons instead of stale Science paths.
+- Updated `lib/categoryRegistry.js` category keywords so related content discovery can match red light, compression, massage gun, vibration, and recovery-tool content.
+- Updated Science article related products/guides/Best Of references so red light, sleep/HRV, and hormesis articles feed into the new buyer guides and rankings.
+
+Validation:
+- JSON validation passed for `data/best-lists.json`, `data/comparisons.json`, `data/guides.json`, `data/science-articles.json`, `data/best-of-page.json`, and `data/guides-page.json`.
+- Syntax validation passed: `node --check` for changed app/lib files, `bash -n scripts/seo-smoke-test.sh`, `python3 -m py_compile scripts/seo_crawler.py`, and `node --check scripts/audit-site.js`.
+- Custom data consistency audit passed with 0 broken product SKUs, Best Of IDs, guide IDs, comparison URLs, or Science routes.
+- `npm run build` passed and generated 121 static pages.
+- Static output validation passed: new Best Of, comparison, and guide routes exist; sitemap includes all new routes; old stale Science paths are absent; rendered outbound affiliate anchors comply with retailer/vendor CTA rules and include sponsored/nofollow where required.

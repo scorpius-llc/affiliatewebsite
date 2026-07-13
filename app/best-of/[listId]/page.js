@@ -73,6 +73,13 @@ const getFeatureScore = (product, key) => {
     portable: suitability.portable ? 10 : 2.5,
     budget_fit: getBudgetFitScore(product),
     chiller_fit: getChillerFitScore(product),
+    heat_performance: baseScore.heat_performance,
+    build_quality: baseScore.build_quality,
+    comfort: baseScore.comfort,
+    installation: baseScore.installation,
+    light_output: baseScore.light_output,
+    coverage: baseScore.coverage,
+    recovery_effectiveness: baseScore.recovery_effectiveness,
   };
 
   return featureMap[key];
@@ -145,6 +152,21 @@ const contextualScoreWeights = {
     budget_fit: 0.1,
     portable: 0.06,
   },
+  'best-red-light-therapy-devices': {
+    light_output: 0.26,
+    coverage: 0.22,
+    ease_of_use: 0.18,
+    build_quality: 0.14,
+    portability: 0.08,
+    value: 0.12,
+  },
+  'best-recovery-tools': {
+    recovery_effectiveness: 0.3,
+    build_quality: 0.2,
+    ease_of_use: 0.18,
+    portability: 0.14,
+    value: 0.18,
+  },
 };
 
 const getContextualScore = (listId, product) => {
@@ -209,6 +231,18 @@ const getCoolingLabel = (coolingType) => {
   return coolingMap[coolingType] || formatTitle((coolingType || 'varies').replace(/-/g, '_'));
 };
 
+const getSystemTypeLabel = (product) => {
+  const categoryMap = {
+    'red-light-therapy': 'Red/NIR light therapy',
+    'compression-boots': 'Dynamic compression',
+    'massage-gun': 'Percussion massage',
+    'vibration-therapy': 'Vibration therapy',
+  };
+
+  if (categoryMap[product.category]) return categoryMap[product.category];
+  return getCoolingLabel(product.cooling_type || product.heating_type);
+};
+
 const getSizeLabel = (product) => {
   const footprintMap = {
     small: 'Small footprint',
@@ -252,6 +286,115 @@ const saunaScoreCriteria = [
   { title: 'Maintenance', description: 'Cleaning, material care, and long-term ownership effort.' },
   { title: 'Value for Price', description: 'Whether the ownership experience justifies the total spend.' },
 ];
+
+const redLightScoreCriteria = [
+  { title: 'Light Output', description: 'Wavelength mix, device intensity, and whether the product can support a realistic protocol.' },
+  { title: 'Coverage Area', description: 'How efficiently the device covers the intended treatment zone.' },
+  { title: 'Ease of Use', description: 'Setup friction, placement flexibility, controls, and repeat-use practicality.' },
+  { title: 'Build Quality', description: 'Device construction, mounting or wearable design, and everyday durability.' },
+  { title: 'Value for Price', description: 'Whether the coverage and specs justify the spend for the intended use case.' },
+];
+
+const recoveryToolScoreCriteria = [
+  { title: 'Recovery Use Case', description: 'How directly the tool supports soreness, warm-up, mobility, or post-training recovery.' },
+  { title: 'Build Quality', description: 'Materials, motor or compression system quality, controls, and long-term durability.' },
+  { title: 'Ease of Use', description: 'How easily the product fits into a repeatable home recovery routine.' },
+  { title: 'Portability', description: 'Storage, travel fit, and whether the tool can be used outside a fixed recovery space.' },
+  { title: 'Value for Price', description: 'Whether the benefit and usage frequency justify the product cost.' },
+];
+
+const listCategoryProfiles = {
+  'cold-plunge': {
+    label: 'Cold Plunge Tubs',
+    evaluationFocus: 'temperature consistency, insulation, ease of cleaning, and realistic repeat use',
+    topPickContext: 'It stands out because it reduces common ownership friction around temperature control, ice use, and upkeep.',
+    scoreCriteria,
+    advice: (
+      <>
+        <p>
+          If budget is the main constraint, start with our{' '}
+          <Link href="/best-of/best-budget-cold-plunge">Best Budget Cold Plunge</Link>{' '}
+          picks before paying premium-system prices.
+        </p>
+        <p>
+          Buyers deciding between manual ice use and powered systems should compare{' '}
+          <Link href="/comparisons/cold-plunge-vs-ice-bath">Cold Plunge vs Ice Bath</Link>{' '}
+          before spending chiller-system money.
+        </p>
+        <p>
+          For upkeep basics, review the{' '}
+          <Link href="/guides/cold-plunge-maintenance-guide">cold plunge maintenance guide</Link>{' '}
+          before choosing your final shortlist.
+        </p>
+      </>
+    ),
+  },
+  sauna: {
+    label: 'Saunas',
+    evaluationFocus: 'heat performance, installation practicality, comfort, material quality, and realistic repeat use',
+    topPickContext: 'It stands out for a practical home heat experience, ownership fit, and the likelihood that buyers can use it consistently.',
+    scoreCriteria: saunaScoreCriteria,
+    advice: (
+      <p>
+        Before choosing a review, use our{' '}
+        <Link href="/guides/how-to-choose-a-home-sauna">home sauna buying guide</Link>{' '}
+        and{' '}
+        <Link href="/comparisons/infrared-vs-traditional-sauna">infrared vs traditional sauna comparison</Link>.
+      </p>
+    ),
+  },
+  'red-light-therapy': {
+    label: 'Red Light Therapy Devices',
+    evaluationFocus: 'wavelength transparency, usable coverage, repeatable setup, device quality, and realistic recovery use cases',
+    topPickContext: 'It stands out because it gives buyers a practical way to apply red and near-infrared light consistently without overbuying.',
+    scoreCriteria: redLightScoreCriteria,
+    advice: (
+      <>
+        <p>
+          Start with the{' '}
+          <Link href="/guides/red-light-therapy-buying-guide">red light therapy buying guide</Link>{' '}
+          to understand wavelengths, coverage, and protocol fit.
+        </p>
+        <p>
+          If you are deciding between formats, compare{' '}
+          <Link href="/comparisons/red-light-panel-vs-wrap">red light panels vs wraps</Link>{' '}
+          before choosing a device.
+        </p>
+        <p>
+          For research context, read{' '}
+          <Link href="/science/inflammation/red-light-therapy-recovery">Red Light Therapy for Recovery</Link>.
+        </p>
+      </>
+    ),
+  },
+  'performance-longevity': {
+    label: 'Recovery Tools',
+    evaluationFocus: 'recovery use case, build quality, ease of use, portability, and value for frequent home routines',
+    topPickContext: 'It stands out because it solves a clear recovery problem with lower friction than a broad, unfocused equipment setup.',
+    scoreCriteria: recoveryToolScoreCriteria,
+    advice: (
+      <>
+        <p>
+          Use the{' '}
+          <Link href="/guides/recovery-tools-buying-guide">recovery tools buying guide</Link>{' '}
+          to match compression, percussion, and vibration tools to the recovery problem you are trying to solve.
+        </p>
+        <p>
+          If you are choosing between categories, compare{' '}
+          <Link href="/comparisons/compression-boots-vs-massage-gun">compression boots vs massage guns</Link>{' '}
+          before narrowing to a product review.
+        </p>
+        <p>
+          For broader evidence context, read{' '}
+          <Link href="/science/athletic-performance/hormesis-explained">Hormesis Explained</Link>.
+        </p>
+      </>
+    ),
+  },
+};
+
+const getListCategoryProfile = (list) =>
+  listCategoryProfiles[list.primary_category] || listCategoryProfiles['cold-plunge'];
 
 export async function generateStaticParams() {
   return bestLists
@@ -327,15 +470,11 @@ export default function BestOfPage({ params }) {
   const relatedComparisons = comparisons.filter((comparison) =>
     (comparison.related_best_of || []).includes(list.id)
   );
-  const isSaunaList = list.primary_category === 'sauna';
-  const categoryLabel = isSaunaList ? 'Saunas' : 'Cold Plunge Tubs';
-  const evaluationFocus = isSaunaList
-    ? 'heat performance, installation practicality, comfort, material quality, and realistic repeat use'
-    : 'temperature consistency, insulation, ease of cleaning, and realistic repeat use';
-  const topPickContext = isSaunaList
-    ? 'It stands out for a practical home heat experience, ownership fit, and the likelihood that buyers can use it consistently.'
-    : 'It stands out because it reduces common ownership friction around temperature control, ice use, and upkeep.';
-  const displayedScoreCriteria = isSaunaList ? saunaScoreCriteria : scoreCriteria;
+  const categoryProfile = getListCategoryProfile(list);
+  const categoryLabel = categoryProfile.label;
+  const evaluationFocus = categoryProfile.evaluationFocus;
+  const topPickContext = categoryProfile.topPickContext;
+  const displayedScoreCriteria = categoryProfile.scoreCriteria;
 
   const faqJsonLd = faqs.length
     ? {
@@ -418,7 +557,7 @@ export default function BestOfPage({ params }) {
                 <div className="top-pick-meta">
                   <span><strong>Best For:</strong> {getBestForLabel(topPick)}</span>
                   <span><strong>Price Range:</strong> {getPriceLabel(topPick)}</span>
-                  <span><strong>Format:</strong> {getCoolingLabel(topPick.cooling_type || topPick.heating_type)}</span>
+                  <span><strong>Format:</strong> {getSystemTypeLabel(topPick)}</span>
                 </div>
                 <div className="cta-row">
                   <AffiliateButtons product={topPick} size="md" />
@@ -445,7 +584,7 @@ export default function BestOfPage({ params }) {
                     <tr>
                       <th>Product</th>
                       <th>Price Range</th>
-                      <th>System Type</th>
+                      <th>Format</th>
                       <th>Size / Capacity</th>
                       <th>Best For</th>
                       <th>Score</th>
@@ -462,7 +601,7 @@ export default function BestOfPage({ params }) {
                           </div>
                         </td>
                         <td>{getPriceLabel(product)}</td>
-                        <td>{getCoolingLabel(product.cooling_type || product.heating_type)}</td>
+                        <td>{getSystemTypeLabel(product)}</td>
                         <td>{getSizeLabel(product)}</td>
                         <td>{getBestForLabel(product)}</td>
                         <td>
@@ -495,8 +634,8 @@ export default function BestOfPage({ params }) {
                       <dd>{getPriceLabel(product)}</dd>
                     </div>
                     <div>
-                      <dt>System Type</dt>
-                      <dd>{getCoolingLabel(product.cooling_type || product.heating_type)}</dd>
+                      <dt>Format</dt>
+                      <dd>{getSystemTypeLabel(product)}</dd>
                     </div>
                     <div>
                       <dt>Size / Capacity</dt>
@@ -579,7 +718,7 @@ export default function BestOfPage({ params }) {
                     <p className="product-summary">{product.description}</p>
                     <div className="money-product-meta">
                       <span><strong>Price:</strong> {getPriceLabel(product)}</span>
-                      <span><strong>Cooling:</strong> {getCoolingLabel(product.cooling_type)}</span>
+                      <span><strong>Format:</strong> {getSystemTypeLabel(product)}</span>
                       <span><strong>Size:</strong> {getSizeLabel(product)}</span>
                     </div>
                     <div className="product-copy rich-copy" dangerouslySetInnerHTML={{ __html: product.reason }} />
@@ -679,32 +818,7 @@ export default function BestOfPage({ params }) {
             </div>
             <div className="rich-copy">
               {list.buying_advice && <div dangerouslySetInnerHTML={{ __html: list.buying_advice }} />}
-              {isSaunaList ? (
-                <p>
-                  Before choosing a review, use our{' '}
-                  <Link href="/guides/how-to-choose-a-home-sauna">home sauna buying guide</Link>{' '}
-                  and{' '}
-                  <Link href="/comparisons/infrared-vs-traditional-sauna">infrared vs traditional sauna comparison</Link>.
-                </p>
-              ) : (
-                <>
-                  <p>
-                    If budget is the main constraint, start with our{' '}
-                    <Link href="/best-of/best-budget-cold-plunge">Best Budget Cold Plunge</Link>{' '}
-                    picks before paying premium-system prices.
-                  </p>
-                  <p>
-                    Buyers deciding between manual ice use and powered systems should compare{' '}
-                    <Link href="/comparisons/cold-plunge-vs-ice-bath">Cold Plunge vs Ice Bath</Link>{' '}
-                    before spending chiller-system money.
-                  </p>
-                  <p>
-                    For upkeep basics, review the{' '}
-                    <Link href="/guides/cold-plunge-maintenance-guide">cold plunge maintenance guide</Link>{' '}
-                    before choosing your final shortlist.
-                  </p>
-                </>
-              )}
+              {categoryProfile.advice}
             </div>
           </div>
         </section>

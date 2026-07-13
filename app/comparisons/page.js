@@ -6,9 +6,10 @@ const ogImageUrl = `https://${config.domain}/images/ThermaPeakOG.png`;
 const featuredComparisonSlugs = [
   'cold-plunge-vs-ice-bath',
   'infrared-vs-traditional-sauna',
+  'red-light-panel-vs-wrap',
+  'compression-boots-vs-massage-gun',
   'sauna-vs-steam-room',
   'cold-plunge-vs-cryotherapy',
-  'plunge-standard-vs-plunge-all-in',
 ];
 
 export const metadata = {
@@ -17,10 +18,10 @@ export const metadata = {
     canonical: `https://${config.domain}/comparisons`,
   },
   title: `Recovery Equipment Comparisons | ${config.siteName}`,
-  description: `Direct, decision-focused comparisons for cold plunge tubs, saunas, and recovery gear.`,
+  description: `Direct, decision-focused comparisons for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
   openGraph: {
     title: `Recovery Equipment Comparisons | ${config.siteName}`,
-    description: `Direct, decision-focused comparisons for cold plunge tubs, saunas, and recovery gear.`,
+    description: `Direct, decision-focused comparisons for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
     url: `https://${config.domain}/comparisons`,
     images: [
       {
@@ -33,7 +34,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `Recovery Equipment Comparisons | ${config.siteName}`,
-    description: `Direct, decision-focused comparisons for cold plunge tubs, saunas, and recovery gear.`,
+    description: `Direct, decision-focused comparisons for cold plunge tubs, home saunas, red light therapy, and recovery tools.`,
     images: [ogImageUrl],
   },
 };
@@ -51,7 +52,7 @@ export default function ComparisonsPage() {
           <p className="best-of-eyebrow">Decision Hub</p>
           <h1 className="section-title">Recovery Equipment Comparisons</h1>
           <p className="section-subtitle mx-auto">
-            Direct, decision-focused comparisons for cold plunge tubs and home saunas. Use these pages when you are choosing between two formats, products, or ownership paths.
+            Direct, decision-focused comparisons for cold plunge tubs, home saunas, red light therapy, and recovery tools. Use these pages when you are choosing between two formats, products, or ownership paths.
           </p>
           <div className="cta-row center-cta-row">
             <Link href="/comparisons/cold-plunge-vs-ice-bath" className="btn btn-primary-cta">
@@ -59,6 +60,9 @@ export default function ComparisonsPage() {
             </Link>
             <Link href="/comparisons/infrared-vs-traditional-sauna" className="btn btn-secondary-cta">
               Compare Sauna Types
+            </Link>
+            <Link href="/comparisons/red-light-panel-vs-wrap" className="btn btn-secondary-cta">
+              Compare Red Light Formats
             </Link>
           </div>
         </header>

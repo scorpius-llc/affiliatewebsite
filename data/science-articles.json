@@ -657,19 +657,26 @@
       "SunHome-Cold-Plunge-Pro",
       "SunHome-Hybrid-Series",
       "Plunge-All-In",
-      "SunHome-Equinox-2P-Infrared"
+      "SunHome-Equinox-2P-Infrared",
+      "Hyperice-Normatec-3-Legs",
+      "Hyperice-Hypervolt-2",
+      "Fringe-Red-Light-Therapy-Wrap"
     ],
     "related_guides": [
       "cold-plunge-temperature-guide",
       "how-to-choose-a-home-sauna",
       "cold-plunge-after-workout",
-      "cold-plunge-benefits-and-risks"
+      "cold-plunge-benefits-and-risks",
+      "red-light-therapy-buying-guide",
+      "recovery-tools-buying-guide"
     ],
     "related_best_lists": [
       "best-cold-plunge-tubs",
       "best-cold-plunge-with-chiller",
       "best-home-saunas",
-      "best-infrared-saunas"
+      "best-infrared-saunas",
+      "best-red-light-therapy-devices",
+      "best-recovery-tools"
     ],
     "faq_ids": [
       "contrast-therapy-proof",
@@ -771,9 +778,19 @@
       "ferraresi-2016-pbm-human-muscle",
       "maghfour-2024-pbm-overview-mechanism"
     ],
-    "related_products": [],
-    "related_guides": [],
-    "related_best_lists": [],
+    "related_products": [
+      "Hooga-HG300-Red-Light-Panel",
+      "Fringe-Red-Light-Therapy-Wrap",
+      "LifePro-Red-Light-Therapy-Panel"
+    ],
+    "related_guides": [
+      "red-light-therapy-buying-guide",
+      "recovery-tools-buying-guide"
+    ],
+    "related_best_lists": [
+      "best-red-light-therapy-devices",
+      "best-recovery-tools"
+    ],
     "faq_ids": [
       "red-light-proof",
       "red-light-device-specs"
@@ -867,9 +884,19 @@
       "ferraresi-2016-pbm-human-muscle",
       "oliveira-2017-pre-exercise-pbm-recovery"
     ],
-    "related_products": [],
-    "related_guides": [],
-    "related_best_lists": [],
+    "related_products": [
+      "Fringe-Red-Light-Therapy-Wrap",
+      "Hooga-HG300-Red-Light-Panel",
+      "LifePro-Red-Light-Therapy-Panel"
+    ],
+    "related_guides": [
+      "red-light-therapy-buying-guide",
+      "recovery-tools-buying-guide"
+    ],
+    "related_best_lists": [
+      "best-red-light-therapy-devices",
+      "best-recovery-tools"
+    ],
     "faq_ids": [
       "red-light-recovery",
       "red-light-device-specs",
@@ -977,12 +1004,15 @@
     "related_guides": [
       "cold-plunge-after-workout",
       "cold-plunge-benefits-and-risks",
-      "how-to-choose-a-home-sauna"
+      "how-to-choose-a-home-sauna",
+      "red-light-therapy-buying-guide",
+      "recovery-tools-buying-guide"
     ],
     "related_best_lists": [
       "best-cold-plunge-tubs",
       "best-home-saunas",
-      "best-red-light-therapy-devices"
+      "best-red-light-therapy-devices",
+      "best-recovery-tools"
     ],
     "faq_ids": [
       "sleep-vs-tools",
@@ -1089,12 +1119,15 @@
     "related_guides": [
       "cold-plunge-after-workout",
       "cold-plunge-benefits-and-risks",
-      "how-to-choose-a-home-sauna"
+      "how-to-choose-a-home-sauna",
+      "recovery-tools-buying-guide",
+      "red-light-therapy-buying-guide"
     ],
     "related_best_lists": [
       "best-cold-plunge-tubs",
       "best-home-saunas",
-      "best-red-light-therapy-devices"
+      "best-red-light-therapy-devices",
+      "best-recovery-tools"
     ],
     "faq_ids": [
       "hrv-single-reading",

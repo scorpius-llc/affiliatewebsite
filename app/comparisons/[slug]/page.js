@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import comparisons from '../../../data/comparisons.json';
+import bestLists from '../../../data/best-lists.json';
 import products from '../../../data/products.json';
 import config from '../../../data/config.json';
 import AffiliateButtons from '../../../components/AffiliateButtons';
@@ -40,6 +41,8 @@ const getProductForReviewUrl = (reviewUrl) => {
   if (!reviewUrl) return null;
   return products.find((product) => getReviewPath(product.sku) === reviewUrl) || null;
 };
+
+const getBestList = (listId) => bestLists.find((list) => list.id === listId) || null;
 
 const renderOptionCta = (product, href, label, variant = 'primary') => {
   if (product) {
@@ -103,9 +106,11 @@ export default function ComparisonPage({ params }) {
       },
     })),
   };
-  const isColdPlungeComparison = comparison.slug.includes('cold-plunge') || comparison.slug.includes('ice-bath');
   const optionAProduct = getProductForReviewUrl(comparison.optionAReviewUrl);
   const optionBProduct = getProductForReviewUrl(comparison.optionBReviewUrl);
+  const relatedBestLists = (comparison.related_best_of || [])
+    .map(getBestList)
+    .filter(Boolean);
 
   return (
     <div className="container my-5 comparison-page">
@@ -248,46 +253,19 @@ export default function ComparisonPage({ params }) {
             <p>Choose the next step based on what you want to decide next.</p>
           </div>
           <div className="row g-4">
-            {isColdPlungeComparison ? (
-              <>
-                <div className="col-md-6">
-                  <article className="card h-100 comparison-index-card">
-                    <div className="card-body d-flex flex-column">
-                      <h3 className="card-title h5">Want the best overall cold plunge options?</h3>
-                      <p className="card-text flex-grow-1">Go to our ranked buyer guide to compare the strongest overall picks across price points and ownership styles.</p>
-                      <Link href="/best-of/best-cold-plunge-tubs" className="btn btn-outline-primary mt-3">
-                        View Best Cold Plunge Tubs
-                      </Link>
-                    </div>
-                  </article>
-                </div>
-                <div className="col-md-6">
-                  <article className="card h-100 comparison-index-card">
-                    <div className="card-body d-flex flex-column">
-                      <h3 className="card-title h5">Want a chiller-based setup?</h3>
-                      <p className="card-text flex-grow-1">Use the dedicated ranked guide for buyers prioritizing temperature consistency and lower day-to-day effort.</p>
-                      <Link href="/best-of/best-cold-plunge-with-chiller" className="btn btn-outline-primary mt-3">
-                        View Best Cold Plunge With Chiller
-                      </Link>
-                    </div>
-                  </article>
-                </div>
-              </>
-            ) : (
-              (comparison.related_best_of?.length ? comparison.related_best_of : []).map((listId) => (
-                <div key={listId} className="col-md-6">
-                  <article className="card h-100 comparison-index-card">
-                    <div className="card-body d-flex flex-column">
-                      <h3 className="card-title h5">Continue to ranked sauna picks</h3>
-                      <p className="card-text flex-grow-1">Use a ranked buyer guide after comparing the sauna formats that fit your home and heat preference.</p>
-                      <Link href={`/best-of/${listId}`} className="btn btn-outline-primary mt-3">
-                        View {listId.replaceAll('-', ' ')}
-                      </Link>
-                    </div>
-                  </article>
-                </div>
-              ))
-            )}
+            {relatedBestLists.map((list) => (
+              <div key={list.id} className="col-md-6">
+                <article className="card h-100 comparison-index-card">
+                  <div className="card-body d-flex flex-column">
+                    <h3 className="card-title h5">Continue to {list.title}</h3>
+                    <p className="card-text flex-grow-1">{list.description}</p>
+                    <Link href={`/best-of/${list.id}`} className="btn btn-outline-primary mt-3">
+                      View Rankings
+                    </Link>
+                  </div>
+                </article>
+              </div>
+            ))}
             {(comparison.optionAReviewUrl || comparison.optionBReviewUrl) && (
               <>
                 {comparison.optionAReviewUrl && (
